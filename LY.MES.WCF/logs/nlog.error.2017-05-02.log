@@ -1,0 +1,8 @@
+2017-05-02 11:22:41.7699  47 ERROR LY.MES.Service.Base.ForDeviceServices.AddDevParameter
+ForDeviceServices.AddDevParameter => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - 更新条目时出错。有关详细信息，请参阅内部异常。 
+
+2017-05-02 11:23:08.5854  47 ERROR LY.MES.Service.Base.ForDeviceServices.AddDevParameter
+ForDeviceServices.AddDevParameter => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - 更新条目时出错。有关详细信息，请参阅内部异常。 
+

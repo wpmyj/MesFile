@@ -1,0 +1,14 @@
+2017-03-24 15:39:47.7951  13 ERROR LY.MES.Service.ThirdSystem.ForQZDBServices.GetNewQZRFIDCodeData
+ForQZDBServices.GetNewQZRFIDCodeData => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - 列名 '参数编码' 无效。 
+
+2017-03-24 16:01:58.3482  17 ERROR LY.MES.WCF.Dispatch.DispatchCenterSerivce+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext
+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 LY.MES.WCF.Dispatch.DispatchCenterSerivce.<DispatchArrangedCraftsProcessAsync>d__4.MoveNext() 位置 d:\svn\MES\CODE\LY.MES\LY.MES.WCF\Dispatch\DispatchCenterSerivce.svc.cs:行号 223 
+
+2017-03-24 16:01:58.4082  17 ERROR LY.MES.WCF.Dispatch.DispatchCenterSerivce+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext
+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 LY.MES.WCF.Dispatch.DispatchCenterSerivce.<DispatchArrangedCraftsProcessAsync>d__4.MoveNext() 位置 d:\svn\MES\CODE\LY.MES\LY.MES.WCF\Dispatch\DispatchCenterSerivce.svc.cs:行号 233 
+

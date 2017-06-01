@@ -1,0 +1,40 @@
+2017-04-26 15:17:29.8203  12 ERROR LY.MES.Service.ThirdSystem.ForQZDBServices.InsertSJData
+ForQZDBServices.InsertSJData => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - 不支持关键字: “metadata”。 
+
+2017-04-26 15:21:41.1387   8 ERROR LY.MES.Service.ThirdSystem.ForQZDBServices.InsertSJData
+ForQZDBServices.InsertSJData => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - 不支持关键字: “metadata”。 
+
+2017-04-26 15:25:14.2229   5 ERROR LY.MES.Service.ThirdSystem.ForQZDBServices.InsertSJData
+ForQZDBServices.InsertSJData => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - 无法打开登录所请求的数据库 "Testfirst"。登录失败。
+用户 'sa' 登录失败。 
+
+2017-04-26 15:29:35.8208   5 ERROR LY.MES.Service.ThirdSystem.ForQZDBServices.InsertSJData
+ForQZDBServices.InsertSJData => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - 无法找到表 0。 
+
+2017-04-26 20:03:35.6411  18 ERROR LY.MES.Service.ThirdSystem.ForQZDBServices.InsertSJData
+ForQZDBServices.InsertSJData => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - INSERT 语句中列的数目大于 VALUES 子句中指定的值的数目。VALUES 子句中值的数目必须与 INSERT 语句中指定的列的数目匹配。 
+
+2017-04-26 20:08:07.5447  11 ERROR LY.MES.Service.ThirdSystem.ForQZDBServices.InsertSJData
+ForQZDBServices.InsertSJData => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - INSERT 语句中列的数目大于 VALUES 子句中指定的值的数目。VALUES 子句中值的数目必须与 INSERT 语句中指定的列的数目匹配。 
+
+2017-04-26 20:10:46.9798   9 ERROR LY.MES.Service.ThirdSystem.ForQZDBServices.InsertSJData
+ForQZDBServices.InsertSJData => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - 将截断字符串或二进制数据。
+语句已终止。 
+
+2017-04-26 20:15:08.3388  13 ERROR LY.MES.Service.ThirdSystem.ForQZDBServices.InsertSJData
+ForQZDBServices.InsertSJData => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - 将截断字符串或二进制数据。
+语句已终止。 
+
+2017-04-26 20:19:27.1606  12 ERROR LY.MES.Service.ThirdSystem.ForQZDBServices.InsertSJData
+ForQZDBServices.InsertSJData => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - 将截断字符串或二进制数据。
+语句已终止。 
+

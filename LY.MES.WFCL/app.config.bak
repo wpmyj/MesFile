@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <configSections>
+    
+  </configSections>
+  <connectionStrings >
+
+  <add name="CacheFileServer" connectionString="192.168.1.238:6381,password=926FECF08696,allowAdmin=true" providerName="" />
+
+  </connectionStrings>
+  
+  
+  <system.serviceModel>
+    <bindings>
+      <basicHttpBinding>
+        <binding name="BasicHttpBinding_IPipelineService" />
+      </basicHttpBinding>
+      <wsHttpBinding>
+        <binding name="WSHttpBinding_IQCDFindLeakService">
+          <security mode="None" />
+        </binding>
+        <binding name="WSHttpBinding_IPullDetectionRegService">
+          <security mode="None" />
+        </binding>
+        <binding name="WSHttpBinding_IQCDrumsSetService">
+          <security mode="None" />
+        </binding>
+        <binding name="WSHttpBinding_IBaseService">
+          <security mode="None" />
+        </binding>
+        <binding name="WSHttpBinding_IBaseService1">
+          <security mode="None" />
+        </binding>
+        <binding name="WSHttpBinding_IDevExecuteService">
+          <security mode="None" />
+        </binding>
+        <binding name="WSHttpBinding_IBaseService2">
+          <security mode="None" />
+        </binding>
+        <binding name="WSHttpBinding_ICLParamSetSerivce">
+          <security mode="None" />
+        </binding>
+        <binding name="WSHttpBinding_IDeviceCollectService">
+          <security mode="None" />
+        </binding>
+        <binding name="WSHttpBinding_IDeviceService">
+          <security mode="None" />
+        </binding>
+        <binding name="WSHttpBinding_IQZDataService">
+          <security mode="None" />
+        </binding>
+        <binding name="WSHttpBinding_IArrangedVService">
+          <security mode="None" />
+        </binding>
+        <binding name="WSHttpBinding_ICfPExecuteService">
+          <security mode="None" />
+        </binding>
+        <binding name="WSHttpBinding_ICfPExecuteService">
+          <security mode="None" />
+        </binding>
+      </wsHttpBinding>
+    </bindings>
+    <client>
+      <endpoint address="http://localhost:16498/FindLeak/QCDFindLeakService.svc"
+        binding="wsHttpBinding" bindingConfiguration="WSHttpBinding_IQCDFindLeakService"
+        contract="SRFindLeak.IQCDFindLeakService" name="WSHttpBinding_IQCDFindLeakService" />
+      <endpoint address="http://localhost:16498/Winder/PullDetectionRegService.svc"
+        binding="wsHttpBinding" bindingConfiguration="WSHttpBinding_IPullDetectionRegService"
+        contract="SRPullDetectionReg.IPullDetectionRegService" name="WSHttpBinding_IPullDetectionRegService" />
+      <endpoint address="http://localhost:16498/FindLeak/QCDrumsSetService.svc"
+        binding="wsHttpBinding" bindingConfiguration="WSHttpBinding_IQCDrumsSetService"
+        contract="SRQZDDrumesSet.IQCDrumsSetService" name="WSHttpBinding_IQCDrumsSetService" />
+      <endpoint address="http://localhost:16498/Base/BaseService.svc"
+        binding="wsHttpBinding" bindingConfiguration="WSHttpBinding_IBaseService"
+        contract="SRBase.IBaseService" name="WSHttpBinding_IBaseService" />
+      <endpoint address="http://desktop-john:1001/DataColl/DevExecuteService.svc"
+        binding="wsHttpBinding" bindingConfiguration="WSHttpBinding_IDevExecuteService"
+        contract="SRExcute.IDevExecuteService" name="WSHttpBinding_IDevExecuteService" />
+      <endpoint address="http://localhost:16498/Base/BaseService.svc"
+        binding="wsHttpBinding" bindingConfiguration="WSHttpBinding_IBaseService1"
+        contract="SRBase.IBaseService" name="WSHttpBinding_IBaseService1" />
+      <endpoint address="http://localhost:16498/Base/BaseService.svc"
+        binding="wsHttpBinding" bindingConfiguration="WSHttpBinding_IBaseService2"
+        contract="SRBase.IBaseService" name="WSHttpBinding_IBaseService2" />
+      <endpoint address="http://localhost:16498/Base/CLParamSetSerivce.svc"
+        binding="wsHttpBinding" bindingConfiguration="WSHttpBinding_ICLParamSetSerivce"
+        contract="SRCLParamSet.ICLParamSetSerivce" name="WSHttpBinding_ICLParamSetSerivce" />
+      <endpoint address="http://localhost:16498/DataColl/DeviceCollectService.svc"
+        binding="wsHttpBinding" bindingConfiguration="WSHttpBinding_IDeviceCollectService"
+        contract="SRDataColl.IDeviceCollectService" name="WSHttpBinding_IDeviceCollectService" />
+      <endpoint address="http://localhost:16498/Base/DeviceService.svc"
+        binding="wsHttpBinding" bindingConfiguration="WSHttpBinding_IDeviceService"
+        contract="SRDevice.IDeviceService" name="WSHttpBinding_IDeviceService" />
+      <endpoint address="http://localhost:16498/ThirdSystem/QZDataService.svc"
+        binding="wsHttpBinding" bindingConfiguration="WSHttpBinding_IQZDataService"
+        contract="SRQZData.IQZDataService" name="WSHttpBinding_IQZDataService" />
+      <endpoint address="http://localhost:16498/Drums/ArrangedVService.svc"
+        binding="wsHttpBinding" bindingConfiguration="WSHttpBinding_IArrangedVService"
+        contract="SRArrangedVouch.IArrangedVService" name="WSHttpBinding_IArrangedVService" />
+      <endpoint address="http://localhost:16498/Pipeline/PipelineService.svc"
+        binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IPipelineService"
+        contract="SRPiPeline.IPipelineService" name="BasicHttpBinding_IPipelineService" />
+      <endpoint address="http://localhost:16498/Drums/CfPExecuteService.svc"
+        binding="wsHttpBinding" bindingConfiguration="WSHttpBinding_ICfPExecuteService"
+        contract="SRCfPExecute.ICfPExecuteService" name="WSHttpBinding_ICfPExecuteService" />
+    </client>
+  </system.serviceModel>
+</configuration>

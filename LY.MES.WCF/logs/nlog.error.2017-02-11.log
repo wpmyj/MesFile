@@ -1,0 +1,85 @@
+2017-02-11 09:08:06.6346  13 ERROR LY.MES.WCF.Dispatch.DispatchCenterSerivce+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext
+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 LY.MES.WCF.Dispatch.DispatchCenterSerivce.<DispatchArrangedCraftsProcessAsync>d__4.MoveNext() 位置 d:\svn\MES\CODE\LY.MES\LY.MES.WCF\Dispatch\DispatchCenterSerivce.svc.cs:行号 209 
+
+2017-02-11 09:09:01.8138  13 ERROR LY.MES.WCF.Dispatch.DispatchCenterSerivce+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext
+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 LY.MES.WCF.Dispatch.DispatchCenterSerivce.<DispatchArrangedCraftsProcessAsync>d__4.MoveNext() 位置 d:\svn\MES\CODE\LY.MES\LY.MES.WCF\Dispatch\DispatchCenterSerivce.svc.cs:行号 219 
+
+2017-02-11 09:09:46.0623  19 ERROR LY.MES.WCF.Dispatch.DispatchCenterSerivce+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext
+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 LY.MES.WCF.Dispatch.DispatchCenterSerivce.<DispatchArrangedCraftsProcessAsync>d__4.MoveNext() 位置 d:\svn\MES\CODE\LY.MES\LY.MES.WCF\Dispatch\DispatchCenterSerivce.svc.cs:行号 219 
+
+2017-02-11 09:09:53.5458  13 ERROR LY.MES.WCF.Dispatch.DispatchCenterSerivce+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext
+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 LY.MES.WCF.Dispatch.DispatchCenterSerivce.<DispatchArrangedCraftsProcessAsync>d__4.MoveNext() 位置 d:\svn\MES\CODE\LY.MES\LY.MES.WCF\Dispatch\DispatchCenterSerivce.svc.cs:行号 219 
+
+2017-02-11 09:09:53.5918  13 ERROR LY.MES.WCF.Dispatch.DispatchCenterSerivce+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext
+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 LY.MES.WCF.Dispatch.DispatchCenterSerivce.<DispatchArrangedCraftsProcessAsync>d__4.MoveNext() 位置 d:\svn\MES\CODE\LY.MES\LY.MES.WCF\Dispatch\DispatchCenterSerivce.svc.cs:行号 219 
+
+2017-02-11 09:11:23.6279  13 ERROR LY.MES.WCF.Dispatch.DispatchCenterSerivce+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext
+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 LY.MES.WCF.Dispatch.DispatchCenterSerivce.<DispatchArrangedCraftsProcessAsync>d__4.MoveNext() 位置 d:\svn\MES\CODE\LY.MES\LY.MES.WCF\Dispatch\DispatchCenterSerivce.svc.cs:行号 219 
+
+2017-02-11 09:11:23.6719  13 ERROR LY.MES.WCF.Dispatch.DispatchCenterSerivce+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext
+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 LY.MES.WCF.Dispatch.DispatchCenterSerivce.<DispatchArrangedCraftsProcessAsync>d__4.MoveNext() 位置 d:\svn\MES\CODE\LY.MES\LY.MES.WCF\Dispatch\DispatchCenterSerivce.svc.cs:行号 219 
+
+2017-02-11 09:11:28.4112  13 ERROR LY.MES.WCF.Dispatch.DispatchCenterSerivce+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext
+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 LY.MES.WCF.Dispatch.DispatchCenterSerivce.<DispatchArrangedCraftsProcessAsync>d__4.MoveNext() 位置 d:\svn\MES\CODE\LY.MES\LY.MES.WCF\Dispatch\DispatchCenterSerivce.svc.cs:行号 219 
+
+2017-02-11 09:11:28.4482  13 ERROR LY.MES.WCF.Dispatch.DispatchCenterSerivce+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext
+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 LY.MES.WCF.Dispatch.DispatchCenterSerivce.<DispatchArrangedCraftsProcessAsync>d__4.MoveNext() 位置 d:\svn\MES\CODE\LY.MES\LY.MES.WCF\Dispatch\DispatchCenterSerivce.svc.cs:行号 219 
+
+2017-02-11 09:11:34.7195  13 ERROR LY.MES.WCF.Dispatch.DispatchCenterSerivce+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext
+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 LY.MES.WCF.Dispatch.DispatchCenterSerivce.<DispatchArrangedCraftsProcessAsync>d__4.MoveNext() 位置 d:\svn\MES\CODE\LY.MES\LY.MES.WCF\Dispatch\DispatchCenterSerivce.svc.cs:行号 219 
+
+2017-02-11 09:11:34.7595  13 ERROR LY.MES.WCF.Dispatch.DispatchCenterSerivce+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext
+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 LY.MES.WCF.Dispatch.DispatchCenterSerivce.<DispatchArrangedCraftsProcessAsync>d__4.MoveNext() 位置 d:\svn\MES\CODE\LY.MES\LY.MES.WCF\Dispatch\DispatchCenterSerivce.svc.cs:行号 219 
+
+2017-02-11 09:11:41.5939  26 ERROR LY.MES.WCF.Dispatch.DispatchCenterSerivce+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext
+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 LY.MES.WCF.Dispatch.DispatchCenterSerivce.<DispatchArrangedCraftsProcessAsync>d__4.MoveNext() 位置 d:\svn\MES\CODE\LY.MES\LY.MES.WCF\Dispatch\DispatchCenterSerivce.svc.cs:行号 219 
+
+2017-02-11 09:12:53.2340  36 ERROR LY.MES.WCF.Dispatch.DispatchCenterSerivce+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext
+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 LY.MES.WCF.Dispatch.DispatchCenterSerivce.<DispatchArrangedCraftsProcessAsync>d__4.MoveNext() 位置 d:\svn\MES\CODE\LY.MES\LY.MES.WCF\Dispatch\DispatchCenterSerivce.svc.cs:行号 219 
+
+2017-02-11 09:13:09.5840  36 ERROR LY.MES.WCF.Dispatch.DispatchCenterSerivce+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext
+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 LY.MES.WCF.Dispatch.DispatchCenterSerivce.<DispatchArrangedCraftsProcessAsync>d__4.MoveNext() 位置 d:\svn\MES\CODE\LY.MES\LY.MES.WCF\Dispatch\DispatchCenterSerivce.svc.cs:行号 219 
+
+2017-02-11 09:13:14.8613  36 ERROR LY.MES.WCF.Dispatch.DispatchCenterSerivce+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext
+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 LY.MES.WCF.Dispatch.DispatchCenterSerivce.<DispatchArrangedCraftsProcessAsync>d__4.MoveNext() 位置 d:\svn\MES\CODE\LY.MES\LY.MES.WCF\Dispatch\DispatchCenterSerivce.svc.cs:行号 219 
+
+2017-02-11 09:19:27.2766  10 ERROR LY.MES.WCF.Dispatch.DispatchCenterSerivce+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext
+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 LY.MES.WCF.Dispatch.DispatchCenterSerivce.<DispatchArrangedCraftsProcessAsync>d__4.MoveNext() 位置 d:\svn\MES\CODE\LY.MES\LY.MES.WCF\Dispatch\DispatchCenterSerivce.svc.cs:行号 209 
+
+2017-02-11 09:19:35.3570  12 ERROR LY.MES.WCF.Dispatch.DispatchCenterSerivce+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext
+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 LY.MES.WCF.Dispatch.DispatchCenterSerivce.<DispatchArrangedCraftsProcessAsync>d__4.MoveNext() 位置 d:\svn\MES\CODE\LY.MES\LY.MES.WCF\Dispatch\DispatchCenterSerivce.svc.cs:行号 219 
+

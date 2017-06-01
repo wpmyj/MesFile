@@ -1,0 +1,649 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Server.Framework</name>
+    </assembly>
+    <members>
+        <member name="T:Server.Framework.Data.BulkToDB">
+            <summary>
+            批量插入数据库
+            </summary>
+        </member>
+        <member name="M:Server.Framework.Data.BulkToDB.Insert(System.Data.DataTable,System.String,System.String,System.Int32)">
+            <summary>
+            将 <see cref="T:System.Data.DataTable"/> 的数据批量插入到数据库中。调用前请先把<see cref="T:System.Data.DataTable"/>的自增列移除
+            </summary>
+            <param name="dt">要批量插入的 <see cref="T:System.Data.DataTable"/>。</param>
+            <param name="idColumnName">自增列名。</param>
+            <param name="conStr">数据库连接字符串。</param>
+            <param name="batchSize">每批次写入的数据量。</param>
+            <returns>成功则返回true，失败返回false</returns>
+        </member>
+        <member name="T:Server.Framework.Data.EFExtensions">
+            <summary>
+            EntityFramework的SQL语句扩展
+            </summary>
+        </member>
+        <member name="M:Server.Framework.Data.EFExtensions.ExecuteSqlCommand``2(Server.Framework.Data.GenericRepository{``0,``1},System.String,System.Object[])">
+            <summary>执行sql语句，返回影响行数</summary>
+            <param name="gr">实体库</param>
+            <param name="sql">Sql语句</param>
+            <param name="parameters">SqlParameter参数</param>
+            <returns>Sql语句执行结果</returns>
+        </member>
+        <member name="M:Server.Framework.Data.EFExtensions.ExecuteSqlCommandAsync``2(Server.Framework.Data.GenericRepository{``0,``1},System.String,System.Object[])">
+            <summary>执行sql语句，返回影响行数</summary>
+            <param name="gr">实体库</param>
+            <param name="sql">Sql语句</param>
+            <param name="parameters">SqlParameter参数</param>
+            <returns>Sql语句执行结果</returns>
+        </member>
+        <member name="M:Server.Framework.Data.EFExtensions.SqlQuery``3(Server.Framework.Data.GenericRepository{``1,``2},System.String,System.Object[])">
+            <summary>执行Sql语句，自动绑定到对象的属性中</summary>
+            <param name="gr">实体库</param>
+            <param name="sql">Sql语句</param>
+            <param name="parameters">SqlParameter参数</param>
+            <returns>查询结果实体对象集合</returns>
+        </member>
+        <member name="M:Server.Framework.Data.EFExtensions.SqlQuery``2(Server.Framework.Data.GenericRepository{``0,``1},System.String,System.Object[])">
+            <summary>执行Sql语句</summary>
+            <param name="gr">实体库</param>
+            <param name="sql">Sql语句</param>
+            <param name="parameters">SqlParameter参数</param>
+            <returns>查询结果实体对象集合</returns>
+        </member>
+        <member name="M:Server.Framework.Data.EFExtensions.ExecuteScalar``3(Server.Framework.Data.GenericRepository{``1,``2},System.String,System.Object[])">
+            <summary>执行Sql语句，并返回查询结果的第一行第一列</summary>
+            <param name="gr">实体库</param>
+            <param name="sql">sql语句</param>
+            <param name="parameters">SqlParameter参数</param>
+            <returns>实体对象</returns>
+        </member>
+        <member name="M:Server.Framework.Data.EFExtensions.SqlQueryAndPaging``3(Server.Framework.Data.GenericRepository{``1,``2},System.String,System.Int32,System.Int32,System.Int32@,System.Object[])">
+            <summary>执行Sql语句，定自动绑定到对象的属性中.兼分页功能</summary>
+            <param name="gr">实体库</param>
+            <param name="sql">执行的SQL</param>
+            <param name="pageIndex">页面索引，从0开始</param>
+            <param name="pageSize">页面大小</param>
+            <param name="rowCount">行数</param>
+            <param name="parameters">执行的SQL参数</param>
+            <returns>实体集合</returns>
+        </member>
+        <member name="M:Server.Framework.Data.EFExtensions.SqlQueryNotPaging``3(Server.Framework.Data.GenericRepository{``1,``2},System.String,System.String,System.Boolean,System.Object[])">
+            <summary>执行Sql语句</summary>
+            <param name="gr">实体库</param>
+            <param name="sql">执行的SQL</param>
+            <param name="orderByColumn">排序的列</param>
+            <param name="isOrderByAsc">True:升序,False:倒序</param>
+            <param name="parameters">执行的SQL参数</param>
+            <returns>实体集合</returns>
+        </member>
+        <member name="M:Server.Framework.Data.EFExtensions.SqlQueryProcedure``3(Server.Framework.Data.GenericRepository{``1,``2},System.String,``0[])">
+            <summary>执行存储过程</summary>
+            <param name="gr">实体库</param>
+            <param name="procedureName">存储过程名称</param>
+            <param name="parameters">参数</param>
+            <returns>查询结果实体对象集合</returns>
+        </member>
+        <member name="M:Server.Framework.Data.EFExtensions.SqlQueryProcedure``4(Server.Framework.Data.GenericRepository{``2,``3},System.String,``1[])">
+            <summary>执行存储过程</summary>
+            <param name="gr">实体库</param>
+            <param name="procedureName">存储过程名称</param>
+            <param name="parameters">参数</param>
+            <returns>查询结果实体对象集合</returns>
+        </member>
+        <member name="M:Server.Framework.Data.EFExtensions.SqlQueryProcedure``2(Server.Framework.Data.GenericRepository{``0,``1},System.String,System.Object[])">
+            <summary>执行存储过程</summary>
+            <param name="gr">实体库</param>
+            <param name="procedureName">存储过程名称</param>
+            <param name="parameters">参数</param>
+            <returns>查询结果实体对象集合</returns>
+        </member>
+        <member name="M:Server.Framework.Data.EFExtensions.SqlQueryProcedure``3(Server.Framework.Data.GenericRepository{``1,``2},System.String,System.Object[])">
+            <summary>执行存储过程</summary>
+            <param name="gr">实体库</param>
+            <param name="procedureName">存储过程名称</param>
+            <param name="parameters">参数</param>
+            <returns>查询结果实体对象集合</returns>
+        </member>
+        <member name="T:Server.Framework.Data.GenericRepository`2">
+            <summary>
+            
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+        </member>
+        <member name="T:Server.Framework.Data.IRepository`1">
+            <summary>
+            实体库
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+        </member>
+        <member name="M:Server.Framework.Data.IRepository`1.GetList(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},Server.Framework.Data.IOrderByClause{`0}[],System.Int32,System.Int32,System.String[])">
+            <summary>根据指定条件从数据库中查询数据</summary>
+            <param name="whereClause">查询条件</param>
+            <param name="orderBy">排序条件</param>
+            <param name="skip">跳过前N个</param>
+            <param name="top">获取N个</param>
+            <param name="include">导航属性</param>
+            <returns>查询结果</returns>
+        </member>
+        <member name="M:Server.Framework.Data.IRepository`1.Update(`0,System.Boolean)">
+            <summary>修改数据</summary>
+            <param name="entity">实体对象</param>
+            <param name="saveImmediately">是否马上执行</param>
+            <returns>修改后的实体对象</returns>
+        </member>
+        <member name="M:Server.Framework.Data.IRepository`1.Delete(`0,System.Boolean)">
+            <summary>删除数据</summary>
+            <param name="saveImmediately">是否马上执行</param>
+            <param name="entity">实体对象e</param>
+        </member>
+        <member name="M:Server.Framework.Data.IRepository`1.Insert(`0,System.Boolean)">
+            <summary>插入数据</summary>
+            <param name="entity">实体对象</param>
+            <param name="saveImmediately">是否马上执行</param>
+            <returns>插入后的实体对象</returns>
+        </member>
+        <member name="T:Server.Framework.Data.IRepositoryAsync`1">
+            <summary>
+            实体库接口（异步）
+            </summary>
+            <typeparam name="TEntity">实体类型</typeparam>
+        </member>
+        <member name="M:Server.Framework.Data.IRepositoryAsync`1.InsertAsync(`0)">
+            <summary>异步添加实体并提交到数据服务器</summary>
+            <param name="entity">实体对象</param>
+        </member>
+        <member name="M:Server.Framework.Data.IRepositoryAsync`1.DeleteAsync(`0)">
+            <summary>异步移除实体并提交到数据服务器
+            </summary>
+            <param name="entity">实体对象</param>
+        </member>
+        <member name="M:Server.Framework.Data.IRepositoryAsync`1.UpdateAsync(`0)">
+            <summary>异步修改实体并提交到数据服务器</summary>
+            <param name="entity">实体对象</param>
+        </member>
+        <member name="M:Server.Framework.Data.IRepositoryAsync`1.InsertAsync(System.Collections.Generic.IEnumerable{`0})">
+            <summary>异步添加集合</summary>
+            <param name="entities">实体对象集合</param>
+        </member>
+        <member name="M:Server.Framework.Data.IRepositoryAsync`1.UpdateAsync(System.Collections.Generic.IEnumerable{`0})">
+            <summary>异步修改集合</summary>
+            <param name="entities">实体对象集合</param>
+        </member>
+        <member name="M:Server.Framework.Data.IRepositoryAsync`1.DeleteAsync(System.Collections.Generic.IEnumerable{`0})">
+            <summary>异步删除集合</summary>
+            <param name="entities">实体对象集合</param>
+        </member>
+        <member name="M:Server.Framework.Data.GenericRepository`2.#ctor(`0)">
+            <summary>构造函数</summary>
+            <param name="context">实体库对应的上下文</param>
+        </member>
+        <member name="M:Server.Framework.Data.GenericRepository`2.#ctor(System.String)">
+            <summary>构造函数</summary>
+            <param name="connectionStringName">连接字符串配置名称</param>
+        </member>
+        <member name="M:Server.Framework.Data.GenericRepository`2.GetById(System.Int32,System.Boolean)">
+            <summary>根据ID获取对应的数据对象</summary>
+            <param name="id">实体ID</param>
+            <param name="isLazyload">是否启用延迟加载，用于导航属性加载</param>
+            <returns>实体对象</returns>
+        </member>
+        <member name="M:Server.Framework.Data.GenericRepository`2.GetById(System.Int64)">
+            <summary>根据主键获取实体</summary>
+            <param name="id">主键ID</param>
+            <returns>实体对象</returns>
+        </member>
+        <member name="M:Server.Framework.Data.GenericRepository`2.GetByGuid(System.Guid)">
+            <summary>根据guid获取对应的数据对象</summary>
+            <param name="guid">GUID</param>
+            <returns>实体对象</returns>
+        </member>
+        <member name="M:Server.Framework.Data.GenericRepository`2.GetMaxId(System.String)">
+            <summary>
+            获取最大一条数据
+            </summary>
+            <param name="strSortField">排序字段</param>
+            <returns>实体对象</returns>
+        </member>
+        <member name="M:Server.Framework.Data.GenericRepository`2.GetCount(System.Linq.Expressions.Expression{System.Func{`1,System.Boolean}})">
+            <summary>获取行数</summary>
+            <param name="filter">用于测试每个元素是否满足条件的函数</param>
+            <returns>满足条件的行数</returns>
+        </member>
+        <member name="M:Server.Framework.Data.GenericRepository`2.GetLocalQueryable">
+            <summary>获得本地实例对象</summary>
+            <returns>查询接口</returns>
+        </member>
+        <member name="M:Server.Framework.Data.GenericRepository`2.GetQueryable(System.Linq.Expressions.Expression{System.Func{`1,System.Boolean}},Server.Framework.Data.IOrderByClause{`1}[],System.Int32,System.Int32,System.String[])">
+            <summary>根据指定条件获取实体对象</summary>
+            <param name="whereClause">查询条件</param>
+            <param name="orderBy">排序</param>
+            <param name="skip">跳过序列中指定数量的元素，然后返回剩余的元素。</param>
+            <param name="top">从序列的开头返回指定数量的连续元素。</param>
+            <param name="include">加载额外字段</param>
+            <returns>查询接口</returns>
+        </member>
+        <member name="M:Server.Framework.Data.GenericRepository`2.GetQueryAndPaging(Server.Framework.ORM.QueryArgs,System.Int32@)">
+            <summary>
+            获取分页数据集合
+            </summary>
+            <param name="qArgs">过滤条件</param>
+            <param name="rowCount">总条数</param>
+            <returns>查询接口</returns>
+        </member>
+        <member name="M:Server.Framework.Data.GenericRepository`2.GetList(System.Linq.Expressions.Expression{System.Func{`1,System.Boolean}},Server.Framework.Data.IOrderByClause{`1}[],System.Int32,System.Int32,System.String[])">
+            <summary>从数据库查询数据</summary>
+            <param name="whereClause">查询条件</param>
+            <param name="orderBy">排序</param>
+            <param name="skip">跳过前N个</param>
+            <param name="top">取数据行数</param>
+            <param name="include">导航属性</param>
+            <returns>结果实体对象集合</returns>
+        </member>
+        <member name="M:Server.Framework.Data.GenericRepository`2.GetByIdAsync(System.Int32)">
+            <summary>根据ID异步获取对应的数据对象</summary>
+            <param name="id">实体ID</param>
+            <returns>实体对象</returns>
+        </member>
+        <member name="M:Server.Framework.Data.GenericRepository`2.GetByIdAsync(System.Int64)">
+            <summary>根据主键异步获取实体</summary>
+            <param name="id">主键ID</param>
+            <returns>实体对象</returns>
+        </member>
+        <member name="M:Server.Framework.Data.GenericRepository`2.GetByGuidAsync(System.Guid)">
+            <summary>根据guid异步获取对应的数据对象</summary>
+            <param name="guid">GUID</param>
+            <returns>实体对象</returns>
+        </member>
+        <member name="M:Server.Framework.Data.GenericRepository`2.GetCountAsync(System.Linq.Expressions.Expression{System.Func{`1,System.Boolean}})">
+            <summary>获取行数</summary>
+            <param name="filter">用于测试每个元素是否满足条件的函数</param>
+            <returns>满足条件的行数</returns>
+        </member>
+        <member name="M:Server.Framework.Data.GenericRepository`2.GetListAsync(System.Linq.Expressions.Expression{System.Func{`1,System.Boolean}},Server.Framework.Data.IOrderByClause{`1}[],System.Int32,System.Int32,System.String[])">
+            <summary>从数据库异步查询数据</summary>
+            <param name="whereClause">查询条件</param>
+            <param name="orderBy">排序</param>
+            <param name="skip">跳过前N个</param>
+            <param name="top">取数据行数</param>
+            <param name="include">导航属性</param>
+            <returns>结果实体对象集合</returns>
+        </member>
+        <member name="M:Server.Framework.Data.GenericRepository`2.BulkToTable(System.Data.DataTable,System.String)">
+            <summary> 批量插入表数据，只支持SQL Server数据库</summary>
+            <param name="dt">数据表</param>
+            <param name="tableName">表名</param>
+            <returns>成功返回true，失败返回false</returns>
+        </member>
+        <member name="M:Server.Framework.Data.GenericRepository`2.Insert(`1,System.Boolean)">
+            <summary>插入一条数据</summary>
+            <param name="entity">实体对象</param>
+            <param name="saveImmediately">是否马上执行</param>
+            <returns>插入后的实体对象</returns>
+        </member>
+        <member name="M:Server.Framework.Data.GenericRepository`2.Insert(System.Collections.Generic.IEnumerable{`1})">
+            <summary>循环插入，效率比BulkToTable低</summary>
+            <param name="entities">实体集合</param>
+            <returns>插入后的实体类型集合</returns>
+        </member>
+        <member name="M:Server.Framework.Data.GenericRepository`2.InsertAsync(`1)">
+            <summary>异步添加实体并提交到数据服务器</summary>
+            <param name="entity">实体对象</param>
+        </member>
+        <member name="M:Server.Framework.Data.GenericRepository`2.InsertAsync(System.Collections.Generic.IEnumerable{`1})">
+            <summary>异步添加集合</summary>
+            <param name="entities">实体对象集合</param>
+        </member>
+        <member name="M:Server.Framework.Data.GenericRepository`2.Update(`1,System.Action{`1},System.Boolean)">
+            <summary>更新一条数据</summary>
+            <param name="entity">实体对象</param>
+            <param name="action">更新前的动作</param>
+            <param name="saveImmediately">是否马上执行</param>
+            <returns>更新后的实体类型</returns>
+        </member>
+        <member name="M:Server.Framework.Data.GenericRepository`2.Update(`1,System.Boolean)">
+            <summary>更新一条数据</summary>
+            <param name="entity">实体对象</param>
+            <param name="saveImmediately">是否马上执行</param>
+            <returns>更新后的实体类型</returns>
+        </member>
+        <member name="M:Server.Framework.Data.GenericRepository`2.Update(`1,System.Collections.Generic.IEnumerable{System.String},System.Boolean)">
+            <summary>更新一条数据</summary>
+            <param name="entity">实体对象</param>
+            <param name="properties">更新的字段名称</param>
+            <param name="saveImmediately">是否马上执行</param>
+            <returns>更新后的实体类型</returns>
+        </member>
+        <member name="M:Server.Framework.Data.GenericRepository`2.Update(`1,System.Collections.Generic.IEnumerable{System.String},System.Action{`1},System.Boolean)">
+            <summary>更新一条数据</summary>
+            <param name="entity">实体对象</param>
+            <param name="properties">更新的字段名称</param>
+            <param name="action">更新前的动作</param>
+            <param name="saveImmediately">是否马上执行</param>
+            <returns>更新后的实体类型</returns>
+        </member>
+        <member name="M:Server.Framework.Data.GenericRepository`2.UpdateList(System.Collections.Generic.IEnumerable{`1})">
+            <summary>批量更新对象，外键对象需要设置为null</summary>
+            <param name="entities">实体对象集合</param>
+        </member>
+        <member name="M:Server.Framework.Data.GenericRepository`2.UpdateAsync(`1)">
+            <summary>异步更新一条数据</summary>
+            <param name="entity">实体对象</param>
+        </member>
+        <member name="M:Server.Framework.Data.GenericRepository`2.UpdateAsync(System.Collections.Generic.IEnumerable{`1})">
+            <summary>异步更新集合</summary>
+            <param name="entities">实体对象集合</param>
+        </member>
+        <member name="M:Server.Framework.Data.GenericRepository`2.Delete(System.Int64,System.Boolean)">
+            <summary>删除数据</summary>
+            <param name="id">实体对象ID</param>
+            <param name="saveImmediately">是否马上执行</param>
+        </member>
+        <member name="M:Server.Framework.Data.GenericRepository`2.Delete(System.Int32,System.Boolean)">
+            <summary>删除数据</summary>
+            <param name="id">实体对象ID</param>
+            <param name="saveImmediately">是否马上执行</param>
+        </member>
+        <member name="M:Server.Framework.Data.GenericRepository`2.Delete(`1,System.Boolean)">
+            <summary>删除数据</summary>
+            <param name="entity">实体对象</param>
+            <param name="saveImmediately">是否马上执行</param>
+        </member>
+        <member name="M:Server.Framework.Data.GenericRepository`2.Delete(System.Collections.Generic.IEnumerable{`1},System.Boolean)">
+            <summary>批量删除数据</summary>
+            <typeparam name="TEntity">实体类型</typeparam>
+            <param name="entitys">实体对象集合</param>
+            <param name="saveImmediately">是否马上执行</param>
+        </member>
+        <member name="M:Server.Framework.Data.GenericRepository`2.Delete(System.Collections.Generic.IEnumerable{System.Int64},System.Boolean)">
+            <summary>批量删除数据</summary>
+            <param name="ids">实体对象ID集合</param>
+            <param name="saveImmediately">是否马上执行</param>
+        </member>
+        <member name="M:Server.Framework.Data.GenericRepository`2.Delete(System.Collections.Generic.IEnumerable{System.Int32},System.Boolean)">
+            <summary>批量删除数据</summary>
+            <param name="ids">实体对象ID集合</param>
+            <param name="saveImmediately">是否马上执行</param>
+        </member>
+        <member name="M:Server.Framework.Data.GenericRepository`2.Delete(System.Collections.Generic.IEnumerable{`1})">
+            <summary>批量删除</summary>
+            <param name="entities">实体对象集合</param>
+        </member>
+        <member name="M:Server.Framework.Data.GenericRepository`2.DeleteAsync(`1)">
+            <summary>异步删除数据</summary>
+            <param name="entity">实体对象</param>
+        </member>
+        <member name="M:Server.Framework.Data.GenericRepository`2.DeleteAsync(System.Int64)">
+            <summary>异步删除数据</summary>
+            <param name="id">实体对象ID</param>
+        </member>
+        <member name="M:Server.Framework.Data.GenericRepository`2.DeleteAsync(System.Int32)">
+            <summary>异步删除数据</summary>
+            <param name="id">实体对象ID</param>
+        </member>
+        <member name="M:Server.Framework.Data.GenericRepository`2.DeleteAsync(System.Collections.Generic.IEnumerable{`1})">
+            <summary>异步删除集合数据</summary>
+            <param name="entities">实体对象集合</param>
+        </member>
+        <member name="M:Server.Framework.Data.GenericRepository`2.DeleteAsync(System.Collections.Generic.IEnumerable{System.Int64})">
+            <summary>异步删除集合数据</summary>
+            <param name="ids">实体对象ID集合</param>
+        </member>
+        <member name="M:Server.Framework.Data.GenericRepository`2.DeleteAsync(System.Collections.Generic.IEnumerable{System.Int32})">
+            <summary>异步删除集合数据</summary>
+            <param name="ids">实体对象ID集合</param>
+        </member>
+        <member name="M:Server.Framework.Data.GenericRepository`2.Save">
+            <summary>保存所有变化</summary>
+            <returns></returns>
+        </member>
+        <member name="M:Server.Framework.Data.GenericRepository`2.SaveAsync">
+            <summary>异步保存所有变化</summary>
+            <returns></returns>
+        </member>
+        <member name="M:Server.Framework.Data.GenericRepository`2.Dispose">
+            <summary>释放资源</summary>
+        </member>
+        <member name="M:Server.Framework.Data.GenericRepository`2.SqlQuery``1(System.String,System.Object[])">
+            <summary>执行Sql语句，自动绑定到对象的属性中</summary>
+            <param name="sql">Sql语句</param>
+            <param name="parameters">SqlParameter参数</param>
+            <returns>查询结果实体对象集合</returns>
+        </member>
+        <member name="M:Server.Framework.Data.GenericRepository`2.ExecuteScalar``1(System.String,System.Object[])">
+            <summary>执行Sql语句，并返回查询结果的第一行第一行</summary>
+            <param name="sql">sql语句</param>
+            <param name="parameters">SqlParameter参数</param>
+            <returns>实体对象</returns>
+        </member>
+        <member name="M:Server.Framework.Data.GenericRepository`2.SqlQueryAndPaging``1(System.String,System.Int32,System.Int32,System.Int32@,System.Object[])">
+            <summary>执行Sql语句，定自动绑定到对象的属性中.兼分页功能</summary>
+            <param name="sql">执行的SQL</param>
+            <param name="pageIndex">页面索引，从0开始</param>
+            <param name="pageSize">页面大小</param>
+            <param name="rowCount">行数</param>
+            <param name="parameters">执行的SQL参数</param>
+            <returns>实体集合</returns>
+        </member>
+        <member name="M:Server.Framework.Data.GenericRepository`2.SqlQueryNotPaging``1(System.String,System.String,System.Boolean,System.Object[])">
+            <summary>执行Sql语句</summary>
+            <param name="sql">执行的SQL</param>
+            <param name="orderByColumn">排序的列</param>
+            <param name="isOrderByAsc">True:升序,False:倒序</param>
+            <param name="parameters">执行的SQL参数</param>
+            <returns>实体集合</returns>
+        </member>
+        <member name="M:Server.Framework.Data.GenericRepository`2.ExecuteSqlCommand(System.String,System.Object[])">
+            <summary>执行sql语句，返回影响行数</summary>
+            <param name="sql">Sql语句</param>
+            <param name="parameters">SqlParameter参数</param>
+            <returns>Sql语句执行结果</returns>
+        </member>
+        <member name="M:Server.Framework.Data.GenericRepository`2.ExecuteSqlCommandAsync(System.String,System.Object[])">
+            <summary>执行sql语句，返回影响行数</summary>
+            <param name="sql">Sql语句</param>
+            <param name="parameters">SqlParameter参数</param>
+            <returns>Sql语句执行结果</returns>
+        </member>
+        <member name="P:Server.Framework.Data.GenericRepository`2.Context">
+            <summary>实体库对应的上下文</summary>
+        </member>
+        <member name="M:Server.Framework.Data.IOrderByClause`1.ApplySort(System.Linq.IQueryable{`0},System.Boolean)">
+            <summary>排序</summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="query">排序队列</param>
+            <param name="firstSort">是否先排序</param>
+            <returns>返回排序结果</returns>
+        </member>
+        <member name="T:Server.Framework.ORM.QueryArgs">
+            <summary>
+            Author:xxp
+            Remark:查询参数值
+            CreateDate:20170321
+            </summary>
+        </member>
+        <member name="P:Server.Framework.ORM.QueryArgs.PageIndex">
+            <summary>
+            当前页
+            </summary>
+        </member>
+        <member name="P:Server.Framework.ORM.QueryArgs.PageSize">
+            <summary>
+            每页大小
+            </summary>
+        </member>
+        <member name="P:Server.Framework.ORM.QueryArgs.QueryFields">
+            <summary>
+            查询字段
+            </summary>
+        </member>
+        <member name="P:Server.Framework.ORM.QueryArgs.WhereFields">
+            <summary>
+            条件字段
+            </summary>
+        </member>
+        <member name="P:Server.Framework.ORM.QueryArgs.SortFields">
+            <summary>
+            排序字段
+            </summary>
+        </member>
+        <member name="T:Server.Framework.ORM.SortField">
+            <summary>
+            Author:xxp
+            Remark:排序字段
+            CreateDate:20170321
+            </summary>
+        </member>
+        <member name="P:Server.Framework.ORM.SortField.Field">
+            <summary>
+            字段
+            </summary>
+        </member>
+        <member name="P:Server.Framework.ORM.SortField.IsASC">
+            <summary>
+            是否排序
+            </summary>
+        </member>
+        <member name="T:Server.Framework.ORM.WhereField">
+            <summary>
+            Author:xxp
+            Remark:条件字段
+            CreateDate:20170321
+            </summary>
+        </member>
+        <member name="T:Server.Framework.ORM.WhereType">
+            <summary>
+            条件类型
+            </summary>
+        </member>
+        <member name="M:Server.Framework.ORM.WhereTypeProcess.GetWhereString(System.String,System.String,Server.Framework.ORM.WhereType,System.Char)">
+            <summary>
+            获取过滤字符串
+            </summary>
+            <param name="strField">字符</param>
+            <param name="strParamName">参数名称</param>
+            <param name="whereType">条件类型</param>
+            <param name="ParamSymbol">数据库字符</param>
+            <returns></returns>
+        </member>
+        <member name="M:Server.Framework.ORM.WhereTypeProcess.GetEntityInfo(System.Type)">
+            <summary>
+            获取实体信息集合
+            </summary>
+            <param name="entityType">实体类型</param>
+            <returns></returns>
+        </member>
+        <member name="T:Server.Framework.SqlHelper">
+            <summary>
+            数据访问基础类(基于SQLServer)
+            </summary>
+        </member>
+        <member name="M:Server.Framework.SqlHelper.ExecuteCountSql(System.String,System.String,System.Data.SqlClient.SqlParameter[])">
+            <summary>执行SQL语句，返回记录的个数</summary>
+            <param name="connectionString">连接字符串</param>
+            <param name="SQLString">SQL语句</param>
+            <param name="cmdParms">参数</param>
+            <returns>影响的记录数</returns>
+        </member>
+        <member name="M:Server.Framework.SqlHelper.ExecuteScalar(System.String,System.String)">
+            <summary>执行SQL语句，返回记录的个数</summary>
+            <param name="connectionString">连接字符串</param>
+            <param name="SQLString">SQL语句</param>
+            <returns>影响的记录数</returns>
+        </member>
+        <member name="M:Server.Framework.SqlHelper.ExecuteScalar``1(System.String,System.String,System.Data.SqlClient.SqlParameter[])">
+            <summary>执行SQL语句，返回记录的个数</summary>
+            <param name="connectionString">连接字符串</param>
+            <param name="SQLString">SQL语句</param>
+            <param name="cmdParms">参数</param>
+            <returns>影响的记录数</returns>
+        </member>
+        <member name="M:Server.Framework.SqlHelper.ExecuteSqlTran(System.String,System.Collections.Generic.List{System.String})">
+            <summary> 执行多条SQL语句，实现数据库事务。</summary>
+            <param name="connectionString">连接字符串</param>
+            <param name="SQLStringList">多条SQL语句</param>		
+        </member>
+        <member name="M:Server.Framework.SqlHelper.ExecuteNonQuery(System.String,System.String)">
+            <summary>执行一条SQL语句，不限制超时时间。</summary>
+            <param name="connectionString">连接字符串</param>
+            <param name="SQLString">SQL语句</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:Server.Framework.SqlHelper.ExecuteSql(System.String,System.String,System.Data.SqlClient.SqlParameter[])">
+            <summary>执行带一个存储过程参数的的SQL语句。</summary>
+            <param name="connectionString">连接字符串</param>
+            <param name="strSql">SQL语句</param>
+            <param name="cmdParms">参数内容,比如一个字段是格式复杂的文章，有特殊符号，可以通过这个方式添加</param>
+            <returns>影响的记录数</returns>
+        </member>
+        <member name="M:Server.Framework.SqlHelper.ExecuteReader(System.String,System.String,System.Data.SqlClient.SqlParameter[])">
+            <summary>执行查询语句，返回SqlDataReader</summary>
+            <param name="connectionString">连接字符串</param>
+            <param name="SQLString">查询语句</param>
+            <param name="cmdParms">参数</param>
+            <returns>SqlDataReader</returns>
+        </member>
+        <member name="M:Server.Framework.SqlHelper.Query(System.String,System.String,System.Data.SqlClient.SqlParameter[])">
+            <summary>执行查询语句，返回DataSet</summary>
+            <param name="connectionString">连接字符串</param>
+            <param name="SQLString">查询语句</param>
+            <param name="cmdParms">参数</param>
+            <returns>DataSet</returns>
+        </member>
+        <member name="M:Server.Framework.SqlHelper.RunProcedure(System.String,System.String,System.Data.IDataParameter[])">
+            <summary>执行存储过程</summary>
+            <param name="connectionString">连接字符串</param>
+            <param name="storedProcName">存储过程名</param>
+            <param name="parameters">存储过程参数</param>
+            <returns>SqlDataReader</returns>
+        </member>
+        <member name="M:Server.Framework.SqlHelper.RunProcedure(System.String,System.String,System.Data.IDataParameter[],System.String)">
+            <summary> 执行存储过程</summary>
+            <param name="connectionString">连接字符串</param>
+            <param name="storedProcName">存储过程名</param>
+            <param name="parameters">存储过程参数</param>
+            <param name="tableName">DataSet结果中的表名</param>
+            <returns>DataSet</returns>
+        </member>
+        <member name="M:Server.Framework.SqlHelper.RunProcedure(System.String,System.String,System.Data.IDataParameter[],System.Int32@)">
+            <summary>执行存储过程，返回Return值</summary>
+            <param name="connectionString">连接字符串</param>
+            <param name="storedProcName">存储过程名</param>
+            <param name="parameters">存储过程参数</param>
+            <param name="rowsAffected">影响的行数</param>
+            <returns>ReturnValue</returns>
+        </member>
+        <member name="M:Server.Framework.SqlHelper.MakeInParam(System.String,System.Data.SqlDbType,System.Int32,System.Object)">
+            <summary>创建一个输入参数</summary>
+            <param name="ParamName">参数名称</param>
+            <param name="DbType">参数类型</param>
+            <param name="Size">参数大小</param>
+            <param name="Value">参数值</param>
+            <returns>输入参数</returns>
+        </member>
+        <member name="M:Server.Framework.SqlHelper.MakeInParam(System.String,System.Data.SqlDbType,System.Object)">
+            <summary> 创建一个输入参数</summary>
+            <param name="ParamName">参数名称</param>
+            <param name="DbType">参数类型</param>
+            <param name="Value">参数值</param>
+            <returns>输入参数</returns>
+        </member>
+        <member name="M:Server.Framework.SqlHelper.MakeOutParam(System.String,System.Data.SqlDbType,System.Int32)">
+            <summary> 创建一个输出参数</summary>
+            <param name="ParamName">参数名称</param>
+            <param name="DbType">参数类型</param>
+            <param name="Size">参数大小</param>
+            <returns>输出参数</returns>
+        </member>
+        <member name="M:Server.Framework.SqlHelper.MakeParam(System.String,System.Data.SqlDbType,System.Int32,System.Data.ParameterDirection,System.Object)">
+            <summary>创建一个存储过程参数</summary>
+            <param name="ParamName">参数名称</param>
+            <param name="DbType">参数类型</param>
+            <param name="Size">参数大小</param>
+            <param name="Direction">输入 or 输出</param>
+            <param name="Value">参数值</param>
+            <returns>新的参数</returns>
+        </member>
+    </members>
+</doc>

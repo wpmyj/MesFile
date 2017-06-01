@@ -1,0 +1,16 @@
+2017-01-17 16:11:12.5913  11 ERROR LY.MES.Service.Drums.ForCfPExecuteServices.InsterRegistForm
+ForCfPExecuteServices.InsterRegistForm => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - 对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。 
+
+2017-01-17 16:35:06.8023  21 ERROR LY.MES.Service.Drums.ForCfPExecuteServices.InsterRegistForm
+ForCfPExecuteServices.InsterRegistForm => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - 对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。 
+
+2017-01-17 16:37:48.2016  12 ERROR LY.MES.Service.Drums.ForCfPExecuteServices.UpdateRegistForm
+ForCfPExecuteServices.UpdateRegistForm => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - 存储区更新、插入或删除语句影响到了意外的行数(0)。实体在加载后可能被修改或删除。刷新 ObjectStateManager 项。 
+
+2017-01-17 16:38:18.7573  12 ERROR LY.MES.Service.Drums.ForCfPExecuteServices.UpdateRegistForm
+ForCfPExecuteServices.UpdateRegistForm => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - 存储区更新、插入或删除语句影响到了意外的行数(0)。实体在加载后可能被修改或删除。刷新 ObjectStateManager 项。 
+

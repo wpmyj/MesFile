@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{310EC04E-2F38-4564-B9D1-0BF9280448FC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LY.MES.Model</RootNamespace>
+    <AssemblyName>LY.MES.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\第三方\ThirdPart.DLL\Server\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\第三方\ThirdPart.DLL\Server\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ArrangedVouch.cs">
+      <DependentUpon>MESSystem.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ArrangedVouchLog.cs">
+      <DependentUpon>MESSystem.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CollectDataInfo.cs">
+      <DependentUpon>MESSystem.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CraftsLineParamSet.cs">
+      <DependentUpon>MESSystem.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CraftsLineParamSetDetail.cs">
+      <DependentUpon>MESSystem.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CraftsParameterContrast.cs">
+      <DependentUpon>MESSystem.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CraftsProcessExecute.cs">
+      <DependentUpon>MESSystem.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CraftsProcessExecuteDetail.cs">
+      <DependentUpon>MESSystem.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Department.cs">
+      <DependentUpon>MESSystem.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Device.cs">
+      <DependentUpon>MESSystem.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DeviceClass.cs">
+      <DependentUpon>MESSystem.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DeviceExecute.cs">
+      <DependentUpon>MESSystem.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DeviceInterface.cs">
+      <DependentUpon>MESSystem.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DeviceParameter.cs">
+      <DependentUpon>MESSystem.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DeviceWorkingCondition.cs">
+      <DependentUpon>MESSystem.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IPRegistForm.cs">
+      <DependentUpon>MESSystem.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MainPipelineInfo.cs">
+      <DependentUpon>MESSystem.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MESSystem.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MESSystem.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MESSystem.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MESSystem.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MESSystem.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MESSystem.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Person.cs">
+      <DependentUpon>MESSystem.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QC_DrumsFindLeakReport.cs">
+      <DependentUpon>MESSystem.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QC_FindLeakDrumsSet.cs">
+      <DependentUpon>MESSystem.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QC_FindLeakDrumsSetDetail.cs">
+      <DependentUpon>MESSystem.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QC_PullDetectionReg.cs">
+      <DependentUpon>MESSystem.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VModel\sj_line.cs" />
+    <Compile Include="VModel\VCollectDataInfo.cs" />
+    <Compile Include="VModel\VCraftsLineParamSetDetail.cs" />
+    <Compile Include="VModel\VDeviceInfo.cs" />
+    <Compile Include="vw_ArrangedCraftsProcessExecute.cs">
+      <DependentUpon>MESSystem.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_CraftsLineParamSetDetail.cs">
+      <DependentUpon>MESSystem.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_DurmsUpFeeding.cs">
+      <DependentUpon>MESSystem.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vw_QC_FindLeakDrumsSet.cs">
+      <DependentUpon>MESSystem.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_DV_DevExecute.cs">
+      <DependentUpon>MESSystem.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="MESSystem.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>MESSystem.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="GetSummery.ttinclude" />
+    <None Include="MESSystem.edmx.diagram">
+      <DependentUpon>MESSystem.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MESSystem.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MESSystem.edmx</DependentUpon>
+      <LastGenOutput>MESSystem.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="MESSystem.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MESSystem.edmx</DependentUpon>
+      <LastGenOutput>MESSystem.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

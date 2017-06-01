@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E7A617C1-38CB-46B9-B4A7-A801F104198C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LY.MES.Service</RootNamespace>
+    <AssemblyName>LY.MES.Service</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\..\..\第三方\ThirdPart.DLL\Server\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\..\..\第三方\ThirdPart.DLL\Server\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Server.Framework">
+      <HintPath>..\..\..\第三方\ThirdPart.DLL\Server\Server.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Server.Utility">
+      <HintPath>..\..\..\第三方\ThirdPart.DLL\Server\Server.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Linq.Dynamic">
+      <HintPath>..\..\..\第三方\ThirdPart.DLL\Server\System.Linq.Dynamic.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\ForBaseServices.cs" />
+    <Compile Include="Base\ForCLParamSetServices.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Base\ForDepartmentServices.cs" />
+    <Compile Include="Base\ForDevInterfaceServices.cs" />
+    <Compile Include="Base\ForPersonalInfoServices.cs" />
+    <Compile Include="Common\EF6Process.cs" />
+    <Compile Include="Drums\ForArrangedVouchServices.cs" />
+    <Compile Include="Drums\ForCfPExecuteServices.cs" />
+    <Compile Include="DataColl\ForDeviceCollectServices.cs" />
+    <Compile Include="DataColl\ForDevExecuteServices.cs" />
+    <Compile Include="Base\ForDeviceServices.cs" />
+    <Compile Include="Common\DBService.cs" />
+    <Compile Include="FindLeak\ForQCDFindLeakServices.cs" />
+    <Compile Include="FindLeak\ForQCDrumsSetServices.cs" />
+    <Compile Include="Pipeline\ForPipelineServices.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ThirdSystem\ForQZDBServices.cs" />
+    <Compile Include="Winder\ForPullDetectionRegServices.cs" />
+    <Compile Include="ZhuanGu\ForZhuanGuServices.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LY.MES.Manage\LY.MES.Manage.csproj">
+      <Project>{585befc2-d1bb-40be-8fdb-2674807eede0}</Project>
+      <Name>LY.MES.Manage</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LY.MES.Model\LY.MES.Model.csproj">
+      <Project>{310ec04e-2f38-4564-b9d1-0bf9280448fc}</Project>
+      <Name>LY.MES.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

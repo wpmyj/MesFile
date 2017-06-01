@@ -1,0 +1,8 @@
+2017-03-02 14:36:18.8188  44 DEBUG LY.MES.WCF.Base.DeviceService.GetDeviceClassList
+DeviceService.GetDeviceClassList => LoggerExtensions.Debug => LoggerExtensions.FilteredLog
+ - 时长:40 
+
+2017-03-02 16:20:04.0159  12 DEBUG LY.MES.WCF.Base.DeviceService.GetDeviceClassList
+DeviceService.GetDeviceClassList => LoggerExtensions.Debug => LoggerExtensions.FilteredLog
+ - 时长:1296 
+

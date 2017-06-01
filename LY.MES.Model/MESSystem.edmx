@@ -1,0 +1,2109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="LYMesSystemModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ArrangedVouch">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ArrangedVouchCode" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="VouchDate" Type="date" Nullable="false" />
+          <Property Name="MaterialVouchCode" Type="nvarchar" MaxLength="20" />
+          <Property Name="FormulaCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="FormulaName" Type="nvarchar" MaxLength="150" />
+          <Property Name="InputWeight" Type="decimal" Precision="18" Scale="6" />
+          <Property Name="OutputWeight" Type="decimal" Precision="18" Scale="6" />
+          <Property Name="WeighingPounds" Type="decimal" Precision="18" Scale="6" />
+          <Property Name="UserStatus" Type="int" Nullable="false" />
+          <Property Name="InterruptionRemark" Type="nvarchar" MaxLength="255" />
+          <Property Name="InterruptionTime" Type="datetime" />
+          <Property Name="Creator" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="CreateTime" Type="datetime" Nullable="false" />
+          <Property Name="ModifyPerson" Type="nvarchar" MaxLength="20" />
+          <Property Name="ModifyTime" Type="datetime" />
+          <Property Name="LicenseNum" Type="nvarchar" MaxLength="20" />
+          <Property Name="VehicleWeight" Type="float" />
+          <Property Name="WeightMan" Type="float" />
+          <Property Name="TeachProgress" Type="nvarchar" MaxLength="20" />
+          <Property Name="RFIDCode" Type="nvarchar" MaxLength="20" />
+          <Property Name="VouchType" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="ProPlanNum" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="ArrangedVouchLog">
+          <Key>
+            <PropertyRef Name="AutoID" />
+          </Key>
+          <Property Name="AutoID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ArrangedVouchCode" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="OperatDesc" Type="nvarchar" MaxLength="250" />
+          <Property Name="Operator" Type="nvarchar" MaxLength="20" />
+          <Property Name="OperatingTime" Type="datetime" />
+          <Property Name="Frequency" Type="nvarchar" MaxLength="10" />
+          <Property Name="CraftsName" Type="nvarchar" MaxLength="20" />
+          <Property Name="OperatorNum" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="CollectDataInfo">
+          <Key>
+            <PropertyRef Name="AutoId" />
+          </Key>
+          <Property Name="AutoId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DeveCode" Type="int" Nullable="false" />
+          <Property Name="OriginalValue" Type="nvarchar" MaxLength="50" />
+          <Property Name="CollValue" Type="decimal" Precision="18" Scale="6" />
+          <Property Name="CreateDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CraftsLineParamSet">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="WorkShop" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Order" Type="int" Nullable="false" />
+          <Property Name="CraftsCode" Type="nvarchar" MaxLength="20" />
+          <Property Name="CraftsName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="CraftsTaskTime" Type="int" />
+          <Property Name="Treatment" Type="nvarchar" MaxLength="10" />
+          <Property Name="Creator" Type="nvarchar" MaxLength="20" />
+          <Property Name="CreateDateTime" Type="datetime" />
+          <Property Name="Modify" Type="nvarchar" MaxLength="20" />
+          <Property Name="ModifyDate" Type="datetime" />
+          <Property Name="UseStatus" Type="int" Nullable="false" />
+          <Property Name="MachineNum" Type="nvarchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="CraftsLineParamSetDetail">
+          <Key>
+            <PropertyRef Name="AutoID" />
+          </Key>
+          <Property Name="AutoID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID" Type="int" />
+          <Property Name="Priority" Type="int" Nullable="false" />
+          <Property Name="StandardValue" Type="nvarchar" MaxLength="20" />
+          <Property Name="UpperValue" Type="nvarchar" MaxLength="20" />
+          <Property Name="LowerValue" Type="nvarchar" MaxLength="20" />
+          <Property Name="IsValveCheck" Type="bit" Nullable="false" />
+          <Property Name="IsValveControl" Type="bit" Nullable="false" />
+          <Property Name="IsFixedParameters" Type="bit" Nullable="false" />
+          <Property Name="IntervalDuration" Type="int" />
+          <Property Name="TriggerDuration" Type="int" />
+          <Property Name="UserStatus" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="CraftsID" Type="int" />
+          <Property Name="ParameterID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CraftsParameterContrast">
+          <Key>
+            <PropertyRef Name="ParameterID" />
+          </Key>
+          <Property Name="ParameterID" Type="int" Nullable="false" />
+          <Property Name="ParamType" Type="nvarchar" MaxLength="10" />
+          <Property Name="ParamName" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="DevepName" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="CraftsProcessExecute">
+          <Key>
+            <PropertyRef Name="ExecuteID" />
+          </Key>
+          <Property Name="ExecuteID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ArrangedVouchCode" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="ExecuteOrder" Type="int" Nullable="false" />
+          <Property Name="WorkshopCode" Type="nvarchar" MaxLength="20" />
+          <Property Name="WorkshopName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="WorkbrachCode" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="WorkbrachName" Type="nvarchar" MaxLength="50" />
+          <Property Name="CraftsCode" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="CraftsName" Type="nvarchar" MaxLength="50" />
+          <Property Name="ExecuteMode" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="PlanDuration" Type="int" />
+          <Property Name="StartTime" Type="datetime" />
+          <Property Name="EndTime" Type="datetime" />
+          <Property Name="ExecuteStatus" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CraftsProcessExecuteDetail">
+          <Key>
+            <PropertyRef Name="AutoID" />
+          </Key>
+          <Property Name="AutoID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ExecuteID" Type="int" Nullable="false" />
+          <Property Name="Priority" Type="int" Nullable="false" />
+          <Property Name="StandardValue" Type="nvarchar" MaxLength="20" />
+          <Property Name="UpperValue" Type="nvarchar" MaxLength="20" />
+          <Property Name="LowerValue" Type="nvarchar" MaxLength="20" />
+          <Property Name="IsValveCheck" Type="bit" Nullable="false" />
+          <Property Name="IsValveControl" Type="bit" Nullable="false" />
+          <Property Name="IntervalDuration" Type="int" />
+          <Property Name="TriggerDuration" Type="int" />
+          <Property Name="StartDateTime" Type="datetime" />
+          <Property Name="EndDateTime" Type="datetime" />
+          <Property Name="ExecuteStatus" Type="int" Nullable="false" />
+          <Property Name="ParameterID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Department">
+          <Key>
+            <PropertyRef Name="DepCode" />
+          </Key>
+          <Property Name="DepCode" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="DepName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="SupDepCode" Type="nvarchar" MaxLength="20" />
+          <Property Name="Grade" Type="int" Nullable="false" />
+          <Property Name="DepPerson" Type="nvarchar" MaxLength="20" />
+          <Property Name="DepPhone" Type="nvarchar" MaxLength="12" />
+          <Property Name="DepAddress" Type="nvarchar" MaxLength="255" />
+          <Property Name="DepFax" Type="nvarchar" MaxLength="20" />
+          <Property Name="DepPostCode" Type="nvarchar" MaxLength="6" />
+          <Property Name="DepEmail" Type="nvarchar" MaxLength="100" />
+          <Property Name="DepMemo" Type="nvarchar" MaxLength="255" />
+          <Property Name="DepBeginDate" Type="date" Nullable="false" />
+          <Property Name="DepEndDate" Type="date" />
+        </EntityType>
+        <EntityType Name="Device">
+          <Key>
+            <PropertyRef Name="DevCode" />
+          </Key>
+          <Property Name="DevCode" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="DevName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="DevStd" Type="nvarchar" MaxLength="150" />
+          <Property Name="DevCCode" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="DevImageUrl" Type="nvarchar" MaxLength="255" />
+          <Property Name="DevQRUrl" Type="nvarchar" MaxLength="255" />
+          <Property Name="DevCategory" Type="int" Nullable="false" />
+          <Property Name="FactoryName" Type="nvarchar" MaxLength="50" />
+          <Property Name="FactoryContacts" Type="nvarchar" MaxLength="20" />
+          <Property Name="FContactsTel" Type="nvarchar" MaxLength="50" />
+          <Property Name="Origin" Type="nvarchar" MaxLength="100" />
+          <Property Name="IPUrl" Type="nvarchar" MaxLength="20" />
+          <Property Name="Port" Type="int" />
+          <Property Name="SerialPort" Type="nvarchar" MaxLength="50" />
+          <Property Name="DeviceId" Type="int" />
+          <Property Name="CallID" Type="int" />
+          <Property Name="LocalAddress" Type="nvarchar" MaxLength="100" />
+          <Property Name="AdminPerson" Type="nvarchar" MaxLength="20" />
+          <Property Name="AdminPhone" Type="nvarchar" MaxLength="20" />
+          <Property Name="UseStatus" Type="int" Nullable="false" />
+          <Property Name="Remark" Type="nvarchar" MaxLength="250" />
+          <Property Name="CreateDate" Type="datetime" Nullable="false" />
+          <Property Name="CreatePerson" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="LastDate" Type="datetime" />
+          <Property Name="LastPerson" Type="nvarchar" MaxLength="20" />
+          <Property Name="DevAbbName" Type="nvarchar" MaxLength="30" />
+          <Property Name="Weight" Type="decimal" Precision="18" Scale="6" />
+          <Property Name="Volume" Type="decimal" Precision="18" Scale="6" />
+          <Property Name="DevDefine2" Type="nvarchar" MaxLength="20" />
+          <Property Name="DevDefine3" Type="nvarchar" MaxLength="20" />
+          <Property Name="DevDefine4" Type="nvarchar" MaxLength="60" />
+          <Property Name="DevDefine5" Type="nvarchar" MaxLength="60" />
+          <Property Name="DevDefine6" Type="nvarchar" MaxLength="60" />
+          <Property Name="DevDefine7" Type="nvarchar" MaxLength="120" />
+          <Property Name="DevDefine9" Type="nvarchar" MaxLength="120" />
+          <Property Name="DevDefine10" Type="nvarchar" MaxLength="120" />
+          <Property Name="DevDefine11" Type="int" />
+          <Property Name="DevDefine12" Type="int" />
+          <Property Name="DevDefine13" Type="float" />
+          <Property Name="DevDefine14" Type="float" />
+          <Property Name="DevDefine15" Type="datetime" />
+          <Property Name="DevDefine16" Type="datetime" />
+          <Property Name="DevDefine8" Type="nvarchar" MaxLength="120" />
+          <Property Name="DevDefine1" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="DeviceClass">
+          <Key>
+            <PropertyRef Name="DevCCode" />
+          </Key>
+          <Property Name="DevCCode" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="DevCName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="SupCCode" Type="nvarchar" MaxLength="20" />
+          <Property Name="Grade" Type="int" Nullable="false" />
+          <Property Name="Remark" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="DeviceExecute">
+          <Key>
+            <PropertyRef Name="DeveCode" />
+          </Key>
+          <Property Name="DeveCode" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DevCode" Type="nvarchar" MaxLength="20" />
+          <Property Name="DeviCode" Type="nvarchar" MaxLength="20" />
+          <Property Name="CollFrequency" Type="int" />
+          <Property Name="UserStatus" Type="int" Nullable="false" />
+          <Property Name="CreateDate" Type="datetime" Nullable="false" />
+          <Property Name="CreatePerson" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="LastDate" Type="datetime" />
+          <Property Name="LastPerson" Type="nvarchar" MaxLength="20" />
+          <Property Name="DevpCode" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="DeviceInterface">
+          <Key>
+            <PropertyRef Name="DeviCode" />
+          </Key>
+          <Property Name="DeviCode" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="DeviName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="DevCode" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="DevpCode" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="DevpAddress" Type="int" />
+          <Property Name="DataType" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsTwoWay" Type="bit" />
+          <Property Name="SendFormat" Type="nvarchar" MaxLength="150" />
+          <Property Name="Remark" Type="nvarchar" MaxLength="250" />
+          <Property Name="UserStatus" Type="int" Nullable="false" />
+          <Property Name="ConAccAddress" Type="int" />
+        </EntityType>
+        <EntityType Name="DeviceParameter">
+          <Key>
+            <PropertyRef Name="DevpCode" />
+          </Key>
+          <Property Name="DevpCode" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="DevpName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="DevCode" Type="nvarchar" MaxLength="20" />
+          <Property Name="StandardValue" Type="decimal" Precision="18" Scale="6" />
+          <Property Name="MinValue" Type="decimal" Precision="18" Scale="6" />
+          <Property Name="MaxValue" Type="decimal" Precision="18" Scale="6" />
+          <Property Name="Remark" Type="nvarchar" MaxLength="150" />
+          <Property Name="SerialPort" Type="nvarchar" MaxLength="50" />
+          <Property Name="BaudRate" Type="nvarchar" MaxLength="50" />
+          <Property Name="CheckBit" Type="nvarchar" MaxLength="50" />
+          <Property Name="DataBit" Type="nvarchar" MaxLength="50" />
+          <Property Name="StopBit" Type="nvarchar" MaxLength="50" />
+          <Property Name="ConvertType" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="DeviceWorkingCondition">
+          <Key>
+            <PropertyRef Name="DevCode" />
+          </Key>
+          <Property Name="DevCode" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="DevName" Type="nvarchar" MaxLength="50" />
+          <Property Name="VouchType" Type="nvarchar" MaxLength="10" />
+          <Property Name="VouchCode" Type="nvarchar" MaxLength="20" />
+          <Property Name="WorkingStatus" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="IPRegistForm">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IP" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="MACAddress" Type="nvarchar" MaxLength="50" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="CreatorName" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="CreatorTime" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MainPipelineInfo">
+          <Key>
+            <PropertyRef Name="AutoID" />
+          </Key>
+          <Property Name="AutoID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DeveCode" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="DeveName" Type="nvarchar" MaxLength="150" />
+          <Property Name="PipelineStatus" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="PromptDes" Type="nvarchar" MaxLength="150" />
+          <Property Name="Frequency" Type="nvarchar" MaxLength="10" />
+          <Property Name="OperatorReamrk" Type="nvarchar" MaxLength="150" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="Creator" Type="nvarchar" MaxLength="20" />
+          <Property Name="Operator" Type="nvarchar" MaxLength="20" />
+          <Property Name="OperatingTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Person">
+          <Key>
+            <PropertyRef Name="PersonCode" />
+          </Key>
+          <Property Name="PersonCode" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="PersonName" Type="nvarchar" MaxLength="40" />
+          <Property Name="PersonType" Type="nvarchar" MaxLength="10" />
+          <Property Name="DepCode" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="PersonEmai" Type="nvarchar" MaxLength="100" />
+          <Property Name="PersonPhone" Type="nvarchar" MaxLength="20" />
+          <Property Name="Sex" Type="nvarchar" MaxLength="10" />
+          <Property Name="IsOperator" Type="bit" Nullable="false" />
+          <Property Name="OparatorCode" Type="nvarchar" MaxLength="20" />
+          <Property Name="OparatorName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Height" Type="int" />
+          <Property Name="Weight" Type="decimal" Precision="18" Scale="6" />
+        </EntityType>
+        <EntityType Name="QC_DrumsFindLeakReport">
+          <Key>
+            <PropertyRef Name="FLVCode" />
+          </Key>
+          <Property Name="FLVCode" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Year" Type="int" Nullable="false" />
+          <Property Name="Month" Type="int" Nullable="false" />
+          <Property Name="Week" Type="int" Nullable="false" />
+          <Property Name="DevCode" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="DevName" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Frequency" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="FLSituation" Type="nvarchar" MaxLength="250" />
+          <Property Name="FLResult" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Remark" Type="nvarchar" MaxLength="250" />
+          <Property Name="CreatePerson" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="CreateDate" Type="date" Nullable="false" />
+          <Property Name="CreateTime" Type="datetime" Nullable="false" />
+          <Property Name="SourceCode" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="QC_FindLeakDrumsSet">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Year" Type="int" Nullable="false" />
+          <Property Name="Month" Type="int" Nullable="false" />
+          <Property Name="Week" Type="int" Nullable="false" />
+          <Property Name="Frequency" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="CreatePerson" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="CreateDate" Type="date" Nullable="false" />
+          <Property Name="CreateDateTime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="QC_FindLeakDrumsSetDetail">
+          <Key>
+            <PropertyRef Name="AutoID" />
+          </Key>
+          <Property Name="AutoID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="DevCode" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="DevName" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsLeak" Type="int" Nullable="false" />
+          <Property Name="ArrangedVouchCode" Type="nvarchar" MaxLength="20" />
+          <Property Name="ExecuteID" Type="int" />
+        </EntityType>
+        <EntityType Name="QC_PullDetectionReg">
+          <Key>
+            <PropertyRef Name="AutoID" />
+          </Key>
+          <Property Name="AutoID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RegDate" Type="datetime" Nullable="false" />
+          <Property Name="Frequency" Type="nvarchar" MaxLength="20" />
+          <Property Name="ProductionLine" Type="nvarchar" MaxLength="20" />
+          <Property Name="QualityInspector" Type="nvarchar" MaxLength="20" />
+          <Property Name="OrderType" Type="nvarchar" MaxLength="20" />
+          <Property Name="OrderCode" Type="nvarchar" MaxLength="20" />
+          <Property Name="ProductLevel" Type="nvarchar" MaxLength="20" />
+          <Property Name="StandardPull" Type="decimal" Precision="18" Scale="6" />
+          <Property Name="ActualPull" Type="decimal" Precision="18" Scale="6" />
+          <Property Name="ActualWidth" Type="decimal" Precision="18" Scale="6" />
+          <Property Name="ActualThick" Type="decimal" Precision="18" Scale="6" />
+          <Property Name="Width" Type="decimal" Precision="18" Scale="6" />
+          <Property Name="Thick" Type="decimal" Precision="18" Scale="6" />
+          <Property Name="Strength" Type="nvarchar" MaxLength="20" />
+          <Property Name="ProcessType" Type="int" Nullable="false" />
+          <Property Name="TestResults" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="CreateDate" Type="datetime" Nullable="false" />
+          <Property Name="CreatePerson" Type="nvarchar" MaxLength="20" />
+          <Property Name="ModifyDate" Type="datetime" />
+          <Property Name="ModifyPerson" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“LYMesSystem.dbo.New_DV_DEVExecute”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“LYMesSystem.dbo.V_DV_DevExecute”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="V_DV_DevExecute">
+          <Key>
+            <PropertyRef Name="ExecuteID" />
+            <PropertyRef Name="ZGCode" />
+            <PropertyRef Name="ZGName" />
+            <PropertyRef Name="DevName" />
+            <PropertyRef Name="DeviName" />
+            <PropertyRef Name="DevpName" />
+            <PropertyRef Name="InterFaceStatus" />
+            <PropertyRef Name="EquipStatus" />
+            <PropertyRef Name="WorkStatus" />
+            <PropertyRef Name="DevCode" />
+          </Key>
+          <Property Name="ExecuteID" Type="int" Nullable="false" />
+          <Property Name="ZGCode" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="ZGName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="DeviCode" Type="nvarchar" MaxLength="20" />
+          <Property Name="DevpCode" Type="nvarchar" MaxLength="20" />
+          <Property Name="DevName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="DeviName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="DevpName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="CollFrequency" Type="int" />
+          <Property Name="IPUrl" Type="nvarchar" MaxLength="20" />
+          <Property Name="Port" Type="int" />
+          <Property Name="LocalAddress" Type="nvarchar" MaxLength="100" />
+          <Property Name="MaxValue" Type="decimal" Precision="18" Scale="6" />
+          <Property Name="MinValue" Type="decimal" Precision="18" Scale="6" />
+          <Property Name="StandardValue" Type="decimal" Precision="18" Scale="6" />
+          <Property Name="DeviceId" Type="int" />
+          <Property Name="CallID" Type="int" />
+          <Property Name="DevpAddress" Type="int" />
+          <Property Name="SendFormat" Type="nvarchar" MaxLength="150" />
+          <Property Name="SerialPort" Type="nvarchar" MaxLength="50" />
+          <Property Name="BaudRate" Type="nvarchar" MaxLength="50" />
+          <Property Name="CheckBit" Type="nvarchar" MaxLength="50" />
+          <Property Name="DataBit" Type="nvarchar" MaxLength="50" />
+          <Property Name="StopBit" Type="nvarchar" MaxLength="50" />
+          <Property Name="InterFaceStatus" Type="int" Nullable="false" />
+          <Property Name="DataType" Type="nvarchar" MaxLength="50" />
+          <Property Name="DevStd" Type="nvarchar" MaxLength="150" />
+          <Property Name="EquipStatus" Type="int" Nullable="false" />
+          <Property Name="WorkStatus" Type="int" Nullable="false" />
+          <Property Name="ConAccAddress" Type="int" />
+          <Property Name="ConvertType" Type="nvarchar" MaxLength="50" />
+          <Property Name="DevCode" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“LYMesSystem.dbo.vw_ArrangedCraftsProcessExecute”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="vw_ArrangedCraftsProcessExecute">
+          <Key>
+            <PropertyRef Name="vwID" />
+            <PropertyRef Name="ArrangedVouchCode" />
+            <PropertyRef Name="VouchDate" />
+            <PropertyRef Name="UserStatus" />
+            <PropertyRef Name="ArrangedVTime" />
+          </Key>
+          <Property Name="vwID" Type="bigint" Nullable="false" />
+          <Property Name="ArrangedVouchCode" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="VouchDate" Type="date" Nullable="false" />
+          <Property Name="MaterialVouchCode" Type="nvarchar" MaxLength="20" />
+          <Property Name="FormulaCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="FormulaName" Type="nvarchar" MaxLength="150" />
+          <Property Name="UserStatus" Type="int" Nullable="false" />
+          <Property Name="ArrangedVTime" Type="datetime" Nullable="false" />
+          <Property Name="ExecuteID" Type="int" />
+          <Property Name="WorkshopName" Type="nvarchar" MaxLength="50" />
+          <Property Name="WorkshopCode" Type="nvarchar" MaxLength="20" />
+          <Property Name="WorkbrachCode" Type="nvarchar" MaxLength="20" />
+          <Property Name="WorkbrachName" Type="nvarchar" MaxLength="50" />
+          <Property Name="CraftsCode" Type="nvarchar" MaxLength="20" />
+          <Property Name="CraftsName" Type="nvarchar" MaxLength="50" />
+          <Property Name="ExecuteOrder" Type="int" />
+          <Property Name="ExecuteMode" Type="nvarchar" MaxLength="10" />
+          <Property Name="PlanDuration" Type="int" />
+          <Property Name="StartTime" Type="datetime" />
+          <Property Name="EndTime" Type="datetime" />
+          <Property Name="ExecuteStatus" Type="int" />
+          <Property Name="AutoID" Type="int" />
+          <Property Name="Priority" Type="int" />
+          <Property Name="ParameterID" Type="int" />
+          <Property Name="ParameterName" Type="nvarchar" MaxLength="20" />
+          <Property Name="DevepName" Type="nvarchar" MaxLength="20" />
+          <Property Name="ParamType" Type="nvarchar" MaxLength="10" />
+          <Property Name="StandardValue" Type="nvarchar" MaxLength="20" />
+          <Property Name="UpperValue" Type="nvarchar" MaxLength="20" />
+          <Property Name="LowerValue" Type="nvarchar" MaxLength="20" />
+          <Property Name="IntervalDuration" Type="int" />
+          <Property Name="TriggerDuration" Type="int" />
+          <Property Name="IsValveCheck" Type="bit" />
+          <Property Name="IsValveControl" Type="bit" />
+          <Property Name="StartDateTime" Type="datetime" />
+          <Property Name="EndDateTime" Type="datetime" />
+          <Property Name="ParamExecuteStatus" Type="int" />
+        </EntityType>
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“LYMesSystem.dbo.vw_CraftsLineParamSetDetail”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="vw_CraftsLineParamSetDetail">
+          <Key>
+            <PropertyRef Name="ParameterID" />
+            <PropertyRef Name="ParamName" />
+            <PropertyRef Name="AutoID" />
+            <PropertyRef Name="Priority" />
+            <PropertyRef Name="IsValveCheck" />
+            <PropertyRef Name="IsValveControl" />
+            <PropertyRef Name="IsFixedParameters" />
+            <PropertyRef Name="UserStatus" />
+          </Key>
+          <Property Name="ParameterID" Type="int" Nullable="false" />
+          <Property Name="ParamType" Type="nvarchar" MaxLength="10" />
+          <Property Name="ParamName" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="DevepName" Type="nvarchar" MaxLength="20" />
+          <Property Name="AutoID" Type="int" Nullable="false" />
+          <Property Name="ID" Type="int" />
+          <Property Name="Priority" Type="int" Nullable="false" />
+          <Property Name="StandardValue" Type="nvarchar" MaxLength="20" />
+          <Property Name="UpperValue" Type="nvarchar" MaxLength="20" />
+          <Property Name="LowerValue" Type="nvarchar" MaxLength="20" />
+          <Property Name="IsValveCheck" Type="bit" Nullable="false" />
+          <Property Name="IsValveControl" Type="bit" Nullable="false" />
+          <Property Name="IsFixedParameters" Type="bit" Nullable="false" />
+          <Property Name="IntervalDuration" Type="int" />
+          <Property Name="TriggerDuration" Type="int" />
+          <Property Name="UserStatus" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="CraftsID" Type="int" />
+        </EntityType>
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“LYMesSystem.dbo.vw_DurmsUpFeeding”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="vw_DurmsUpFeeding">
+          <Key>
+            <PropertyRef Name="vwId" />
+            <PropertyRef Name="DevCode" />
+            <PropertyRef Name="DevName" />
+            <PropertyRef Name="DeveUseStatus" />
+          </Key>
+          <Property Name="vwId" Type="bigint" Nullable="false" />
+          <Property Name="DevCode" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="DevName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="DeveUseStatus" Type="int" Nullable="false" />
+          <Property Name="ExecuteID" Type="int" />
+          <Property Name="ExecuteOrder" Type="int" />
+          <Property Name="WorkshopCode" Type="nvarchar" MaxLength="20" />
+          <Property Name="WorkshopName" Type="nvarchar" MaxLength="50" />
+          <Property Name="WorkbrachCode" Type="nvarchar" MaxLength="20" />
+          <Property Name="WorkbrachName" Type="nvarchar" MaxLength="50" />
+          <Property Name="CraftsCode" Type="nvarchar" MaxLength="20" />
+          <Property Name="CraftsName" Type="nvarchar" MaxLength="50" />
+          <Property Name="ExecuteMode" Type="nvarchar" MaxLength="10" />
+          <Property Name="PlanDuration" Type="int" />
+          <Property Name="StartTime" Type="datetime" />
+          <Property Name="EndTime" Type="datetime" />
+          <Property Name="ExecuteStatus" Type="int" />
+          <Property Name="ID" Type="int" />
+          <Property Name="ArrangedVouchCode" Type="nvarchar" MaxLength="20" />
+          <Property Name="VouchDate" Type="date" />
+          <Property Name="MaterialVouchCode" Type="nvarchar" MaxLength="20" />
+          <Property Name="FormulaCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="FormulaName" Type="nvarchar" MaxLength="150" />
+          <Property Name="InputWeight" Type="decimal" Precision="18" Scale="6" />
+          <Property Name="OutputWeight" Type="decimal" Precision="18" Scale="6" />
+          <Property Name="WeighingPounds" Type="decimal" Precision="18" Scale="6" />
+          <Property Name="UserStatus" Type="int" />
+          <Property Name="InterruptionRemark" Type="nvarchar" MaxLength="255" />
+          <Property Name="InterruptionTime" Type="datetime" />
+          <Property Name="Creator" Type="nvarchar" MaxLength="20" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="ModifyPerson" Type="nvarchar" MaxLength="20" />
+          <Property Name="ModifyTime" Type="datetime" />
+          <Property Name="LicenseNum" Type="nvarchar" MaxLength="20" />
+          <Property Name="VehicleWeight" Type="float" />
+          <Property Name="WeightMan" Type="float" />
+          <Property Name="TeachProgress" Type="nvarchar" MaxLength="20" />
+          <Property Name="RFIDCode" Type="nvarchar" MaxLength="20" />
+          <Property Name="ProPlanNum" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“LYMesSystem.dbo.vw_QC_FindLeakDrumsSet”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="vw_QC_FindLeakDrumsSet">
+          <Key>
+            <PropertyRef Name="AutoID" />
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="Year" />
+            <PropertyRef Name="Month" />
+            <PropertyRef Name="Week" />
+            <PropertyRef Name="Frequency" />
+            <PropertyRef Name="CreatePerson" />
+            <PropertyRef Name="CreateDate" />
+            <PropertyRef Name="CreateDateTime" />
+            <PropertyRef Name="IsLeak" />
+            <PropertyRef Name="ArrangedVouchCode" />
+            <PropertyRef Name="ExecuteID" />
+          </Key>
+          <Property Name="AutoID" Type="int" Nullable="false" />
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="Year" Type="int" Nullable="false" />
+          <Property Name="Month" Type="int" Nullable="false" />
+          <Property Name="Week" Type="int" Nullable="false" />
+          <Property Name="Frequency" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="CreatePerson" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="CreateDate" Type="date" Nullable="false" />
+          <Property Name="CreateDateTime" Type="datetime" Nullable="false" />
+          <Property Name="DevCode" Type="nvarchar" MaxLength="20" />
+          <Property Name="DevName" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsLeak" Type="int" Nullable="false" />
+          <Property Name="ArrangedVouchCode" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="ExecuteID" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_CRAFTSLI_REFERENCE_CRAFTSLI">
+          <End Role="CraftsLineParamSet" Type="Self.CraftsLineParamSet" Multiplicity="0..1" />
+          <End Role="CraftsLineParamSetDetail" Type="Self.CraftsLineParamSetDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CraftsLineParamSet">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="CraftsLineParamSetDetail">
+              <PropertyRef Name="ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CRAFTSPR_REFERENCE_CRAFTSPR">
+          <End Role="CraftsProcessExecute" Type="Self.CraftsProcessExecute" Multiplicity="1" />
+          <End Role="CraftsProcessExecuteDetail" Type="Self.CraftsProcessExecuteDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CraftsProcessExecute">
+              <PropertyRef Name="ExecuteID" />
+            </Principal>
+            <Dependent Role="CraftsProcessExecuteDetail">
+              <PropertyRef Name="ExecuteID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_QC_FINDL_REFERENCE_QC_FINDL">
+          <End Role="QC_FindLeakDrumsSet" Type="Self.QC_FindLeakDrumsSet" Multiplicity="1" />
+          <End Role="QC_FindLeakDrumsSetDetail" Type="Self.QC_FindLeakDrumsSetDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="QC_FindLeakDrumsSet">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="QC_FindLeakDrumsSetDetail">
+              <PropertyRef Name="ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="LYMesSystemModelStoreContainer">
+          <EntitySet Name="ArrangedVouch" EntityType="Self.ArrangedVouch" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ArrangedVouchLog" EntityType="Self.ArrangedVouchLog" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CollectDataInfo" EntityType="Self.CollectDataInfo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CraftsLineParamSet" EntityType="Self.CraftsLineParamSet" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CraftsLineParamSetDetail" EntityType="Self.CraftsLineParamSetDetail" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CraftsParameterContrast" EntityType="Self.CraftsParameterContrast" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CraftsProcessExecute" EntityType="Self.CraftsProcessExecute" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CraftsProcessExecuteDetail" EntityType="Self.CraftsProcessExecuteDetail" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Department" EntityType="Self.Department" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Device" EntityType="Self.Device" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DeviceClass" EntityType="Self.DeviceClass" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DeviceExecute" EntityType="Self.DeviceExecute" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DeviceInterface" EntityType="Self.DeviceInterface" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DeviceParameter" EntityType="Self.DeviceParameter" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DeviceWorkingCondition" EntityType="Self.DeviceWorkingCondition" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="IPRegistForm" EntityType="Self.IPRegistForm" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MainPipelineInfo" EntityType="Self.MainPipelineInfo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Person" EntityType="Self.Person" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="QC_DrumsFindLeakReport" EntityType="Self.QC_DrumsFindLeakReport" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="QC_FindLeakDrumsSet" EntityType="Self.QC_FindLeakDrumsSet" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="QC_FindLeakDrumsSetDetail" EntityType="Self.QC_FindLeakDrumsSetDetail" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="QC_PullDetectionReg" EntityType="Self.QC_PullDetectionReg" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="V_DV_DevExecute" EntityType="Self.V_DV_DevExecute" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [V_DV_DevExecute].[ExecuteID] AS [ExecuteID], 
+    [V_DV_DevExecute].[ZGCode] AS [ZGCode], 
+    [V_DV_DevExecute].[ZGName] AS [ZGName], 
+    [V_DV_DevExecute].[DeviCode] AS [DeviCode], 
+    [V_DV_DevExecute].[DevpCode] AS [DevpCode], 
+    [V_DV_DevExecute].[DevName] AS [DevName], 
+    [V_DV_DevExecute].[DeviName] AS [DeviName], 
+    [V_DV_DevExecute].[DevpName] AS [DevpName], 
+    [V_DV_DevExecute].[CollFrequency] AS [CollFrequency], 
+    [V_DV_DevExecute].[IPUrl] AS [IPUrl], 
+    [V_DV_DevExecute].[Port] AS [Port], 
+    [V_DV_DevExecute].[LocalAddress] AS [LocalAddress], 
+    [V_DV_DevExecute].[MaxValue] AS [MaxValue], 
+    [V_DV_DevExecute].[MinValue] AS [MinValue], 
+    [V_DV_DevExecute].[StandardValue] AS [StandardValue], 
+    [V_DV_DevExecute].[DeviceId] AS [DeviceId], 
+    [V_DV_DevExecute].[CallID] AS [CallID], 
+    [V_DV_DevExecute].[DevpAddress] AS [DevpAddress], 
+    [V_DV_DevExecute].[SendFormat] AS [SendFormat], 
+    [V_DV_DevExecute].[SerialPort] AS [SerialPort], 
+    [V_DV_DevExecute].[BaudRate] AS [BaudRate], 
+    [V_DV_DevExecute].[CheckBit] AS [CheckBit], 
+    [V_DV_DevExecute].[DataBit] AS [DataBit], 
+    [V_DV_DevExecute].[StopBit] AS [StopBit], 
+    [V_DV_DevExecute].[InterFaceStatus] AS [InterFaceStatus], 
+    [V_DV_DevExecute].[DataType] AS [DataType], 
+    [V_DV_DevExecute].[DevStd] AS [DevStd], 
+    [V_DV_DevExecute].[EquipStatus] AS [EquipStatus], 
+    [V_DV_DevExecute].[WorkStatus] AS [WorkStatus], 
+    [V_DV_DevExecute].[ConAccAddress] AS [ConAccAddress], 
+    [V_DV_DevExecute].[ConvertType] AS [ConvertType], 
+    [V_DV_DevExecute].[DevCode] AS [DevCode]
+    FROM [dbo].[V_DV_DevExecute] AS [V_DV_DevExecute]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vw_ArrangedCraftsProcessExecute" EntityType="Self.vw_ArrangedCraftsProcessExecute" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [vw_ArrangedCraftsProcessExecute].[vwID] AS [vwID], 
+    [vw_ArrangedCraftsProcessExecute].[ArrangedVouchCode] AS [ArrangedVouchCode], 
+    [vw_ArrangedCraftsProcessExecute].[VouchDate] AS [VouchDate], 
+    [vw_ArrangedCraftsProcessExecute].[MaterialVouchCode] AS [MaterialVouchCode], 
+    [vw_ArrangedCraftsProcessExecute].[FormulaCode] AS [FormulaCode], 
+    [vw_ArrangedCraftsProcessExecute].[FormulaName] AS [FormulaName], 
+    [vw_ArrangedCraftsProcessExecute].[UserStatus] AS [UserStatus], 
+    [vw_ArrangedCraftsProcessExecute].[ArrangedVTime] AS [ArrangedVTime], 
+    [vw_ArrangedCraftsProcessExecute].[ExecuteID] AS [ExecuteID], 
+    [vw_ArrangedCraftsProcessExecute].[WorkshopName] AS [WorkshopName], 
+    [vw_ArrangedCraftsProcessExecute].[WorkshopCode] AS [WorkshopCode], 
+    [vw_ArrangedCraftsProcessExecute].[WorkbrachCode] AS [WorkbrachCode], 
+    [vw_ArrangedCraftsProcessExecute].[WorkbrachName] AS [WorkbrachName], 
+    [vw_ArrangedCraftsProcessExecute].[CraftsCode] AS [CraftsCode], 
+    [vw_ArrangedCraftsProcessExecute].[CraftsName] AS [CraftsName], 
+    [vw_ArrangedCraftsProcessExecute].[ExecuteOrder] AS [ExecuteOrder], 
+    [vw_ArrangedCraftsProcessExecute].[ExecuteMode] AS [ExecuteMode], 
+    [vw_ArrangedCraftsProcessExecute].[PlanDuration] AS [PlanDuration], 
+    [vw_ArrangedCraftsProcessExecute].[StartTime] AS [StartTime], 
+    [vw_ArrangedCraftsProcessExecute].[EndTime] AS [EndTime], 
+    [vw_ArrangedCraftsProcessExecute].[ExecuteStatus] AS [ExecuteStatus], 
+    [vw_ArrangedCraftsProcessExecute].[AutoID] AS [AutoID], 
+    [vw_ArrangedCraftsProcessExecute].[Priority] AS [Priority], 
+    [vw_ArrangedCraftsProcessExecute].[ParameterID] AS [ParameterID], 
+    [vw_ArrangedCraftsProcessExecute].[ParameterName] AS [ParameterName], 
+    [vw_ArrangedCraftsProcessExecute].[DevepName] AS [DevepName], 
+    [vw_ArrangedCraftsProcessExecute].[ParamType] AS [ParamType], 
+    [vw_ArrangedCraftsProcessExecute].[StandardValue] AS [StandardValue], 
+    [vw_ArrangedCraftsProcessExecute].[UpperValue] AS [UpperValue], 
+    [vw_ArrangedCraftsProcessExecute].[LowerValue] AS [LowerValue], 
+    [vw_ArrangedCraftsProcessExecute].[IntervalDuration] AS [IntervalDuration], 
+    [vw_ArrangedCraftsProcessExecute].[TriggerDuration] AS [TriggerDuration], 
+    [vw_ArrangedCraftsProcessExecute].[IsValveCheck] AS [IsValveCheck], 
+    [vw_ArrangedCraftsProcessExecute].[IsValveControl] AS [IsValveControl], 
+    [vw_ArrangedCraftsProcessExecute].[StartDateTime] AS [StartDateTime], 
+    [vw_ArrangedCraftsProcessExecute].[EndDateTime] AS [EndDateTime], 
+    [vw_ArrangedCraftsProcessExecute].[ParamExecuteStatus] AS [ParamExecuteStatus]
+    FROM [dbo].[vw_ArrangedCraftsProcessExecute] AS [vw_ArrangedCraftsProcessExecute]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vw_CraftsLineParamSetDetail" EntityType="Self.vw_CraftsLineParamSetDetail" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [vw_CraftsLineParamSetDetail].[ParameterID] AS [ParameterID], 
+    [vw_CraftsLineParamSetDetail].[ParamType] AS [ParamType], 
+    [vw_CraftsLineParamSetDetail].[ParamName] AS [ParamName], 
+    [vw_CraftsLineParamSetDetail].[DevepName] AS [DevepName], 
+    [vw_CraftsLineParamSetDetail].[AutoID] AS [AutoID], 
+    [vw_CraftsLineParamSetDetail].[ID] AS [ID], 
+    [vw_CraftsLineParamSetDetail].[Priority] AS [Priority], 
+    [vw_CraftsLineParamSetDetail].[StandardValue] AS [StandardValue], 
+    [vw_CraftsLineParamSetDetail].[UpperValue] AS [UpperValue], 
+    [vw_CraftsLineParamSetDetail].[LowerValue] AS [LowerValue], 
+    [vw_CraftsLineParamSetDetail].[IsValveCheck] AS [IsValveCheck], 
+    [vw_CraftsLineParamSetDetail].[IsValveControl] AS [IsValveControl], 
+    [vw_CraftsLineParamSetDetail].[IsFixedParameters] AS [IsFixedParameters], 
+    [vw_CraftsLineParamSetDetail].[IntervalDuration] AS [IntervalDuration], 
+    [vw_CraftsLineParamSetDetail].[TriggerDuration] AS [TriggerDuration], 
+    [vw_CraftsLineParamSetDetail].[UserStatus] AS [UserStatus], 
+    [vw_CraftsLineParamSetDetail].[CraftsID] AS [CraftsID]
+    FROM [dbo].[vw_CraftsLineParamSetDetail] AS [vw_CraftsLineParamSetDetail]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vw_DurmsUpFeeding" EntityType="Self.vw_DurmsUpFeeding" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [vw_DurmsUpFeeding].[vwId] AS [vwId], 
+    [vw_DurmsUpFeeding].[DevCode] AS [DevCode], 
+    [vw_DurmsUpFeeding].[DevName] AS [DevName], 
+    [vw_DurmsUpFeeding].[DeveUseStatus] AS [DeveUseStatus], 
+    [vw_DurmsUpFeeding].[ExecuteID] AS [ExecuteID], 
+    [vw_DurmsUpFeeding].[ExecuteOrder] AS [ExecuteOrder], 
+    [vw_DurmsUpFeeding].[WorkshopCode] AS [WorkshopCode], 
+    [vw_DurmsUpFeeding].[WorkshopName] AS [WorkshopName], 
+    [vw_DurmsUpFeeding].[WorkbrachCode] AS [WorkbrachCode], 
+    [vw_DurmsUpFeeding].[WorkbrachName] AS [WorkbrachName], 
+    [vw_DurmsUpFeeding].[CraftsCode] AS [CraftsCode], 
+    [vw_DurmsUpFeeding].[CraftsName] AS [CraftsName], 
+    [vw_DurmsUpFeeding].[ExecuteMode] AS [ExecuteMode], 
+    [vw_DurmsUpFeeding].[PlanDuration] AS [PlanDuration], 
+    [vw_DurmsUpFeeding].[StartTime] AS [StartTime], 
+    [vw_DurmsUpFeeding].[EndTime] AS [EndTime], 
+    [vw_DurmsUpFeeding].[ExecuteStatus] AS [ExecuteStatus], 
+    [vw_DurmsUpFeeding].[ID] AS [ID], 
+    [vw_DurmsUpFeeding].[ArrangedVouchCode] AS [ArrangedVouchCode], 
+    [vw_DurmsUpFeeding].[VouchDate] AS [VouchDate], 
+    [vw_DurmsUpFeeding].[MaterialVouchCode] AS [MaterialVouchCode], 
+    [vw_DurmsUpFeeding].[FormulaCode] AS [FormulaCode], 
+    [vw_DurmsUpFeeding].[FormulaName] AS [FormulaName], 
+    [vw_DurmsUpFeeding].[InputWeight] AS [InputWeight], 
+    [vw_DurmsUpFeeding].[OutputWeight] AS [OutputWeight], 
+    [vw_DurmsUpFeeding].[WeighingPounds] AS [WeighingPounds], 
+    [vw_DurmsUpFeeding].[UserStatus] AS [UserStatus], 
+    [vw_DurmsUpFeeding].[InterruptionRemark] AS [InterruptionRemark], 
+    [vw_DurmsUpFeeding].[InterruptionTime] AS [InterruptionTime], 
+    [vw_DurmsUpFeeding].[Creator] AS [Creator], 
+    [vw_DurmsUpFeeding].[CreateTime] AS [CreateTime], 
+    [vw_DurmsUpFeeding].[ModifyPerson] AS [ModifyPerson], 
+    [vw_DurmsUpFeeding].[ModifyTime] AS [ModifyTime], 
+    [vw_DurmsUpFeeding].[LicenseNum] AS [LicenseNum], 
+    [vw_DurmsUpFeeding].[VehicleWeight] AS [VehicleWeight], 
+    [vw_DurmsUpFeeding].[WeightMan] AS [WeightMan], 
+    [vw_DurmsUpFeeding].[TeachProgress] AS [TeachProgress], 
+    [vw_DurmsUpFeeding].[RFIDCode] AS [RFIDCode], 
+    [vw_DurmsUpFeeding].[ProPlanNum] AS [ProPlanNum]
+    FROM [dbo].[vw_DurmsUpFeeding] AS [vw_DurmsUpFeeding]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vw_QC_FindLeakDrumsSet" EntityType="Self.vw_QC_FindLeakDrumsSet" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [vw_QC_FindLeakDrumsSet].[AutoID] AS [AutoID], 
+    [vw_QC_FindLeakDrumsSet].[ID] AS [ID], 
+    [vw_QC_FindLeakDrumsSet].[Year] AS [Year], 
+    [vw_QC_FindLeakDrumsSet].[Month] AS [Month], 
+    [vw_QC_FindLeakDrumsSet].[Week] AS [Week], 
+    [vw_QC_FindLeakDrumsSet].[Frequency] AS [Frequency], 
+    [vw_QC_FindLeakDrumsSet].[CreatePerson] AS [CreatePerson], 
+    [vw_QC_FindLeakDrumsSet].[CreateDate] AS [CreateDate], 
+    [vw_QC_FindLeakDrumsSet].[CreateDateTime] AS [CreateDateTime], 
+    [vw_QC_FindLeakDrumsSet].[DevCode] AS [DevCode], 
+    [vw_QC_FindLeakDrumsSet].[DevName] AS [DevName], 
+    [vw_QC_FindLeakDrumsSet].[IsLeak] AS [IsLeak], 
+    [vw_QC_FindLeakDrumsSet].[ArrangedVouchCode] AS [ArrangedVouchCode], 
+    [vw_QC_FindLeakDrumsSet].[ExecuteID] AS [ExecuteID]
+    FROM [dbo].[vw_QC_FindLeakDrumsSet] AS [vw_QC_FindLeakDrumsSet]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_CRAFTSLI_REFERENCE_CRAFTSLI" Association="Self.FK_CRAFTSLI_REFERENCE_CRAFTSLI">
+            <End Role="CraftsLineParamSet" EntitySet="CraftsLineParamSet" />
+            <End Role="CraftsLineParamSetDetail" EntitySet="CraftsLineParamSetDetail" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CRAFTSPR_REFERENCE_CRAFTSPR" Association="Self.FK_CRAFTSPR_REFERENCE_CRAFTSPR">
+            <End Role="CraftsProcessExecute" EntitySet="CraftsProcessExecute" />
+            <End Role="CraftsProcessExecuteDetail" EntitySet="CraftsProcessExecuteDetail" />
+          </AssociationSet>
+          <AssociationSet Name="FK_QC_FINDL_REFERENCE_QC_FINDL" Association="Self.FK_QC_FINDL_REFERENCE_QC_FINDL">
+            <End Role="QC_FindLeakDrumsSet" EntitySet="QC_FindLeakDrumsSet" />
+            <End Role="QC_FindLeakDrumsSetDetail" EntitySet="QC_FindLeakDrumsSetDetail" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="LYMesSystemModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ArrangedVouch">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ArrangedVouchCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="VouchDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="MaterialVouchCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="FormulaCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FormulaName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="InputWeight" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="OutputWeight" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="WeighingPounds" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="UserStatus" Type="Int32" Nullable="false" />
+          <Property Name="InterruptionRemark" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="InterruptionTime" Type="DateTime" Precision="3" />
+          <Property Name="Creator" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifyPerson" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ModifyTime" Type="DateTime" Precision="3" />
+          <Property Name="LicenseNum" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="VehicleWeight" Type="Double" />
+          <Property Name="WeightMan" Type="Double" />
+          <Property Name="TeachProgress" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="RFIDCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="VouchType" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="ProPlanNum" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ArrangedVouchLog">
+          <Key>
+            <PropertyRef Name="AutoID" />
+          </Key>
+          <Property Name="AutoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ArrangedVouchCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="OperatDesc" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Operator" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="OperatingTime" Type="DateTime" Precision="3" />
+          <Property Name="Frequency" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="CraftsName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="OperatorNum" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="CollectDataInfo">
+          <Key>
+            <PropertyRef Name="AutoId" />
+          </Key>
+          <Property Name="AutoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DeveCode" Type="Int32" Nullable="false" />
+          <Property Name="OriginalValue" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CollValue" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="CraftsLineParamSet">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="WorkShop" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Order" Type="Int32" Nullable="false" />
+          <Property Name="CraftsCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="CraftsName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CraftsTaskTime" Type="Int32" />
+          <Property Name="Treatment" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Creator" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="CreateDateTime" Type="DateTime" Precision="3" />
+          <Property Name="Modify" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ModifyDate" Type="DateTime" Precision="3" />
+          <Property Name="UseStatus" Type="Int32" Nullable="false" />
+          <Property Name="MachineNum" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="CraftsLineParamSetDetail" Relationship="Self.FK_CRAFTSLI_REFERENCE_CRAFTSLI" FromRole="CraftsLineParamSet" ToRole="CraftsLineParamSetDetail" />
+        </EntityType>
+        <EntityType Name="CraftsLineParamSetDetail">
+          <Key>
+            <PropertyRef Name="AutoID" />
+          </Key>
+          <Property Name="AutoID" Type="Int32" Nullable="false" />
+          <Property Name="ID" Type="Int32" />
+          <Property Name="Priority" Type="Int32" Nullable="false" />
+          <Property Name="StandardValue" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="UpperValue" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="LowerValue" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="IsValveCheck" Type="Boolean" Nullable="false" />
+          <Property Name="IsValveControl" Type="Boolean" Nullable="false" />
+          <Property Name="IsFixedParameters" Type="Boolean" Nullable="false" />
+          <Property Name="IntervalDuration" Type="Int32" />
+          <Property Name="TriggerDuration" Type="Int32" />
+          <Property Name="UserStatus" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="CraftsLineParamSet" Relationship="Self.FK_CRAFTSLI_REFERENCE_CRAFTSLI" FromRole="CraftsLineParamSetDetail" ToRole="CraftsLineParamSet" />
+          <Property Name="CraftsID" Type="Int32" />
+          <Property Name="ParameterID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CraftsParameterContrast">
+          <Key>
+            <PropertyRef Name="ParameterID" />
+          </Key>
+          <Property Name="ParamName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DevepName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ParamType" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="ParameterID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CraftsProcessExecute">
+          <Key>
+            <PropertyRef Name="ExecuteID" />
+          </Key>
+          <Property Name="ExecuteID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ArrangedVouchCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ExecuteOrder" Type="Int32" Nullable="false" />
+          <Property Name="WorkshopCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="WorkshopName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="WorkbrachCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="WorkbrachName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CraftsCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CraftsName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ExecuteMode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PlanDuration" Type="Int32" />
+          <Property Name="StartTime" Type="DateTime" Precision="3" />
+          <Property Name="EndTime" Type="DateTime" Precision="3" />
+          <Property Name="ExecuteStatus" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="CraftsProcessExecuteDetail" Relationship="Self.FK_CRAFTSPR_REFERENCE_CRAFTSPR" FromRole="CraftsProcessExecute" ToRole="CraftsProcessExecuteDetail" />
+        </EntityType>
+        <EntityType Name="CraftsProcessExecuteDetail">
+          <Key>
+            <PropertyRef Name="AutoID" />
+          </Key>
+          <Property Name="AutoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ExecuteID" Type="Int32" Nullable="false" />
+          <Property Name="Priority" Type="Int32" Nullable="false" />
+          <Property Name="StandardValue" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="UpperValue" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="LowerValue" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="IsValveCheck" Type="Boolean" Nullable="false" />
+          <Property Name="IsValveControl" Type="Boolean" Nullable="false" />
+          <Property Name="IntervalDuration" Type="Int32" />
+          <Property Name="TriggerDuration" Type="Int32" />
+          <Property Name="StartDateTime" Type="DateTime" Precision="3" />
+          <Property Name="EndDateTime" Type="DateTime" Precision="3" />
+          <Property Name="ExecuteStatus" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="CraftsProcessExecute" Relationship="Self.FK_CRAFTSPR_REFERENCE_CRAFTSPR" FromRole="CraftsProcessExecuteDetail" ToRole="CraftsProcessExecute" />
+          <Property Name="ParameterID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Device">
+          <Key>
+            <PropertyRef Name="DevCode" />
+          </Key>
+          <Property Name="DevCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DevName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DevStd" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="DevCCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DevImageUrl" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DevQRUrl" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DevCategory" Type="Int32" Nullable="false" />
+          <Property Name="FactoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FactoryContacts" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="FContactsTel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Origin" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="IPUrl" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Port" Type="Int32" />
+          <Property Name="SerialPort" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DeviceId" Type="Int32" />
+          <Property Name="CallID" Type="Int32" />
+          <Property Name="LocalAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="AdminPerson" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="AdminPhone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="UseStatus" Type="Int32" Nullable="false" />
+          <Property Name="Remark" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CreatePerson" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LastDate" Type="DateTime" Precision="3" />
+          <Property Name="LastPerson" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="DevAbbName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Weight" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="Volume" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="DevDefine2" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="DevDefine3" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="DevDefine4" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="DevDefine5" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="DevDefine6" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="DevDefine7" Type="String" MaxLength="120" FixedLength="false" Unicode="true" />
+          <Property Name="DevDefine9" Type="String" MaxLength="120" FixedLength="false" Unicode="true" />
+          <Property Name="DevDefine10" Type="String" MaxLength="120" FixedLength="false" Unicode="true" />
+          <Property Name="DevDefine11" Type="Int32" />
+          <Property Name="DevDefine12" Type="Int32" />
+          <Property Name="DevDefine13" Type="Double" />
+          <Property Name="DevDefine14" Type="Double" />
+          <Property Name="DevDefine15" Type="DateTime" Precision="3" />
+          <Property Name="DevDefine16" Type="DateTime" Precision="3" />
+          <Property Name="DevDefine8" Type="String" MaxLength="120" FixedLength="false" Unicode="true" />
+          <Property Name="DevDefine1" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="DeviceClass">
+          <Key>
+            <PropertyRef Name="DevCCode" />
+          </Key>
+          <Property Name="DevCCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DevCName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SupCCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Grade" Type="Int32" Nullable="false" />
+          <Property Name="Remark" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="DeviceExecute">
+          <Key>
+            <PropertyRef Name="DeveCode" />
+          </Key>
+          <Property Name="DeveCode" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DevCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="DeviCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="CollFrequency" Type="Int32" />
+          <Property Name="UserStatus" Type="Int32" Nullable="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CreatePerson" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LastDate" Type="DateTime" Precision="3" />
+          <Property Name="LastPerson" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="DevpCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="DeviceInterface">
+          <Key>
+            <PropertyRef Name="DeviCode" />
+          </Key>
+          <Property Name="DeviCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DeviName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DevCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DevpCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DevpAddress" Type="Int32" />
+          <Property Name="DataType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IsTwoWay" Type="Boolean" />
+          <Property Name="SendFormat" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Remark" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="UserStatus" Type="Int32" Nullable="false" />
+          <Property Name="ConAccAddress" Type="Int32" />
+        </EntityType>
+        <EntityType Name="DeviceParameter">
+          <Key>
+            <PropertyRef Name="DevpCode" />
+          </Key>
+          <Property Name="DevpCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DevpName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DevCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="StandardValue" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="MinValue" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="MaxValue" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="Remark" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="SerialPort" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BaudRate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CheckBit" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DataBit" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="StopBit" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ConvertType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="MainPipelineInfo">
+          <Key>
+            <PropertyRef Name="AutoID" />
+          </Key>
+          <Property Name="AutoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DeveCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DeveName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="PipelineStatus" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PromptDes" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Frequency" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="OperatorReamrk" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="CreateDate" Type="DateTime" Precision="3" />
+          <Property Name="Creator" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Operator" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="OperatingTime" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="QC_PullDetectionReg">
+          <Key>
+            <PropertyRef Name="AutoID" />
+          </Key>
+          <Property Name="AutoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RegDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Frequency" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ProductionLine" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="QualityInspector" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="OrderType" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="OrderCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ProductLevel" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="StandardPull" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="ActualPull" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="ActualWidth" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="ActualThick" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="Width" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="Thick" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="Strength" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ProcessType" Type="Int32" Nullable="false" />
+          <Property Name="TestResults" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CreatePerson" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ModifyDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifyPerson" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <Association Name="FK_CRAFTSLI_REFERENCE_CRAFTSLI">
+          <End Role="CraftsLineParamSet" Type="Self.CraftsLineParamSet" Multiplicity="0..1" />
+          <End Role="CraftsLineParamSetDetail" Type="Self.CraftsLineParamSetDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CraftsLineParamSet">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="CraftsLineParamSetDetail">
+              <PropertyRef Name="ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CRAFTSPR_REFERENCE_CRAFTSPR">
+          <End Role="CraftsProcessExecute" Type="Self.CraftsProcessExecute" Multiplicity="1" />
+          <End Role="CraftsProcessExecuteDetail" Type="Self.CraftsProcessExecuteDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CraftsProcessExecute">
+              <PropertyRef Name="ExecuteID" />
+            </Principal>
+            <Dependent Role="CraftsProcessExecuteDetail">
+              <PropertyRef Name="ExecuteID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="LYMesSystemEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ArrangedVouch" EntityType="Self.ArrangedVouch" />
+          <EntitySet Name="ArrangedVouchLog" EntityType="Self.ArrangedVouchLog" />
+          <EntitySet Name="CollectDataInfo" EntityType="Self.CollectDataInfo" />
+          <EntitySet Name="CraftsLineParamSet" EntityType="Self.CraftsLineParamSet" />
+          <EntitySet Name="CraftsLineParamSetDetail" EntityType="Self.CraftsLineParamSetDetail" />
+          <EntitySet Name="CraftsParameterContrast" EntityType="Self.CraftsParameterContrast" />
+          <EntitySet Name="CraftsProcessExecute" EntityType="Self.CraftsProcessExecute" />
+          <EntitySet Name="CraftsProcessExecuteDetail" EntityType="Self.CraftsProcessExecuteDetail" />
+          <EntitySet Name="Device" EntityType="Self.Device" />
+          <EntitySet Name="DeviceClass" EntityType="Self.DeviceClass" />
+          <EntitySet Name="DeviceExecute" EntityType="Self.DeviceExecute" />
+          <EntitySet Name="DeviceInterface" EntityType="Self.DeviceInterface" />
+          <EntitySet Name="DeviceParameter" EntityType="Self.DeviceParameter" />
+          <EntitySet Name="MainPipelineInfo" EntityType="Self.MainPipelineInfo" />
+          <EntitySet Name="QC_PullDetectionReg" EntityType="Self.QC_PullDetectionReg" />
+          <AssociationSet Name="FK_CRAFTSLI_REFERENCE_CRAFTSLI" Association="Self.FK_CRAFTSLI_REFERENCE_CRAFTSLI">
+            <End Role="CraftsLineParamSet" EntitySet="CraftsLineParamSet" />
+            <End Role="CraftsLineParamSetDetail" EntitySet="CraftsLineParamSetDetail" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CRAFTSPR_REFERENCE_CRAFTSPR" Association="Self.FK_CRAFTSPR_REFERENCE_CRAFTSPR">
+            <End Role="CraftsProcessExecute" EntitySet="CraftsProcessExecute" />
+            <End Role="CraftsProcessExecuteDetail" EntitySet="CraftsProcessExecuteDetail" />
+          </AssociationSet>
+          <EntitySet Name="vw_DurmsUpFeeding" EntityType="LYMesSystemModel.vw_DurmsUpFeeding" />
+          <EntitySet Name="vw_QC_FindLeakDrumsSet" EntityType="LYMesSystemModel.vw_QC_FindLeakDrumsSet" />
+          <EntitySet Name="QC_FindLeakDrumsSet" EntityType="LYMesSystemModel.QC_FindLeakDrumsSet" />
+          <EntitySet Name="QC_FindLeakDrumsSetDetail" EntityType="LYMesSystemModel.QC_FindLeakDrumsSetDetail" />
+          <AssociationSet Name="FK_QC_FINDL_REFERENCE_QC_FINDL" Association="LYMesSystemModel.FK_QC_FINDL_REFERENCE_QC_FINDL">
+            <End Role="QC_FindLeakDrumsSet" EntitySet="QC_FindLeakDrumsSet" />
+            <End Role="QC_FindLeakDrumsSetDetail" EntitySet="QC_FindLeakDrumsSetDetail" />
+          </AssociationSet>
+          <EntitySet Name="QC_DrumsFindLeakReport" EntityType="LYMesSystemModel.QC_DrumsFindLeakReport" />
+          <EntitySet Name="Department" EntityType="LYMesSystemModel.Department" />
+          <EntitySet Name="DeviceWorkingCondition" EntityType="LYMesSystemModel.DeviceWorkingCondition" />
+          <EntitySet Name="Person" EntityType="LYMesSystemModel.Person" />
+          <EntitySet Name="vw_ArrangedCraftsProcessExecute" EntityType="LYMesSystemModel.vw_ArrangedCraftsProcessExecute" />
+          <EntitySet Name="IPRegistForm" EntityType="LYMesSystemModel.IPRegistForm" />
+          <EntitySet Name="vw_CraftsLineParamSetDetail" EntityType="LYMesSystemModel.vw_CraftsLineParamSetDetail" />
+          <EntitySet Name="V_DV_DevExecute" EntityType="LYMesSystemModel.V_DV_DevExecute" />
+        </EntityContainer>
+        <EntityType Name="vw_DurmsUpFeeding">
+          <Key>
+            <PropertyRef Name="vwId" />
+            <PropertyRef Name="DevCode" />
+            <PropertyRef Name="DevName" />
+            <PropertyRef Name="DeveUseStatus" />
+          </Key>
+          <Property Name="vwId" Type="Int64" Nullable="false" />
+          <Property Name="DevCode" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="DevName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DeveUseStatus" Type="Int32" Nullable="false" />
+          <Property Name="ExecuteID" Type="Int32" />
+          <Property Name="ExecuteOrder" Type="Int32" />
+          <Property Name="WorkshopCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="WorkshopName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="WorkbrachCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="WorkbrachName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CraftsCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="CraftsName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ExecuteMode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="PlanDuration" Type="Int32" />
+          <Property Name="StartTime" Type="DateTime" Precision="3" />
+          <Property Name="EndTime" Type="DateTime" Precision="3" />
+          <Property Name="ExecuteStatus" Type="Int32" />
+          <Property Name="ID" Type="Int32" />
+          <Property Name="ArrangedVouchCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="VouchDate" Type="DateTime" Precision="0" />
+          <Property Name="MaterialVouchCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="FormulaCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FormulaName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="InputWeight" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="OutputWeight" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="WeighingPounds" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="UserStatus" Type="Int32" />
+          <Property Name="InterruptionRemark" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="InterruptionTime" Type="DateTime" Precision="3" />
+          <Property Name="Creator" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="ModifyPerson" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ModifyTime" Type="DateTime" Precision="3" />
+          <Property Name="LicenseNum" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="VehicleWeight" Type="Double" />
+          <Property Name="WeightMan" Type="Double" />
+          <Property Name="TeachProgress" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="RFIDCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ProPlanNum" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="vw_QC_FindLeakDrumsSet">
+          <Key>
+            <PropertyRef Name="AutoID" />
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="Year" />
+            <PropertyRef Name="Month" />
+            <PropertyRef Name="Week" />
+            <PropertyRef Name="Frequency" />
+            <PropertyRef Name="CreatePerson" />
+            <PropertyRef Name="CreateDate" />
+            <PropertyRef Name="CreateDateTime" />
+            <PropertyRef Name="IsLeak" />
+            <PropertyRef Name="ArrangedVouchCode" />
+            <PropertyRef Name="ExecuteID" />
+          </Key>
+          <Property Name="AutoID" Type="Int32" Nullable="false" />
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Year" Type="Int32" Nullable="false" />
+          <Property Name="Month" Type="Int32" Nullable="false" />
+          <Property Name="Week" Type="Int32" Nullable="false" />
+          <Property Name="Frequency" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="CreatePerson" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="CreateDateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="DevCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="DevName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IsLeak" Type="Int32" Nullable="false" />
+          <Property Name="ArrangedVouchCode" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ExecuteID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="QC_FindLeakDrumsSet">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Year" Type="Int32" Nullable="false" />
+          <Property Name="Month" Type="Int32" Nullable="false" />
+          <Property Name="Week" Type="Int32" Nullable="false" />
+          <Property Name="Frequency" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="CreatePerson" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="CreateDateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="QC_FindLeakDrumsSetDetail" Relationship="LYMesSystemModel.FK_QC_FINDL_REFERENCE_QC_FINDL" FromRole="QC_FindLeakDrumsSet" ToRole="QC_FindLeakDrumsSetDetail" />
+        </EntityType>
+        <EntityType Name="QC_FindLeakDrumsSetDetail">
+          <Key>
+            <PropertyRef Name="AutoID" />
+          </Key>
+          <Property Name="AutoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="DevCode" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="DevName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IsLeak" Type="Int32" Nullable="false" />
+          <Property Name="ArrangedVouchCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ExecuteID" Type="Int32" />
+          <NavigationProperty Name="QC_FindLeakDrumsSet" Relationship="LYMesSystemModel.FK_QC_FINDL_REFERENCE_QC_FINDL" FromRole="QC_FindLeakDrumsSetDetail" ToRole="QC_FindLeakDrumsSet" />
+        </EntityType>
+        <Association Name="FK_QC_FINDL_REFERENCE_QC_FINDL">
+          <End Type="LYMesSystemModel.QC_FindLeakDrumsSet" Role="QC_FindLeakDrumsSet" Multiplicity="1" />
+          <End Type="LYMesSystemModel.QC_FindLeakDrumsSetDetail" Role="QC_FindLeakDrumsSetDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="QC_FindLeakDrumsSet">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="QC_FindLeakDrumsSetDetail">
+              <PropertyRef Name="ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="QC_DrumsFindLeakReport">
+          <Key>
+            <PropertyRef Name="FLVCode" />
+          </Key>
+          <Property Name="FLVCode" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Year" Type="Int32" Nullable="false" />
+          <Property Name="Month" Type="Int32" Nullable="false" />
+          <Property Name="Week" Type="Int32" Nullable="false" />
+          <Property Name="DevCode" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="DevName" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Frequency" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="FLSituation" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="FLResult" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Remark" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="CreatePerson" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="SourceCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Department">
+          <Key>
+            <PropertyRef Name="DepCode" />
+          </Key>
+          <Property Name="DepCode" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="DepName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SupDepCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="DepPerson" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="DepPhone" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="DepAddress" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DepFax" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="DepPostCode" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Name="DepEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="DepMemo" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DepBeginDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="DepEndDate" Type="DateTime" Precision="0" />
+          <Property Name="Grade" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DeviceWorkingCondition">
+          <Key>
+            <PropertyRef Name="DevCode" />
+          </Key>
+          <Property Name="DevCode" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="DevName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="VouchType" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="VouchCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="WorkingStatus" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Person">
+          <Key>
+            <PropertyRef Name="PersonCode" />
+          </Key>
+          <Property Name="PersonCode" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="PersonName" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="PersonType" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="DepCode" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="PersonEmai" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PersonPhone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Sex" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="IsOperator" Type="Boolean" Nullable="false" />
+          <Property Name="OparatorCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="OparatorName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Height" Type="Int32" />
+          <Property Name="Weight" Type="Decimal" Precision="18" Scale="6" />
+        </EntityType>
+        <EntityType Name="vw_ArrangedCraftsProcessExecute">
+          <Key>
+            <PropertyRef Name="vwID" />
+            <PropertyRef Name="ArrangedVouchCode" />
+            <PropertyRef Name="VouchDate" />
+            <PropertyRef Name="UserStatus" />
+            <PropertyRef Name="ArrangedVTime" />
+          </Key>
+          <Property Name="vwID" Type="Int64" Nullable="false" />
+          <Property Name="ArrangedVouchCode" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="VouchDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="MaterialVouchCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="FormulaCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FormulaName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="UserStatus" Type="Int32" Nullable="false" />
+          <Property Name="ExecuteID" Type="Int32" />
+          <Property Name="WorkshopName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="WorkshopCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="WorkbrachCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="WorkbrachName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CraftsCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="CraftsName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ExecuteOrder" Type="Int32" />
+          <Property Name="ExecuteMode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="PlanDuration" Type="Int32" />
+          <Property Name="StartTime" Type="DateTime" Precision="3" />
+          <Property Name="EndTime" Type="DateTime" Precision="3" />
+          <Property Name="ExecuteStatus" Type="Int32" />
+          <Property Name="AutoID" Type="Int32" />
+          <Property Name="Priority" Type="Int32" />
+          <Property Name="DevepName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="StandardValue" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="UpperValue" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="LowerValue" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="IntervalDuration" Type="Int32" />
+          <Property Name="TriggerDuration" Type="Int32" />
+          <Property Name="IsValveCheck" Type="Boolean" />
+          <Property Name="IsValveControl" Type="Boolean" />
+          <Property Name="StartDateTime" Type="DateTime" Precision="3" />
+          <Property Name="EndDateTime" Type="DateTime" Precision="3" />
+          <Property Name="ParamExecuteStatus" Type="Int32" />
+          <Property Name="ArrangedVTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ParamType" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="ParameterID" Type="Int32" />
+          <Property Name="ParameterName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="IPRegistForm">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IP" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="MACAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="CreatorName" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="CreatorTime" Type="DateTime" Nullable="false" Precision="0" />
+        </EntityType>
+        <EntityType Name="vw_CraftsLineParamSetDetail">
+          <Key>
+            <PropertyRef Name="ParameterID" />
+            <PropertyRef Name="ParamName" />
+            <PropertyRef Name="Priority" />
+            <PropertyRef Name="IsValveCheck" />
+            <PropertyRef Name="IsValveControl" />
+            <PropertyRef Name="IsFixedParameters" />
+            <PropertyRef Name="UserStatus" />
+            <PropertyRef Name="AutoID" />
+          </Key>
+          <Property Name="ParameterID" Type="Int32" Nullable="false" />
+          <Property Name="ParamType" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="ParamName" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="DevepName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ID" Type="Int32" />
+          <Property Name="Priority" Type="Int32" Nullable="false" />
+          <Property Name="StandardValue" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="UpperValue" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="LowerValue" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="IsValveCheck" Type="Boolean" Nullable="false" />
+          <Property Name="IsValveControl" Type="Boolean" Nullable="false" />
+          <Property Name="IsFixedParameters" Type="Boolean" Nullable="false" />
+          <Property Name="IntervalDuration" Type="Int32" />
+          <Property Name="TriggerDuration" Type="Int32" />
+          <Property Name="UserStatus" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="CraftsID" Type="Int32" />
+          <Property Name="AutoID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="V_DV_DevExecute">
+          <Key>
+            <PropertyRef Name="ExecuteID" />
+            <PropertyRef Name="ZGCode" />
+            <PropertyRef Name="ZGName" />
+            <PropertyRef Name="DevName" />
+            <PropertyRef Name="DeviName" />
+            <PropertyRef Name="DevpName" />
+            <PropertyRef Name="InterFaceStatus" />
+            <PropertyRef Name="EquipStatus" />
+            <PropertyRef Name="WorkStatus" />
+            <PropertyRef Name="DevCode" />
+          </Key>
+          <Property Name="ExecuteID" Type="Int32" Nullable="false" />
+          <Property Name="ZGCode" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ZGName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DeviCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="DevpCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="DevName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DeviName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DevpName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CollFrequency" Type="Int32" />
+          <Property Name="IPUrl" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Port" Type="Int32" />
+          <Property Name="LocalAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="MaxValue" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="MinValue" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="StandardValue" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="DeviceId" Type="Int32" />
+          <Property Name="CallID" Type="Int32" />
+          <Property Name="DevpAddress" Type="Int32" />
+          <Property Name="SendFormat" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="SerialPort" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BaudRate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CheckBit" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DataBit" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="StopBit" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="InterFaceStatus" Type="Int32" Nullable="false" />
+          <Property Name="DataType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DevStd" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="EquipStatus" Type="Int32" Nullable="false" />
+          <Property Name="WorkStatus" Type="Int32" Nullable="false" />
+          <Property Name="ConAccAddress" Type="Int32" />
+          <Property Name="ConvertType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DevCode" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="LYMesSystemModelStoreContainer" CdmEntityContainer="LYMesSystemEntities">
+          <EntitySetMapping Name="ArrangedVouch">
+            <EntityTypeMapping TypeName="LYMesSystemModel.ArrangedVouch">
+              <MappingFragment StoreEntitySet="ArrangedVouch">
+                <ScalarProperty Name="ProPlanNum" ColumnName="ProPlanNum" />
+                <ScalarProperty Name="VouchType" ColumnName="VouchType" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ArrangedVouchCode" ColumnName="ArrangedVouchCode" />
+                <ScalarProperty Name="VouchDate" ColumnName="VouchDate" />
+                <ScalarProperty Name="MaterialVouchCode" ColumnName="MaterialVouchCode" />
+                <ScalarProperty Name="FormulaCode" ColumnName="FormulaCode" />
+                <ScalarProperty Name="FormulaName" ColumnName="FormulaName" />
+                <ScalarProperty Name="InputWeight" ColumnName="InputWeight" />
+                <ScalarProperty Name="OutputWeight" ColumnName="OutputWeight" />
+                <ScalarProperty Name="WeighingPounds" ColumnName="WeighingPounds" />
+                <ScalarProperty Name="UserStatus" ColumnName="UserStatus" />
+                <ScalarProperty Name="InterruptionRemark" ColumnName="InterruptionRemark" />
+                <ScalarProperty Name="InterruptionTime" ColumnName="InterruptionTime" />
+                <ScalarProperty Name="Creator" ColumnName="Creator" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="ModifyPerson" ColumnName="ModifyPerson" />
+                <ScalarProperty Name="ModifyTime" ColumnName="ModifyTime" />
+                <ScalarProperty Name="LicenseNum" ColumnName="LicenseNum" />
+                <ScalarProperty Name="VehicleWeight" ColumnName="VehicleWeight" />
+                <ScalarProperty Name="WeightMan" ColumnName="WeightMan" />
+                <ScalarProperty Name="TeachProgress" ColumnName="TeachProgress" />
+                <ScalarProperty Name="RFIDCode" ColumnName="RFIDCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ArrangedVouchLog">
+            <EntityTypeMapping TypeName="LYMesSystemModel.ArrangedVouchLog">
+              <MappingFragment StoreEntitySet="ArrangedVouchLog">
+                <ScalarProperty Name="AutoID" ColumnName="AutoID" />
+                <ScalarProperty Name="ArrangedVouchCode" ColumnName="ArrangedVouchCode" />
+                <ScalarProperty Name="OperatDesc" ColumnName="OperatDesc" />
+                <ScalarProperty Name="Operator" ColumnName="Operator" />
+                <ScalarProperty Name="OperatingTime" ColumnName="OperatingTime" />
+                <ScalarProperty Name="Frequency" ColumnName="Frequency" />
+                <ScalarProperty Name="CraftsName" ColumnName="CraftsName" />
+                <ScalarProperty Name="OperatorNum" ColumnName="OperatorNum" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CollectDataInfo">
+            <EntityTypeMapping TypeName="LYMesSystemModel.CollectDataInfo">
+              <MappingFragment StoreEntitySet="CollectDataInfo">
+                <ScalarProperty Name="AutoId" ColumnName="AutoId" />
+                <ScalarProperty Name="DeveCode" ColumnName="DeveCode" />
+                <ScalarProperty Name="OriginalValue" ColumnName="OriginalValue" />
+                <ScalarProperty Name="CollValue" ColumnName="CollValue" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CraftsLineParamSet">
+            <EntityTypeMapping TypeName="LYMesSystemModel.CraftsLineParamSet">
+              <MappingFragment StoreEntitySet="CraftsLineParamSet">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="WorkShop" ColumnName="WorkShop" />
+                <ScalarProperty Name="Order" ColumnName="Order" />
+                <ScalarProperty Name="CraftsCode" ColumnName="CraftsCode" />
+                <ScalarProperty Name="CraftsName" ColumnName="CraftsName" />
+                <ScalarProperty Name="CraftsTaskTime" ColumnName="CraftsTaskTime" />
+                <ScalarProperty Name="Treatment" ColumnName="Treatment" />
+                <ScalarProperty Name="Creator" ColumnName="Creator" />
+                <ScalarProperty Name="CreateDateTime" ColumnName="CreateDateTime" />
+                <ScalarProperty Name="Modify" ColumnName="Modify" />
+                <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+                <ScalarProperty Name="UseStatus" ColumnName="UseStatus" />
+                <ScalarProperty Name="MachineNum" ColumnName="MachineNum" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CraftsLineParamSetDetail">
+            <EntityTypeMapping TypeName="LYMesSystemModel.CraftsLineParamSetDetail">
+              <MappingFragment StoreEntitySet="CraftsLineParamSetDetail">
+                <ScalarProperty Name="ParameterID" ColumnName="ParameterID" />
+                <ScalarProperty Name="CraftsID" ColumnName="CraftsID" />
+                <ScalarProperty Name="AutoID" ColumnName="AutoID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Priority" ColumnName="Priority" />
+                <ScalarProperty Name="StandardValue" ColumnName="StandardValue" />
+                <ScalarProperty Name="UpperValue" ColumnName="UpperValue" />
+                <ScalarProperty Name="LowerValue" ColumnName="LowerValue" />
+                <ScalarProperty Name="IsValveCheck" ColumnName="IsValveCheck" />
+                <ScalarProperty Name="IsValveControl" ColumnName="IsValveControl" />
+                <ScalarProperty Name="IsFixedParameters" ColumnName="IsFixedParameters" />
+                <ScalarProperty Name="IntervalDuration" ColumnName="IntervalDuration" />
+                <ScalarProperty Name="TriggerDuration" ColumnName="TriggerDuration" />
+                <ScalarProperty Name="UserStatus" ColumnName="UserStatus" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CraftsParameterContrast">
+            <EntityTypeMapping TypeName="LYMesSystemModel.CraftsParameterContrast">
+              <MappingFragment StoreEntitySet="CraftsParameterContrast">
+                <ScalarProperty Name="ParameterID" ColumnName="ParameterID" />
+                <ScalarProperty Name="ParamType" ColumnName="ParamType" />
+                <ScalarProperty Name="ParamName" ColumnName="ParamName" />
+                <ScalarProperty Name="DevepName" ColumnName="DevepName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CraftsProcessExecute">
+            <EntityTypeMapping TypeName="LYMesSystemModel.CraftsProcessExecute">
+              <MappingFragment StoreEntitySet="CraftsProcessExecute">
+                <ScalarProperty Name="ExecuteID" ColumnName="ExecuteID" />
+                <ScalarProperty Name="ArrangedVouchCode" ColumnName="ArrangedVouchCode" />
+                <ScalarProperty Name="ExecuteOrder" ColumnName="ExecuteOrder" />
+                <ScalarProperty Name="WorkshopCode" ColumnName="WorkshopCode" />
+                <ScalarProperty Name="WorkshopName" ColumnName="WorkshopName" />
+                <ScalarProperty Name="WorkbrachCode" ColumnName="WorkbrachCode" />
+                <ScalarProperty Name="WorkbrachName" ColumnName="WorkbrachName" />
+                <ScalarProperty Name="CraftsCode" ColumnName="CraftsCode" />
+                <ScalarProperty Name="CraftsName" ColumnName="CraftsName" />
+                <ScalarProperty Name="ExecuteMode" ColumnName="ExecuteMode" />
+                <ScalarProperty Name="PlanDuration" ColumnName="PlanDuration" />
+                <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+                <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+                <ScalarProperty Name="ExecuteStatus" ColumnName="ExecuteStatus" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CraftsProcessExecuteDetail">
+            <EntityTypeMapping TypeName="LYMesSystemModel.CraftsProcessExecuteDetail">
+              <MappingFragment StoreEntitySet="CraftsProcessExecuteDetail">
+                <ScalarProperty Name="ParameterID" ColumnName="ParameterID" />
+                <ScalarProperty Name="AutoID" ColumnName="AutoID" />
+                <ScalarProperty Name="ExecuteID" ColumnName="ExecuteID" />
+                <ScalarProperty Name="Priority" ColumnName="Priority" />
+                <ScalarProperty Name="StandardValue" ColumnName="StandardValue" />
+                <ScalarProperty Name="UpperValue" ColumnName="UpperValue" />
+                <ScalarProperty Name="LowerValue" ColumnName="LowerValue" />
+                <ScalarProperty Name="IsValveCheck" ColumnName="IsValveCheck" />
+                <ScalarProperty Name="IsValveControl" ColumnName="IsValveControl" />
+                <ScalarProperty Name="IntervalDuration" ColumnName="IntervalDuration" />
+                <ScalarProperty Name="TriggerDuration" ColumnName="TriggerDuration" />
+                <ScalarProperty Name="StartDateTime" ColumnName="StartDateTime" />
+                <ScalarProperty Name="EndDateTime" ColumnName="EndDateTime" />
+                <ScalarProperty Name="ExecuteStatus" ColumnName="ExecuteStatus" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Device">
+            <EntityTypeMapping TypeName="LYMesSystemModel.Device">
+              <MappingFragment StoreEntitySet="Device">
+                <ScalarProperty Name="DevDefine1" ColumnName="DevDefine1" />
+                <ScalarProperty Name="DevDefine8" ColumnName="DevDefine8" />
+                <ScalarProperty Name="DevDefine16" ColumnName="DevDefine16" />
+                <ScalarProperty Name="DevDefine15" ColumnName="DevDefine15" />
+                <ScalarProperty Name="DevDefine14" ColumnName="DevDefine14" />
+                <ScalarProperty Name="DevDefine13" ColumnName="DevDefine13" />
+                <ScalarProperty Name="DevDefine12" ColumnName="DevDefine12" />
+                <ScalarProperty Name="DevDefine11" ColumnName="DevDefine11" />
+                <ScalarProperty Name="DevDefine10" ColumnName="DevDefine10" />
+                <ScalarProperty Name="DevDefine9" ColumnName="DevDefine9" />
+                <ScalarProperty Name="DevDefine7" ColumnName="DevDefine7" />
+                <ScalarProperty Name="DevDefine6" ColumnName="DevDefine6" />
+                <ScalarProperty Name="DevDefine5" ColumnName="DevDefine5" />
+                <ScalarProperty Name="DevDefine4" ColumnName="DevDefine4" />
+                <ScalarProperty Name="DevDefine3" ColumnName="DevDefine3" />
+                <ScalarProperty Name="DevDefine2" ColumnName="DevDefine2" />
+                <ScalarProperty Name="Volume" ColumnName="Volume" />
+                <ScalarProperty Name="Weight" ColumnName="Weight" />
+                <ScalarProperty Name="DevAbbName" ColumnName="DevAbbName" />
+                <ScalarProperty Name="DevCode" ColumnName="DevCode" />
+                <ScalarProperty Name="DevName" ColumnName="DevName" />
+                <ScalarProperty Name="DevStd" ColumnName="DevStd" />
+                <ScalarProperty Name="DevCCode" ColumnName="DevCCode" />
+                <ScalarProperty Name="DevImageUrl" ColumnName="DevImageUrl" />
+                <ScalarProperty Name="DevQRUrl" ColumnName="DevQRUrl" />
+                <ScalarProperty Name="DevCategory" ColumnName="DevCategory" />
+                <ScalarProperty Name="FactoryName" ColumnName="FactoryName" />
+                <ScalarProperty Name="FactoryContacts" ColumnName="FactoryContacts" />
+                <ScalarProperty Name="FContactsTel" ColumnName="FContactsTel" />
+                <ScalarProperty Name="Origin" ColumnName="Origin" />
+                <ScalarProperty Name="IPUrl" ColumnName="IPUrl" />
+                <ScalarProperty Name="Port" ColumnName="Port" />
+                <ScalarProperty Name="SerialPort" ColumnName="SerialPort" />
+                <ScalarProperty Name="DeviceId" ColumnName="DeviceId" />
+                <ScalarProperty Name="CallID" ColumnName="CallID" />
+                <ScalarProperty Name="LocalAddress" ColumnName="LocalAddress" />
+                <ScalarProperty Name="AdminPerson" ColumnName="AdminPerson" />
+                <ScalarProperty Name="AdminPhone" ColumnName="AdminPhone" />
+                <ScalarProperty Name="UseStatus" ColumnName="UseStatus" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreatePerson" ColumnName="CreatePerson" />
+                <ScalarProperty Name="LastDate" ColumnName="LastDate" />
+                <ScalarProperty Name="LastPerson" ColumnName="LastPerson" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DeviceClass">
+            <EntityTypeMapping TypeName="LYMesSystemModel.DeviceClass">
+              <MappingFragment StoreEntitySet="DeviceClass">
+                <ScalarProperty Name="DevCCode" ColumnName="DevCCode" />
+                <ScalarProperty Name="DevCName" ColumnName="DevCName" />
+                <ScalarProperty Name="SupCCode" ColumnName="SupCCode" />
+                <ScalarProperty Name="Grade" ColumnName="Grade" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DeviceExecute">
+            <EntityTypeMapping TypeName="LYMesSystemModel.DeviceExecute">
+              <MappingFragment StoreEntitySet="DeviceExecute">
+                <ScalarProperty Name="DeveCode" ColumnName="DeveCode" />
+                <ScalarProperty Name="DevCode" ColumnName="DevCode" />
+                <ScalarProperty Name="DeviCode" ColumnName="DeviCode" />
+                <ScalarProperty Name="CollFrequency" ColumnName="CollFrequency" />
+                <ScalarProperty Name="UserStatus" ColumnName="UserStatus" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreatePerson" ColumnName="CreatePerson" />
+                <ScalarProperty Name="LastDate" ColumnName="LastDate" />
+                <ScalarProperty Name="LastPerson" ColumnName="LastPerson" />
+                <ScalarProperty Name="DevpCode" ColumnName="DevpCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DeviceInterface">
+            <EntityTypeMapping TypeName="LYMesSystemModel.DeviceInterface">
+              <MappingFragment StoreEntitySet="DeviceInterface">
+                <ScalarProperty Name="DeviCode" ColumnName="DeviCode" />
+                <ScalarProperty Name="DeviName" ColumnName="DeviName" />
+                <ScalarProperty Name="DevCode" ColumnName="DevCode" />
+                <ScalarProperty Name="DevpCode" ColumnName="DevpCode" />
+                <ScalarProperty Name="DevpAddress" ColumnName="DevpAddress" />
+                <ScalarProperty Name="DataType" ColumnName="DataType" />
+                <ScalarProperty Name="IsTwoWay" ColumnName="IsTwoWay" />
+                <ScalarProperty Name="SendFormat" ColumnName="SendFormat" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="UserStatus" ColumnName="UserStatus" />
+                <ScalarProperty Name="ConAccAddress" ColumnName="ConAccAddress" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DeviceParameter">
+            <EntityTypeMapping TypeName="LYMesSystemModel.DeviceParameter">
+              <MappingFragment StoreEntitySet="DeviceParameter">
+                <ScalarProperty Name="ConvertType" ColumnName="ConvertType" />
+                <ScalarProperty Name="DevpCode" ColumnName="DevpCode" />
+                <ScalarProperty Name="DevpName" ColumnName="DevpName" />
+                <ScalarProperty Name="DevCode" ColumnName="DevCode" />
+                <ScalarProperty Name="StandardValue" ColumnName="StandardValue" />
+                <ScalarProperty Name="MinValue" ColumnName="MinValue" />
+                <ScalarProperty Name="MaxValue" ColumnName="MaxValue" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="SerialPort" ColumnName="SerialPort" />
+                <ScalarProperty Name="BaudRate" ColumnName="BaudRate" />
+                <ScalarProperty Name="CheckBit" ColumnName="CheckBit" />
+                <ScalarProperty Name="DataBit" ColumnName="DataBit" />
+                <ScalarProperty Name="StopBit" ColumnName="StopBit" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MainPipelineInfo">
+            <EntityTypeMapping TypeName="LYMesSystemModel.MainPipelineInfo">
+              <MappingFragment StoreEntitySet="MainPipelineInfo">
+                <ScalarProperty Name="AutoID" ColumnName="AutoID" />
+                <ScalarProperty Name="DeveCode" ColumnName="DeveCode" />
+                <ScalarProperty Name="DeveName" ColumnName="DeveName" />
+                <ScalarProperty Name="PipelineStatus" ColumnName="PipelineStatus" />
+                <ScalarProperty Name="PromptDes" ColumnName="PromptDes" />
+                <ScalarProperty Name="Frequency" ColumnName="Frequency" />
+                <ScalarProperty Name="OperatorReamrk" ColumnName="OperatorReamrk" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="Creator" ColumnName="Creator" />
+                <ScalarProperty Name="Operator" ColumnName="Operator" />
+                <ScalarProperty Name="OperatingTime" ColumnName="OperatingTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="QC_PullDetectionReg">
+            <EntityTypeMapping TypeName="LYMesSystemModel.QC_PullDetectionReg">
+              <MappingFragment StoreEntitySet="QC_PullDetectionReg">
+                <ScalarProperty Name="AutoID" ColumnName="AutoID" />
+                <ScalarProperty Name="RegDate" ColumnName="RegDate" />
+                <ScalarProperty Name="Frequency" ColumnName="Frequency" />
+                <ScalarProperty Name="ProductionLine" ColumnName="ProductionLine" />
+                <ScalarProperty Name="QualityInspector" ColumnName="QualityInspector" />
+                <ScalarProperty Name="OrderType" ColumnName="OrderType" />
+                <ScalarProperty Name="OrderCode" ColumnName="OrderCode" />
+                <ScalarProperty Name="ProductLevel" ColumnName="ProductLevel" />
+                <ScalarProperty Name="StandardPull" ColumnName="StandardPull" />
+                <ScalarProperty Name="ActualPull" ColumnName="ActualPull" />
+                <ScalarProperty Name="ActualWidth" ColumnName="ActualWidth" />
+                <ScalarProperty Name="ActualThick" ColumnName="ActualThick" />
+                <ScalarProperty Name="Width" ColumnName="Width" />
+                <ScalarProperty Name="Thick" ColumnName="Thick" />
+                <ScalarProperty Name="Strength" ColumnName="Strength" />
+                <ScalarProperty Name="ProcessType" ColumnName="ProcessType" />
+                <ScalarProperty Name="TestResults" ColumnName="TestResults" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreatePerson" ColumnName="CreatePerson" />
+                <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+                <ScalarProperty Name="ModifyPerson" ColumnName="ModifyPerson" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vw_DurmsUpFeeding">
+            <EntityTypeMapping TypeName="LYMesSystemModel.vw_DurmsUpFeeding">
+              <MappingFragment StoreEntitySet="vw_DurmsUpFeeding">
+                <ScalarProperty Name="ProPlanNum" ColumnName="ProPlanNum" />
+                <ScalarProperty Name="RFIDCode" ColumnName="RFIDCode" />
+                <ScalarProperty Name="TeachProgress" ColumnName="TeachProgress" />
+                <ScalarProperty Name="WeightMan" ColumnName="WeightMan" />
+                <ScalarProperty Name="VehicleWeight" ColumnName="VehicleWeight" />
+                <ScalarProperty Name="LicenseNum" ColumnName="LicenseNum" />
+                <ScalarProperty Name="ModifyTime" ColumnName="ModifyTime" />
+                <ScalarProperty Name="ModifyPerson" ColumnName="ModifyPerson" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="Creator" ColumnName="Creator" />
+                <ScalarProperty Name="InterruptionTime" ColumnName="InterruptionTime" />
+                <ScalarProperty Name="InterruptionRemark" ColumnName="InterruptionRemark" />
+                <ScalarProperty Name="UserStatus" ColumnName="UserStatus" />
+                <ScalarProperty Name="WeighingPounds" ColumnName="WeighingPounds" />
+                <ScalarProperty Name="OutputWeight" ColumnName="OutputWeight" />
+                <ScalarProperty Name="InputWeight" ColumnName="InputWeight" />
+                <ScalarProperty Name="FormulaName" ColumnName="FormulaName" />
+                <ScalarProperty Name="FormulaCode" ColumnName="FormulaCode" />
+                <ScalarProperty Name="MaterialVouchCode" ColumnName="MaterialVouchCode" />
+                <ScalarProperty Name="VouchDate" ColumnName="VouchDate" />
+                <ScalarProperty Name="ArrangedVouchCode" ColumnName="ArrangedVouchCode" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ExecuteStatus" ColumnName="ExecuteStatus" />
+                <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+                <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+                <ScalarProperty Name="PlanDuration" ColumnName="PlanDuration" />
+                <ScalarProperty Name="ExecuteMode" ColumnName="ExecuteMode" />
+                <ScalarProperty Name="CraftsName" ColumnName="CraftsName" />
+                <ScalarProperty Name="CraftsCode" ColumnName="CraftsCode" />
+                <ScalarProperty Name="WorkbrachName" ColumnName="WorkbrachName" />
+                <ScalarProperty Name="WorkbrachCode" ColumnName="WorkbrachCode" />
+                <ScalarProperty Name="WorkshopName" ColumnName="WorkshopName" />
+                <ScalarProperty Name="WorkshopCode" ColumnName="WorkshopCode" />
+                <ScalarProperty Name="ExecuteOrder" ColumnName="ExecuteOrder" />
+                <ScalarProperty Name="ExecuteID" ColumnName="ExecuteID" />
+                <ScalarProperty Name="DeveUseStatus" ColumnName="DeveUseStatus" />
+                <ScalarProperty Name="DevName" ColumnName="DevName" />
+                <ScalarProperty Name="DevCode" ColumnName="DevCode" />
+                <ScalarProperty Name="vwId" ColumnName="vwId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vw_QC_FindLeakDrumsSet">
+            <EntityTypeMapping TypeName="LYMesSystemModel.vw_QC_FindLeakDrumsSet">
+              <MappingFragment StoreEntitySet="vw_QC_FindLeakDrumsSet">
+                <ScalarProperty Name="ExecuteID" ColumnName="ExecuteID" />
+                <ScalarProperty Name="ArrangedVouchCode" ColumnName="ArrangedVouchCode" />
+                <ScalarProperty Name="IsLeak" ColumnName="IsLeak" />
+                <ScalarProperty Name="DevName" ColumnName="DevName" />
+                <ScalarProperty Name="DevCode" ColumnName="DevCode" />
+                <ScalarProperty Name="CreateDateTime" ColumnName="CreateDateTime" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreatePerson" ColumnName="CreatePerson" />
+                <ScalarProperty Name="Frequency" ColumnName="Frequency" />
+                <ScalarProperty Name="Week" ColumnName="Week" />
+                <ScalarProperty Name="Month" ColumnName="Month" />
+                <ScalarProperty Name="Year" ColumnName="Year" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="AutoID" ColumnName="AutoID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="QC_FindLeakDrumsSet">
+            <EntityTypeMapping TypeName="LYMesSystemModel.QC_FindLeakDrumsSet">
+              <MappingFragment StoreEntitySet="QC_FindLeakDrumsSet">
+                <ScalarProperty Name="CreateDateTime" ColumnName="CreateDateTime" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreatePerson" ColumnName="CreatePerson" />
+                <ScalarProperty Name="Frequency" ColumnName="Frequency" />
+                <ScalarProperty Name="Week" ColumnName="Week" />
+                <ScalarProperty Name="Month" ColumnName="Month" />
+                <ScalarProperty Name="Year" ColumnName="Year" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="QC_FindLeakDrumsSetDetail">
+            <EntityTypeMapping TypeName="LYMesSystemModel.QC_FindLeakDrumsSetDetail">
+              <MappingFragment StoreEntitySet="QC_FindLeakDrumsSetDetail">
+                <ScalarProperty Name="ExecuteID" ColumnName="ExecuteID" />
+                <ScalarProperty Name="ArrangedVouchCode" ColumnName="ArrangedVouchCode" />
+                <ScalarProperty Name="IsLeak" ColumnName="IsLeak" />
+                <ScalarProperty Name="DevName" ColumnName="DevName" />
+                <ScalarProperty Name="DevCode" ColumnName="DevCode" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="AutoID" ColumnName="AutoID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="QC_DrumsFindLeakReport">
+            <EntityTypeMapping TypeName="LYMesSystemModel.QC_DrumsFindLeakReport">
+              <MappingFragment StoreEntitySet="QC_DrumsFindLeakReport">
+                <ScalarProperty Name="SourceCode" ColumnName="SourceCode" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreatePerson" ColumnName="CreatePerson" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="FLResult" ColumnName="FLResult" />
+                <ScalarProperty Name="FLSituation" ColumnName="FLSituation" />
+                <ScalarProperty Name="Frequency" ColumnName="Frequency" />
+                <ScalarProperty Name="DevName" ColumnName="DevName" />
+                <ScalarProperty Name="DevCode" ColumnName="DevCode" />
+                <ScalarProperty Name="Week" ColumnName="Week" />
+                <ScalarProperty Name="Month" ColumnName="Month" />
+                <ScalarProperty Name="Year" ColumnName="Year" />
+                <ScalarProperty Name="FLVCode" ColumnName="FLVCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Department">
+            <EntityTypeMapping TypeName="LYMesSystemModel.Department">
+              <MappingFragment StoreEntitySet="Department">
+                <ScalarProperty Name="Grade" ColumnName="Grade" />
+                <ScalarProperty Name="DepEndDate" ColumnName="DepEndDate" />
+                <ScalarProperty Name="DepBeginDate" ColumnName="DepBeginDate" />
+                <ScalarProperty Name="DepMemo" ColumnName="DepMemo" />
+                <ScalarProperty Name="DepEmail" ColumnName="DepEmail" />
+                <ScalarProperty Name="DepPostCode" ColumnName="DepPostCode" />
+                <ScalarProperty Name="DepFax" ColumnName="DepFax" />
+                <ScalarProperty Name="DepAddress" ColumnName="DepAddress" />
+                <ScalarProperty Name="DepPhone" ColumnName="DepPhone" />
+                <ScalarProperty Name="DepPerson" ColumnName="DepPerson" />
+                <ScalarProperty Name="SupDepCode" ColumnName="SupDepCode" />
+                <ScalarProperty Name="DepName" ColumnName="DepName" />
+                <ScalarProperty Name="DepCode" ColumnName="DepCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DeviceWorkingCondition">
+            <EntityTypeMapping TypeName="LYMesSystemModel.DeviceWorkingCondition">
+              <MappingFragment StoreEntitySet="DeviceWorkingCondition">
+                <ScalarProperty Name="WorkingStatus" ColumnName="WorkingStatus" />
+                <ScalarProperty Name="VouchCode" ColumnName="VouchCode" />
+                <ScalarProperty Name="VouchType" ColumnName="VouchType" />
+                <ScalarProperty Name="DevName" ColumnName="DevName" />
+                <ScalarProperty Name="DevCode" ColumnName="DevCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Person">
+            <EntityTypeMapping TypeName="LYMesSystemModel.Person">
+              <MappingFragment StoreEntitySet="Person">
+                <ScalarProperty Name="Weight" ColumnName="Weight" />
+                <ScalarProperty Name="Height" ColumnName="Height" />
+                <ScalarProperty Name="OparatorName" ColumnName="OparatorName" />
+                <ScalarProperty Name="OparatorCode" ColumnName="OparatorCode" />
+                <ScalarProperty Name="IsOperator" ColumnName="IsOperator" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="PersonPhone" ColumnName="PersonPhone" />
+                <ScalarProperty Name="PersonEmai" ColumnName="PersonEmai" />
+                <ScalarProperty Name="DepCode" ColumnName="DepCode" />
+                <ScalarProperty Name="PersonType" ColumnName="PersonType" />
+                <ScalarProperty Name="PersonName" ColumnName="PersonName" />
+                <ScalarProperty Name="PersonCode" ColumnName="PersonCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vw_ArrangedCraftsProcessExecute">
+            <EntityTypeMapping TypeName="LYMesSystemModel.vw_ArrangedCraftsProcessExecute">
+              <MappingFragment StoreEntitySet="vw_ArrangedCraftsProcessExecute">
+                <ScalarProperty Name="ParameterName" ColumnName="ParameterName" />
+                <ScalarProperty Name="ParameterID" ColumnName="ParameterID" />
+                <ScalarProperty Name="ParamType" ColumnName="ParamType" />
+                <ScalarProperty Name="ArrangedVTime" ColumnName="ArrangedVTime" />
+                <ScalarProperty Name="ParamExecuteStatus" ColumnName="ParamExecuteStatus" />
+                <ScalarProperty Name="EndDateTime" ColumnName="EndDateTime" />
+                <ScalarProperty Name="StartDateTime" ColumnName="StartDateTime" />
+                <ScalarProperty Name="IsValveControl" ColumnName="IsValveControl" />
+                <ScalarProperty Name="IsValveCheck" ColumnName="IsValveCheck" />
+                <ScalarProperty Name="TriggerDuration" ColumnName="TriggerDuration" />
+                <ScalarProperty Name="IntervalDuration" ColumnName="IntervalDuration" />
+                <ScalarProperty Name="LowerValue" ColumnName="LowerValue" />
+                <ScalarProperty Name="UpperValue" ColumnName="UpperValue" />
+                <ScalarProperty Name="StandardValue" ColumnName="StandardValue" />
+                <ScalarProperty Name="DevepName" ColumnName="DevepName" />
+                <ScalarProperty Name="Priority" ColumnName="Priority" />
+                <ScalarProperty Name="AutoID" ColumnName="AutoID" />
+                <ScalarProperty Name="ExecuteStatus" ColumnName="ExecuteStatus" />
+                <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+                <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+                <ScalarProperty Name="PlanDuration" ColumnName="PlanDuration" />
+                <ScalarProperty Name="ExecuteMode" ColumnName="ExecuteMode" />
+                <ScalarProperty Name="ExecuteOrder" ColumnName="ExecuteOrder" />
+                <ScalarProperty Name="CraftsName" ColumnName="CraftsName" />
+                <ScalarProperty Name="CraftsCode" ColumnName="CraftsCode" />
+                <ScalarProperty Name="WorkbrachName" ColumnName="WorkbrachName" />
+                <ScalarProperty Name="WorkbrachCode" ColumnName="WorkbrachCode" />
+                <ScalarProperty Name="WorkshopCode" ColumnName="WorkshopCode" />
+                <ScalarProperty Name="WorkshopName" ColumnName="WorkshopName" />
+                <ScalarProperty Name="ExecuteID" ColumnName="ExecuteID" />
+                <ScalarProperty Name="UserStatus" ColumnName="UserStatus" />
+                <ScalarProperty Name="FormulaName" ColumnName="FormulaName" />
+                <ScalarProperty Name="FormulaCode" ColumnName="FormulaCode" />
+                <ScalarProperty Name="MaterialVouchCode" ColumnName="MaterialVouchCode" />
+                <ScalarProperty Name="VouchDate" ColumnName="VouchDate" />
+                <ScalarProperty Name="ArrangedVouchCode" ColumnName="ArrangedVouchCode" />
+                <ScalarProperty Name="vwID" ColumnName="vwID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="IPRegistForm">
+            <EntityTypeMapping TypeName="LYMesSystemModel.IPRegistForm">
+              <MappingFragment StoreEntitySet="IPRegistForm">
+                <ScalarProperty Name="CreatorTime" ColumnName="CreatorTime" />
+                <ScalarProperty Name="CreatorName" ColumnName="CreatorName" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="MACAddress" ColumnName="MACAddress" />
+                <ScalarProperty Name="IP" ColumnName="IP" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vw_CraftsLineParamSetDetail">
+            <EntityTypeMapping TypeName="LYMesSystemModel.vw_CraftsLineParamSetDetail">
+              <MappingFragment StoreEntitySet="vw_CraftsLineParamSetDetail">
+                <ScalarProperty Name="AutoID" ColumnName="AutoID" />
+                <ScalarProperty Name="CraftsID" ColumnName="CraftsID" />
+                <ScalarProperty Name="UserStatus" ColumnName="UserStatus" />
+                <ScalarProperty Name="TriggerDuration" ColumnName="TriggerDuration" />
+                <ScalarProperty Name="IntervalDuration" ColumnName="IntervalDuration" />
+                <ScalarProperty Name="IsFixedParameters" ColumnName="IsFixedParameters" />
+                <ScalarProperty Name="IsValveControl" ColumnName="IsValveControl" />
+                <ScalarProperty Name="IsValveCheck" ColumnName="IsValveCheck" />
+                <ScalarProperty Name="LowerValue" ColumnName="LowerValue" />
+                <ScalarProperty Name="UpperValue" ColumnName="UpperValue" />
+                <ScalarProperty Name="StandardValue" ColumnName="StandardValue" />
+                <ScalarProperty Name="Priority" ColumnName="Priority" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="DevepName" ColumnName="DevepName" />
+                <ScalarProperty Name="ParamName" ColumnName="ParamName" />
+                <ScalarProperty Name="ParamType" ColumnName="ParamType" />
+                <ScalarProperty Name="ParameterID" ColumnName="ParameterID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="V_DV_DevExecute">
+            <EntityTypeMapping TypeName="LYMesSystemModel.V_DV_DevExecute">
+              <MappingFragment StoreEntitySet="V_DV_DevExecute">
+                <ScalarProperty Name="DevCode" ColumnName="DevCode" />
+                <ScalarProperty Name="ConvertType" ColumnName="ConvertType" />
+                <ScalarProperty Name="ConAccAddress" ColumnName="ConAccAddress" />
+                <ScalarProperty Name="WorkStatus" ColumnName="WorkStatus" />
+                <ScalarProperty Name="EquipStatus" ColumnName="EquipStatus" />
+                <ScalarProperty Name="DevStd" ColumnName="DevStd" />
+                <ScalarProperty Name="DataType" ColumnName="DataType" />
+                <ScalarProperty Name="InterFaceStatus" ColumnName="InterFaceStatus" />
+                <ScalarProperty Name="StopBit" ColumnName="StopBit" />
+                <ScalarProperty Name="DataBit" ColumnName="DataBit" />
+                <ScalarProperty Name="CheckBit" ColumnName="CheckBit" />
+                <ScalarProperty Name="BaudRate" ColumnName="BaudRate" />
+                <ScalarProperty Name="SerialPort" ColumnName="SerialPort" />
+                <ScalarProperty Name="SendFormat" ColumnName="SendFormat" />
+                <ScalarProperty Name="DevpAddress" ColumnName="DevpAddress" />
+                <ScalarProperty Name="CallID" ColumnName="CallID" />
+                <ScalarProperty Name="DeviceId" ColumnName="DeviceId" />
+                <ScalarProperty Name="StandardValue" ColumnName="StandardValue" />
+                <ScalarProperty Name="MinValue" ColumnName="MinValue" />
+                <ScalarProperty Name="MaxValue" ColumnName="MaxValue" />
+                <ScalarProperty Name="LocalAddress" ColumnName="LocalAddress" />
+                <ScalarProperty Name="Port" ColumnName="Port" />
+                <ScalarProperty Name="IPUrl" ColumnName="IPUrl" />
+                <ScalarProperty Name="CollFrequency" ColumnName="CollFrequency" />
+                <ScalarProperty Name="DevpName" ColumnName="DevpName" />
+                <ScalarProperty Name="DeviName" ColumnName="DeviName" />
+                <ScalarProperty Name="DevName" ColumnName="DevName" />
+                <ScalarProperty Name="DevpCode" ColumnName="DevpCode" />
+                <ScalarProperty Name="DeviCode" ColumnName="DeviCode" />
+                <ScalarProperty Name="ZGName" ColumnName="ZGName" />
+                <ScalarProperty Name="ZGCode" ColumnName="ZGCode" />
+                <ScalarProperty Name="ExecuteID" ColumnName="ExecuteID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

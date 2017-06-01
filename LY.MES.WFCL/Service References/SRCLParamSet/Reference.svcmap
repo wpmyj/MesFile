@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="dcc261ef-c62f-411f-8db3-3cf1539a593b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:1001/Base/CLParamSetSerivce.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CLParamSetSerivce1.wsdl" MetadataType="Wsdl" ID="64131379-cc28-4919-aa50-d4d878c5c58e" SourceId="1" SourceUrl="http://localhost:1001/Base/CLParamSetSerivce.svc?wsdl" />
+    <MetadataFile FileName="CLParamSetSerivce4.xsd" MetadataType="Schema" ID="bcfd9f8e-1b3f-40ba-978f-693ca9231580" SourceId="1" SourceUrl="http://localhost:1001/Base/CLParamSetSerivce.svc?xsd=xsd1" />
+    <MetadataFile FileName="CLParamSetSerivce41.xsd" MetadataType="Schema" ID="f3249d65-0823-4a2d-82d3-3b34332b617c" SourceId="1" SourceUrl="http://localhost:1001/Base/CLParamSetSerivce.svc?xsd=xsd0" />
+    <MetadataFile FileName="CLParamSetSerivce42.xsd" MetadataType="Schema" ID="a53ae8e4-a0e9-414c-a084-01287510abf6" SourceId="1" SourceUrl="http://localhost:1001/Base/CLParamSetSerivce.svc?xsd=xsd3" />
+    <MetadataFile FileName="CLParamSetSerivce43.xsd" MetadataType="Schema" ID="8c110a15-b6ea-4759-88c5-4771ba9bc89a" SourceId="1" SourceUrl="http://localhost:1001/Base/CLParamSetSerivce.svc?xsd=xsd2" />
+    <MetadataFile FileName="CLParamSetSerivce.xsd" MetadataType="Schema" ID="a2f333fc-f180-4eab-a61e-94189b50cafe" SourceId="1" SourceUrl="http://localhost:1001/Base/CLParamSetSerivce.svc?xsd=xsd4" />
+    <MetadataFile FileName="CLParamSetSerivce1.disco" MetadataType="Disco" ID="e79265b2-d317-41ba-93d8-2de491ed96c8" SourceId="1" SourceUrl="http://localhost:1001/Base/CLParamSetSerivce.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="7a1ab8ff-69c9-436c-a696-296f88797675" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:16498/DataColl/DeviceCollectService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="DeviceCollectService5.xsd" MetadataType="Schema" ID="1416227f-af83-428f-a88b-ddb0f81c9165" SourceId="1" SourceUrl="http://localhost:16498/DataColl/DeviceCollectService.svc?xsd=xsd0" />
+    <MetadataFile FileName="DeviceCollectService1.wsdl" MetadataType="Wsdl" ID="6953b8a3-4e88-45b8-9e7b-c403657e7bc7" SourceId="1" SourceUrl="http://localhost:16498/DataColl/DeviceCollectService.svc?wsdl" />
+    <MetadataFile FileName="DeviceCollectService7.xsd" MetadataType="Schema" ID="51089445-4baf-41aa-8f9c-877c49024b4b" SourceId="1" SourceUrl="http://localhost:16498/DataColl/DeviceCollectService.svc?xsd=xsd2" />
+    <MetadataFile FileName="DeviceCollectService8.xsd" MetadataType="Schema" ID="3cd7ef7a-bbfb-44a6-8ae0-e36058f2f3d0" SourceId="1" SourceUrl="http://localhost:16498/DataColl/DeviceCollectService.svc?xsd=xsd3" />
+    <MetadataFile FileName="DeviceCollectService9.xsd" MetadataType="Schema" ID="3812edaf-30a4-4137-be02-e0662a52a8d9" SourceId="1" SourceUrl="http://localhost:16498/DataColl/DeviceCollectService.svc?xsd=xsd4" />
+    <MetadataFile FileName="DeviceCollectService10.xsd" MetadataType="Schema" ID="dcad3370-f9d0-4358-9759-ef9e10d0219d" SourceId="1" SourceUrl="http://localhost:16498/DataColl/DeviceCollectService.svc?xsd=xsd5" />
+    <MetadataFile FileName="DeviceCollectService11.xsd" MetadataType="Schema" ID="3f674bef-53aa-4a89-a497-c8247b79daff" SourceId="1" SourceUrl="http://localhost:16498/DataColl/DeviceCollectService.svc?xsd=xsd6" />
+    <MetadataFile FileName="DeviceCollectService12.xsd" MetadataType="Schema" ID="64c0b24d-e285-4e3a-ade6-8b6796bfdb34" SourceId="1" SourceUrl="http://localhost:16498/DataColl/DeviceCollectService.svc?xsd=xsd1" />
+    <MetadataFile FileName="DeviceCollectService1.disco" MetadataType="Disco" ID="07b54a87-2893-467e-abe3-f37498af225f" SourceId="1" SourceUrl="http://localhost:16498/DataColl/DeviceCollectService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

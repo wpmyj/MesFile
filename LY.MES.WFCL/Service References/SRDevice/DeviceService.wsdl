@@ -1,0 +1,633 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="DeviceService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="WSHttpBinding_IDeviceService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:16498/Base/DeviceService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:16498/Base/DeviceService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Server.Utility" />
+      <xsd:import schemaLocation="http://localhost:16498/Base/DeviceService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:16498/Base/DeviceService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/LY.MES.Model" />
+      <xsd:import schemaLocation="http://localhost:16498/Base/DeviceService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System" />
+      <xsd:import schemaLocation="http://localhost:16498/Base/DeviceService.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost:16498/Base/DeviceService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/LY.MES.Model.VModel" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IDeviceService_AddDeviceClass_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddDeviceClass" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceService_AddDeviceClass_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddDeviceClassResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceService_AddDeviceClass_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q1:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceService_AddDevParameter_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddDevParameter" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceService_AddDevParameter_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddDevParameterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceService_AddDevParameter_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q2:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceService_GetDevParameterByCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDevParameterByCode" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceService_GetDevParameterByCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDevParameterByCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceService_GetDevParameterByCode_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q3:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceService_GetDevParByCodePaging_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDevParByCodePaging" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceService_GetDevParByCodePaging_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDevParByCodePagingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceService_GetDevParByCodePaging_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q4:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceService_GetDevParameterPagedList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDevParameterPagedList" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceService_GetDevParameterPagedList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDevParameterPagedListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceService_GetDevParameterPagedList_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q5:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceService_UpdatDevParameter_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatDevParameter" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceService_UpdatDevParameter_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatDevParameterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceService_UpdatDevParameter_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q6:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceService_DelDevParameterByCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:DelDevParameterByCode" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceService_DelDevParameterByCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DelDevParameterByCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceService_DelDevParameterByCode_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q7:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceService_UpdateDeviceClass_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDeviceClass" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceService_UpdateDeviceClass_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDeviceClassResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceService_UpdateDeviceClass_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q8:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceService_GetDeviceClassByCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDeviceClassByCode" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceService_GetDeviceClassByCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDeviceClassByCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceService_GetDeviceClassByCode_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q9:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceService_GetDeviceClassList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDeviceClassList" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceService_GetDeviceClassList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDeviceClassListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceService_GetDeviceClassList_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q10:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceService_DelDeviceClassByCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:DelDeviceClassByCode" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceService_DelDeviceClassByCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DelDeviceClassByCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceService_DelDeviceClassByCode_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q11:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceService_AddDevice_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddDevice" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceService_AddDevice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddDeviceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceService_AddDevice_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q12:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceService_UpdateDevice_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDevice" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceService_UpdateDevice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDeviceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceService_UpdateDevice_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q13:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceService_GetDeviceByCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDeviceByCode" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceService_GetDeviceByCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDeviceByCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceService_GetDeviceByCode_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q14:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceService_DelDeviceByCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:DelDeviceByCode" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceService_DelDeviceByCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DelDeviceByCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceService_DelDeviceByCode_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q15:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceService_GetDevicePagedList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDevicePagedList" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceService_GetDevicePagedList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDevicePagedListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceService_GetDevicePagedList_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q16:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceService_GetVDeviceInfoPagedList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVDeviceInfoPagedList" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceService_GetVDeviceInfoPagedList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVDeviceInfoPagedListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceService_GetVDeviceInfoPagedList_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q17:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceService_AddDeviceInterface_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddDeviceInterface" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceService_AddDeviceInterface_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddDeviceInterfaceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceService_AddDeviceInterface_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q18:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceService_UpdateDeviceInterface_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDeviceInterface" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceService_UpdateDeviceInterface_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDeviceInterfaceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceService_UpdateDeviceInterface_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q19="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q19:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceService_GetDeviceInterface_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDeviceInterface" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceService_GetDeviceInterface_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDeviceInterfaceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceService_GetDeviceInterface_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q20="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q20:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceService_GetDeviceInterfaceList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDeviceInterfaceList" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceService_GetDeviceInterfaceList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDeviceInterfaceListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceService_GetDeviceInterfaceList_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q21="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q21:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceService_DelDeviceInterface_InputMessage">
+    <wsdl:part name="parameters" element="tns:DelDeviceInterface" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceService_DelDeviceInterface_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DelDeviceInterfaceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceService_DelDeviceInterface_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q22="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q22:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceService_GetDevInterfacePagedList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDevInterfacePagedList" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceService_GetDevInterfacePagedList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDevInterfacePagedListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceService_GetDevInterfacePagedList_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q23="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q23:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:portType name="IDeviceService">
+    <wsdl:operation name="AddDeviceClass">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDeviceService/AddDeviceClass" message="tns:IDeviceService_AddDeviceClass_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDeviceService/AddDeviceClassResponse" message="tns:IDeviceService_AddDeviceClass_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDeviceService/AddDeviceClassCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IDeviceService_AddDeviceClass_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddDevParameter">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDeviceService/AddDevParameter" message="tns:IDeviceService_AddDevParameter_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDeviceService/AddDevParameterResponse" message="tns:IDeviceService_AddDevParameter_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDeviceService/AddDevParameterCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IDeviceService_AddDevParameter_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDevParameterByCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDeviceService/GetDevParameterByCode" message="tns:IDeviceService_GetDevParameterByCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDeviceService/GetDevParameterByCodeResponse" message="tns:IDeviceService_GetDevParameterByCode_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDeviceService/GetDevParameterByCodeCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IDeviceService_GetDevParameterByCode_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDevParByCodePaging">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDeviceService/GetDevParByCodePaging" message="tns:IDeviceService_GetDevParByCodePaging_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDeviceService/GetDevParByCodePagingResponse" message="tns:IDeviceService_GetDevParByCodePaging_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDeviceService/GetDevParByCodePagingCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IDeviceService_GetDevParByCodePaging_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDevParameterPagedList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDeviceService/GetDevParameterPagedList" message="tns:IDeviceService_GetDevParameterPagedList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDeviceService/GetDevParameterPagedListResponse" message="tns:IDeviceService_GetDevParameterPagedList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDeviceService/GetDevParameterPagedListCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IDeviceService_GetDevParameterPagedList_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatDevParameter">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDeviceService/UpdatDevParameter" message="tns:IDeviceService_UpdatDevParameter_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDeviceService/UpdatDevParameterResponse" message="tns:IDeviceService_UpdatDevParameter_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDeviceService/UpdatDevParameterCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IDeviceService_UpdatDevParameter_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DelDevParameterByCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDeviceService/DelDevParameterByCode" message="tns:IDeviceService_DelDevParameterByCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDeviceService/DelDevParameterByCodeResponse" message="tns:IDeviceService_DelDevParameterByCode_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDeviceService/DelDevParameterByCodeCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IDeviceService_DelDevParameterByCode_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeviceClass">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDeviceService/UpdateDeviceClass" message="tns:IDeviceService_UpdateDeviceClass_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDeviceService/UpdateDeviceClassResponse" message="tns:IDeviceService_UpdateDeviceClass_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDeviceService/UpdateDeviceClassCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IDeviceService_UpdateDeviceClass_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDeviceClassByCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDeviceService/GetDeviceClassByCode" message="tns:IDeviceService_GetDeviceClassByCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDeviceService/GetDeviceClassByCodeResponse" message="tns:IDeviceService_GetDeviceClassByCode_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDeviceService/GetDeviceClassByCodeCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IDeviceService_GetDeviceClassByCode_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDeviceClassList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDeviceService/GetDeviceClassList" message="tns:IDeviceService_GetDeviceClassList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDeviceService/GetDeviceClassListResponse" message="tns:IDeviceService_GetDeviceClassList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDeviceService/GetDeviceClassListCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IDeviceService_GetDeviceClassList_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DelDeviceClassByCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDeviceService/DelDeviceClassByCode" message="tns:IDeviceService_DelDeviceClassByCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDeviceService/DelDeviceClassByCodeResponse" message="tns:IDeviceService_DelDeviceClassByCode_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDeviceService/DelDeviceClassByCodeCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IDeviceService_DelDeviceClassByCode_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddDevice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDeviceService/AddDevice" message="tns:IDeviceService_AddDevice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDeviceService/AddDeviceResponse" message="tns:IDeviceService_AddDevice_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDeviceService/AddDeviceCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IDeviceService_AddDevice_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDevice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDeviceService/UpdateDevice" message="tns:IDeviceService_UpdateDevice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDeviceService/UpdateDeviceResponse" message="tns:IDeviceService_UpdateDevice_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDeviceService/UpdateDeviceCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IDeviceService_UpdateDevice_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDeviceByCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDeviceService/GetDeviceByCode" message="tns:IDeviceService_GetDeviceByCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDeviceService/GetDeviceByCodeResponse" message="tns:IDeviceService_GetDeviceByCode_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDeviceService/GetDeviceByCodeCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IDeviceService_GetDeviceByCode_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DelDeviceByCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDeviceService/DelDeviceByCode" message="tns:IDeviceService_DelDeviceByCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDeviceService/DelDeviceByCodeResponse" message="tns:IDeviceService_DelDeviceByCode_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDeviceService/DelDeviceByCodeCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IDeviceService_DelDeviceByCode_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDevicePagedList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDeviceService/GetDevicePagedList" message="tns:IDeviceService_GetDevicePagedList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDeviceService/GetDevicePagedListResponse" message="tns:IDeviceService_GetDevicePagedList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDeviceService/GetDevicePagedListCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IDeviceService_GetDevicePagedList_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVDeviceInfoPagedList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDeviceService/GetVDeviceInfoPagedList" message="tns:IDeviceService_GetVDeviceInfoPagedList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDeviceService/GetVDeviceInfoPagedListResponse" message="tns:IDeviceService_GetVDeviceInfoPagedList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDeviceService/GetVDeviceInfoPagedListCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IDeviceService_GetVDeviceInfoPagedList_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddDeviceInterface">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDeviceService/AddDeviceInterface" message="tns:IDeviceService_AddDeviceInterface_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDeviceService/AddDeviceInterfaceResponse" message="tns:IDeviceService_AddDeviceInterface_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDeviceService/AddDeviceInterfaceCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IDeviceService_AddDeviceInterface_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeviceInterface">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDeviceService/UpdateDeviceInterface" message="tns:IDeviceService_UpdateDeviceInterface_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDeviceService/UpdateDeviceInterfaceResponse" message="tns:IDeviceService_UpdateDeviceInterface_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDeviceService/UpdateDeviceInterfaceCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IDeviceService_UpdateDeviceInterface_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDeviceInterface">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDeviceService/GetDeviceInterface" message="tns:IDeviceService_GetDeviceInterface_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDeviceService/GetDeviceInterfaceResponse" message="tns:IDeviceService_GetDeviceInterface_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDeviceService/GetDeviceInterfaceCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IDeviceService_GetDeviceInterface_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDeviceInterfaceList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDeviceService/GetDeviceInterfaceList" message="tns:IDeviceService_GetDeviceInterfaceList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDeviceService/GetDeviceInterfaceListResponse" message="tns:IDeviceService_GetDeviceInterfaceList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDeviceService/GetDeviceInterfaceListCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IDeviceService_GetDeviceInterfaceList_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DelDeviceInterface">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDeviceService/DelDeviceInterface" message="tns:IDeviceService_DelDeviceInterface_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDeviceService/DelDeviceInterfaceResponse" message="tns:IDeviceService_DelDeviceInterface_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDeviceService/DelDeviceInterfaceCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IDeviceService_DelDeviceInterface_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDevInterfacePagedList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDeviceService/GetDevInterfacePagedList" message="tns:IDeviceService_GetDevInterfacePagedList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDeviceService/GetDevInterfacePagedListResponse" message="tns:IDeviceService_GetDevInterfacePagedList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDeviceService/GetDevInterfacePagedListCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IDeviceService_GetDevInterfacePagedList_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSHttpBinding_IDeviceService" type="tns:IDeviceService">
+    <wsp:PolicyReference URI="#WSHttpBinding_IDeviceService_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddDeviceClass">
+      <soap12:operation soapAction="http://tempuri.org/IDeviceService/AddDeviceClass" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddDevParameter">
+      <soap12:operation soapAction="http://tempuri.org/IDeviceService/AddDevParameter" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDevParameterByCode">
+      <soap12:operation soapAction="http://tempuri.org/IDeviceService/GetDevParameterByCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDevParByCodePaging">
+      <soap12:operation soapAction="http://tempuri.org/IDeviceService/GetDevParByCodePaging" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDevParameterPagedList">
+      <soap12:operation soapAction="http://tempuri.org/IDeviceService/GetDevParameterPagedList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatDevParameter">
+      <soap12:operation soapAction="http://tempuri.org/IDeviceService/UpdatDevParameter" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DelDevParameterByCode">
+      <soap12:operation soapAction="http://tempuri.org/IDeviceService/DelDevParameterByCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeviceClass">
+      <soap12:operation soapAction="http://tempuri.org/IDeviceService/UpdateDeviceClass" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDeviceClassByCode">
+      <soap12:operation soapAction="http://tempuri.org/IDeviceService/GetDeviceClassByCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDeviceClassList">
+      <soap12:operation soapAction="http://tempuri.org/IDeviceService/GetDeviceClassList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DelDeviceClassByCode">
+      <soap12:operation soapAction="http://tempuri.org/IDeviceService/DelDeviceClassByCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddDevice">
+      <soap12:operation soapAction="http://tempuri.org/IDeviceService/AddDevice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDevice">
+      <soap12:operation soapAction="http://tempuri.org/IDeviceService/UpdateDevice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDeviceByCode">
+      <soap12:operation soapAction="http://tempuri.org/IDeviceService/GetDeviceByCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DelDeviceByCode">
+      <soap12:operation soapAction="http://tempuri.org/IDeviceService/DelDeviceByCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDevicePagedList">
+      <soap12:operation soapAction="http://tempuri.org/IDeviceService/GetDevicePagedList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetVDeviceInfoPagedList">
+      <soap12:operation soapAction="http://tempuri.org/IDeviceService/GetVDeviceInfoPagedList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddDeviceInterface">
+      <soap12:operation soapAction="http://tempuri.org/IDeviceService/AddDeviceInterface" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeviceInterface">
+      <soap12:operation soapAction="http://tempuri.org/IDeviceService/UpdateDeviceInterface" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDeviceInterface">
+      <soap12:operation soapAction="http://tempuri.org/IDeviceService/GetDeviceInterface" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDeviceInterfaceList">
+      <soap12:operation soapAction="http://tempuri.org/IDeviceService/GetDeviceInterfaceList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DelDeviceInterface">
+      <soap12:operation soapAction="http://tempuri.org/IDeviceService/DelDeviceInterface" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDevInterfacePagedList">
+      <soap12:operation soapAction="http://tempuri.org/IDeviceService/GetDevInterfacePagedList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DeviceService">
+    <wsdl:port name="WSHttpBinding_IDeviceService" binding="tns:WSHttpBinding_IDeviceService">
+      <soap12:address location="http://localhost:16498/Base/DeviceService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://localhost:16498/Base/DeviceService.svc</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

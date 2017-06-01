@@ -1,0 +1,631 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="QZDataService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="WSHttpBinding_IQZDataService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:16498/ThirdSystem/QZDataService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:16498/ThirdSystem/QZDataService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Server.Utility" />
+      <xsd:import schemaLocation="http://localhost:16498/ThirdSystem/QZDataService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:16498/ThirdSystem/QZDataService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+      <xsd:import schemaLocation="http://localhost:16498/ThirdSystem/QZDataService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/LY.MES.Model.VModel" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IQZDataService_GetQualityInspector_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetQualityInspector" />
+  </wsdl:message>
+  <wsdl:message name="IQZDataService_GetQualityInspector_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetQualityInspectorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQZDataService_GetQualityInspector_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q1:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IQZDataService_GetOrderSchData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderSchData" />
+  </wsdl:message>
+  <wsdl:message name="IQZDataService_GetOrderSchData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderSchDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQZDataService_GetOrderSchData_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q2:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IQZDataService_GetOrderSchData1_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderSchData1" />
+  </wsdl:message>
+  <wsdl:message name="IQZDataService_GetOrderSchData1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderSchData1Response" />
+  </wsdl:message>
+  <wsdl:message name="IQZDataService_GetOrderSchData1_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q3:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IQZDataService_GetPullCompute_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPullCompute" />
+  </wsdl:message>
+  <wsdl:message name="IQZDataService_GetPullCompute_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPullComputeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQZDataService_GetPullCompute_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q4:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IQZDataService_GetCraftsTable_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCraftsTable" />
+  </wsdl:message>
+  <wsdl:message name="IQZDataService_GetCraftsTable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCraftsTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQZDataService_GetCraftsTable_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q5:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IQZDataService_GetQZRFIDCodeData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetQZRFIDCodeData" />
+  </wsdl:message>
+  <wsdl:message name="IQZDataService_GetQZRFIDCodeData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetQZRFIDCodeDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQZDataService_GetQZRFIDCodeData_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q6:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IQZDataService_GetNewQZRFIDCodeData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewQZRFIDCodeData" />
+  </wsdl:message>
+  <wsdl:message name="IQZDataService_GetNewQZRFIDCodeData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewQZRFIDCodeDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQZDataService_GetNewQZRFIDCodeData_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q7:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IQZDataService_GetQZZGData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetQZZGData" />
+  </wsdl:message>
+  <wsdl:message name="IQZDataService_GetQZZGData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetQZZGDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQZDataService_GetQZZGData_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q8:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IQZDataService_GetQZWeight_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetQZWeight" />
+  </wsdl:message>
+  <wsdl:message name="IQZDataService_GetQZWeight_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetQZWeightResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQZDataService_GetQZWeight_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q9:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IQZDataService_GetRFIDWeight_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRFIDWeight" />
+  </wsdl:message>
+  <wsdl:message name="IQZDataService_GetRFIDWeight_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRFIDWeightResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQZDataService_GetRFIDWeight_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q10:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IQZDataService_GetZGStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetZGStatus" />
+  </wsdl:message>
+  <wsdl:message name="IQZDataService_GetZGStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetZGStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQZDataService_GetZGStatus_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q11:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IQZDataService_GetColorData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetColorData" />
+  </wsdl:message>
+  <wsdl:message name="IQZDataService_GetColorData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetColorDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQZDataService_GetColorData_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q12:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IQZDataService_GetQZFunColor_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetQZFunColor" />
+  </wsdl:message>
+  <wsdl:message name="IQZDataService_GetQZFunColor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetQZFunColorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQZDataService_GetQZFunColor_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q13:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IQZDataService_GetRFIDData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRFIDData" />
+  </wsdl:message>
+  <wsdl:message name="IQZDataService_GetRFIDData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRFIDDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQZDataService_GetRFIDData_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q14:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IQZDataService_GetNullZGColor_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNullZGColor" />
+  </wsdl:message>
+  <wsdl:message name="IQZDataService_GetNullZGColor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNullZGColorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQZDataService_GetNullZGColor_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q15:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IQZDataService_GetL4Data1_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetL4Data1" />
+  </wsdl:message>
+  <wsdl:message name="IQZDataService_GetL4Data1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetL4Data1Response" />
+  </wsdl:message>
+  <wsdl:message name="IQZDataService_GetL4Data1_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q16:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IQZDataService_GetL5Data1_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetL5Data1" />
+  </wsdl:message>
+  <wsdl:message name="IQZDataService_GetL5Data1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetL5Data1Response" />
+  </wsdl:message>
+  <wsdl:message name="IQZDataService_GetL5Data1_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q17:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IQZDataService_UpdateRFIDStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRFIDStatus" />
+  </wsdl:message>
+  <wsdl:message name="IQZDataService_UpdateRFIDStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRFIDStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQZDataService_UpdateRFIDStatus_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q18:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IQZDataService_GetQZPcDataByJH_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetQZPcDataByJH" />
+  </wsdl:message>
+  <wsdl:message name="IQZDataService_GetQZPcDataByJH_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetQZPcDataByJHResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQZDataService_GetQZPcDataByJH_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q19="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q19:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IQZDataService_GetQZPcDataByOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetQZPcDataByOrder" />
+  </wsdl:message>
+  <wsdl:message name="IQZDataService_GetQZPcDataByOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetQZPcDataByOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQZDataService_GetQZPcDataByOrder_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q20="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q20:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IQZDataService_GetSJDataByJH_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSJDataByJH" />
+  </wsdl:message>
+  <wsdl:message name="IQZDataService_GetSJDataByJH_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSJDataByJHResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQZDataService_GetSJDataByJH_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q21="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q21:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IQZDataService_InsertSJData_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertSJData" />
+  </wsdl:message>
+  <wsdl:message name="IQZDataService_InsertSJData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertSJDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQZDataService_InsertSJData_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q22="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q22:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IQZDataService_GetSJDataByPC_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSJDataByPC" />
+  </wsdl:message>
+  <wsdl:message name="IQZDataService_GetSJDataByPC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSJDataByPCResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQZDataService_GetSJDataByPC_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q23="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q23:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:portType name="IQZDataService">
+    <wsdl:operation name="GetQualityInspector">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQZDataService/GetQualityInspector" message="tns:IQZDataService_GetQualityInspector_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQZDataService/GetQualityInspectorResponse" message="tns:IQZDataService_GetQualityInspector_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IQZDataService/GetQualityInspectorCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IQZDataService_GetQualityInspector_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderSchData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQZDataService/GetOrderSchData" message="tns:IQZDataService_GetOrderSchData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQZDataService/GetOrderSchDataResponse" message="tns:IQZDataService_GetOrderSchData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IQZDataService/GetOrderSchDataCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IQZDataService_GetOrderSchData_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderSchData1">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQZDataService/GetOrderSchData1" message="tns:IQZDataService_GetOrderSchData1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQZDataService/GetOrderSchData1Response" message="tns:IQZDataService_GetOrderSchData1_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IQZDataService/GetOrderSchData1CustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IQZDataService_GetOrderSchData1_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPullCompute">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQZDataService/GetPullCompute" message="tns:IQZDataService_GetPullCompute_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQZDataService/GetPullComputeResponse" message="tns:IQZDataService_GetPullCompute_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IQZDataService/GetPullComputeCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IQZDataService_GetPullCompute_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCraftsTable">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQZDataService/GetCraftsTable" message="tns:IQZDataService_GetCraftsTable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQZDataService/GetCraftsTableResponse" message="tns:IQZDataService_GetCraftsTable_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IQZDataService/GetCraftsTableCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IQZDataService_GetCraftsTable_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQZRFIDCodeData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQZDataService/GetQZRFIDCodeData" message="tns:IQZDataService_GetQZRFIDCodeData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQZDataService/GetQZRFIDCodeDataResponse" message="tns:IQZDataService_GetQZRFIDCodeData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IQZDataService/GetQZRFIDCodeDataCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IQZDataService_GetQZRFIDCodeData_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNewQZRFIDCodeData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQZDataService/GetNewQZRFIDCodeData" message="tns:IQZDataService_GetNewQZRFIDCodeData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQZDataService/GetNewQZRFIDCodeDataResponse" message="tns:IQZDataService_GetNewQZRFIDCodeData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IQZDataService/GetNewQZRFIDCodeDataCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IQZDataService_GetNewQZRFIDCodeData_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQZZGData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQZDataService/GetQZZGData" message="tns:IQZDataService_GetQZZGData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQZDataService/GetQZZGDataResponse" message="tns:IQZDataService_GetQZZGData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IQZDataService/GetQZZGDataCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IQZDataService_GetQZZGData_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQZWeight">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQZDataService/GetQZWeight" message="tns:IQZDataService_GetQZWeight_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQZDataService/GetQZWeightResponse" message="tns:IQZDataService_GetQZWeight_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IQZDataService/GetQZWeightCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IQZDataService_GetQZWeight_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRFIDWeight">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQZDataService/GetRFIDWeight" message="tns:IQZDataService_GetRFIDWeight_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQZDataService/GetRFIDWeightResponse" message="tns:IQZDataService_GetRFIDWeight_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IQZDataService/GetRFIDWeightCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IQZDataService_GetRFIDWeight_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetZGStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQZDataService/GetZGStatus" message="tns:IQZDataService_GetZGStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQZDataService/GetZGStatusResponse" message="tns:IQZDataService_GetZGStatus_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IQZDataService/GetZGStatusCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IQZDataService_GetZGStatus_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetColorData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQZDataService/GetColorData" message="tns:IQZDataService_GetColorData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQZDataService/GetColorDataResponse" message="tns:IQZDataService_GetColorData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IQZDataService/GetColorDataCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IQZDataService_GetColorData_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQZFunColor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQZDataService/GetQZFunColor" message="tns:IQZDataService_GetQZFunColor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQZDataService/GetQZFunColorResponse" message="tns:IQZDataService_GetQZFunColor_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IQZDataService/GetQZFunColorCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IQZDataService_GetQZFunColor_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRFIDData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQZDataService/GetRFIDData" message="tns:IQZDataService_GetRFIDData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQZDataService/GetRFIDDataResponse" message="tns:IQZDataService_GetRFIDData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IQZDataService/GetRFIDDataCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IQZDataService_GetRFIDData_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNullZGColor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQZDataService/GetNullZGColor" message="tns:IQZDataService_GetNullZGColor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQZDataService/GetNullZGColorResponse" message="tns:IQZDataService_GetNullZGColor_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IQZDataService/GetNullZGColorCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IQZDataService_GetNullZGColor_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetL4Data1">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQZDataService/GetL4Data1" message="tns:IQZDataService_GetL4Data1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQZDataService/GetL4Data1Response" message="tns:IQZDataService_GetL4Data1_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IQZDataService/GetL4Data1CustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IQZDataService_GetL4Data1_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetL5Data1">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQZDataService/GetL5Data1" message="tns:IQZDataService_GetL5Data1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQZDataService/GetL5Data1Response" message="tns:IQZDataService_GetL5Data1_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IQZDataService/GetL5Data1CustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IQZDataService_GetL5Data1_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRFIDStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQZDataService/UpdateRFIDStatus" message="tns:IQZDataService_UpdateRFIDStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQZDataService/UpdateRFIDStatusResponse" message="tns:IQZDataService_UpdateRFIDStatus_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IQZDataService/UpdateRFIDStatusCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IQZDataService_UpdateRFIDStatus_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQZPcDataByJH">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQZDataService/GetQZPcDataByJH" message="tns:IQZDataService_GetQZPcDataByJH_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQZDataService/GetQZPcDataByJHResponse" message="tns:IQZDataService_GetQZPcDataByJH_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IQZDataService/GetQZPcDataByJHCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IQZDataService_GetQZPcDataByJH_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQZPcDataByOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQZDataService/GetQZPcDataByOrder" message="tns:IQZDataService_GetQZPcDataByOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQZDataService/GetQZPcDataByOrderResponse" message="tns:IQZDataService_GetQZPcDataByOrder_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IQZDataService/GetQZPcDataByOrderCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IQZDataService_GetQZPcDataByOrder_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSJDataByJH">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQZDataService/GetSJDataByJH" message="tns:IQZDataService_GetSJDataByJH_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQZDataService/GetSJDataByJHResponse" message="tns:IQZDataService_GetSJDataByJH_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IQZDataService/GetSJDataByJHCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IQZDataService_GetSJDataByJH_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertSJData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQZDataService/InsertSJData" message="tns:IQZDataService_InsertSJData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQZDataService/InsertSJDataResponse" message="tns:IQZDataService_InsertSJData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IQZDataService/InsertSJDataCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IQZDataService_InsertSJData_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSJDataByPC">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQZDataService/GetSJDataByPC" message="tns:IQZDataService_GetSJDataByPC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQZDataService/GetSJDataByPCResponse" message="tns:IQZDataService_GetSJDataByPC_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IQZDataService/GetSJDataByPCCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IQZDataService_GetSJDataByPC_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSHttpBinding_IQZDataService" type="tns:IQZDataService">
+    <wsp:PolicyReference URI="#WSHttpBinding_IQZDataService_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetQualityInspector">
+      <soap12:operation soapAction="http://tempuri.org/IQZDataService/GetQualityInspector" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderSchData">
+      <soap12:operation soapAction="http://tempuri.org/IQZDataService/GetOrderSchData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderSchData1">
+      <soap12:operation soapAction="http://tempuri.org/IQZDataService/GetOrderSchData1" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPullCompute">
+      <soap12:operation soapAction="http://tempuri.org/IQZDataService/GetPullCompute" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCraftsTable">
+      <soap12:operation soapAction="http://tempuri.org/IQZDataService/GetCraftsTable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetQZRFIDCodeData">
+      <soap12:operation soapAction="http://tempuri.org/IQZDataService/GetQZRFIDCodeData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewQZRFIDCodeData">
+      <soap12:operation soapAction="http://tempuri.org/IQZDataService/GetNewQZRFIDCodeData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetQZZGData">
+      <soap12:operation soapAction="http://tempuri.org/IQZDataService/GetQZZGData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetQZWeight">
+      <soap12:operation soapAction="http://tempuri.org/IQZDataService/GetQZWeight" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetRFIDWeight">
+      <soap12:operation soapAction="http://tempuri.org/IQZDataService/GetRFIDWeight" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetZGStatus">
+      <soap12:operation soapAction="http://tempuri.org/IQZDataService/GetZGStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetColorData">
+      <soap12:operation soapAction="http://tempuri.org/IQZDataService/GetColorData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetQZFunColor">
+      <soap12:operation soapAction="http://tempuri.org/IQZDataService/GetQZFunColor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetRFIDData">
+      <soap12:operation soapAction="http://tempuri.org/IQZDataService/GetRFIDData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetNullZGColor">
+      <soap12:operation soapAction="http://tempuri.org/IQZDataService/GetNullZGColor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetL4Data1">
+      <soap12:operation soapAction="http://tempuri.org/IQZDataService/GetL4Data1" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetL5Data1">
+      <soap12:operation soapAction="http://tempuri.org/IQZDataService/GetL5Data1" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRFIDStatus">
+      <soap12:operation soapAction="http://tempuri.org/IQZDataService/UpdateRFIDStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetQZPcDataByJH">
+      <soap12:operation soapAction="http://tempuri.org/IQZDataService/GetQZPcDataByJH" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetQZPcDataByOrder">
+      <soap12:operation soapAction="http://tempuri.org/IQZDataService/GetQZPcDataByOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSJDataByJH">
+      <soap12:operation soapAction="http://tempuri.org/IQZDataService/GetSJDataByJH" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertSJData">
+      <soap12:operation soapAction="http://tempuri.org/IQZDataService/InsertSJData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSJDataByPC">
+      <soap12:operation soapAction="http://tempuri.org/IQZDataService/GetSJDataByPC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="QZDataService">
+    <wsdl:port name="WSHttpBinding_IQZDataService" binding="tns:WSHttpBinding_IQZDataService">
+      <soap12:address location="http://localhost:16498/ThirdSystem/QZDataService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://localhost:16498/ThirdSystem/QZDataService.svc</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

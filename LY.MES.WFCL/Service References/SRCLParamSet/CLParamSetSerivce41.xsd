@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:1001/Base/CLParamSetSerivce.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/LY.MES.Model" />
+  <xs:import schemaLocation="http://localhost:1001/Base/CLParamSetSerivce.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/LY.MES.Model.VModel" />
+  <xs:import schemaLocation="http://localhost:1001/Base/CLParamSetSerivce.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Server.Utility" />
+  <xs:element name="AddCLParamSet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/LY.MES.Model" minOccurs="0" name="model" nillable="true" type="q1:CraftsLineParamSet" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/LY.MES.Model.VModel" minOccurs="0" name="listModels" nillable="true" type="q2:ArrayOfVCraftsLineParamSetDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddCLParamSetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Server.Utility" minOccurs="0" name="AddCLParamSetResult" nillable="true" type="q3:CommonResultOfCraftsLineParamSetVCraftsLineParamSetDetaildAbW2S3Q" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCLParamSet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/LY.MES.Model" minOccurs="0" name="model" nillable="true" type="q4:CraftsLineParamSet" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/LY.MES.Model.VModel" minOccurs="0" name="listModels" nillable="true" type="q5:ArrayOfVCraftsLineParamSetDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCLParamSetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Server.Utility" minOccurs="0" name="UpdateCLParamSetResult" nillable="true" type="q6:CommonResultOfCraftsLineParamSetVCraftsLineParamSetDetaildAbW2S3Q" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DelCLParamSet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DelCLParamSetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Server.Utility" minOccurs="0" name="DelCLParamSetResult" nillable="true" type="q7:CommonResultOfboolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCLParamSetList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCLParamSetListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Server.Utility" minOccurs="0" name="GetCLParamSetListResult" nillable="true" type="q8:CommonResultOfArrayOfCraftsLineParamSetdYMi5huk" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCLParamSetsList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCLParamSetsListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Server.Utility" minOccurs="0" name="GetCLParamSetsListResult" nillable="true" type="q9:CommonResultOfCraftsLineParamSetVCraftsLineParamSetDetaildAbW2S3Q" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

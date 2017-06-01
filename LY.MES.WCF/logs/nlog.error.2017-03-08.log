@@ -1,0 +1,45 @@
+2017-03-08 14:40:50.9748  15 ERROR LY.MES.WCF.Dispatch.DispatchCenterSerivce+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext
+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 LY.MES.WCF.Dispatch.DispatchCenterSerivce.<DispatchArrangedCraftsProcessAsync>d__4.MoveNext() 位置 d:\svn\MES\CODE\LY.MES\LY.MES.WCF\Dispatch\DispatchCenterSerivce.svc.cs:行号 233 
+
+2017-03-08 14:40:51.0408  15 ERROR LY.MES.WCF.Dispatch.DispatchCenterSerivce+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext
+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 LY.MES.WCF.Dispatch.DispatchCenterSerivce.<DispatchArrangedCraftsProcessAsync>d__4.MoveNext() 位置 d:\svn\MES\CODE\LY.MES\LY.MES.WCF\Dispatch\DispatchCenterSerivce.svc.cs:行号 233 
+
+2017-03-08 14:41:05.0926  13 ERROR LY.MES.WCF.Dispatch.DispatchCenterSerivce+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext
+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 LY.MES.WCF.Dispatch.DispatchCenterSerivce.<DispatchArrangedCraftsProcessAsync>d__4.MoveNext() 位置 d:\svn\MES\CODE\LY.MES\LY.MES.WCF\Dispatch\DispatchCenterSerivce.svc.cs:行号 233 
+
+2017-03-08 14:42:38.2220  13 ERROR LY.MES.WCF.Dispatch.DispatchCenterSerivce+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext
+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 LY.MES.WCF.Dispatch.DispatchCenterSerivce.<DispatchArrangedCraftsProcessAsync>d__4.MoveNext() 位置 d:\svn\MES\CODE\LY.MES\LY.MES.WCF\Dispatch\DispatchCenterSerivce.svc.cs:行号 233 
+
+2017-03-08 14:45:47.0788  23 ERROR LY.MES.WCF.Dispatch.DispatchCenterSerivce+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext
+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 LY.MES.WCF.Dispatch.DispatchCenterSerivce.<DispatchArrangedCraftsProcessAsync>d__4.MoveNext() 位置 d:\svn\MES\CODE\LY.MES\LY.MES.WCF\Dispatch\DispatchCenterSerivce.svc.cs:行号 233 
+
+2017-03-08 14:47:13.1837  10 ERROR LY.MES.WCF.Dispatch.DispatchCenterSerivce+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext
+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 LY.MES.WCF.Dispatch.DispatchCenterSerivce.<DispatchArrangedCraftsProcessAsync>d__4.MoveNext() 位置 d:\svn\MES\CODE\LY.MES\LY.MES.WCF\Dispatch\DispatchCenterSerivce.svc.cs:行号 233 
+
+2017-03-08 14:58:52.9987  12 ERROR LY.MES.WCF.Dispatch.DispatchCenterSerivce+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext
+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 LY.MES.WCF.Dispatch.DispatchCenterSerivce.<DispatchArrangedCraftsProcessAsync>d__4.MoveNext() 位置 d:\svn\MES\CODE\LY.MES\LY.MES.WCF\Dispatch\DispatchCenterSerivce.svc.cs:行号 223 
+
+2017-03-08 14:58:53.0637  12 ERROR LY.MES.WCF.Dispatch.DispatchCenterSerivce+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext
+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 LY.MES.WCF.Dispatch.DispatchCenterSerivce.<DispatchArrangedCraftsProcessAsync>d__4.MoveNext() 位置 d:\svn\MES\CODE\LY.MES\LY.MES.WCF\Dispatch\DispatchCenterSerivce.svc.cs:行号 233 
+
+2017-03-08 15:00:59.5230  19 ERROR LY.MES.WCF.Dispatch.DispatchCenterSerivce+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext
+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 LY.MES.WCF.Dispatch.DispatchCenterSerivce.<DispatchArrangedCraftsProcessAsync>d__4.MoveNext() 位置 d:\svn\MES\CODE\LY.MES\LY.MES.WCF\Dispatch\DispatchCenterSerivce.svc.cs:行号 233 
+

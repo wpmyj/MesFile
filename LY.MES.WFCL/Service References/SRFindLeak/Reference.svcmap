@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ceb471fe-a473-43e9-be28-e8568d4f39ad" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:16498/FindLeak/QCDFindLeakService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="QCDFindLeakService.xsd" MetadataType="Schema" ID="cdd4d9b8-7bf2-4b3a-85df-1cc1e925dc58" SourceId="1" SourceUrl="http://localhost:16498/FindLeak/QCDFindLeakService.svc?xsd=xsd1" />
+    <MetadataFile FileName="QCDFindLeakService1.xsd" MetadataType="Schema" ID="728eacbf-ff96-46a8-8cb7-8aab73ebd264" SourceId="1" SourceUrl="http://localhost:16498/FindLeak/QCDFindLeakService.svc?xsd=xsd2" />
+    <MetadataFile FileName="QCDFindLeakService2.xsd" MetadataType="Schema" ID="14ab747b-d43c-4e65-ba8b-510a618e6ddb" SourceId="1" SourceUrl="http://localhost:16498/FindLeak/QCDFindLeakService.svc?xsd=xsd4" />
+    <MetadataFile FileName="QCDFindLeakService.disco" MetadataType="Disco" ID="b4c69fc0-6641-4f82-bc64-2c2587fabdb1" SourceId="1" SourceUrl="http://localhost:16498/FindLeak/QCDFindLeakService.svc?disco" />
+    <MetadataFile FileName="QCDFindLeakService.wsdl" MetadataType="Wsdl" ID="81479fa9-18f0-4f9d-88b6-e10fa797ca9d" SourceId="1" SourceUrl="http://localhost:16498/FindLeak/QCDFindLeakService.svc?wsdl" />
+    <MetadataFile FileName="QCDFindLeakService3.xsd" MetadataType="Schema" ID="84fbe6f3-8501-4925-b33b-1dd1293b68b9" SourceId="1" SourceUrl="http://localhost:16498/FindLeak/QCDFindLeakService.svc?xsd=xsd0" />
+    <MetadataFile FileName="QCDFindLeakService4.xsd" MetadataType="Schema" ID="2bffa437-9ab7-4af1-8d90-a2324921d6fb" SourceId="1" SourceUrl="http://localhost:16498/FindLeak/QCDFindLeakService.svc?xsd=xsd5" />
+    <MetadataFile FileName="QCDFindLeakService5.xsd" MetadataType="Schema" ID="b0495aad-d8fe-4712-bfe4-54d7c7c78f5f" SourceId="1" SourceUrl="http://localhost:16498/FindLeak/QCDFindLeakService.svc?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

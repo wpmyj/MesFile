@@ -1,0 +1,4 @@
+2017-03-03 11:29:58.5547  55 DEBUG LY.MES.WCF.Base.DeviceService.GetDeviceClassList
+DeviceService.GetDeviceClassList => LoggerExtensions.Debug => LoggerExtensions.FilteredLog
+ - Ê±³¤:68 
+

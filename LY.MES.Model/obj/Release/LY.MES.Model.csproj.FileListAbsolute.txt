@@ -1,0 +1,10 @@
+D:\svn\MES\CODE\LY.MES\LY.MES.Model\bin\Release\LY.MES.Model.dll.config
+D:\svn\MES\CODE\LY.MES\LY.MES.Model\bin\Release\LY.MES.Model.dll
+D:\svn\MES\CODE\LY.MES\LY.MES.Model\bin\Release\LY.MES.Model.pdb
+D:\svn\MES\CODE\LY.MES\LY.MES.Model\bin\Release\EntityFramework.dll
+D:\svn\MES\CODE\LY.MES\LY.MES.Model\bin\Release\EntityFramework.SqlServer.dll
+D:\svn\MES\CODE\LY.MES\LY.MES.Model\bin\Release\EntityFramework.xml
+D:\svn\MES\CODE\LY.MES\LY.MES.Model\bin\Release\zh-Hans\EntityFramework.resources.dll
+D:\svn\MES\CODE\LY.MES\LY.MES.Model\obj\Release\LY.MES.Model.dll
+D:\svn\MES\CODE\LY.MES\LY.MES.Model\obj\Release\LY.MES.Model.pdb
+D:\svn\MES\CODE\LY.MES\LY.MES.Model\obj\Release\LY.MES.Model.csprojResolveAssemblyReference.cache

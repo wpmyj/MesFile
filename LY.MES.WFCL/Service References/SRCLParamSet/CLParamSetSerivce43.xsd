@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/LY.MES.Model" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/LY.MES.Model" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="CraftsLineParamSet">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CraftsCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CraftsLineParamSetDetail" nillable="true" type="tns:ArrayOfCraftsLineParamSetDetail" />
+      <xs:element minOccurs="0" name="CraftsName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CraftsTaskTime" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CreateDateTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Creator" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="MachineNum" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Modify" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ModifyDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Order" type="xs:int" />
+      <xs:element minOccurs="0" name="Treatment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UseStatus" type="xs:int" />
+      <xs:element minOccurs="0" name="WorkShop" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CraftsLineParamSet" nillable="true" type="tns:CraftsLineParamSet" />
+  <xs:complexType name="ArrayOfCraftsLineParamSetDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CraftsLineParamSetDetail" nillable="true" type="tns:CraftsLineParamSetDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCraftsLineParamSetDetail" nillable="true" type="tns:ArrayOfCraftsLineParamSetDetail" />
+  <xs:complexType name="CraftsLineParamSetDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AutoID" type="xs:int" />
+      <xs:element minOccurs="0" name="CraftsID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CraftsLineParamSet" nillable="true" type="tns:CraftsLineParamSet" />
+      <xs:element minOccurs="0" name="ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IntervalDuration" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IsFixedParameters" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsValveCheck" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsValveControl" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LowerValue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ParameterID" type="xs:int" />
+      <xs:element minOccurs="0" name="Priority" type="xs:int" />
+      <xs:element minOccurs="0" name="StandardValue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TriggerDuration" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="UpperValue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserStatus" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CraftsLineParamSetDetail" nillable="true" type="tns:CraftsLineParamSetDetail" />
+  <xs:complexType name="ArrayOfCraftsLineParamSet">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CraftsLineParamSet" nillable="true" type="tns:CraftsLineParamSet" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCraftsLineParamSet" nillable="true" type="tns:ArrayOfCraftsLineParamSet" />
+</xs:schema>

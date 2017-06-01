@@ -1,0 +1,4 @@
+2017-02-18 11:08:41.3156  10 ERROR LY.MES.Service.Base.ForDeviceServices.GetDevParameterByCode
+ForDeviceServices.GetDevParameterByCode => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - 实体类型 DeviceParameter 不是当前上下文的模型的一部分。 
+

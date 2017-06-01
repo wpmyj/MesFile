@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="LY.MES.WCF.ZhuanGu.ZhuanGuService" CodeBehind="ZhuanGuService.svc.cs" %>

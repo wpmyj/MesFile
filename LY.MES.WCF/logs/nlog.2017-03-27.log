@@ -1,0 +1,264 @@
+2017-03-27 11:16:11.4864   9 ERROR LY.MES.Service.Drums.ForCfPExecuteServices.UpdateCraftsProcessData
+ForCfPExecuteServices.UpdateCraftsProcessData => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - 拒绝了对对象 '原料RFID绑卡_明细新' (数据库 'I5V3'，架构 'dbo')的 UPDATE 权限。 
+
+2017-03-27 11:26:10.4587  10 ERROR LY.MES.Service.ThirdSystem.ForQZDBServices.GetL4Data1
+ForQZDBServices.GetL4Data1 => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - Login failed for user 'messa'.  Reason: The password of the account has expired. 
+
+2017-03-27 11:26:16.5740  13 ERROR LY.MES.Service.ThirdSystem.ForQZDBServices.GetL4Data1
+ForQZDBServices.GetL4Data1 => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - Login failed for user 'messa'.  Reason: The password of the account has expired. 
+
+2017-03-27 11:26:26.5386  17 ERROR LY.MES.Service.ThirdSystem.ForQZDBServices.GetL4Data1
+ForQZDBServices.GetL4Data1 => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - Login failed for user 'messa'.  Reason: The password of the account has expired. 
+
+2017-03-27 11:26:36.5762  12 ERROR LY.MES.Service.ThirdSystem.ForQZDBServices.GetL4Data1
+ForQZDBServices.GetL4Data1 => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - Login failed for user 'messa'.  Reason: The password of the account has expired. 
+
+2017-03-27 11:26:46.5277  10 ERROR LY.MES.Service.ThirdSystem.ForQZDBServices.GetL4Data1
+ForQZDBServices.GetL4Data1 => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - Login failed for user 'messa'.  Reason: The password of the account has expired. 
+
+2017-03-27 11:26:48.7129  13 ERROR LY.MES.Service.ThirdSystem.ForQZDBServices.GetL4Data1
+ForQZDBServices.GetL4Data1 => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - Login failed for user 'messa'.  Reason: The password of the account has expired. 
+
+2017-03-27 11:26:58.7734  10 ERROR LY.MES.Service.ThirdSystem.ForQZDBServices.GetL4Data1
+ForQZDBServices.GetL4Data1 => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - Login failed for user 'messa'.  Reason: The password of the account has expired. 
+
+2017-03-27 11:29:12.1501  11 ERROR LY.MES.Service.ThirdSystem.ForQZDBServices.GetL4Data1
+ForQZDBServices.GetL4Data1 => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - Login failed for user 'messa'.  Reason: The password of the account has expired. 
+
+2017-03-27 11:29:16.2803  11 ERROR LY.MES.Service.ThirdSystem.ForQZDBServices.GetL4Data1
+ForQZDBServices.GetL4Data1 => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - Login failed for user 'messa'.  Reason: The password of the account has expired. 
+
+2017-03-27 11:29:26.3219   8 ERROR LY.MES.Service.ThirdSystem.ForQZDBServices.GetL4Data1
+ForQZDBServices.GetL4Data1 => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - Login failed for user 'messa'.  Reason: The password of the account has expired. 
+
+2017-03-27 11:29:36.3205  14 ERROR LY.MES.Service.ThirdSystem.ForQZDBServices.GetL4Data1
+ForQZDBServices.GetL4Data1 => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - Login failed for user 'messa'.  Reason: The password of the account has expired. 
+
+2017-03-27 11:29:46.3260  12 ERROR LY.MES.Service.ThirdSystem.ForQZDBServices.GetL4Data1
+ForQZDBServices.GetL4Data1 => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - Login failed for user 'messa'.  Reason: The password of the account has expired. 
+
+2017-03-27 11:29:56.3156  11 ERROR LY.MES.Service.ThirdSystem.ForQZDBServices.GetL4Data1
+ForQZDBServices.GetL4Data1 => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - Login failed for user 'messa'.  Reason: The password of the account has expired. 
+
+2017-03-27 11:30:06.3382  14 ERROR LY.MES.Service.ThirdSystem.ForQZDBServices.GetL4Data1
+ForQZDBServices.GetL4Data1 => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - Login failed for user 'messa'.  Reason: The password of the account has expired. 
+
+2017-03-27 11:30:16.3657  12 ERROR LY.MES.Service.ThirdSystem.ForQZDBServices.GetL4Data1
+ForQZDBServices.GetL4Data1 => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - Login failed for user 'messa'.  Reason: The password of the account has expired. 
+
+2017-03-27 11:30:49.8007  24 ERROR LY.MES.Service.ThirdSystem.ForQZDBServices.GetL4Data1
+ForQZDBServices.GetL4Data1 => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - Login failed for user 'messa'.  Reason: The password of the account has expired. 
+
+2017-03-27 11:35:59.4934  13 ERROR LY.MES.Service.ThirdSystem.ForQZDBServices.GetL4Data1
+ForQZDBServices.GetL4Data1 => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - Login failed for user 'messa'.  Reason: The password of the account has expired. 
+
+2017-03-27 11:44:52.5709  12 ERROR LY.MES.Service.ThirdSystem.ForQZDBServices.GetL4Data1
+ForQZDBServices.GetL4Data1 => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - Login failed for user 'messa'.  Reason: The password of the account has expired. 
+
+2017-03-27 11:44:56.1611  10 ERROR LY.MES.Service.ThirdSystem.ForQZDBServices.GetL4Data1
+ForQZDBServices.GetL4Data1 => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - Login failed for user 'messa'.  Reason: The password of the account has expired. 
+
+2017-03-27 11:45:06.2376  11 ERROR LY.MES.Service.ThirdSystem.ForQZDBServices.GetL4Data1
+ForQZDBServices.GetL4Data1 => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - Login failed for user 'messa'.  Reason: The password of the account has expired. 
+
+2017-03-27 11:45:16.1612  12 ERROR LY.MES.Service.ThirdSystem.ForQZDBServices.GetL4Data1
+ForQZDBServices.GetL4Data1 => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - Login failed for user 'messa'.  Reason: The password of the account has expired. 
+
+2017-03-27 11:45:26.2548  12 ERROR LY.MES.Service.ThirdSystem.ForQZDBServices.GetL4Data1
+ForQZDBServices.GetL4Data1 => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - Login failed for user 'messa'.  Reason: The password of the account has expired. 
+
+2017-03-27 11:45:36.1754  12 ERROR LY.MES.Service.ThirdSystem.ForQZDBServices.GetL4Data1
+ForQZDBServices.GetL4Data1 => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - Login failed for user 'messa'.  Reason: The password of the account has expired. 
+
+2017-03-27 11:45:46.1939  12 ERROR LY.MES.Service.ThirdSystem.ForQZDBServices.GetL4Data1
+ForQZDBServices.GetL4Data1 => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - Login failed for user 'messa'.  Reason: The password of the account has expired. 
+
+2017-03-27 11:45:56.2255   7 ERROR LY.MES.Service.ThirdSystem.ForQZDBServices.GetL4Data1
+ForQZDBServices.GetL4Data1 => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - Login failed for user 'messa'.  Reason: The password of the account has expired. 
+
+2017-03-27 11:46:06.2111   9 ERROR LY.MES.Service.ThirdSystem.ForQZDBServices.GetL4Data1
+ForQZDBServices.GetL4Data1 => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - Login failed for user 'messa'.  Reason: The password of the account has expired. 
+
+2017-03-27 11:46:16.2416   9 ERROR LY.MES.Service.ThirdSystem.ForQZDBServices.GetL4Data1
+ForQZDBServices.GetL4Data1 => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - Login failed for user 'messa'.  Reason: The password of the account has expired. 
+
+2017-03-27 11:46:26.1972   7 ERROR LY.MES.Service.ThirdSystem.ForQZDBServices.GetL4Data1
+ForQZDBServices.GetL4Data1 => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - Login failed for user 'messa'.  Reason: The password of the account has expired. 
+
+2017-03-27 11:46:36.1968  10 ERROR LY.MES.Service.ThirdSystem.ForQZDBServices.GetL4Data1
+ForQZDBServices.GetL4Data1 => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - Login failed for user 'messa'.  Reason: The password of the account has expired. 
+
+2017-03-27 11:46:46.2854  11 ERROR LY.MES.Service.ThirdSystem.ForQZDBServices.GetL4Data1
+ForQZDBServices.GetL4Data1 => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - Login failed for user 'messa'.  Reason: The password of the account has expired. 
+
+2017-03-27 11:46:56.2389  10 ERROR LY.MES.Service.ThirdSystem.ForQZDBServices.GetL4Data1
+ForQZDBServices.GetL4Data1 => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - Login failed for user 'messa'.  Reason: The password of the account has expired. 
+
+2017-03-27 11:47:06.2345  10 ERROR LY.MES.Service.ThirdSystem.ForQZDBServices.GetL4Data1
+ForQZDBServices.GetL4Data1 => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - Login failed for user 'messa'.  Reason: The password of the account has expired. 
+
+2017-03-27 11:47:16.2601  12 ERROR LY.MES.Service.ThirdSystem.ForQZDBServices.GetL4Data1
+ForQZDBServices.GetL4Data1 => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - Login failed for user 'messa'.  Reason: The password of the account has expired. 
+
+2017-03-27 11:47:26.2497  10 ERROR LY.MES.Service.ThirdSystem.ForQZDBServices.GetL4Data1
+ForQZDBServices.GetL4Data1 => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - Login failed for user 'messa'.  Reason: The password of the account has expired. 
+
+2017-03-27 11:47:36.2652   9 ERROR LY.MES.Service.ThirdSystem.ForQZDBServices.GetL4Data1
+ForQZDBServices.GetL4Data1 => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - Login failed for user 'messa'.  Reason: The password of the account has expired. 
+
+2017-03-27 11:47:46.2848  13 ERROR LY.MES.Service.ThirdSystem.ForQZDBServices.GetL4Data1
+ForQZDBServices.GetL4Data1 => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - Login failed for user 'messa'.  Reason: The password of the account has expired. 
+
+2017-03-27 11:47:56.3164   7 ERROR LY.MES.Service.ThirdSystem.ForQZDBServices.GetL4Data1
+ForQZDBServices.GetL4Data1 => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - Login failed for user 'messa'.  Reason: The password of the account has expired. 
+
+2017-03-27 11:48:06.3439   9 ERROR LY.MES.Service.ThirdSystem.ForQZDBServices.GetL4Data1
+ForQZDBServices.GetL4Data1 => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - Login failed for user 'messa'.  Reason: The password of the account has expired. 
+
+2017-03-27 11:48:16.3085  12 ERROR LY.MES.Service.ThirdSystem.ForQZDBServices.GetL4Data1
+ForQZDBServices.GetL4Data1 => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - Login failed for user 'messa'.  Reason: The password of the account has expired. 
+
+2017-03-27 11:48:26.2951  12 ERROR LY.MES.Service.ThirdSystem.ForQZDBServices.GetL4Data1
+ForQZDBServices.GetL4Data1 => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - Login failed for user 'messa'.  Reason: The password of the account has expired. 
+
+2017-03-27 11:48:36.2877  13 ERROR LY.MES.Service.ThirdSystem.ForQZDBServices.GetL4Data1
+ForQZDBServices.GetL4Data1 => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - Login failed for user 'messa'.  Reason: The password of the account has expired. 
+
+2017-03-27 11:48:46.3022  11 ERROR LY.MES.Service.ThirdSystem.ForQZDBServices.GetL4Data1
+ForQZDBServices.GetL4Data1 => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - Login failed for user 'messa'.  Reason: The password of the account has expired. 
+
+2017-03-27 11:48:56.3288  11 ERROR LY.MES.Service.ThirdSystem.ForQZDBServices.GetL4Data1
+ForQZDBServices.GetL4Data1 => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - Login failed for user 'messa'.  Reason: The password of the account has expired. 
+
+2017-03-27 11:49:06.4024  12 ERROR LY.MES.Service.ThirdSystem.ForQZDBServices.GetL4Data1
+ForQZDBServices.GetL4Data1 => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - Login failed for user 'messa'.  Reason: The password of the account has expired. 
+
+2017-03-27 11:50:36.5615  13 ERROR LY.MES.Service.ThirdSystem.ForQZDBServices.GetL4Data1
+ForQZDBServices.GetL4Data1 => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - Login failed for user 'messa'.  Reason: The password of the account has expired. 
+
+2017-03-27 11:50:42.8529   8 ERROR LY.MES.Service.ThirdSystem.ForQZDBServices.GetL4Data1
+ForQZDBServices.GetL4Data1 => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - Login failed for user 'messa'.  Reason: The password of the account has expired. 
+
+2017-03-27 11:50:52.7785  11 ERROR LY.MES.Service.ThirdSystem.ForQZDBServices.GetL4Data1
+ForQZDBServices.GetL4Data1 => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - Login failed for user 'messa'.  Reason: The password of the account has expired. 
+
+2017-03-27 11:51:52.2029  10 ERROR LY.MES.Service.ThirdSystem.ForQZDBServices.GetL4Data1
+ForQZDBServices.GetL4Data1 => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - Login failed for user 'messa'.  Reason: The password of the account has expired. 
+
+2017-03-27 11:51:58.7472  11 ERROR LY.MES.Service.ThirdSystem.ForQZDBServices.GetL4Data1
+ForQZDBServices.GetL4Data1 => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - Login failed for user 'messa'.  Reason: The password of the account has expired. 
+
+2017-03-27 14:25:00.6024   9 ERROR LY.MES.Service.Drums.ForCfPExecuteServices.UpdateCraftsProcessData
+ForCfPExecuteServices.UpdateCraftsProcessData => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - 无法找到表 0。 
+
+2017-03-27 14:36:17.1431  10 ERROR LY.MES.Service.Drums.ForCfPExecuteServices.UpdateCraftsProcessData
+ForCfPExecuteServices.UpdateCraftsProcessData => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - 未将对象引用设置到对象的实例。 
+
+2017-03-27 14:37:28.5102  11 ERROR LY.MES.Service.Drums.ForCfPExecuteServices.UpdateCraftsProcessData
+ForCfPExecuteServices.UpdateCraftsProcessData => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - 未将对象引用设置到对象的实例。 
+
+2017-03-27 14:39:45.3700  11 ERROR LY.MES.Service.Drums.ForCfPExecuteServices.UpdateCraftsProcessData
+ForCfPExecuteServices.UpdateCraftsProcessData => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - 未将对象引用设置到对象的实例。 
+
+2017-03-27 14:41:20.7225  13 ERROR LY.MES.Service.Drums.ForCfPExecuteServices.UpdateCraftsProcessData
+ForCfPExecuteServices.UpdateCraftsProcessData => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - 未将对象引用设置到对象的实例。 
+
+2017-03-27 14:44:52.5216  13 ERROR LY.MES.Service.Drums.ForCfPExecuteServices.UpdateCraftsProcessData
+ForCfPExecuteServices.UpdateCraftsProcessData => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - 未将对象引用设置到对象的实例。 
+
+2017-03-27 14:45:44.8356  13 ERROR LY.MES.Service.Drums.ForCfPExecuteServices.UpdateCraftsProcessData
+ForCfPExecuteServices.UpdateCraftsProcessData => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - 未将对象引用设置到对象的实例。 
+
+2017-03-27 14:49:42.4962  13 ERROR LY.MES.Service.Drums.ForCfPExecuteServices.UpdateCraftsProcessData
+ForCfPExecuteServices.UpdateCraftsProcessData => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - 未将对象引用设置到对象的实例。 
+
+2017-03-27 14:53:03.5227  10 ERROR LY.MES.Service.Drums.ForCfPExecuteServices.UpdateCraftsProcessData
+ForCfPExecuteServices.UpdateCraftsProcessData => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - 基础提供程序在 Open 上失败。 
+
+2017-03-27 14:54:19.3340  10 ERROR LY.MES.Service.Drums.ForCfPExecuteServices.UpdateCraftsProcessData
+ForCfPExecuteServices.UpdateCraftsProcessData => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - 基础提供程序在 Open 上失败。 
+
+2017-03-27 14:59:32.5229  12 ERROR LY.MES.WCF.Dispatch.DispatchCenterSerivce+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext
+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 LY.MES.WCF.Dispatch.DispatchCenterSerivce.<DispatchArrangedCraftsProcessAsync>d__4.MoveNext() 位置 d:\svn\MES\CODE\LY.MES\LY.MES.WCF\Dispatch\DispatchCenterSerivce.svc.cs:行号 223 
+
+2017-03-27 14:59:32.5919  12 ERROR LY.MES.WCF.Dispatch.DispatchCenterSerivce+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext
+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 LY.MES.WCF.Dispatch.DispatchCenterSerivce.<DispatchArrangedCraftsProcessAsync>d__4.MoveNext() 位置 d:\svn\MES\CODE\LY.MES\LY.MES.WCF\Dispatch\DispatchCenterSerivce.svc.cs:行号 233 
+
+2017-03-27 15:04:15.7951  12 ERROR LY.MES.WCF.Dispatch.DispatchCenterSerivce+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext
+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 LY.MES.WCF.Dispatch.DispatchCenterSerivce.<DispatchArrangedCraftsProcessAsync>d__4.MoveNext() 位置 d:\svn\MES\CODE\LY.MES\LY.MES.WCF\Dispatch\DispatchCenterSerivce.svc.cs:行号 223 
+
+2017-03-27 15:04:15.8601  12 ERROR LY.MES.WCF.Dispatch.DispatchCenterSerivce+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext
+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 LY.MES.WCF.Dispatch.DispatchCenterSerivce.<DispatchArrangedCraftsProcessAsync>d__4.MoveNext() 位置 d:\svn\MES\CODE\LY.MES\LY.MES.WCF\Dispatch\DispatchCenterSerivce.svc.cs:行号 233 
+
+2017-03-27 15:43:28.8917  12 ERROR LY.MES.Service.ThirdSystem.ForQZDBServices.GetL4Data1
+ForQZDBServices.GetL4Data1 => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - Login failed for user 'messa'.  Reason: The password of the account has expired. 
+

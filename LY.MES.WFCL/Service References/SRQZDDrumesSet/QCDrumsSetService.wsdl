@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="QCDrumsSetService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="WSHttpBinding_IQCDrumsSetService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://192.168.1.238:1001/FindLeak/QCDrumsSetService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://192.168.1.238:1001/FindLeak/QCDrumsSetService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Server.Utility" />
+      <xsd:import schemaLocation="http://192.168.1.238:1001/FindLeak/QCDrumsSetService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://192.168.1.238:1001/FindLeak/QCDrumsSetService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/LY.MES.Model" />
+      <xsd:import schemaLocation="http://192.168.1.238:1001/FindLeak/QCDrumsSetService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System" />
+      <xsd:import schemaLocation="http://192.168.1.238:1001/FindLeak/QCDrumsSetService.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IQCDrumsSetService_AddQCDrumsSet_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddQCDrumsSet" />
+  </wsdl:message>
+  <wsdl:message name="IQCDrumsSetService_AddQCDrumsSet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddQCDrumsSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQCDrumsSetService_AddQCDrumsSet_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q1:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IQCDrumsSetService_GetQCDrumsSet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetQCDrumsSet" />
+  </wsdl:message>
+  <wsdl:message name="IQCDrumsSetService_GetQCDrumsSet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetQCDrumsSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQCDrumsSetService_GetQCDrumsSet_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q2:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IQCDrumsSetService_GetQCDrumsSetQRCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetQCDrumsSetQRCode" />
+  </wsdl:message>
+  <wsdl:message name="IQCDrumsSetService_GetQCDrumsSetQRCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetQCDrumsSetQRCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQCDrumsSetService_GetQCDrumsSetQRCode_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q3:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IQCDrumsSetService_GetQCDrumsSetQRCodes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetQCDrumsSetQRCodes" />
+  </wsdl:message>
+  <wsdl:message name="IQCDrumsSetService_GetQCDrumsSetQRCodes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetQCDrumsSetQRCodesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQCDrumsSetService_GetQCDrumsSetQRCodes_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q4:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IQCDrumsSetService_Getvw_QC_FindLeakDrumsSetList_InputMessage">
+    <wsdl:part name="parameters" element="tns:Getvw_QC_FindLeakDrumsSetList" />
+  </wsdl:message>
+  <wsdl:message name="IQCDrumsSetService_Getvw_QC_FindLeakDrumsSetList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Getvw_QC_FindLeakDrumsSetListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQCDrumsSetService_Getvw_QC_FindLeakDrumsSetList_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q5:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IQCDrumsSetService_GetQCDrumsList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetQCDrumsList" />
+  </wsdl:message>
+  <wsdl:message name="IQCDrumsSetService_GetQCDrumsList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetQCDrumsListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQCDrumsSetService_GetQCDrumsList_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q6:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IQCDrumsSetService_GetQCDrumsFindLeakList1_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetQCDrumsFindLeakList1" />
+  </wsdl:message>
+  <wsdl:message name="IQCDrumsSetService_GetQCDrumsFindLeakList1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetQCDrumsFindLeakList1Response" />
+  </wsdl:message>
+  <wsdl:message name="IQCDrumsSetService_GetQCDrumsFindLeakList1_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q7:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:portType name="IQCDrumsSetService">
+    <wsdl:operation name="AddQCDrumsSet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQCDrumsSetService/AddQCDrumsSet" message="tns:IQCDrumsSetService_AddQCDrumsSet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQCDrumsSetService/AddQCDrumsSetResponse" message="tns:IQCDrumsSetService_AddQCDrumsSet_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IQCDrumsSetService/AddQCDrumsSetCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IQCDrumsSetService_AddQCDrumsSet_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQCDrumsSet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQCDrumsSetService/GetQCDrumsSet" message="tns:IQCDrumsSetService_GetQCDrumsSet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQCDrumsSetService/GetQCDrumsSetResponse" message="tns:IQCDrumsSetService_GetQCDrumsSet_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IQCDrumsSetService/GetQCDrumsSetCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IQCDrumsSetService_GetQCDrumsSet_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQCDrumsSetQRCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQCDrumsSetService/GetQCDrumsSetQRCode" message="tns:IQCDrumsSetService_GetQCDrumsSetQRCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQCDrumsSetService/GetQCDrumsSetQRCodeResponse" message="tns:IQCDrumsSetService_GetQCDrumsSetQRCode_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IQCDrumsSetService/GetQCDrumsSetQRCodeCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IQCDrumsSetService_GetQCDrumsSetQRCode_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQCDrumsSetQRCodes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQCDrumsSetService/GetQCDrumsSetQRCodes" message="tns:IQCDrumsSetService_GetQCDrumsSetQRCodes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQCDrumsSetService/GetQCDrumsSetQRCodesResponse" message="tns:IQCDrumsSetService_GetQCDrumsSetQRCodes_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IQCDrumsSetService/GetQCDrumsSetQRCodesCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IQCDrumsSetService_GetQCDrumsSetQRCodes_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Getvw_QC_FindLeakDrumsSetList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQCDrumsSetService/Getvw_QC_FindLeakDrumsSetList" message="tns:IQCDrumsSetService_Getvw_QC_FindLeakDrumsSetList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQCDrumsSetService/Getvw_QC_FindLeakDrumsSetListResponse" message="tns:IQCDrumsSetService_Getvw_QC_FindLeakDrumsSetList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IQCDrumsSetService/Getvw_QC_FindLeakDrumsSetListCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IQCDrumsSetService_Getvw_QC_FindLeakDrumsSetList_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQCDrumsList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQCDrumsSetService/GetQCDrumsList" message="tns:IQCDrumsSetService_GetQCDrumsList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQCDrumsSetService/GetQCDrumsListResponse" message="tns:IQCDrumsSetService_GetQCDrumsList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IQCDrumsSetService/GetQCDrumsListCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IQCDrumsSetService_GetQCDrumsList_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQCDrumsFindLeakList1">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQCDrumsSetService/GetQCDrumsFindLeakList1" message="tns:IQCDrumsSetService_GetQCDrumsFindLeakList1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQCDrumsSetService/GetQCDrumsFindLeakList1Response" message="tns:IQCDrumsSetService_GetQCDrumsFindLeakList1_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IQCDrumsSetService/GetQCDrumsFindLeakList1CustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IQCDrumsSetService_GetQCDrumsFindLeakList1_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSHttpBinding_IQCDrumsSetService" type="tns:IQCDrumsSetService">
+    <wsp:PolicyReference URI="#WSHttpBinding_IQCDrumsSetService_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddQCDrumsSet">
+      <soap12:operation soapAction="http://tempuri.org/IQCDrumsSetService/AddQCDrumsSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetQCDrumsSet">
+      <soap12:operation soapAction="http://tempuri.org/IQCDrumsSetService/GetQCDrumsSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetQCDrumsSetQRCode">
+      <soap12:operation soapAction="http://tempuri.org/IQCDrumsSetService/GetQCDrumsSetQRCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetQCDrumsSetQRCodes">
+      <soap12:operation soapAction="http://tempuri.org/IQCDrumsSetService/GetQCDrumsSetQRCodes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Getvw_QC_FindLeakDrumsSetList">
+      <soap12:operation soapAction="http://tempuri.org/IQCDrumsSetService/Getvw_QC_FindLeakDrumsSetList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetQCDrumsList">
+      <soap12:operation soapAction="http://tempuri.org/IQCDrumsSetService/GetQCDrumsList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetQCDrumsFindLeakList1">
+      <soap12:operation soapAction="http://tempuri.org/IQCDrumsSetService/GetQCDrumsFindLeakList1" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="QCDrumsSetService">
+    <wsdl:port name="WSHttpBinding_IQCDrumsSetService" binding="tns:WSHttpBinding_IQCDrumsSetService">
+      <soap12:address location="http://192.168.1.238:1001/FindLeak/QCDrumsSetService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://192.168.1.238:1001/FindLeak/QCDrumsSetService.svc</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="62d3930c-8302-4569-9d7d-bc27a6f8867c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies>
+      <ReferencedAssembly AssemblyName="mscorlib" />
+    </ReferencedAssemblies>
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://192.168.1.238:1001/FindLeak/QCDrumsSetService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="QCDrumsSetService.disco" MetadataType="Disco" ID="1c47ca70-49cf-4d45-b871-971e32bc392f" SourceId="1" SourceUrl="http://192.168.1.238:1001/FindLeak/QCDrumsSetService.svc?disco" />
+    <MetadataFile FileName="QCDrumsSetService.wsdl" MetadataType="Wsdl" ID="f7b985fb-82ea-4b65-aeb0-0597f01c294c" SourceId="1" SourceUrl="http://192.168.1.238:1001/FindLeak/QCDrumsSetService.svc?wsdl" />
+    <MetadataFile FileName="QCDrumsSetService.xsd" MetadataType="Schema" ID="a1127f85-878c-4701-84c6-275462c31751" SourceId="1" SourceUrl="http://192.168.1.238:1001/FindLeak/QCDrumsSetService.svc?xsd=xsd0" />
+    <MetadataFile FileName="QCDrumsSetService1.xsd" MetadataType="Schema" ID="afef31c3-1b1f-4102-9a31-022dad8e6fb7" SourceId="1" SourceUrl="http://192.168.1.238:1001/FindLeak/QCDrumsSetService.svc?xsd=xsd1" />
+    <MetadataFile FileName="QCDrumsSetService2.xsd" MetadataType="Schema" ID="9bf52ed0-b3dd-4729-b8fa-69711419ed3a" SourceId="1" SourceUrl="http://192.168.1.238:1001/FindLeak/QCDrumsSetService.svc?xsd=xsd2" />
+    <MetadataFile FileName="QCDrumsSetService3.xsd" MetadataType="Schema" ID="0790ca41-4b50-4ebd-9679-76f9417d38bc" SourceId="1" SourceUrl="http://192.168.1.238:1001/FindLeak/QCDrumsSetService.svc?xsd=xsd3" />
+    <MetadataFile FileName="QCDrumsSetService4.xsd" MetadataType="Schema" ID="498f1007-b495-4d1a-905c-5d8e05ea2735" SourceId="1" SourceUrl="http://192.168.1.238:1001/FindLeak/QCDrumsSetService.svc?xsd=xsd4" />
+    <MetadataFile FileName="QCDrumsSetService5.xsd" MetadataType="Schema" ID="d2d551db-5e08-4739-b81a-2b8995d70217" SourceId="1" SourceUrl="http://192.168.1.238:1001/FindLeak/QCDrumsSetService.svc?xsd=xsd5" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

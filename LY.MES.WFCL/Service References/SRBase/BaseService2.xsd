@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:16498/Base/BaseService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/LY.MES.Model" />
+  <xs:import schemaLocation="http://localhost:16498/Base/BaseService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Server.Utility" />
+  <xs:element name="AddCraftsParameterContrast">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/LY.MES.Model" minOccurs="0" name="model" nillable="true" type="q1:CraftsParameterContrast" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddCraftsParameterContrastResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Server.Utility" minOccurs="0" name="AddCraftsParameterContrastResult" nillable="true" type="q2:CommonResultOfCraftsParameterContrastdYMi5huk" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCraftsParameterContrast">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/LY.MES.Model" minOccurs="0" name="model" nillable="true" type="q3:CraftsParameterContrast" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCraftsParameterContrastResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Server.Utility" minOccurs="0" name="UpdateCraftsParameterContrastResult" nillable="true" type="q4:CommonResultOfCraftsParameterContrastdYMi5huk" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCraftsParameterContrastListByID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCraftsParameterContrastListByIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Server.Utility" minOccurs="0" name="GetCraftsParameterContrastListByIDResult" nillable="true" type="q5:CommonResultOfCraftsParameterContrastdYMi5huk" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DelCraftsParameterContrastListByID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DelCraftsParameterContrastListByIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Server.Utility" minOccurs="0" name="DelCraftsParameterContrastListByIDResult" nillable="true" type="q6:CommonResultOfboolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCraftsParameterContrastList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCraftsParameterContrastListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Server.Utility" minOccurs="0" name="GetCraftsParameterContrastListResult" nillable="true" type="q7:CommonResultOfArrayOfCraftsParameterContrastdYMi5huk" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

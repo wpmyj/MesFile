@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="47d6007f-364f-4232-926e-bcf3c0b42b34" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:16498/ZhuanGu/ZhuanGuService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ZhuanGuService4.xsd" MetadataType="Schema" ID="8c0c66f6-f640-4713-a7e5-46c0c7b0e147" SourceId="1" SourceUrl="http://localhost:16498/ZhuanGu/ZhuanGuService.svc?xsd=xsd4" />
+    <MetadataFile FileName="ZhuanGuService.wsdl" MetadataType="Wsdl" ID="6383fe14-6c7e-48be-a086-0003d0ff0731" SourceId="1" SourceUrl="http://localhost:16498/ZhuanGu/ZhuanGuService.svc?wsdl" />
+    <MetadataFile FileName="ZhuanGuService.disco" MetadataType="Disco" ID="1732da48-6fb3-4793-95eb-06f642e5f015" SourceId="1" SourceUrl="http://localhost:16498/ZhuanGu/ZhuanGuService.svc?disco" />
+    <MetadataFile FileName="ZhuanGuService.xsd" MetadataType="Schema" ID="c1e416b8-bcbe-4ee3-ac8e-7b74ccc16d31" SourceId="1" SourceUrl="http://localhost:16498/ZhuanGu/ZhuanGuService.svc?xsd=xsd0" />
+    <MetadataFile FileName="ZhuanGuService1.xsd" MetadataType="Schema" ID="814b876d-16f4-40db-bf15-2bd18dc81810" SourceId="1" SourceUrl="http://localhost:16498/ZhuanGu/ZhuanGuService.svc?xsd=xsd1" />
+    <MetadataFile FileName="ZhuanGuService2.xsd" MetadataType="Schema" ID="4e84a04e-ef20-4cba-b351-f924341c4580" SourceId="1" SourceUrl="http://localhost:16498/ZhuanGu/ZhuanGuService.svc?xsd=xsd2" />
+    <MetadataFile FileName="ZhuanGuService3.xsd" MetadataType="Schema" ID="faefd386-312c-406f-891c-c885180d9a27" SourceId="1" SourceUrl="http://localhost:16498/ZhuanGu/ZhuanGuService.svc?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

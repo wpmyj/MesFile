@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="QCDFindLeakService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="WSHttpBinding_IQCDFindLeakService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:16498/FindLeak/QCDFindLeakService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:16498/FindLeak/QCDFindLeakService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Server.Utility" />
+      <xsd:import schemaLocation="http://localhost:16498/FindLeak/QCDFindLeakService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:16498/FindLeak/QCDFindLeakService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/LY.MES.Model" />
+      <xsd:import schemaLocation="http://localhost:16498/FindLeak/QCDFindLeakService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System" />
+      <xsd:import schemaLocation="http://localhost:16498/FindLeak/QCDFindLeakService.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IQCDFindLeakService_AddQCDrumsFindLeakReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddQCDrumsFindLeakReport" />
+  </wsdl:message>
+  <wsdl:message name="IQCDFindLeakService_AddQCDrumsFindLeakReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddQCDrumsFindLeakReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQCDFindLeakService_AddQCDrumsFindLeakReport_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q1:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IQCDFindLeakService_GetQCDrumsFindLeak_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetQCDrumsFindLeak" />
+  </wsdl:message>
+  <wsdl:message name="IQCDFindLeakService_GetQCDrumsFindLeak_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetQCDrumsFindLeakResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQCDFindLeakService_GetQCDrumsFindLeak_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q2:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IQCDFindLeakService_GetQCDrumsFindLeakList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetQCDrumsFindLeakList" />
+  </wsdl:message>
+  <wsdl:message name="IQCDFindLeakService_GetQCDrumsFindLeakList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetQCDrumsFindLeakListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQCDFindLeakService_GetQCDrumsFindLeakList_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q3:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:portType name="IQCDFindLeakService">
+    <wsdl:operation name="AddQCDrumsFindLeakReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQCDFindLeakService/AddQCDrumsFindLeakReport" message="tns:IQCDFindLeakService_AddQCDrumsFindLeakReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQCDFindLeakService/AddQCDrumsFindLeakReportResponse" message="tns:IQCDFindLeakService_AddQCDrumsFindLeakReport_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IQCDFindLeakService/AddQCDrumsFindLeakReportCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IQCDFindLeakService_AddQCDrumsFindLeakReport_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQCDrumsFindLeak">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQCDFindLeakService/GetQCDrumsFindLeak" message="tns:IQCDFindLeakService_GetQCDrumsFindLeak_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQCDFindLeakService/GetQCDrumsFindLeakResponse" message="tns:IQCDFindLeakService_GetQCDrumsFindLeak_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IQCDFindLeakService/GetQCDrumsFindLeakCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IQCDFindLeakService_GetQCDrumsFindLeak_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQCDrumsFindLeakList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQCDFindLeakService/GetQCDrumsFindLeakList" message="tns:IQCDFindLeakService_GetQCDrumsFindLeakList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQCDFindLeakService/GetQCDrumsFindLeakListResponse" message="tns:IQCDFindLeakService_GetQCDrumsFindLeakList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IQCDFindLeakService/GetQCDrumsFindLeakListCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IQCDFindLeakService_GetQCDrumsFindLeakList_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSHttpBinding_IQCDFindLeakService" type="tns:IQCDFindLeakService">
+    <wsp:PolicyReference URI="#WSHttpBinding_IQCDFindLeakService_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddQCDrumsFindLeakReport">
+      <soap12:operation soapAction="http://tempuri.org/IQCDFindLeakService/AddQCDrumsFindLeakReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetQCDrumsFindLeak">
+      <soap12:operation soapAction="http://tempuri.org/IQCDFindLeakService/GetQCDrumsFindLeak" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetQCDrumsFindLeakList">
+      <soap12:operation soapAction="http://tempuri.org/IQCDFindLeakService/GetQCDrumsFindLeakList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="QCDFindLeakService">
+    <wsdl:port name="WSHttpBinding_IQCDFindLeakService" binding="tns:WSHttpBinding_IQCDFindLeakService">
+      <soap12:address location="http://localhost:16498/FindLeak/QCDFindLeakService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://localhost:16498/FindLeak/QCDFindLeakService.svc</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/LY.MES.Model.VModel" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/LY.MES.Model.VModel" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:1001/Base/DeviceService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/LY.MES.Model" />
+  <xs:complexType name="ArrayOfVDeviceInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VDeviceInfo" nillable="true" type="tns:VDeviceInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVDeviceInfo" nillable="true" type="tns:ArrayOfVDeviceInfo" />
+  <xs:complexType name="VDeviceInfo">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/LY.MES.Model" base="q1:Device">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DevCName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="VDeviceInfo" nillable="true" type="tns:VDeviceInfo" />
+</xs:schema>

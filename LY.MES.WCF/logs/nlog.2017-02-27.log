@@ -1,0 +1,94 @@
+2017-02-27 09:13:29.4515  12 ERROR LY.MES.Service.Drums.ForCfPExecuteServices.UpdateCraftsProcessData
+ForCfPExecuteServices.UpdateCraftsProcessData => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - 输入字符串的格式不正确。 
+
+2017-02-27 09:33:23.4158   8 ERROR LY.MES.Service.Drums.ForCfPExecuteServices.UpdateCraftsProcessData
+ForCfPExecuteServices.UpdateCraftsProcessData => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - 基础提供程序在 Open 上失败。 
+
+2017-02-27 10:02:58.7313  11 ERROR LY.MES.Service.Drums.ForCfPExecuteServices.UpdateCraftsProcessData
+ForCfPExecuteServices.UpdateCraftsProcessData => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - 无法访问已释放的对象。
+对象名:“TransactionScope”。 
+
+2017-02-27 10:06:05.9830  13 ERROR LY.MES.Service.Drums.ForCfPExecuteServices.UpdateCraftsProcessData
+ForCfPExecuteServices.UpdateCraftsProcessData => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - 基础提供程序在 Open 上失败。 
+
+2017-02-27 10:08:19.6006  13 ERROR LY.MES.Service.Drums.ForCfPExecuteServices.UpdateCraftsProcessData
+ForCfPExecuteServices.UpdateCraftsProcessData => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - 基础提供程序在 Open 上失败。 
+
+2017-02-27 10:26:14.0081  15 ERROR LY.MES.Service.Drums.ForCfPExecuteServices.UpdateCraftsProcessData
+ForCfPExecuteServices.UpdateCraftsProcessData => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - 列“[标准值]”不属于表 ds。 
+
+2017-02-27 10:34:15.2616  12 ERROR LY.MES.Service.Drums.ForCfPExecuteServices.UpdateCraftsProcessData
+ForCfPExecuteServices.UpdateCraftsProcessData => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - 基础提供程序在 Open 上失败。 
+
+2017-02-27 10:42:23.5816  12 ERROR LY.MES.Service.Drums.ForCfPExecuteServices.UpdateCraftsProcessData
+ForCfPExecuteServices.UpdateCraftsProcessData => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - 基础提供程序在 Open 上失败。 
+
+2017-02-27 10:59:32.4954  15 ERROR LY.MES.WCF.Dispatch.DispatchCenterSerivce+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext
+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 LY.MES.WCF.Dispatch.DispatchCenterSerivce.<DispatchArrangedCraftsProcessAsync>d__4.MoveNext() 位置 d:\svn\MES\CODE\LY.MES\LY.MES.WCF\Dispatch\DispatchCenterSerivce.svc.cs:行号 233 
+
+2017-02-27 14:56:04.0101  24 ERROR LY.MES.WCF.Dispatch.DispatchCenterSerivce+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext
+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 LY.MES.WCF.Dispatch.DispatchCenterSerivce.<DispatchArrangedCraftsProcessAsync>d__4.MoveNext() 位置 d:\svn\MES\CODE\LY.MES\LY.MES.WCF\Dispatch\DispatchCenterSerivce.svc.cs:行号 233 
+
+2017-02-27 14:56:04.1151  24 ERROR LY.MES.Service.Drums.ForCfPExecuteServices.UpdateCraftsProcessData
+ForCfPExecuteServices.UpdateCraftsProcessData => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - 输入字符串的格式不正确。 
+
+2017-02-27 14:58:55.8579  30 ERROR LY.MES.WCF.Dispatch.DispatchCenterSerivce+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext
+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 LY.MES.WCF.Dispatch.DispatchCenterSerivce.<DispatchArrangedCraftsProcessAsync>d__4.MoveNext() 位置 d:\svn\MES\CODE\LY.MES\LY.MES.WCF\Dispatch\DispatchCenterSerivce.svc.cs:行号 233 
+
+2017-02-27 14:59:13.1139  30 ERROR LY.MES.Service.Drums.ForCfPExecuteServices.UpdateCraftsProcessData
+ForCfPExecuteServices.UpdateCraftsProcessData => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - 输入字符串的格式不正确。 
+
+2017-02-27 15:01:15.4479  30 ERROR LY.MES.WCF.Dispatch.DispatchCenterSerivce+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext
+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 LY.MES.WCF.Dispatch.DispatchCenterSerivce.<DispatchArrangedCraftsProcessAsync>d__4.MoveNext() 位置 d:\svn\MES\CODE\LY.MES\LY.MES.WCF\Dispatch\DispatchCenterSerivce.svc.cs:行号 233 
+
+2017-02-27 15:21:44.2462  11 ERROR LY.MES.Service.Drums.ForCfPExecuteServices.UpdateCraftsProcessData
+ForCfPExecuteServices.UpdateCraftsProcessData => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - 输入字符串的格式不正确。 
+
+2017-02-27 15:32:02.6456  11 ERROR LY.MES.Service.Drums.ForCfPExecuteServices.UpdateCraftsProcessData
+ForCfPExecuteServices.UpdateCraftsProcessData => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - 输入字符串的格式不正确。 
+
+2017-02-27 15:33:59.1022  11 ERROR LY.MES.WCF.Dispatch.DispatchCenterSerivce+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext
+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 LY.MES.WCF.Dispatch.DispatchCenterSerivce.<DispatchArrangedCraftsProcessAsync>d__4.MoveNext() 位置 d:\svn\MES\CODE\LY.MES\LY.MES.WCF\Dispatch\DispatchCenterSerivce.svc.cs:行号 223 
+
+2017-02-27 15:37:06.1849  11 ERROR LY.MES.WCF.Dispatch.DispatchCenterSerivce+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext
+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 LY.MES.WCF.Dispatch.DispatchCenterSerivce.<DispatchArrangedCraftsProcessAsync>d__4.MoveNext() 位置 d:\svn\MES\CODE\LY.MES\LY.MES.WCF\Dispatch\DispatchCenterSerivce.svc.cs:行号 233 
+
+2017-02-27 15:37:10.5882  11 ERROR LY.MES.WCF.Dispatch.DispatchCenterSerivce+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext
+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 LY.MES.WCF.Dispatch.DispatchCenterSerivce.<DispatchArrangedCraftsProcessAsync>d__4.MoveNext() 位置 d:\svn\MES\CODE\LY.MES\LY.MES.WCF\Dispatch\DispatchCenterSerivce.svc.cs:行号 223 
+
+2017-02-27 16:35:58.9660  19 ERROR LY.MES.WCF.Dispatch.DispatchCenterSerivce+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext
+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 LY.MES.WCF.Dispatch.DispatchCenterSerivce.<DispatchArrangedCraftsProcessAsync>d__4.MoveNext() 位置 d:\svn\MES\CODE\LY.MES\LY.MES.WCF\Dispatch\DispatchCenterSerivce.svc.cs:行号 223 
+
+2017-02-27 16:35:59.0280  19 ERROR LY.MES.WCF.Dispatch.DispatchCenterSerivce+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext
+<DispatchArrangedCraftsProcessAsync>d__4.MoveNext => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 LY.MES.WCF.Dispatch.DispatchCenterSerivce.<DispatchArrangedCraftsProcessAsync>d__4.MoveNext() 位置 d:\svn\MES\CODE\LY.MES\LY.MES.WCF\Dispatch\DispatchCenterSerivce.svc.cs:行号 233 
+

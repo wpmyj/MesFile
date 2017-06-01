@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{20AFB22D-7B43-4BD2-A584-FA95047BB702}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LY.MES.WCF</RootNamespace>
+    <AssemblyName>LY.MES.WCF</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Client.Utility">
+      <HintPath>..\..\..\第三方\ThirdPart.DLL\Client\Client.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\第三方\ThirdPart.DLL\Server\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\第三方\ThirdPart.DLL\Server\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Server.Framework, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\第三方\ThirdPart.DLL\Server\Server.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Server.Utility, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\第三方\ThirdPart.DLL\Server\Server.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Base\BaseService.svc" />
+    <Content Include="Base\CLParamSetSerivce.svc" />
+    <Content Include="Base\DepartmentService.svc" />
+    <Content Include="Base\DeviceService.svc" />
+    <Content Include="Base\PersonService.svc" />
+    <Content Include="DataColl\DevExecuteService.svc" />
+    <Content Include="DataColl\DeviceCollectService.svc" />
+    <Content Include="Dispatch\DispatchCenterSerivce.svc" />
+    <Content Include="Drums\ArrangedVService.svc" />
+    <Content Include="Drums\CfPExecuteService.svc" />
+    <Content Include="FindLeak\QCDFindLeakService.svc" />
+    <Content Include="FindLeak\QCDrumsSetService.svc" />
+    <Content Include="Global.asax" />
+    <Content Include="Pipeline\PipelineService.svc" />
+    <Content Include="ThirdSystem\QZDataService.svc" />
+    <Content Include="Web.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Winder\PullDetectionRegService.svc" />
+    <Content Include="ZhuanGu\ZhuanGuService.svc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\BaseService.svc.cs">
+      <DependentUpon>BaseService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Base\CLParamSetSerivce.svc.cs">
+      <DependentUpon>CLParamSetSerivce.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Base\DepartmentService.svc.cs">
+      <DependentUpon>DepartmentService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Base\DeviceService.svc.cs">
+      <DependentUpon>DeviceService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Base\IBaseService.cs" />
+    <Compile Include="Base\ICLParamSetSerivce.cs" />
+    <Compile Include="Base\IDepartmentService.cs" />
+    <Compile Include="Base\IPersonService.cs" />
+    <Compile Include="Base\PersonService.svc.cs">
+      <DependentUpon>PersonService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ArrangedVouchExecute.cs" />
+    <Compile Include="Common\DisCenterHandler.cs" />
+    <Compile Include="DataColl\DevExecuteService.svc.cs">
+      <DependentUpon>DevExecuteService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="DataColl\DeviceCollectService.svc.cs">
+      <DependentUpon>DeviceCollectService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Base\IDeviceService.cs" />
+    <Compile Include="DataColl\IDevExecuteService.cs" />
+    <Compile Include="DataColl\IDeviceCollectService.cs" />
+    <Compile Include="DeviceCacheData.ashx.cs">
+      <DependentUpon>DeviceCacheData.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Dispatch\DispatchCenterSerivce.svc.cs">
+      <DependentUpon>DispatchCenterSerivce.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Dispatch\IDispatchCenterSerivce.cs" />
+    <Compile Include="Drums\ArrangedVService.svc.cs">
+      <DependentUpon>ArrangedVService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Drums\CfPExecuteService.svc.cs">
+      <DependentUpon>CfPExecuteService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Drums\IArrangedVService.cs" />
+    <Compile Include="Drums\ICfPExecuteService.cs" />
+    <Compile Include="FindLeak\IQCDFindLeakService.cs" />
+    <Compile Include="FindLeak\IQCDrumsSetService.cs" />
+    <Compile Include="FindLeak\QCDFindLeakService.svc.cs">
+      <DependentUpon>QCDFindLeakService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="FindLeak\QCDrumsSetService.svc.cs">
+      <DependentUpon>QCDrumsSetService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Pipeline\IPipelineService.cs" />
+    <Compile Include="Pipeline\PipelineService.svc.cs">
+      <DependentUpon>PipelineService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ThirdSystem\IQZDataService.cs" />
+    <Compile Include="ThirdSystem\QZDataService.svc.cs">
+      <DependentUpon>QZDataService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Winder\IPullDetectionRegService.cs" />
+    <Compile Include="Winder\PullDetectionRegService.svc.cs">
+      <DependentUpon>PullDetectionRegService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="ZhuanGu\IZhuanGuService.cs" />
+    <Compile Include="ZhuanGu\ZhuanGuService.svc.cs">
+      <DependentUpon>ZhuanGuService.svc</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\appSettings.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Config\Conns.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Config\Services.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="log4net.config" />
+    <Content Include="NLog.config" />
+    <Content Include="DeviceCacheData.ashx" />
+    <None Include="Properties\PublishProfiles\Release_WCF.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LY.MES.Model\LY.MES.Model.csproj">
+      <Project>{310ec04e-2f38-4564-b9d1-0bf9280448fc}</Project>
+      <Name>LY.MES.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LY.MES.Service\LY.MES.Service.csproj">
+      <Project>{e7a617c1-38cb-46b9-b4a7-a801f104198c}</Project>
+      <Name>LY.MES.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>16518</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:16498/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

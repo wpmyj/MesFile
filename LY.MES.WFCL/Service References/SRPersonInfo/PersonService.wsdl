@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="PersonService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="WSHttpBinding_IPersonService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:16498/Base/PersonService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:16498/Base/PersonService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Server.Utility" />
+      <xsd:import schemaLocation="http://localhost:16498/Base/PersonService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:16498/Base/PersonService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/LY.MES.Model" />
+      <xsd:import schemaLocation="http://localhost:16498/Base/PersonService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System" />
+      <xsd:import schemaLocation="http://localhost:16498/Base/PersonService.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IPersonService_GetPersonByCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPersonByCode" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_GetPersonByCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPersonByCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_GetPersonByCode_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q1:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_GetPersonList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPersonList" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_GetPersonList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPersonListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_GetPersonList_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q2:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_AddPersonData_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddPersonData" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_AddPersonData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddPersonDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_AddPersonData_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q3:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_UpdataPersonData_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdataPersonData" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_UpdataPersonData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdataPersonDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_UpdataPersonData_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q4:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_DelPersonData_InputMessage">
+    <wsdl:part name="parameters" element="tns:DelPersonData" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_DelPersonData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DelPersonDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_DelPersonData_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q5:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:portType name="IPersonService">
+    <wsdl:operation name="GetPersonByCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonService/GetPersonByCode" message="tns:IPersonService_GetPersonByCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonService/GetPersonByCodeResponse" message="tns:IPersonService_GetPersonByCode_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IPersonService/GetPersonByCodeCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IPersonService_GetPersonByCode_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonService/GetPersonList" message="tns:IPersonService_GetPersonList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonService/GetPersonListResponse" message="tns:IPersonService_GetPersonList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IPersonService/GetPersonListCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IPersonService_GetPersonList_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPersonData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonService/AddPersonData" message="tns:IPersonService_AddPersonData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonService/AddPersonDataResponse" message="tns:IPersonService_AddPersonData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IPersonService/AddPersonDataCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IPersonService_AddPersonData_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdataPersonData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonService/UpdataPersonData" message="tns:IPersonService_UpdataPersonData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonService/UpdataPersonDataResponse" message="tns:IPersonService_UpdataPersonData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IPersonService/UpdataPersonDataCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IPersonService_UpdataPersonData_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DelPersonData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonService/DelPersonData" message="tns:IPersonService_DelPersonData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonService/DelPersonDataResponse" message="tns:IPersonService_DelPersonData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IPersonService/DelPersonDataCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IPersonService_DelPersonData_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSHttpBinding_IPersonService" type="tns:IPersonService">
+    <wsp:PolicyReference URI="#WSHttpBinding_IPersonService_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetPersonByCode">
+      <soap12:operation soapAction="http://tempuri.org/IPersonService/GetPersonByCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonList">
+      <soap12:operation soapAction="http://tempuri.org/IPersonService/GetPersonList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddPersonData">
+      <soap12:operation soapAction="http://tempuri.org/IPersonService/AddPersonData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdataPersonData">
+      <soap12:operation soapAction="http://tempuri.org/IPersonService/UpdataPersonData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DelPersonData">
+      <soap12:operation soapAction="http://tempuri.org/IPersonService/DelPersonData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PersonService">
+    <wsdl:port name="WSHttpBinding_IPersonService" binding="tns:WSHttpBinding_IPersonService">
+      <soap12:address location="http://localhost:16498/Base/PersonService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://localhost:16498/Base/PersonService.svc</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,669 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LYMesSystemModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ArrangedVouch">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ArrangedVouchCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="VouchDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="MaterialVouchCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="FormulaCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FormulaName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="InputWeight" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="OutputWeight" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="WeighingPounds" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="UserStatus" Type="Int32" Nullable="false" />
+    <Property Name="InterruptionRemark" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="InterruptionTime" Type="DateTime" Precision="3" />
+    <Property Name="Creator" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifyPerson" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ModifyTime" Type="DateTime" Precision="3" />
+    <Property Name="LicenseNum" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="VehicleWeight" Type="Double" />
+    <Property Name="WeightMan" Type="Double" />
+    <Property Name="TeachProgress" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="RFIDCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="VouchType" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="ProPlanNum" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ArrangedVouchLog">
+    <Key>
+      <PropertyRef Name="AutoID" />
+    </Key>
+    <Property Name="AutoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ArrangedVouchCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="OperatDesc" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Operator" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="OperatingTime" Type="DateTime" Precision="3" />
+    <Property Name="Frequency" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="CraftsName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="OperatorNum" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="CollectDataInfo">
+    <Key>
+      <PropertyRef Name="AutoId" />
+    </Key>
+    <Property Name="AutoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DeveCode" Type="Int32" Nullable="false" />
+    <Property Name="OriginalValue" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CollValue" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="CraftsLineParamSet">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="WorkShop" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Order" Type="Int32" Nullable="false" />
+    <Property Name="CraftsCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CraftsName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CraftsTaskTime" Type="Int32" />
+    <Property Name="Treatment" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Creator" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CreateDateTime" Type="DateTime" Precision="3" />
+    <Property Name="Modify" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ModifyDate" Type="DateTime" Precision="3" />
+    <Property Name="UseStatus" Type="Int32" Nullable="false" />
+    <Property Name="MachineNum" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="CraftsLineParamSetDetail" Relationship="Self.FK_CRAFTSLI_REFERENCE_CRAFTSLI" FromRole="CraftsLineParamSet" ToRole="CraftsLineParamSetDetail" />
+  </EntityType>
+  <EntityType Name="CraftsLineParamSetDetail">
+    <Key>
+      <PropertyRef Name="AutoID" />
+    </Key>
+    <Property Name="AutoID" Type="Int32" Nullable="false" />
+    <Property Name="ID" Type="Int32" />
+    <Property Name="Priority" Type="Int32" Nullable="false" />
+    <Property Name="StandardValue" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="UpperValue" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="LowerValue" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="IsValveCheck" Type="Boolean" Nullable="false" />
+    <Property Name="IsValveControl" Type="Boolean" Nullable="false" />
+    <Property Name="IsFixedParameters" Type="Boolean" Nullable="false" />
+    <Property Name="IntervalDuration" Type="Int32" />
+    <Property Name="TriggerDuration" Type="Int32" />
+    <Property Name="UserStatus" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="CraftsLineParamSet" Relationship="Self.FK_CRAFTSLI_REFERENCE_CRAFTSLI" FromRole="CraftsLineParamSetDetail" ToRole="CraftsLineParamSet" />
+    <Property Name="CraftsID" Type="Int32" />
+    <Property Name="ParameterID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CraftsParameterContrast">
+    <Key>
+      <PropertyRef Name="ParameterID" />
+    </Key>
+    <Property Name="ParamName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DevepName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ParamType" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="ParameterID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CraftsProcessExecute">
+    <Key>
+      <PropertyRef Name="ExecuteID" />
+    </Key>
+    <Property Name="ExecuteID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ArrangedVouchCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ExecuteOrder" Type="Int32" Nullable="false" />
+    <Property Name="WorkshopCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="WorkshopName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="WorkbrachCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="WorkbrachName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CraftsCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CraftsName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ExecuteMode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PlanDuration" Type="Int32" />
+    <Property Name="StartTime" Type="DateTime" Precision="3" />
+    <Property Name="EndTime" Type="DateTime" Precision="3" />
+    <Property Name="ExecuteStatus" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="CraftsProcessExecuteDetail" Relationship="Self.FK_CRAFTSPR_REFERENCE_CRAFTSPR" FromRole="CraftsProcessExecute" ToRole="CraftsProcessExecuteDetail" />
+  </EntityType>
+  <EntityType Name="CraftsProcessExecuteDetail">
+    <Key>
+      <PropertyRef Name="AutoID" />
+    </Key>
+    <Property Name="AutoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ExecuteID" Type="Int32" Nullable="false" />
+    <Property Name="Priority" Type="Int32" Nullable="false" />
+    <Property Name="StandardValue" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="UpperValue" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="LowerValue" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="IsValveCheck" Type="Boolean" Nullable="false" />
+    <Property Name="IsValveControl" Type="Boolean" Nullable="false" />
+    <Property Name="IntervalDuration" Type="Int32" />
+    <Property Name="TriggerDuration" Type="Int32" />
+    <Property Name="StartDateTime" Type="DateTime" Precision="3" />
+    <Property Name="EndDateTime" Type="DateTime" Precision="3" />
+    <Property Name="ExecuteStatus" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="CraftsProcessExecute" Relationship="Self.FK_CRAFTSPR_REFERENCE_CRAFTSPR" FromRole="CraftsProcessExecuteDetail" ToRole="CraftsProcessExecute" />
+    <Property Name="ParameterID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Device">
+    <Key>
+      <PropertyRef Name="DevCode" />
+    </Key>
+    <Property Name="DevCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DevName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DevStd" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="DevCCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DevImageUrl" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="DevQRUrl" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="DevCategory" Type="Int32" Nullable="false" />
+    <Property Name="FactoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FactoryContacts" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="FContactsTel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Origin" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="IPUrl" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Port" Type="Int32" />
+    <Property Name="SerialPort" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DeviceId" Type="Int32" />
+    <Property Name="CallID" Type="Int32" />
+    <Property Name="LocalAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="AdminPerson" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="AdminPhone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="UseStatus" Type="Int32" Nullable="false" />
+    <Property Name="Remark" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatePerson" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LastDate" Type="DateTime" Precision="3" />
+    <Property Name="LastPerson" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="DevAbbName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Weight" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="Volume" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="DevDefine2" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="DevDefine3" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="DevDefine4" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="DevDefine5" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="DevDefine6" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="DevDefine7" Type="String" MaxLength="120" FixedLength="false" Unicode="true" />
+    <Property Name="DevDefine9" Type="String" MaxLength="120" FixedLength="false" Unicode="true" />
+    <Property Name="DevDefine10" Type="String" MaxLength="120" FixedLength="false" Unicode="true" />
+    <Property Name="DevDefine11" Type="Int32" />
+    <Property Name="DevDefine12" Type="Int32" />
+    <Property Name="DevDefine13" Type="Double" />
+    <Property Name="DevDefine14" Type="Double" />
+    <Property Name="DevDefine15" Type="DateTime" Precision="3" />
+    <Property Name="DevDefine16" Type="DateTime" Precision="3" />
+    <Property Name="DevDefine8" Type="String" MaxLength="120" FixedLength="false" Unicode="true" />
+    <Property Name="DevDefine1" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="DeviceClass">
+    <Key>
+      <PropertyRef Name="DevCCode" />
+    </Key>
+    <Property Name="DevCCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DevCName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SupCCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Grade" Type="Int32" Nullable="false" />
+    <Property Name="Remark" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="DeviceExecute">
+    <Key>
+      <PropertyRef Name="DeveCode" />
+    </Key>
+    <Property Name="DeveCode" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DevCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="DeviCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CollFrequency" Type="Int32" />
+    <Property Name="UserStatus" Type="Int32" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatePerson" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LastDate" Type="DateTime" Precision="3" />
+    <Property Name="LastPerson" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="DevpCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="DeviceInterface">
+    <Key>
+      <PropertyRef Name="DeviCode" />
+    </Key>
+    <Property Name="DeviCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DeviName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DevCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DevpCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DevpAddress" Type="Int32" />
+    <Property Name="DataType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsTwoWay" Type="Boolean" />
+    <Property Name="SendFormat" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Remark" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="UserStatus" Type="Int32" Nullable="false" />
+    <Property Name="ConAccAddress" Type="Int32" />
+  </EntityType>
+  <EntityType Name="DeviceParameter">
+    <Key>
+      <PropertyRef Name="DevpCode" />
+    </Key>
+    <Property Name="DevpCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DevpName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DevCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="StandardValue" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="MinValue" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="MaxValue" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="Remark" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="SerialPort" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BaudRate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CheckBit" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DataBit" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="StopBit" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ConvertType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="MainPipelineInfo">
+    <Key>
+      <PropertyRef Name="AutoID" />
+    </Key>
+    <Property Name="AutoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DeveCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DeveName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="PipelineStatus" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PromptDes" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Frequency" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="OperatorReamrk" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="Creator" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Operator" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="OperatingTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="QC_PullDetectionReg">
+    <Key>
+      <PropertyRef Name="AutoID" />
+    </Key>
+    <Property Name="AutoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RegDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Frequency" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ProductionLine" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="QualityInspector" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="OrderType" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="OrderCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ProductLevel" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="StandardPull" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="ActualPull" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="ActualWidth" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="ActualThick" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="Width" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="Thick" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="Strength" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ProcessType" Type="Int32" Nullable="false" />
+    <Property Name="TestResults" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatePerson" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ModifyDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifyPerson" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_CRAFTSLI_REFERENCE_CRAFTSLI">
+    <End Role="CraftsLineParamSet" Type="Self.CraftsLineParamSet" Multiplicity="0..1" />
+    <End Role="CraftsLineParamSetDetail" Type="Self.CraftsLineParamSetDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CraftsLineParamSet">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CraftsLineParamSetDetail">
+        <PropertyRef Name="ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CRAFTSPR_REFERENCE_CRAFTSPR">
+    <End Role="CraftsProcessExecute" Type="Self.CraftsProcessExecute" Multiplicity="1" />
+    <End Role="CraftsProcessExecuteDetail" Type="Self.CraftsProcessExecuteDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CraftsProcessExecute">
+        <PropertyRef Name="ExecuteID" />
+      </Principal>
+      <Dependent Role="CraftsProcessExecuteDetail">
+        <PropertyRef Name="ExecuteID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="LYMesSystemEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ArrangedVouch" EntityType="Self.ArrangedVouch" />
+    <EntitySet Name="ArrangedVouchLog" EntityType="Self.ArrangedVouchLog" />
+    <EntitySet Name="CollectDataInfo" EntityType="Self.CollectDataInfo" />
+    <EntitySet Name="CraftsLineParamSet" EntityType="Self.CraftsLineParamSet" />
+    <EntitySet Name="CraftsLineParamSetDetail" EntityType="Self.CraftsLineParamSetDetail" />
+    <EntitySet Name="CraftsParameterContrast" EntityType="Self.CraftsParameterContrast" />
+    <EntitySet Name="CraftsProcessExecute" EntityType="Self.CraftsProcessExecute" />
+    <EntitySet Name="CraftsProcessExecuteDetail" EntityType="Self.CraftsProcessExecuteDetail" />
+    <EntitySet Name="Device" EntityType="Self.Device" />
+    <EntitySet Name="DeviceClass" EntityType="Self.DeviceClass" />
+    <EntitySet Name="DeviceExecute" EntityType="Self.DeviceExecute" />
+    <EntitySet Name="DeviceInterface" EntityType="Self.DeviceInterface" />
+    <EntitySet Name="DeviceParameter" EntityType="Self.DeviceParameter" />
+    <EntitySet Name="MainPipelineInfo" EntityType="Self.MainPipelineInfo" />
+    <EntitySet Name="QC_PullDetectionReg" EntityType="Self.QC_PullDetectionReg" />
+    <AssociationSet Name="FK_CRAFTSLI_REFERENCE_CRAFTSLI" Association="Self.FK_CRAFTSLI_REFERENCE_CRAFTSLI">
+      <End Role="CraftsLineParamSet" EntitySet="CraftsLineParamSet" />
+      <End Role="CraftsLineParamSetDetail" EntitySet="CraftsLineParamSetDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CRAFTSPR_REFERENCE_CRAFTSPR" Association="Self.FK_CRAFTSPR_REFERENCE_CRAFTSPR">
+      <End Role="CraftsProcessExecute" EntitySet="CraftsProcessExecute" />
+      <End Role="CraftsProcessExecuteDetail" EntitySet="CraftsProcessExecuteDetail" />
+    </AssociationSet>
+    <EntitySet Name="vw_DurmsUpFeeding" EntityType="LYMesSystemModel.vw_DurmsUpFeeding" />
+    <EntitySet Name="vw_QC_FindLeakDrumsSet" EntityType="LYMesSystemModel.vw_QC_FindLeakDrumsSet" />
+    <EntitySet Name="QC_FindLeakDrumsSet" EntityType="LYMesSystemModel.QC_FindLeakDrumsSet" />
+    <EntitySet Name="QC_FindLeakDrumsSetDetail" EntityType="LYMesSystemModel.QC_FindLeakDrumsSetDetail" />
+    <AssociationSet Name="FK_QC_FINDL_REFERENCE_QC_FINDL" Association="LYMesSystemModel.FK_QC_FINDL_REFERENCE_QC_FINDL">
+      <End Role="QC_FindLeakDrumsSet" EntitySet="QC_FindLeakDrumsSet" />
+      <End Role="QC_FindLeakDrumsSetDetail" EntitySet="QC_FindLeakDrumsSetDetail" />
+    </AssociationSet>
+    <EntitySet Name="QC_DrumsFindLeakReport" EntityType="LYMesSystemModel.QC_DrumsFindLeakReport" />
+    <EntitySet Name="Department" EntityType="LYMesSystemModel.Department" />
+    <EntitySet Name="DeviceWorkingCondition" EntityType="LYMesSystemModel.DeviceWorkingCondition" />
+    <EntitySet Name="Person" EntityType="LYMesSystemModel.Person" />
+    <EntitySet Name="vw_ArrangedCraftsProcessExecute" EntityType="LYMesSystemModel.vw_ArrangedCraftsProcessExecute" />
+    <EntitySet Name="IPRegistForm" EntityType="LYMesSystemModel.IPRegistForm" />
+    <EntitySet Name="vw_CraftsLineParamSetDetail" EntityType="LYMesSystemModel.vw_CraftsLineParamSetDetail" />
+    <EntitySet Name="V_DV_DevExecute" EntityType="LYMesSystemModel.V_DV_DevExecute" />
+  </EntityContainer>
+  <EntityType Name="vw_DurmsUpFeeding">
+    <Key>
+      <PropertyRef Name="vwId" />
+      <PropertyRef Name="DevCode" />
+      <PropertyRef Name="DevName" />
+      <PropertyRef Name="DeveUseStatus" />
+    </Key>
+    <Property Name="vwId" Type="Int64" Nullable="false" />
+    <Property Name="DevCode" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="DevName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DeveUseStatus" Type="Int32" Nullable="false" />
+    <Property Name="ExecuteID" Type="Int32" />
+    <Property Name="ExecuteOrder" Type="Int32" />
+    <Property Name="WorkshopCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="WorkshopName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="WorkbrachCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="WorkbrachName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CraftsCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CraftsName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ExecuteMode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="PlanDuration" Type="Int32" />
+    <Property Name="StartTime" Type="DateTime" Precision="3" />
+    <Property Name="EndTime" Type="DateTime" Precision="3" />
+    <Property Name="ExecuteStatus" Type="Int32" />
+    <Property Name="ID" Type="Int32" />
+    <Property Name="ArrangedVouchCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="VouchDate" Type="DateTime" Precision="0" />
+    <Property Name="MaterialVouchCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="FormulaCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FormulaName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="InputWeight" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="OutputWeight" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="WeighingPounds" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="UserStatus" Type="Int32" />
+    <Property Name="InterruptionRemark" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="InterruptionTime" Type="DateTime" Precision="3" />
+    <Property Name="Creator" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="ModifyPerson" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ModifyTime" Type="DateTime" Precision="3" />
+    <Property Name="LicenseNum" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="VehicleWeight" Type="Double" />
+    <Property Name="WeightMan" Type="Double" />
+    <Property Name="TeachProgress" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="RFIDCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ProPlanNum" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="vw_QC_FindLeakDrumsSet">
+    <Key>
+      <PropertyRef Name="AutoID" />
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Year" />
+      <PropertyRef Name="Month" />
+      <PropertyRef Name="Week" />
+      <PropertyRef Name="Frequency" />
+      <PropertyRef Name="CreatePerson" />
+      <PropertyRef Name="CreateDate" />
+      <PropertyRef Name="CreateDateTime" />
+      <PropertyRef Name="IsLeak" />
+      <PropertyRef Name="ArrangedVouchCode" />
+      <PropertyRef Name="ExecuteID" />
+    </Key>
+    <Property Name="AutoID" Type="Int32" Nullable="false" />
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Year" Type="Int32" Nullable="false" />
+    <Property Name="Month" Type="Int32" Nullable="false" />
+    <Property Name="Week" Type="Int32" Nullable="false" />
+    <Property Name="Frequency" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CreatePerson" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="CreateDateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DevCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="DevName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsLeak" Type="Int32" Nullable="false" />
+    <Property Name="ArrangedVouchCode" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ExecuteID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="QC_FindLeakDrumsSet">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Year" Type="Int32" Nullable="false" />
+    <Property Name="Month" Type="Int32" Nullable="false" />
+    <Property Name="Week" Type="Int32" Nullable="false" />
+    <Property Name="Frequency" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CreatePerson" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="CreateDateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="QC_FindLeakDrumsSetDetail" Relationship="LYMesSystemModel.FK_QC_FINDL_REFERENCE_QC_FINDL" FromRole="QC_FindLeakDrumsSet" ToRole="QC_FindLeakDrumsSetDetail" />
+  </EntityType>
+  <EntityType Name="QC_FindLeakDrumsSetDetail">
+    <Key>
+      <PropertyRef Name="AutoID" />
+    </Key>
+    <Property Name="AutoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="DevCode" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="DevName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsLeak" Type="Int32" Nullable="false" />
+    <Property Name="ArrangedVouchCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ExecuteID" Type="Int32" />
+    <NavigationProperty Name="QC_FindLeakDrumsSet" Relationship="LYMesSystemModel.FK_QC_FINDL_REFERENCE_QC_FINDL" FromRole="QC_FindLeakDrumsSetDetail" ToRole="QC_FindLeakDrumsSet" />
+  </EntityType>
+  <Association Name="FK_QC_FINDL_REFERENCE_QC_FINDL">
+    <End Type="LYMesSystemModel.QC_FindLeakDrumsSet" Role="QC_FindLeakDrumsSet" Multiplicity="1" />
+    <End Type="LYMesSystemModel.QC_FindLeakDrumsSetDetail" Role="QC_FindLeakDrumsSetDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="QC_FindLeakDrumsSet">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="QC_FindLeakDrumsSetDetail">
+        <PropertyRef Name="ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="QC_DrumsFindLeakReport">
+    <Key>
+      <PropertyRef Name="FLVCode" />
+    </Key>
+    <Property Name="FLVCode" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Year" Type="Int32" Nullable="false" />
+    <Property Name="Month" Type="Int32" Nullable="false" />
+    <Property Name="Week" Type="Int32" Nullable="false" />
+    <Property Name="DevCode" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="DevName" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Frequency" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="FLSituation" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="FLResult" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Remark" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="CreatePerson" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="SourceCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Department">
+    <Key>
+      <PropertyRef Name="DepCode" />
+    </Key>
+    <Property Name="DepCode" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="DepName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SupDepCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="DepPerson" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="DepPhone" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+    <Property Name="DepAddress" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="DepFax" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="DepPostCode" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+    <Property Name="DepEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DepMemo" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="DepBeginDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="DepEndDate" Type="DateTime" Precision="0" />
+    <Property Name="Grade" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DeviceWorkingCondition">
+    <Key>
+      <PropertyRef Name="DevCode" />
+    </Key>
+    <Property Name="DevCode" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="DevName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="VouchType" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="VouchCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="WorkingStatus" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Person">
+    <Key>
+      <PropertyRef Name="PersonCode" />
+    </Key>
+    <Property Name="PersonCode" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="PersonName" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="PersonType" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="DepCode" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="PersonEmai" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PersonPhone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Sex" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="IsOperator" Type="Boolean" Nullable="false" />
+    <Property Name="OparatorCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="OparatorName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Height" Type="Int32" />
+    <Property Name="Weight" Type="Decimal" Precision="18" Scale="6" />
+  </EntityType>
+  <EntityType Name="vw_ArrangedCraftsProcessExecute">
+    <Key>
+      <PropertyRef Name="vwID" />
+      <PropertyRef Name="ArrangedVouchCode" />
+      <PropertyRef Name="VouchDate" />
+      <PropertyRef Name="UserStatus" />
+      <PropertyRef Name="ArrangedVTime" />
+    </Key>
+    <Property Name="vwID" Type="Int64" Nullable="false" />
+    <Property Name="ArrangedVouchCode" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="VouchDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="MaterialVouchCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="FormulaCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FormulaName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="UserStatus" Type="Int32" Nullable="false" />
+    <Property Name="ExecuteID" Type="Int32" />
+    <Property Name="WorkshopName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="WorkshopCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="WorkbrachCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="WorkbrachName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CraftsCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CraftsName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ExecuteOrder" Type="Int32" />
+    <Property Name="ExecuteMode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="PlanDuration" Type="Int32" />
+    <Property Name="StartTime" Type="DateTime" Precision="3" />
+    <Property Name="EndTime" Type="DateTime" Precision="3" />
+    <Property Name="ExecuteStatus" Type="Int32" />
+    <Property Name="AutoID" Type="Int32" />
+    <Property Name="Priority" Type="Int32" />
+    <Property Name="DevepName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="StandardValue" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="UpperValue" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="LowerValue" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="IntervalDuration" Type="Int32" />
+    <Property Name="TriggerDuration" Type="Int32" />
+    <Property Name="IsValveCheck" Type="Boolean" />
+    <Property Name="IsValveControl" Type="Boolean" />
+    <Property Name="StartDateTime" Type="DateTime" Precision="3" />
+    <Property Name="EndDateTime" Type="DateTime" Precision="3" />
+    <Property Name="ParamExecuteStatus" Type="Int32" />
+    <Property Name="ArrangedVTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ParamType" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="ParameterID" Type="Int32" />
+    <Property Name="ParameterName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="IPRegistForm">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IP" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="MACAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" Nullable="false" />
+    <Property Name="CreatorName" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CreatorTime" Type="DateTime" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="vw_CraftsLineParamSetDetail">
+    <Key>
+      <PropertyRef Name="ParameterID" />
+      <PropertyRef Name="ParamName" />
+      <PropertyRef Name="Priority" />
+      <PropertyRef Name="IsValveCheck" />
+      <PropertyRef Name="IsValveControl" />
+      <PropertyRef Name="IsFixedParameters" />
+      <PropertyRef Name="UserStatus" />
+      <PropertyRef Name="AutoID" />
+    </Key>
+    <Property Name="ParameterID" Type="Int32" Nullable="false" />
+    <Property Name="ParamType" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="ParamName" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="DevepName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ID" Type="Int32" />
+    <Property Name="Priority" Type="Int32" Nullable="false" />
+    <Property Name="StandardValue" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="UpperValue" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="LowerValue" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="IsValveCheck" Type="Boolean" Nullable="false" />
+    <Property Name="IsValveControl" Type="Boolean" Nullable="false" />
+    <Property Name="IsFixedParameters" Type="Boolean" Nullable="false" />
+    <Property Name="IntervalDuration" Type="Int32" />
+    <Property Name="TriggerDuration" Type="Int32" />
+    <Property Name="UserStatus" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="CraftsID" Type="Int32" />
+    <Property Name="AutoID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="V_DV_DevExecute">
+    <Key>
+      <PropertyRef Name="ExecuteID" />
+      <PropertyRef Name="ZGCode" />
+      <PropertyRef Name="ZGName" />
+      <PropertyRef Name="DevName" />
+      <PropertyRef Name="DeviName" />
+      <PropertyRef Name="DevpName" />
+      <PropertyRef Name="InterFaceStatus" />
+      <PropertyRef Name="EquipStatus" />
+      <PropertyRef Name="WorkStatus" />
+      <PropertyRef Name="DevCode" />
+    </Key>
+    <Property Name="ExecuteID" Type="Int32" Nullable="false" />
+    <Property Name="ZGCode" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ZGName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DeviCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="DevpCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="DevName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DeviName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DevpName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CollFrequency" Type="Int32" />
+    <Property Name="IPUrl" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Port" Type="Int32" />
+    <Property Name="LocalAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="MaxValue" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="MinValue" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="StandardValue" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="DeviceId" Type="Int32" />
+    <Property Name="CallID" Type="Int32" />
+    <Property Name="DevpAddress" Type="Int32" />
+    <Property Name="SendFormat" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="SerialPort" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BaudRate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CheckBit" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DataBit" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="StopBit" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="InterFaceStatus" Type="Int32" Nullable="false" />
+    <Property Name="DataType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DevStd" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="EquipStatus" Type="Int32" Nullable="false" />
+    <Property Name="WorkStatus" Type="Int32" Nullable="false" />
+    <Property Name="ConAccAddress" Type="Int32" />
+    <Property Name="ConvertType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DevCode" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

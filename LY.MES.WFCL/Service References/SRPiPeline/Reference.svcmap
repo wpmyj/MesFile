@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4e3e5e43-bbb1-46b0-931a-f6c49b5b3a65" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:16498/Pipeline/PipelineService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="PipelineService.wsdl" MetadataType="Wsdl" ID="9604d80f-49a9-49cb-8974-04f0313d9a5b" SourceId="1" SourceUrl="http://localhost:16498/Pipeline/PipelineService.svc?wsdl" />
+    <MetadataFile FileName="PipelineService.xsd" MetadataType="Schema" ID="7c29e286-76b2-4c17-96e3-eddfaa712277" SourceId="1" SourceUrl="http://localhost:16498/Pipeline/PipelineService.svc?xsd=xsd0" />
+    <MetadataFile FileName="PipelineService4.xsd" MetadataType="Schema" ID="88c076f8-d942-48e7-8e98-3d01cb6ca3d2" SourceId="1" SourceUrl="http://localhost:16498/Pipeline/PipelineService.svc?xsd=xsd5" />
+    <MetadataFile FileName="PipelineService.disco" MetadataType="Disco" ID="2b9bbb9b-549d-4cd4-b020-542b294eaa25" SourceId="1" SourceUrl="http://localhost:16498/Pipeline/PipelineService.svc?disco" />
+    <MetadataFile FileName="PipelineService41.xsd" MetadataType="Schema" ID="2a884fac-f8ae-4f41-b266-6e321b1dad9d" SourceId="1" SourceUrl="http://localhost:16498/Pipeline/PipelineService.svc?xsd=xsd4" />
+    <MetadataFile FileName="PipelineService1.xsd" MetadataType="Schema" ID="73690d12-722f-401d-9416-08994b8161ec" SourceId="1" SourceUrl="http://localhost:16498/Pipeline/PipelineService.svc?xsd=xsd3" />
+    <MetadataFile FileName="PipelineService2.xsd" MetadataType="Schema" ID="351f6a1e-1c25-4ce7-be3a-4271da263581" SourceId="1" SourceUrl="http://localhost:16498/Pipeline/PipelineService.svc?xsd=xsd1" />
+    <MetadataFile FileName="PipelineService3.xsd" MetadataType="Schema" ID="b28fc979-1767-4d56-9dfc-331c7bb8e7e5" SourceId="1" SourceUrl="http://localhost:16498/Pipeline/PipelineService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

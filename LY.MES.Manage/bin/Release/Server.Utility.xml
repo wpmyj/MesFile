@@ -1,0 +1,1833 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Server.Utility</name>
+    </assembly>
+    <members>
+        <member name="T:Server.Utility.Caching.CacheExtensions">
+            <summary>
+            Extensions
+            </summary>
+        </member>
+        <member name="F:Server.Utility.Caching.CacheExtensions._syncObject">
+            <summary>
+            Variable (lock) to support thread-safe
+            </summary>
+        </member>
+        <member name="M:Server.Utility.Caching.CacheExtensions.Get``1(Server.Utility.Caching.ICacheManager,System.String,System.Func{``0})">
+            <summary>
+            Get a cached item. If it's not in the cache yet, then load and cache it
+            </summary>
+            <typeparam name="T">Type</typeparam>
+            <param name="cacheManager">Cache manager</param>
+            <param name="key">Cache key</param>
+            <param name="acquire">Function to load item if it's not in the cache yet</param>
+            <returns>Cached item</returns>
+        </member>
+        <member name="M:Server.Utility.Caching.CacheExtensions.Get``1(Server.Utility.Caching.ICacheManager,System.String,System.Int32,System.Func{``0})">
+            <summary>
+            Get a cached item. If it's not in the cache yet, then load and cache it
+            </summary>
+            <typeparam name="T">Type</typeparam>
+            <param name="cacheManager">Cache manager</param>
+            <param name="key">Cache key</param>
+            <param name="cacheTime">Cache time in minutes (0 - do not cache)</param>
+            <param name="acquire">Function to load item if it's not in the cache yet</param>
+            <returns>Cached item</returns>
+        </member>
+        <member name="T:Server.Utility.Caching.HttpContextCacheManager">
+            <summary>
+            Represents a manager for caching during an HTTP request (short term caching)
+            </summary>
+        </member>
+        <member name="T:Server.Utility.Caching.ICacheManager">
+            <summary>
+            Cache manager interface
+            </summary>
+        </member>
+        <member name="M:Server.Utility.Caching.ICacheManager.Get``1(System.String)">
+            <summary>
+            Gets or sets the value associated with the specified key.
+            </summary>
+            <typeparam name="T">Type</typeparam>
+            <param name="key">The key of the value to get.</param>
+            <returns>The value associated with the specified key.</returns>
+        </member>
+        <member name="M:Server.Utility.Caching.ICacheManager.Set(System.String,System.Object,System.Nullable{System.Int32})">
+            <summary>
+            Adds the specified key and object to the cache.
+            </summary>
+            <param name="key">key</param>
+            <param name="data">Data</param>
+            <param name="cacheTime">Cache time</param>
+        </member>
+        <member name="M:Server.Utility.Caching.ICacheManager.IsSet(System.String)">
+            <summary>
+            Gets a value indicating whether the value associated with the specified key is cached
+            </summary>
+            <param name="key">key</param>
+            <returns>Result</returns>
+        </member>
+        <member name="M:Server.Utility.Caching.ICacheManager.Remove(System.String)">
+            <summary>
+            Removes the value with the specified key from the cache
+            </summary>
+            <param name="key">/key</param>
+        </member>
+        <member name="M:Server.Utility.Caching.ICacheManager.RemoveByPattern(System.String)">
+            <summary>
+            Removes items by pattern
+            </summary>
+            <param name="pattern">pattern</param>
+        </member>
+        <member name="M:Server.Utility.Caching.ICacheManager.Clear">
+            <summary>
+            Clear all cache data
+            </summary>
+        </member>
+        <member name="M:Server.Utility.Caching.HttpContextCacheManager.#ctor(System.Web.HttpContextBase)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="context">Context</param>
+        </member>
+        <member name="M:Server.Utility.Caching.HttpContextCacheManager.GetItems">
+            <summary>
+            Creates a new instance of the NopRequestCache class
+            </summary>
+        </member>
+        <member name="M:Server.Utility.Caching.HttpContextCacheManager.Get``1(System.String)">
+            <summary>
+            Gets or sets the value associated with the specified key.
+            </summary>
+            <typeparam name="T">Type</typeparam>
+            <param name="key">The key of the value to get.</param>
+            <returns>The value associated with the specified key.</returns>
+        </member>
+        <member name="M:Server.Utility.Caching.HttpContextCacheManager.Set(System.String,System.Object,System.Nullable{System.Int32})">
+            <summary>
+            Adds the specified key and object to the cache.
+            </summary>
+            <param name="key">key</param>
+            <param name="data">Data</param>
+            <param name="cacheTime">Cache time(Minutes)</param>
+        </member>
+        <member name="M:Server.Utility.Caching.HttpContextCacheManager.IsSet(System.String)">
+            <summary>
+            Gets a value indicating whether the value associated with the specified key is cached
+            </summary>
+            <param name="key">key</param>
+            <returns>Result</returns>
+        </member>
+        <member name="M:Server.Utility.Caching.HttpContextCacheManager.Remove(System.String)">
+            <summary>
+            Removes the value with the specified key from the cache
+            </summary>
+            <param name="key">/key</param>
+        </member>
+        <member name="M:Server.Utility.Caching.HttpContextCacheManager.RemoveByPattern(System.String)">
+            <summary>
+            Removes items by pattern
+            </summary>
+            <param name="pattern">pattern</param>
+        </member>
+        <member name="M:Server.Utility.Caching.HttpContextCacheManager.Clear">
+            <summary>
+            Clear all cache data
+            </summary>
+        </member>
+        <member name="T:Server.Utility.Caching.MemoryCacheManager">
+            <summary>
+            Represents a manager for caching between HTTP requests (long term caching)
+            </summary>
+        </member>
+        <member name="M:Server.Utility.Caching.MemoryCacheManager.Get``1(System.String)">
+            <summary>
+            Gets or sets the value associated with the specified key.
+            </summary>
+            <typeparam name="T">Type</typeparam>
+            <param name="key">The key of the value to get.</param>
+            <returns>The value associated with the specified key.</returns>
+        </member>
+        <member name="M:Server.Utility.Caching.MemoryCacheManager.Set(System.String,System.Object,System.Nullable{System.Int32})">
+            <summary>
+            Adds the specified key and object to the cache.
+            </summary>
+            <param name="key">key</param>
+            <param name="data">Data</param>
+            <param name="cacheTime">Cache time(Minutes)</param>
+        </member>
+        <member name="M:Server.Utility.Caching.MemoryCacheManager.IsSet(System.String)">
+            <summary>
+            Gets a value indicating whether the value associated with the specified key is cached
+            </summary>
+            <param name="key">key</param>
+            <returns>Result</returns>
+        </member>
+        <member name="M:Server.Utility.Caching.MemoryCacheManager.Remove(System.String)">
+            <summary>
+            Removes the value with the specified key from the cache
+            </summary>
+            <param name="key">/key</param>
+        </member>
+        <member name="M:Server.Utility.Caching.MemoryCacheManager.RemoveByPattern(System.String)">
+            <summary>
+            Removes items by pattern
+            </summary>
+            <param name="pattern">pattern</param>
+        </member>
+        <member name="M:Server.Utility.Caching.MemoryCacheManager.Clear">
+            <summary>
+            Clear all cache data
+            </summary>
+        </member>
+        <member name="P:Server.Utility.Caching.MemoryCacheManager.Cache">
+            <summary>
+            Cache
+            </summary>
+        </member>
+        <member name="T:Server.Utility.Caching.RedisCacheExtensions">
+            <summary>
+            Redis缓存扩展类
+            </summary>
+        </member>
+        <member name="M:Server.Utility.Caching.RedisCacheExtensions.Get``1(StackExchange.Redis.IDatabase,System.String)">
+            <summary>
+            获取缓存数据
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="cache"></param>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Server.Utility.Caching.RedisCacheExtensions.Get(StackExchange.Redis.IDatabase,System.String)">
+            <summary>
+            获取缓存数据
+            </summary>
+            <param name="cache"></param>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Server.Utility.Caching.RedisCacheExtensions.Set(StackExchange.Redis.IDatabase,System.String,System.Object)">
+            <summary>
+            存储数据到缓存中
+            </summary>
+            <param name="cache"></param>
+            <param name="key"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:Server.Utility.Caching.RedisCacheExtensions.Serialize(System.Object)">
+            <summary>
+            序列化对象
+            </summary>
+            <param name="o"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Server.Utility.Caching.RedisCacheExtensions.Deserialize``1(System.Byte[])">
+            <summary>
+            反序列化对象
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="stream"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Server.Utility.Caching.RedisCacheManager">
+            <summary>
+            Represents a manager for caching between HTTP requests (long term caching)
+            </summary>
+        </member>
+        <member name="M:Server.Utility.Caching.RedisCacheManager.#ctor(System.String)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="connectionStringName"></param>
+        </member>
+        <member name="M:Server.Utility.Caching.RedisCacheManager.GetConnectionMultiplexer">
+            <summary>
+            连接Redis
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Server.Utility.Caching.RedisCacheManager.Get``1(System.String)">
+            <summary>
+            Gets or sets the value associated with the specified key.
+            </summary>
+            <typeparam name="T">Type</typeparam>
+            <param name="key">The key of the value to get.</param>
+            <returns>The value associated with the specified key.</returns>
+        </member>
+        <member name="M:Server.Utility.Caching.RedisCacheManager.Set(System.String,System.Object,System.Nullable{System.Int32})">
+            <summary>
+            Adds the specified key and object to the cache.
+            </summary>
+            <param name="key">key</param>
+            <param name="data">Data</param>
+            <param name="cacheTime">Cache time(Minutes)</param>
+        </member>
+        <member name="M:Server.Utility.Caching.RedisCacheManager.ListLeftPush(System.String,System.String,System.Nullable{System.Int32})">
+            <summary>
+            添加List缓存或添加List第一条记录
+            </summary>
+            <param name="key"></param>
+            <param name="data"></param>
+            <param name="cacheTime">缓存时间</param>
+            <returns></returns>
+        </member>
+        <member name="M:Server.Utility.Caching.RedisCacheManager.ListGetByIndex(System.String,System.Int32)">
+            <summary>
+            依据index获取List中的值
+            </summary>
+            <param name="key"></param>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Server.Utility.Caching.RedisCacheManager.ListRemove(System.String,System.String)">
+            <summary>
+            从List中移除值
+            </summary>
+            <param name="key"></param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Server.Utility.Caching.RedisCacheManager.IsSet(System.String)">
+            <summary>
+            Gets a value indicating whether the value associated with the specified key is cached
+            </summary>
+            <param name="key">key</param>
+            <returns>Result</returns>
+        </member>
+        <member name="M:Server.Utility.Caching.RedisCacheManager.Remove(System.String)">
+            <summary>
+            Removes the value with the specified key from the cache
+            </summary>
+            <param name="key">/key</param>
+        </member>
+        <member name="M:Server.Utility.Caching.RedisCacheManager.RemoveByPattern(System.String)">
+            <summary>
+            Removes items by pattern
+            </summary>
+            <param name="pattern">pattern</param>
+        </member>
+        <member name="M:Server.Utility.Caching.RedisCacheManager.Clear">
+            <summary>
+            Clear all cache data
+            </summary>
+        </member>
+        <member name="P:Server.Utility.Caching.RedisCacheManager.Cache">
+            <summary>
+            获取缓存IDatabase
+            </summary>
+        </member>
+        <member name="T:Server.Utility.CustomException.ErrorInfo">
+            <summary>
+            Author:xxp
+            Remark:错误信息
+            CreateTime:20161018
+            </summary>
+        </member>
+        <member name="F:Server.Utility.CustomException.ErrorInfo.AUTHENTICATION_FAILED">
+            <summary>
+            认证失败
+            </summary>
+        </member>
+        <member name="T:Server.Utility.Db.SqlDBProcess">
+            <summary>
+            Author:xxp
+            Desc:SqlDb操作帮助类
+            CreateTime:20161101
+            </summary>
+        </member>
+        <member name="M:Server.Utility.Db.SqlDBProcess.GetParameterList(System.Data.DataTable,System.Text.StringBuilder@)">
+            <summary>
+            获取SqlParameter集合
+            </summary>
+            <param name="dtFilter">dtFilter Columns{cField(字段),cValues(值),cDataType(数据类型),cValues1(值1),cCompare(过滤符号)}</param>
+            <param name="strWhere">查询条件sql语句</param>
+            <returns>返回Parameter参数集合</returns>
+        </member>
+        <member name="M:Server.Utility.Db.SqlDBProcess.CreateFilterTable">
+            <summary>
+            创建DataTable过滤对象Columns{cField,cValues,cDataType,cValues1,cCompare}
+            </summary>
+            <returns>DataTable</returns>
+        </member>
+        <member name="T:Server.Utility.Logging.ILoggerFactory">
+            <summary>
+            日志工厂接口
+            </summary>
+        </member>
+        <member name="M:Server.Utility.Logging.ILoggerFactory.CreateLogger(System.Type)">
+            <summary>
+            创建日志接口
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Server.Utility.Logging.LogLevel">
+            <summary>
+            日志级别
+            </summary>
+        </member>
+        <member name="T:Server.Utility.Logging.ILogger">
+            <summary>
+            日志接口
+            </summary>
+        </member>
+        <member name="M:Server.Utility.Logging.ILogger.IsEnabled(Server.Utility.Logging.LogLevel)">
+            <summary>
+            是否启用了指定的日志级别
+            </summary>
+            <param name="level"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Server.Utility.Logging.ILogger.Log(Server.Utility.Logging.LogLevel,System.Exception,System.String,System.Object[])">
+            <summary>
+            记录日志
+            </summary>
+            <param name="level"></param>
+            <param name="exception"></param>
+            <param name="format"></param>
+            <param name="args"></param>
+        </member>
+        <member name="M:Server.Utility.Logging.ILogger.Log(Server.Utility.Logging.LogLevel,System.Object,System.Object,System.Exception,System.String)">
+            <summary>
+            记录日志
+            </summary>
+            <param name="level"></param>
+            <param name="exception"></param>
+            <param name="eventPropertiesKey"></param>
+            <param name="eventPropertiesValue"></param>
+            <param name="message"></param>
+        </member>
+        <member name="M:Server.Utility.Logging.ILogger.Log(Server.Utility.Logging.LogLevel,System.Collections.Generic.IDictionary{System.Object,System.Object},System.Exception,System.String,System.Object[])">
+            <summary>
+            记录日志
+            </summary>
+            <param name="level"></param>
+            <param name="exception"></param>
+            <param name="eventProperties"></param>
+            <param name="format"></param>
+            <param name="args"></param>
+        </member>
+        <member name="T:Server.Utility.Logging.LoggerExtensions">
+            <summary>
+            日志ILogger扩展方法
+            </summary>
+        </member>
+        <member name="T:Server.Utility.ProjectRequest">
+            <summary>
+            Request操作类
+            </summary>
+        </member>
+        <member name="M:Server.Utility.ProjectRequest.IsPost">
+            <summary> 判断当前页面是否接收到了Post请求 </summary>
+            <returns>是否接收到了Post请求</returns>
+        </member>
+        <member name="M:Server.Utility.ProjectRequest.IsGet">
+            <summary> 判断当前页面是否接收到了Get请求 </summary>
+            <returns>是否接收到了Get请求</returns>
+        </member>
+        <member name="M:Server.Utility.ProjectRequest.GetServerString(System.String)">
+            <summary> 返回指定的服务器变量信息 </summary>
+            <param name="strName">服务器变量名</param>
+            <returns>服务器变量信息</returns>
+        </member>
+        <member name="M:Server.Utility.ProjectRequest.GetUrlReferrer">
+            <summary> 返回上一个页面的地址 </summary>
+            <returns>上一个页面的地址</returns>
+        </member>
+        <member name="M:Server.Utility.ProjectRequest.GetCurrentFullHost">
+            <summary> 得到当前完整主机头 </summary>
+            <returns>得到当前完整主机头</returns>
+        </member>
+        <member name="M:Server.Utility.ProjectRequest.GetHost">
+            <summary> 得到主机头 </summary>
+            <returns>得到主机头</returns>
+        </member>
+        <member name="M:Server.Utility.ProjectRequest.GetRawUrl">
+            <summary> 获取当前请求的原始 URL(URL 中域信息之后的部分,包括查询字符串(如果存在)) </summary>
+            <returns>原始 URL</returns>
+        </member>
+        <member name="M:Server.Utility.ProjectRequest.IsBrowserGet">
+            <summary> 判断当前访问是否来自浏览器软件 </summary>
+            <returns>当前访问是否来自浏览器软件</returns>
+        </member>
+        <member name="M:Server.Utility.ProjectRequest.IsSearchEnginesGet">
+            <summary> 判断是否来自搜索引擎链接 </summary>
+            <returns>是否来自搜索引擎链接</returns>
+        </member>
+        <member name="M:Server.Utility.ProjectRequest.GetUrl">
+            <summary> 获得当前完整Url地址 </summary>
+            <returns>当前完整Url地址</returns>
+        </member>
+        <member name="M:Server.Utility.ProjectRequest.GetQueryString(System.String)">
+            <summary> 获得指定Url参数的值 </summary>
+            <param name="strName">Url参数</param>
+            <returns>Url参数的值</returns>
+        </member>
+        <member name="M:Server.Utility.ProjectRequest.GetQueryString(System.String,System.Boolean)">
+            <summary>获得指定Url参数的值 </summary> 
+            <param name="strName">Url参数</param>
+            <param name="sqlSafeCheck">是否进行SQL安全检查</param>
+            <returns>Url参数的值</returns>
+        </member>
+        <member name="M:Server.Utility.ProjectRequest.GetPageName">
+            <summary> 获得当前页面的名称 </summary>
+            <returns>当前页面的名称</returns>
+        </member>
+        <member name="M:Server.Utility.ProjectRequest.GetParamCount">
+            <summary> 返回表单或Url参数的总个数 </summary>
+            <returns>返回表单或Url参数的总个数</returns>
+        </member>
+        <member name="M:Server.Utility.ProjectRequest.GetFormString(System.String)">
+            <summary> 获得指定表单参数的值 </summary>
+            <param name="strName">表单参数</param>
+            <returns>表单参数的值</returns>
+        </member>
+        <member name="M:Server.Utility.ProjectRequest.GetFormString(System.String,System.Boolean)">
+            <summary> 获得指定表单参数的值 </summary>
+            <param name="strName">表单参数</param>
+            <param name="sqlSafeCheck">是否进行SQL安全检查</param>
+            <returns>表单参数的值</returns>
+        </member>
+        <member name="M:Server.Utility.ProjectRequest.GetString(System.String)">
+            <summary> 获得Url或表单参数的值, 先判断Url参数是否为空字符串, 如为True则返回表单参数的值 </summary>
+            <param name="strName">参数</param>
+            <returns>Url或表单参数的值</returns>
+        </member>
+        <member name="M:Server.Utility.ProjectRequest.GetString(System.String,System.Boolean)">
+            <summary> 获得Url或表单参数的值, 先判断Url参数是否为空字符串, 如为True则返回表单参数的值 </summary>
+            <param name="strName">参数</param>
+            <param name="sqlSafeCheck">是否进行SQL安全检查</param>
+            <returns>Url或表单参数的值</returns>
+        </member>
+        <member name="M:Server.Utility.ProjectRequest.GetQueryInt(System.String)">
+            <summary> 获得指定Url参数的int类型值 </summary>
+            <param name="strName">Url参数</param>
+            <returns>Url参数的int类型值</returns>
+        </member>
+        <member name="M:Server.Utility.ProjectRequest.GetQueryInt(System.String,System.Int32)">
+            <summary> 获得指定Url参数的int类型值 </summary>
+            <param name="strName">Url参数</param>
+            <param name="defValue">缺省值</param>
+            <returns>Url参数的int类型值</returns>
+        </member>
+        <member name="M:Server.Utility.ProjectRequest.GetQueryIntNullAble(System.String)">
+            <summary> 获得指定Url参数的int类型值,可为null </summary>
+            <param name="strName">Url参数</param>
+            <returns>Url参数的int类型值</returns>
+        </member>
+        <member name="M:Server.Utility.ProjectRequest.GetFormInt(System.String,System.Int32)">
+            <summary> 获得指定表单参数的int类型值 </summary>
+            <param name="strName">表单参数</param>
+            <param name="defValue">缺省值</param>
+            <returns>表单参数的int类型值</returns>
+        </member>
+        <member name="M:Server.Utility.ProjectRequest.GetInt(System.String,System.Int32)">
+            <summary> 获得指定Url或表单参数的int类型值, 先判断Url参数是否为缺省值, 如为True则返回表单参数的值 </summary>
+            <param name="strName">Url或表单参数</param>
+            <param name="defValue">缺省值</param>
+            <returns>Url或表单参数的int类型值</returns>
+        </member>
+        <member name="M:Server.Utility.ProjectRequest.GetQueryFloat(System.String,System.Single)">
+            <summary> 获得指定Url参数的float类型值 </summary>
+            <param name="strName">Url参数</param>
+            <param name="defValue">缺省值</param>
+            <returns>Url参数的int类型值</returns>
+        </member>
+        <member name="M:Server.Utility.ProjectRequest.GetFormFloat(System.String,System.Single)">
+            <summary> 获得指定表单参数的float类型值 </summary>
+            <param name="strName">表单参数</param>
+            <param name="defValue">缺省值</param>
+            <returns>表单参数的float类型值</returns>
+        </member>
+        <member name="M:Server.Utility.ProjectRequest.GetFormStringSetDefult(System.String,System.String)">
+            <summary> 获得指定表单参数的string类型值 </summary>
+            <param name="strName">表单参数</param>
+            <param name="defValue">缺省值</param>
+            <returns>表单参数的string类型值</returns>
+        </member>
+        <member name="M:Server.Utility.ProjectRequest.GetFloat(System.String,System.Single)">
+            <summary> 获得指定Url或表单参数的float类型值, 先判断Url参数是否为缺省值, 如为True则返回表单参数的值 </summary>
+            <param name="strName">Url或表单参数</param>
+            <param name="defValue">缺省值</param>
+            <returns>Url或表单参数的int类型值</returns>
+        </member>
+        <member name="M:Server.Utility.ProjectRequest.GetIP">
+            <summary> 获得当前页面客户端的IP </summary>
+            <returns>当前页面客户端的IP</returns>
+        </member>
+        <member name="M:Server.Utility.ProjectRequest.SaveRequestFile(System.String)">
+            <summary> 保存用户上传的文件 </summary>
+            <param name="path">保存路径</param>
+        </member>
+        <member name="M:Server.Utility.ProjectRequest.IsPostFile">
+            <summary> 判断是否有上传的文件 </summary>
+            <returns>是否有上传的文件</returns>
+        </member>
+        <member name="M:Server.Utility.ProjectRequest.IsExistQueryPara(System.String)">
+            <summary> 判断地址是否存在该参数 </summary>
+            <param name="strName">键值名称</param>
+            <returns>判断结果</returns>
+        </member>
+        <member name="M:Server.Utility.ProjectRequest.SetPrevPageUrl(System.Web.HttpContext)">
+            <summary> 设置之前页面地址 </summary>
+            <param name="httpContext">请求类型</param>
+        </member>
+        <member name="M:Server.Utility.ProjectRequest.GetPrevPageUrl(System.Web.HttpContext)">
+            <summary> 获取之前页面的地址 </summary>
+            <param name="httpContext">请求类型</param>
+            <returns>获取之前页面的地址</returns>
+        </member>
+        <member name="T:Server.Utility.RegexTool">
+            <summary> 正则验证格式 </summary>
+        </member>
+        <member name="M:Server.Utility.RegexTool.IsRegex(System.String,System.String)">
+            <summary> 验证字符格式 </summary>
+            <param name="inputStr">需要验证的字符串</param>
+            <param name="regexFormat">正则表达式</param>
+            <returns>验证字符格式</returns>
+        </member>
+        <member name="M:Server.Utility.RegexTool.IsValidEmail(System.String)">
+            <summary> 检测是否符合email格式 </summary>
+            <param name="strEmail">要判断的email字符串</param>
+            <returns>判断结果</returns>
+        </member>
+        <member name="M:Server.Utility.RegexTool.IsMobile(System.String)">
+            <summary> 判断手机，纯数字11位 </summary>
+            <param name="mobile">需要验证的手机</param>
+            <returns>判断结果</returns>
+        </member>
+        <member name="M:Server.Utility.RegexTool.IsTelephone(System.String)">
+            <summary> 验证纯数字的电话 </summary>
+            <param name="tel">需要验证的电话号码</param>
+            <returns>判断结果</returns>
+        </member>
+        <member name="M:Server.Utility.RegexTool.IsQQ(System.String)">
+            <summary> 验证纯数字QQ </summary>
+            <param name="QQ">需要验证的QQ号码</param>
+            <returns>判断结果</returns>/^[\d]{6,12}$/
+        </member>
+        <member name="M:Server.Utility.RegexTool.IsIdentityNumber(System.String)">
+            <summary> 验证身份证号 </summary>
+            <param name="IdentityNumber">需要验证的身份证号</param>
+            <returns>判断结果</returns>
+        </member>
+        <member name="M:Server.Utility.RegexTool.IsCardNo(System.String)">
+            <summary> 验证银行卡号 </summary>
+            <param name="CardNo">需要验证的银行卡号</param>
+            <returns>判断结果</returns>
+        </member>
+        <member name="M:Server.Utility.RegexTool.IsChinese(System.String)">
+            <summary> 验证是否中文字符 </summary>
+            <param name="iStr">需要验证的字符</param>
+            <returns>判断结果</returns>
+        </member>
+        <member name="M:Server.Utility.RegexTool.IsURL(System.String)">
+            <summary> 检测是否是正确的Url </summary>
+            <param name="strUrl">要验证的Url</param>
+            <returns>判断结果</returns>
+        </member>
+        <member name="M:Server.Utility.RegexTool.IsBase64String(System.String)">
+            <summary> 判断是否为base64字符串 </summary>
+            <param name="str">需要验证的字符串</param>
+            <returns>判断结果</returns>
+        </member>
+        <member name="M:Server.Utility.RegexTool.IsInt(System.String)">
+            <summary> 验证是否为正整数 </summary>
+            <param name="str">需要验证的字符串</param>
+            <returns>判断结果</returns>
+        </member>
+        <member name="M:Server.Utility.RegexTool.IsIDArray(System.String)">
+            <summary> 判断是否以逗号分隔的数字集合 </summary>
+            <param name="idArray">数字集合，格式：1,22,333,4444</param>
+            <returns>判断结果</returns>
+        </member>
+        <member name="M:Server.Utility.RegexTool.IsLetter(System.String)">
+            <summary> 判断对象是否为26个字母 </summary>
+            <param name="str">需要验证的字符串</param>
+            <returns>判断结果</returns>
+        </member>
+        <member name="M:Server.Utility.RegexTool.IsBirthdayDate(System.String)">
+            <summary> 判断对象是否为日期格式（如20140303） </summary>
+            <param name="str">需要验证的字符串</param>
+            <returns>判断结果</returns>
+        </member>
+        <member name="M:Server.Utility.RegexTool.IsDecimal(System.String)">
+            <summary> 判断对象是否人民币格式（如18.00） </summary>
+            <param name="str">需要验证的字符串</param>
+            <returns>判断结果</returns>
+        </member>
+        <member name="M:Server.Utility.RegexTool.IsDomain(System.String)">
+            <summary> 判断是否为域名 </summary>
+            <param name="hostName">域名</param>
+            <returns>判断结果</returns>
+        </member>
+        <member name="M:Server.Utility.RegexTool.IsSafeSqlString(System.String)">
+            <summary> 检测是否是安全的Sql参数 </summary>
+            <param name="str">要判断字符串</param>
+            <returns>判断结果</returns>
+        </member>
+        <member name="M:Server.Utility.RegexTool.IsDateString(System.String)">
+            <summary> 判断字符串是否是yy-mm-dd字符串 </summary>
+            <param name="str">待判断字符串</param>
+            <returns>判断结果</returns>
+        </member>
+        <member name="M:Server.Utility.RegexTool.IsNameFormat1(System.String)">
+            <summary> 判断字符是否为中文、字母、数字单个或组合，是：true </summary>
+            <param name="str">需要验证的字符串</param>
+            <returns>判断结果</returns>
+        </member>
+        <member name="M:Server.Utility.RegexTool.IsNameFormat2(System.String)">
+            <summary> 判断字符是否为字母、数字单类或组合，是：true </summary>
+            <param name="str">需要验证的字符串</param>
+            <returns>判断结果</returns>
+        </member>
+        <member name="M:Server.Utility.RegexTool.IsNameIdentity(System.String)">
+            <summary> 判断字符是否为身份证 是：true </summary>
+            <param name="str">需要验证的字符串</param>
+            <returns>判断结果</returns>
+        </member>
+        <member name="M:Server.Utility.RegexTool.IsPostCode(System.String)">
+            <summary> 判断是否邮编 </summary>
+            <param name="str">需要验证的字符串</param>
+            <returns>判断结果</returns>
+        </member>
+        <member name="M:Server.Utility.RegexTool.IsTelPhone(System.String)">
+            <summary> 判断是否为带区号的电话号码格式 </summary>
+            <param name="str">需要验证的字符串</param>
+            <returns>判断结果</returns>
+        </member>
+        <member name="M:Server.Utility.RegexTool.IsTime(System.String)">
+            <summary> 检测是否是时间格式 </summary>
+            <param name="str">需要验证的字符串</param>
+            <returns>判断结果</returns>
+        </member>
+        <member name="M:Server.Utility.RegexTool.IsDate(System.String)">
+            <summary> 是否为日期型字符串 (true验证通过)</summary>
+            <param name="str">日期字符串(2008-05-08)</param>
+            <returns>判断结果</returns>
+        </member>
+        <member name="M:Server.Utility.RegexTool.IsIP(System.String)">
+            <summary>
+            是否为ip
+            </summary>
+            <param name="ip">IP</param>
+            <returns>是否为ip</returns>
+        </member>
+        <member name="M:Server.Utility.RegexTool.InIPArray(System.String,System.String[])">
+            <summary>
+            返回指定IP是否在指定的IP数组所限定的范围内, IP数组内的IP地址可以使用*表示该IP段任意, 例如192.168.1.*
+            </summary>
+            <param name="ip">ip</param>
+            <param name="iparray">IP段组</param>
+            <returns>True or False</returns>
+        </member>
+        <member name="T:Server.Utility.CommonResult`2">
+            <summary>
+            返回对象扩展类
+            </summary>
+            <typeparam name="headT"></typeparam>
+            <typeparam name="bodyT"></typeparam>
+        </member>
+        <member name="M:Server.Utility.CommonResult`2.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="F:Server.Utility.CommonResult`2.ErrorCode">
+            <summary>
+            错误信息编码
+            </summary>
+        </member>
+        <member name="P:Server.Utility.CommonResult`2.IsSuccess">
+            <summary>
+            是否成功，默认成功
+            </summary>
+        </member>
+        <member name="P:Server.Utility.CommonResult`2.Message">
+            <summary>
+            返回给客户端的信息
+            </summary>
+        </member>
+        <member name="P:Server.Utility.CommonResult`2.StackTrace">
+            <summary>
+            错误堆栈
+            </summary>
+        </member>
+        <member name="P:Server.Utility.CommonResult`2.HeadData">
+            <summary>
+            头部结果
+            </summary>
+        </member>
+        <member name="P:Server.Utility.CommonResult`2.BodyData">
+            <summary>
+            身部结果
+            </summary>
+        </member>
+        <member name="P:Server.Utility.CommonResult`2.TotalNum">
+            <summary>
+            总条数
+            </summary>
+        </member>
+        <member name="T:Server.Utility.UserAuth.BaseInspector">
+            <summary>
+            Author:xxp
+            Remark:基本检查器
+            CreateTieme:20161017
+            </summary>
+        </member>
+        <member name="T:Server.Utility.CHKUserAuth">
+            <summary>
+            Author:xxp
+            Remark:检测用户权限，参数1是默认sessionId
+            CreateDate:20160929
+            </summary>
+        </member>
+        <member name="M:Server.Utility.CHKUserAuth.BeforeCall(System.String,System.Object[])">
+            <summary>
+            WCF接口调用前检查,参数1是默认sessionId,
+            </summary>
+            <param name="operationName"></param>
+            <param name="inputs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Server.Utility.CommonResult`1.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="F:Server.Utility.CommonResult`1.ErrorCode">
+            <summary>
+            错误信息编码
+            </summary>
+        </member>
+        <member name="P:Server.Utility.CommonResult`1.IsSuccess">
+            <summary>
+            是否成功，默认成功
+            </summary>
+        </member>
+        <member name="P:Server.Utility.CommonResult`1.Message">
+            <summary>
+            返回给客户端的信息,赋值IsSuccess更改为False
+            </summary>
+        </member>
+        <member name="P:Server.Utility.CommonResult`1.StackTrace">
+            <summary>
+            错误堆栈
+            </summary>
+        </member>
+        <member name="P:Server.Utility.CommonResult`1.Data">
+            <summary>
+            附属结果
+            </summary>
+        </member>
+        <member name="P:Server.Utility.CommonResult`1.TotalNum">
+            <summary>
+            总条数
+            </summary>
+        </member>
+        <member name="T:Server.Utility.ErrorResponse">
+            <summary>
+            Json错误信息数据类
+            </summary>
+        </member>
+        <member name="M:Server.Utility.ErrorResponse.#ctor">
+            <summary> 构造函数 </summary>
+        </member>
+        <member name="M:Server.Utility.ErrorResponse.errorMsgFormat(System.String,Server.Utility.CallBackServer,System.String)">
+            <summary>
+            错误信息格式化为Json
+            </summary>
+            <param name="Message">错误信息</param>
+            <param name="State">错误状态</param>
+            <param name="Code">错误编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Server.Utility.ErrorResponse.ReturnErrorMessage(Server.Utility.CallBackServer,System.Int64,System.String)">
+            <summary>
+            写入错误信息
+            </summary>
+            <param name="state">状态码</param>
+            <param name="code">错误编码</param>
+            <param name="message">错误信息</param>
+            <returns></returns>
+        </member>
+        <member name="P:Server.Utility.ErrorResponse.State">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:Server.Utility.ErrorResponse.Code">
+            <summary>
+            错误代码
+            </summary>
+        </member>
+        <member name="P:Server.Utility.ErrorResponse.Message">
+            <summary>
+            错误信息
+            </summary>
+        </member>
+        <member name="T:Server.Utility.OutSideErrorResponse">
+            <summary>
+            Json对外错误信息数据类
+            </summary>
+        </member>
+        <member name="M:Server.Utility.OutSideErrorResponse.#ctor">
+            <summary> 构造函数 </summary>
+        </member>
+        <member name="P:Server.Utility.OutSideErrorResponse.Code">
+            <summary>
+            错误代码
+            </summary>
+        </member>
+        <member name="P:Server.Utility.OutSideErrorResponse.Message">
+            <summary>
+            错误信息
+            </summary> 
+        </member>
+        <member name="T:Server.Utility.CallBackServer">
+             <summary>
+            内部错误信息状态枚举
+             </summary>
+        </member>
+        <member name="F:Server.Utility.CallBackServer.Success">
+            <summary>
+            成功 1
+            </summary>
+        </member>
+        <member name="F:Server.Utility.CallBackServer.Fail">
+            <summary>
+            失败 -1
+            </summary>
+        </member>
+        <member name="F:Server.Utility.CallBackServer.Error">
+            <summary>
+            异常、出错 -99
+            </summary>
+        </member>
+        <member name="F:Server.Utility.CallBackServer.Pass">
+            <summary>
+            审核中
+            </summary>
+        </member>
+        <member name="F:Server.Utility.CallBackServer.InputError">
+            <summary>
+            输入数据错误 -3
+            </summary>
+        </member>
+        <member name="T:Server.Utility.JsonTool">
+            <summary>JSON操作类 </summary>
+        </member>
+        <member name="M:Server.Utility.JsonTool.EntityToJson``1(``0)">
+            <summary> 将对象转换为Json </summary>
+            <typeparam name="T">泛型对象</typeparam>
+            <param name="obj">转换对象</param>
+            <returns>将对象转换为Json</returns>
+        </member>
+        <member name="M:Server.Utility.JsonTool.JsonToEntity``1(System.String)">
+            <summary> 将Json转换为对象  </summary>
+            <typeparam name="T">泛型对象</typeparam>
+            <param name="jsonStr">Json数据</param>
+            <returns>将Json转换为对象</returns>
+        </member>
+        <member name="M:Server.Utility.JsonTool.JsonToList``1(System.String)">
+            <summary> 将Json转换为List对象 </summary>
+            <typeparam name="T">泛型对象</typeparam>
+            <param name="JsonStr">Json数据</param>
+            <returns>将Json转换为List对象</returns>
+        </member>
+        <member name="M:Server.Utility.JsonTool.PageResponseJSON(System.String)">
+            <summary> 输出json内容 </summary>
+            <param name="json">json字符</param>
+        </member>
+        <member name="M:Server.Utility.JsonTool.PageResponseJSON``1(``0)">
+            <summary> 输出json内容 </summary>
+            <param name="data">泛型对象类型</param>
+        </member>
+        <member name="T:Server.Utility.ResponseMessage`1">
+            <summary>
+            API返回类型
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+        </member>
+        <member name="M:Server.Utility.ResponseMessage`1.#ctor(System.String)">
+            <summary>构造函数</summary>
+            <param name="returnType">返回类型</param>
+        </member>
+        <member name="M:Server.Utility.ResponseMessage`1.Response(`0)">
+            <summary>根据返回类型返回实体</summary>
+            <param name="t">实体</param>
+            <returns></returns>
+        </member>
+        <member name="T:Server.Utility.ResponseType">
+            <summary>
+            返回类型
+            </summary>
+        </member>
+        <member name="F:Server.Utility.ResponseType.XML">
+            <summary>XML</summary>
+        </member>
+        <member name="F:Server.Utility.ResponseType.JSON">
+            <summary>JSON</summary>
+        </member>
+        <member name="T:Server.Utility.ResponseResult">
+            <summary>
+            响应结果
+            </summary>
+        </member>
+        <member name="P:Server.Utility.ResponseResult.State">
+            <summary>状态：-1，失败；1，成功；0：空值</summary>
+        </member>
+        <member name="P:Server.Utility.ResponseResult.Result">
+            <summary>结果实体：json字符串</summary>
+        </member>
+        <member name="T:Server.Utility.Security.CHKUserHeaderAuth">
+            <summary>
+            Author:xx
+            Remark:检查用户权限,通过头信息检验
+            CreateDate:20170331
+            </summary>
+        </member>
+        <member name="T:Server.Utility.UserSession">
+            <summary>
+            Author:xxp
+            Remark:用户会话对象
+            CreateDate:20161214
+            </summary>
+        </member>
+        <member name="P:Server.Utility.UserSession.SessionId">
+            <summary>
+            用户会话ID
+            </summary>
+        </member>
+        <member name="P:Server.Utility.UserSession.SysCode">
+            <summary>
+            系统编码
+            </summary>
+        </member>
+        <member name="P:Server.Utility.UserSession.SysName">
+            <summary>
+            系统名称
+            </summary>
+        </member>
+        <member name="P:Server.Utility.UserSession.UserCode">
+            <summary>
+            用户编码
+            </summary>
+        </member>
+        <member name="P:Server.Utility.UserSession.UserName">
+            <summary>
+            用户名称
+            </summary>
+        </member>
+        <member name="P:Server.Utility.UserSession.ClientMachineName">
+            <summary>
+            客户端电脑名称
+            </summary>
+        </member>
+        <member name="P:Server.Utility.UserSession.ClientIP">
+            <summary>
+            客户端IP地址
+            </summary>
+        </member>
+        <member name="P:Server.Utility.UserSession.UseRole">
+            <summary>
+            用户权限名称
+            </summary>
+        </member>
+        <member name="P:Server.Utility.UserSession.LoginDate">
+            <summary>
+            登录日期
+            </summary>
+        </member>
+        <member name="P:Server.Utility.UserSession.SvrDate">
+            <summary>
+            服务端登录时间
+            </summary>
+        </member>
+        <member name="P:Server.Utility.UserSession.DownlineDate">
+            <summary>
+            下线日期 SvrDate+1天
+            </summary>
+        </member>
+        <member name="P:Server.Utility.UserSession.IsSingle">
+            <summary>
+            是否开启单例模式
+            </summary>
+        </member>
+        <member name="T:Server.Utility.SecurityTool">
+            <summary>
+            Author:xxp
+            Remark:安全类
+            CreateDate:20160928
+            </summary>
+        </member>
+        <member name="F:Server.Utility.SecurityTool.DEFAULT_DES_KEY">
+            <summary> 默认DES加密解密Key(8位) </summary>
+        </member>
+        <member name="M:Server.Utility.SecurityTool.ToMD5(System.String)">
+            <summary>
+            将字符加密为md5格式
+            </summary>
+            <param name="str">要加密的字符</param>
+            <returns></returns>
+        </member>
+        <member name="M:Server.Utility.SecurityTool.SHA256(System.String)">
+            <summary> SHA256函数 </summary>
+            /// <param name="str">原始字符串</param>
+            <returns>SHA256结果</returns>
+        </member>
+        <member name="M:Server.Utility.SecurityTool.NewGID(System.String)">
+            <summary> 得到唯一标识guid
+            N ：00000000000000000000000000000000
+            D ：00000000-0000-0000-0000-000000000000
+            B ：{00000000-0000-0000-0000-000000000000} 
+            P ：(00000000-0000-0000-0000-000000000000) </summary>
+            <param name="Format"></param>
+            <returns>得到唯一标识guid</returns>
+        </member>
+        <member name="M:Server.Utility.SecurityTool.NewGID">
+            <summary> 得到唯一标识guid,默认N格式 </summary>
+            <returns> 得到唯一标识guid,默认N格式</returns>
+        </member>
+        <member name="F:Server.Utility.SecurityTool.Keys">
+            <summary> 默认DES密钥向量 </summary>
+        </member>
+        <member name="M:Server.Utility.SecurityTool.DESEncode(System.String)">
+            <summary> DES加密字符串 </summary>
+            <param name="encryptString">原文</param>
+            <returns>密文</returns>
+        </member>
+        <member name="M:Server.Utility.SecurityTool.DESEncode(System.String,System.String)">
+            <summary> DES加密字符串 </summary>
+            <param name="encryptString">原文</param>
+            <param name="encryptKey">加密密钥,要求为8位</param>
+            <returns>密文</returns>
+        </member>
+        <member name="M:Server.Utility.SecurityTool.DESDecode(System.String)">
+            <summary>
+            DES解密字符串
+            </summary>
+            <param name="decryptString">密文</param>
+            <returns>原文</returns>
+        </member>
+        <member name="M:Server.Utility.SecurityTool.DESDecode(System.String,System.String)">
+            <summary> DES解密字符串 </summary>
+            <param name="decryptString">密文</param>
+            <param name="decryptKey">解密密钥,要求为8位,和加密密钥相同</param>
+            <returns>原文</returns>
+        </member>
+        <member name="M:Server.Utility.SecurityTool.Encrypt(System.String)">
+            <summary>
+            加密
+            </summary>
+            <param name="Str">加密字符</param>
+            <returns>加密字符</returns>
+        </member>
+        <member name="M:Server.Utility.SecurityTool.Encrypt(System.String,System.String)">
+            <summary> 
+            加密数据 
+            </summary> 
+            <param name="Str">待加密字符</param> 
+            <param name="sKey">密匙</param> 
+            <returns>加密数据</returns> 
+        </member>
+        <member name="M:Server.Utility.SecurityTool.Decrypt(System.String)">
+            <summary>
+            解密
+            </summary>
+            <param name="Str">待加密字符</param>
+            <returns>解密</returns>
+        </member>
+        <member name="M:Server.Utility.SecurityTool.Decrypt(System.String,System.String)">
+            <summary> 
+            解密数据 
+            </summary> 
+            <param name="Str">待加密字符</param> 
+            <param name="sKey">密匙</param> 
+            <returns>解密数据</returns> 
+        </member>
+        <member name="T:Server.Utility.CustomFaultMessage">
+            <summary>
+            Author:xxp
+            Remark:自定义错误信息
+            CreateTime:20161017
+            </summary>
+        </member>
+        <member name="F:Server.Utility.CustomFaultMessage.ErrorCode">
+            <summary>
+            错误信息编码
+            </summary>
+        </member>
+        <member name="F:Server.Utility.CustomFaultMessage.Message">
+            <summary>
+            消息
+            </summary>
+        </member>
+        <member name="P:Server.Utility.CustomFaultMessage.StackTrace">
+            <summary>
+            错误堆栈
+            </summary>
+        </member>
+        <member name="T:Server.Utility.SvrUserSession">
+            <summary>
+            Author:xxp
+            Remark:服务端用户处理
+            CreateDate:20160929
+            </summary>
+        </member>
+        <member name="M:Server.Utility.SvrUserSession.AddUserSession(System.String,System.String,System.String,System.String,System.DateTime,System.String,System.String,System.String,System.Boolean)">
+            <summary>
+             添加用户会话信息
+            </summary>
+            <param name="uSession">用户会话对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Server.Utility.SvrUserSession.GetCurrSession(System.String)">
+            <summary>
+            获取当前用户会话ID
+            </summary>
+            <param name="sessionID">会话ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Server.Utility.SvrUserSession.QuitLogin(System.String)">
+            <summary>
+            退出登录
+            </summary>
+            <param name="sessionID">会话ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Server.Utility.SvrUserSession.ExistsUserSession(System.String,System.String)">
+            <summary>
+            获取缓存登录用户集合
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Server.Utility.StringTool">
+            <summary> 字符串操作类 </summary>
+        </member>
+        <member name="M:Server.Utility.StringTool.SplitString(System.String,System.String)">
+            <summary> 分割字符串 </summary>
+            <param name="strContent">待分割字符</param>
+            <param name="strSplit">分隔符</param>
+            <returns>分割字符串</returns>
+        </member>
+        <member name="M:Server.Utility.StringTool.SplitString(System.String,System.String,System.Int32)">
+            <summary>分割字符串 </summary>
+            <param name="strContent">待分割字符</param>
+            <param name="strSplit">分隔符</param>
+            <param name="index">索引</param>
+            <returns>分割字符串</returns>
+        </member>
+        <member name="M:Server.Utility.StringTool.SplitToSting(System.String,System.Char,System.Int32)">
+            <summary> 分割字符串 </summary>
+            <param name="strContent">原字符串</param>
+            <param name="strSplit">分隔符</param>
+            <param name="index">索引号</param>
+            <returns>分割字符串</returns>
+        </member>
+        <member name="M:Server.Utility.StringTool.GetStringLength(System.String)">
+            <summary> 返回字符串真实长度, 1个汉字长度为2 </summary>
+            <param name="str">原字符串</param>
+            <returns>字符长度</returns>
+        </member>
+        <member name="M:Server.Utility.StringTool.GetInArrayID(System.String,System.String[],System.Boolean)">
+            <summary>
+            判断指定字符串在指定字符串数组中的位置
+            </summary>
+            <param name="strSearch">字符串</param>
+            <param name="stringArray">字符串数组</param>
+            <param name="caseInsensetive">是否不区分大小写, true为不区分, false为区分</param>
+            <returns>字符串在指定字符串数组中的位置, 如不存在则返回-1</returns>
+        </member>
+        <member name="M:Server.Utility.StringTool.GetInArrayID(System.String,System.String[])">
+            <summary>
+            判断指定字符串在指定字符串数组中的位置
+            </summary>
+            <param name="strSearch">字符串</param>
+            <param name="stringArray">字符串数组</param>
+            <returns>字符串在指定字符串数组中的位置, 如不存在则返回-1</returns>		
+        </member>
+        <member name="M:Server.Utility.StringTool.InArray(System.String,System.String[],System.Boolean)">
+            <summary>
+            判断指定字符串是否属于指定字符串数组中的一个元素
+            </summary>
+            <param name="strSearch">字符串</param>
+            <param name="stringArray">字符串数组</param>
+            <param name="caseInsensetive">是否不区分大小写, true为不区分, false为区分</param>
+            <returns>判断结果</returns>
+        </member>
+        <member name="M:Server.Utility.StringTool.InArray(System.String,System.String[])">
+            <summary>
+            判断指定字符串是否属于指定字符串数组中的一个元素
+            </summary>
+            <param name="str">字符串</param>
+            <param name="stringarray">字符串数组</param>
+            <returns>判断结果</returns>
+        </member>
+        <member name="M:Server.Utility.StringTool.InArray(System.String,System.String)">
+            <summary>
+            判断指定字符串是否属于指定字符串数组中的一个元素
+            </summary>
+            <param name="str">字符串</param>
+            <param name="stringarray">内部以逗号分割单词的字符串</param>
+            <returns>判断结果</returns>
+        </member>
+        <member name="M:Server.Utility.StringTool.InArray(System.String,System.String,System.String)">
+            <summary>
+            判断指定字符串是否属于指定字符串数组中的一个元素
+            </summary>
+            <param name="str">字符串</param>
+            <param name="stringarray">内部以逗号分割单词的字符串</param>
+            <param name="strsplit">分割字符串</param>
+            <returns>判断结果</returns>
+        </member>
+        <member name="M:Server.Utility.StringTool.FilterWords(System.String)">
+            <summary>
+            过滤字符串中的特殊字符
+            </summary>
+            <param name="strHtml">字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Server.Utility.StringTool.CutString(System.String,System.Int32,System.Int32)">
+            <summary>
+            从字符串的指定位置截取指定长度的子字符串
+            </summary>
+            <param name="str">原字符串</param>
+            <param name="startIndex">子字符串的起始位置</param>
+            <param name="length">子字符串的长度</param>
+            <returns>子字符串</returns>
+        </member>
+        <member name="M:Server.Utility.StringTool.ReplaceAppointString(System.String,System.Int32,System.Int32,System.String)">
+            <summary>
+            替换指定长度的字符
+            </summary>
+            <param name="Str">需替换字符</param>
+            <param name="StartLen">开始替换位置</param>
+            <param name="Length">替换长度</param>
+            <param name="ReplaceStr">替换的字符</param>
+            <returns></returns>
+        </member>
+        <member name="T:Server.Utility.Utils">
+            <summary>
+            Author:xxp
+            Remark:工具类
+            CreateDate:20161021
+            </summary>
+        </member>
+        <member name="M:Server.Utility.Utils.GetRegexCompiledOptions">
+            <summary> 得到正则编译参数设置 </summary>
+            <returns>参数设置</returns>
+        </member>
+        <member name="M:Server.Utility.Utils.IsImgFilename(System.String)">
+            <summary> 判断文件名是否为浏览器可以直接显示的图片文件名 </summary>
+            <param name="filename">文件名</param>
+            <returns>是否可以直接显示</returns>
+        </member>
+        <member name="M:Server.Utility.Utils.GetEmailHostName(System.String)">
+            <summary> 获取邮箱的域名 </summary>
+            <param name="strEmail">邮箱地址</param>
+            <returns>邮箱的域名</returns>
+        </member>
+        <member name="M:Server.Utility.Utils.IsSafeUserInfoString(System.String)">
+            <summary> 检测是否有危险的可能用于链接的字符串 </summary>
+            <param name="str">要判断字符串</param>
+            <returns>判断结果</returns>
+        </member>
+        <member name="M:Server.Utility.Utils.GetQuarter(System.Int32)">
+            <summary> 返回季度 </summary>
+            <param name="month">月份</param>
+              <returns>返回季度 </returns>
+        </member>
+        <member name="M:Server.Utility.Utils.GetDate">
+            <summary> 返回标准日期格式string  </summary>
+              <returns>返回标准日期格式string </returns>
+        </member>
+        <member name="M:Server.Utility.Utils.GetDate(System.String,System.String)">
+            <summary> 返回指定日期格式 </summary>
+            <param name="datetimestr">日期</param>
+            <param name="replacestr">替换格式</param>
+              <returns>返回指定日期格式</returns>
+        </member>
+        <member name="M:Server.Utility.Utils.GetTime">
+            <summary> 返回标准时间格式string </summary>
+              <returns>返回标准时间格式string</returns>
+        </member>
+        <member name="M:Server.Utility.Utils.GetDateTime">
+            <summary> 返回标准时间格式string </summary>
+             <returns>返回相对于当前时间的相对天数</returns>
+        </member>
+        <member name="M:Server.Utility.Utils.GetDateTime(System.Int32)">
+            <summary> 返回相对于当前时间的相对天数 </summary>
+            <param name="relativeday">相对天数</param>
+             <returns>返回相对于当前时间的相对天数</returns>
+        </member>
+        <member name="M:Server.Utility.Utils.GetDateTimeF">
+            <summary> 返回标准时间格式string </summary>
+            <returns>得到标准时间</returns>
+        </member>
+        <member name="M:Server.Utility.Utils.GetStandardDateTime(System.String,System.String)">
+            <summary> 返回标准时间 </summary>
+            <param name="fDateTime">时间</param>
+            <param name="formatStr">时间格式</param>
+            <returns>得到标准时间</returns>
+        </member>
+        <member name="M:Server.Utility.Utils.GetStandardDateTime(System.String)">
+            <summary> 返回标准时间 yyyy-MM-dd HH:mm:ss </summary>
+            <param name="fDateTime">时间</param>
+            <returns>格式化时间</returns>
+        </member>
+        <member name="M:Server.Utility.Utils.GetStandardDate(System.String)">
+            <summary>  返回标准时间 yyyy-MM-dd </summary>
+            <param name="fDate">时间</param>
+            <returns>格式化时间</returns>
+        </member>
+        <member name="M:Server.Utility.Utils.GetRealIP">
+            <summary> 获取IP地址 </summary>
+            <returns>得到IP地址</returns>
+        </member>
+        <member name="M:Server.Utility.Utils.UrlEncode(System.String)">
+            <summary> 返回 URL 字符串的编码结果 </summary>
+            <param name="str">字符串</param>
+            <returns>编码结果</returns>
+        </member>
+        <member name="M:Server.Utility.Utils.UrlDecode(System.String)">
+            <summary>
+            返回 URL 字符串的解码结果
+            </summary>
+            <param name="str">字符串</param>
+            <returns>解码结果</returns>
+        </member>
+        <member name="M:Server.Utility.Utils.FindNoUTF8File(System.String)">
+            <summary>
+            返回指定目录下的非 UTF8 字符集文件
+            </summary>
+            <param name="Path">路径</param>
+            <returns>文件名的字符串数组</returns>
+        </member>
+        <member name="M:Server.Utility.Utils.IsUTF8(System.IO.FileStream)">
+            <summary>
+            判断文件流是否为UTF8字符集
+            </summary>
+            <param name="sbInputStream">文件流</param>
+            <returns>判断结果</returns>
+        </member>
+        <member name="M:Server.Utility.Utils.FormatBytesStr(System.Int32)">
+            <summary>
+            格式化字节数字符串
+            </summary>
+            <param name="bytes">字符</param>
+            <returns>格式化字节数字符串</returns>
+        </member>
+        <member name="M:Server.Utility.Utils.ReplaceStrToScript(System.String)">
+            <summary>
+            为脚本替换特殊字符串
+            </summary>
+            <param name="str">字符</param>
+            <returns>返回过滤后字符</returns>
+        </member>
+        <member name="M:Server.Utility.Utils.WriteCookie(System.String,System.String)">
+            <summary>
+            写cookie值
+            </summary>
+            <param name="strName">名称</param>
+            <param name="strValue">值</param>
+        </member>
+        <member name="M:Server.Utility.Utils.WriteCookie(System.String,System.String,System.String)">
+            <summary>
+            写cookie值
+            </summary>
+            <param name="strName">名称</param>
+            <param name="key">键值</param>
+            <param name="strValue">值</param>
+             <returns>cookie值</returns>
+        </member>
+        <member name="M:Server.Utility.Utils.WriteCookie(System.String,System.String,System.Int32)">
+            <summary>
+            写cookie值
+            </summary>
+            <param name="strName">名称</param>
+            <param name="strValue">值</param>
+            <param name="expires">过期时间(分钟)</param>
+            <returns>cookie值</returns>
+        </member>
+        <member name="M:Server.Utility.Utils.WriteCookie(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            写cookie值
+            </summary>
+            <param name="strName">名称</param>
+            <param name="strValue">值</param>
+            <param name="expires">过期时间(分钟)</param>
+            <param name="count">存储cookie个数</param>
+            <returns>cookie值</returns>
+        </member>
+        <member name="M:Server.Utility.Utils.GetCookie(System.String)">
+            <summary>
+            读cookie值
+            </summary>
+            <param name="strName">名称</param>
+            <returns>cookie值</returns>
+        </member>
+        <member name="M:Server.Utility.Utils.GetCookie(System.String,System.String)">
+            <summary>
+            读cookie值
+            </summary>
+            <param name="strName">名称</param>
+            <param name="key">键值</param>
+            <returns>cookie值</returns>
+        </member>
+        <member name="M:Server.Utility.Utils.GetTrueForumPath">
+            <summary>
+            得到网站的真实路径
+            </summary>
+            <returns>得到网站的真实路径</returns>
+        </member>
+        <member name="M:Server.Utility.Utils.StrToInt(System.String)">
+            <summary>
+            将对象转换为Int32类型,转换失败返回0
+            </summary>
+            <param name="str">要转换的字符串</param>
+            <returns>转换后的int类型结果</returns>
+        </member>
+        <member name="M:Server.Utility.Utils.StrToInt(System.String,System.Int32)">
+            <summary>
+            将对象转换为Int32类型
+            </summary>
+            <param name="str">要转换的字符串</param>
+            <param name="defValue">缺省值</param>
+            <returns>转换后的int类型结果</returns>
+        </member>
+        <member name="M:Server.Utility.Utils.StrToFloat(System.Object,System.Single)">
+            <summary>
+            string型转换为float型
+            </summary>
+            <param name="strValue">要转换的字符串</param>
+            <param name="defValue">缺省值</param>
+            <returns>转换后的int类型结果</returns>
+        </member>
+        <member name="M:Server.Utility.Utils.ObjToInt(System.Object)">
+            <summary>
+            将object转int
+            </summary>
+            <param name="obj">对象</param>
+            <returns>将object转int</returns>
+        </member>
+        <member name="M:Server.Utility.Utils.ObjToInt(System.Object,System.Int32)">
+            <summary>
+            将object转int，转换失败返回默认值
+            </summary>
+            <param name="obj">对象</param>
+            <param name="defvalue">默认值</param>
+            <returns>将object转int，转换失败返回默认值</returns>
+        </member>
+        <member name="M:Server.Utility.Utils.ToDateTime(System.Object)">
+            <summary>
+            转换成时间
+            </summary>
+            <param name="obj">参数</param>
+            <returns>时间（默认为DateTime.MaxValue）</returns>
+        </member>
+        <member name="M:Server.Utility.Utils.ToDouble(System.Object)">
+            <summary>
+            转换成双精度
+            </summary>
+            <param name="obj">参数</param>
+            <returns>双精度（默认为0）</returns>
+        </member>
+        <member name="M:Server.Utility.Utils.ToDecimal(System.Object)">
+            <summary>
+            转换成小数
+            </summary>
+            <param name="obj">参数</param>
+            <returns>小数（默认为0）</returns>
+        </member>
+        <member name="M:Server.Utility.Utils.BackupFile(System.String,System.String,System.Boolean)">
+            <summary>
+            备份文件
+            </summary>
+            <param name="sourceFileName">源文件名</param>
+            <param name="destFileName">目标文件名</param>
+            <param name="overwrite">当目标文件存在时是否覆盖</param>
+            <returns>操作是否成功</returns>
+        </member>
+        <member name="M:Server.Utility.Utils.ConvertToUnixTimestamp(System.DateTime)">
+            <summary>
+            转换时间为unix时间戳
+            </summary>
+            <param name="date">需要传递UTC时间,避免时区误差,例:DataTime.UTCNow</param>
+            <returns>转换时间为unix时间戳</returns>
+        </member>
+        <member name="M:Server.Utility.Utils.JsonCharFilter(System.String)">
+            <summary>
+            Json特符字符过滤，参见http://www.json.org/
+            </summary>
+            <param name="sourceStr">要过滤的源字符串</param>
+            <returns>返回过滤的字符串</returns>
+        </member>
+        <member name="M:Server.Utility.Utils.ClearUBB(System.String)">
+            <summary>
+            清除UBB标签
+            </summary>
+            <param name="sDetail">帖子内容</param>
+            <returns>帖子内容</returns>
+        </member>
+        <member name="M:Server.Utility.Utils.GetRootUrl(System.String)">
+            <summary>
+            获取站点根目录URL
+            </summary>
+            <param name="forumPath">路径</param>
+            <returns>获取站点根目录URL</returns>
+        </member>
+        <member name="M:Server.Utility.Utils.GetEnum``1(System.String,``0)">
+            <summary>
+            根据字符串获取枚举值
+            </summary>
+            <typeparam name="T">枚举类型</typeparam>
+            <param name="value">字符串枚举值</param>
+            <param name="defValue">缺省值</param>
+            <returns>根据字符串获取枚举值</returns>
+        </member>
+        <member name="M:Server.Utility.Utils.FormatDate(System.Int32,System.Boolean)">
+            <summary>
+            将8位日期型整型数据转换为日期字符串数据
+            </summary>
+            <param name="date">整型日期</param>
+            <param name="chnType">是否以中文年月日输出</param>
+            <returns>将8位日期型整型数据转换为日期字符串数据</returns>
+        </member>
+        <member name="M:Server.Utility.Utils.FormatDate(System.Int32)">
+            <summary>
+            格式化时间
+            </summary>
+            <param name="date">时间</param>
+            <returns>格式化时间</returns>
+        </member>
+        <member name="M:Server.Utility.Utils.GetClientBrower">
+            <summary>
+            获得浏览器信息
+            </summary>
+            <returns>获得浏览器信息</returns>
+        </member>
+        <member name="M:Server.Utility.Utils.GetClientOS">
+            <summary>
+            获得操作系统信息
+            </summary>
+            <returns>获得操作系统信息</returns>
+        </member>
+        <member name="M:Server.Utility.Utils.StringToHexString(System.String,System.Text.Encoding)">
+            <summary>
+            字符串转换成16进制
+            </summary>
+            <param name="s">字符串</param>
+            <param name="encode">编码方式</param>
+            <returns>字符串转换成16进制</returns>    
+        </member>
+        <member name="M:Server.Utility.Utils.IsNumeric(System.Object)">
+            <summary>
+            判断对象是否为Int32类型的数字
+            </summary>
+            <param name="Expression">字符串</param>
+            <returns>True Or False</returns>
+        </member>
+        <member name="M:Server.Utility.Utils.IsNumeric(System.String)">
+            <summary>
+            判断对象是否为Int32类型的数字
+            </summary>
+            <param name="expression">验证字符串</param>
+            <returns>True Or False</returns>
+        </member>
+        <member name="M:Server.Utility.Utils.IsNumericArray(System.String[])">
+            <summary>
+            判断给定的字符串数组(strNumber)中的数据是不是都为数值型
+            </summary>
+            <param name="strNumber">要确认的字符串数组</param>
+            <returns>是则返加true 不是则返回 false</returns>
+        </member>
+        <member name="M:Server.Utility.Utils.GetHomeUrl">
+            <summary>
+            返回当前网站网址
+            </summary>
+            <returns>返回当前网站网址</returns>
+        </member>
+        <member name="M:Server.Utility.Utils.FpHtmlEnCode(System.String)">
+            <summary>
+            过滤发布内容的回车等信息
+            </summary>
+            <param name="ContentStr">待过滤字符串</param>
+            <returns>过滤发布内容的回车等信息</returns>
+        </member>
+        <member name="M:Server.Utility.Utils.ScriptHtml(System.String,System.String,System.Int32)">
+            <summary>
+            过滤字符串中脚本信息
+            </summary>
+            <param name="ContentStr">待过滤字符</param>
+            <param name="TagName">脚本标识</param>
+            <param name="FType">过滤级别</param>
+            <returns>过滤字符串中脚本信息</returns>
+        </member>
+        <member name="M:Server.Utility.Utils.Redirect(System.String)">
+             <summary>
+             直接跳转到指定的页面
+             </summary>
+            <param name="toUrl">跳转指定URL</param>
+        </member>
+        <member name="M:Server.Utility.Utils.AlertAndRedirect(System.String,System.String)">
+             <summary>
+             弹出信息,并跳转指定页面。
+             </summary>
+            <param name="message">弹出信息</param>
+            <param name="toURL">跳转指定URL</param>
+        </member>
+        <member name="M:Server.Utility.Utils.DateSelectVal(System.DateTime,System.String)">
+            <summary>
+            根据有效期值返回对应的过期日期，转换错误返回3天之后的日期
+            </summary>
+            <param name="dateTime">当前时间或者相对时间</param>
+            <param name="dateSelectValue">计算的值,数字+（y,m,d表示年月日）,如：3d表示3天</param>
+            <returns>根据有效期值返回对应的过期日期，转换错误返回3天之后的日期</returns>
+        </member>
+        <member name="M:Server.Utility.Utils.ConvertDateTime(System.String,System.DateTime)">
+            <summary>
+            把两个时间差，三天内的时间用今天，昨天，前天表示，后跟时间，无日期
+            </summary>
+            <param name="date">被比较的时间</param>
+            <param name="currentDateTime">目标时间</param>
+            <returns>把两个时间差，三天内的时间用今天，昨天，前天表示，后跟时间，无日期</returns>
+        </member>
+        <member name="M:Server.Utility.Utils.DateDiff(System.String,System.DateTime,System.DateTime)">
+            <summary>
+            两个时间的差值，可以为秒，小时，天，分钟
+            </summary>
+            <param name="Interval">需要得到的时差方式</param>
+            <param name="StartDate">起始时间</param>
+            <param name="EndDate">结束时间</param>
+            <returns>两个时间的差值，可以为秒，小时，天，分钟</returns>
+        </member>
+        <member name="M:Server.Utility.Utils.ConvertDateTime(System.String)">
+            <summary>
+            把三天内的时间用今天，昨天，前天表示，后跟时间，无日期
+            </summary>
+            <param name="date">被转换的时间</param>
+            <returns> 把三天内的时间用今天，昨天，前天表示，后跟时间，无日期</returns>
+        </member>
+        <member name="M:Server.Utility.Utils.GetTotalMinutes(System.String,System.String)">
+            <summary>
+            时间差分钟数
+            </summary>
+            <param name="MinCreateDate"></param>
+            <param name="MaxCreateDate"></param>
+            <returns>时间差分钟数</returns>
+        </member>
+        <member name="M:Server.Utility.Utils.GetTotalDays(System.String,System.String)">
+            <summary>
+            时间差天数
+            </summary>
+            <param name="MinCreateDate">最小时间</param>
+            <param name="MaxCreateDate">最大时间</param>
+            <returns>时间差天数</returns>
+        </member>
+        <member name="M:Server.Utility.Utils.GetExpires">
+            <summary>生成时间戳 </summary>
+            <returns>生成时间戳</returns>
+        </member>
+        <member name="M:Server.Utility.Utils.ExpiresConvertDateTime(System.Int64)">
+            <summary>
+            时间戳转换成时间格式
+            </summary>
+            <param name="expires">时间戳</param>
+            <returns>时间戳转换成时间格式</returns>
+        </member>
+        <member name="M:Server.Utility.Utils.GetJsonParse(Newtonsoft.Json.Linq.JObject,System.String)">
+            <summary>
+            抓取Json参数
+            </summary>
+            <param name="JsonParse">Json参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Server.Utility.Utils.StrParseJson(System.String,Newtonsoft.Json.Linq.JObject@,System.String@)">
+            <summary>
+            字符转换成Json
+            </summary>
+            <param name="Json">Json格式字符</param>
+            <returns></returns>
+        </member>
+        <member name="M:Server.Utility.Utils.ReadStreamToEnd(System.IO.Stream)">
+            <summary>
+            数据流转成字符串
+            如果可以CanSeek，则还原到原来的流位置
+            </summary>
+            <param name="stream"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Server.Utility.Utils.BitmapDecodeBase64(System.String)">
+            <summary>
+            图像Base64解码 
+            </summary>
+            <param name="BaseString64"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Server.Utility.Utils.CompressIMG(System.Drawing.Bitmap,System.Drawing.Bitmap@)">
+            <summary>
+            压缩到指定尺寸
+            </summary>
+            <param name="img">压缩前</param>
+            <param name="outBmp">压缩后</param>
+        </member>
+        <member name="M:Server.Utility.Utils.CompressIMG(System.Drawing.Bitmap,System.Drawing.Bitmap@,System.Int32,System.Int32)">
+            <summary>
+            压缩指定尺寸，如果写的和图片一样表示大小不变，只是把图片压缩下一些
+            </summary>
+            <param name="img">压缩前</param>
+            <param name="outBmp">压缩后</param>
+            <param name="width">长</param>
+            <param name="height">高</param>
+        </member>
+        <member name="M:Server.Utility.Utils.WriteTxt(System.String)">
+            <summary>
+            记录bug，以便调试
+            </summary>
+            
+            <returns></returns>
+        </member>
+        <member name="M:Server.Utility.Utils.ObjectMapper``2(``1)">
+            <summary>
+            对象映射器
+            </summary>
+            <typeparam name="Return">返回对象</typeparam>
+            <typeparam name="Incom">传入对象</typeparam>
+            <param name="s"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Server.Utility.Utils.ObjectMapper``2(System.Collections.Generic.List{``1})">
+            <summary>
+            List对象映射器
+            </summary>
+            <typeparam name="Return">返回对象</typeparam>
+            <typeparam name="Incom">传入对象</typeparam>
+            <param name="s">List传入对象</param>
+            <returns></returns>
+        </member>
+        <member name="P:Server.Utility.Utils.Monthes">
+             <summary> 根据阿拉伯数字返回月份的名称(可更改为某种语言) </summary>	
+            <returns>根据阿拉伯数字返回月份的名称 </returns>
+        </member>
+        <member name="P:Server.Utility.Utils.GetScriptNameQueryString">
+            <summary>
+            获取当前访问页面地址参数
+            </summary>
+            <returns>获取当前访问页面地址参数</returns>
+        </member>
+        <member name="P:Server.Utility.Utils.GetScriptPath">
+            <summary>
+            获取当前访问文件物理目录
+            </summary>
+            <returns>路径</returns>
+        </member>
+        <member name="P:Server.Utility.Utils.Logger">
+            <summary>
+            日志接口属性
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="aaaf6255-9f7a-4557-a3d2-d25ca5247b4e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:16498/Winder/PullDetectionRegService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="PullDetectionRegService6.xsd" MetadataType="Schema" ID="5cc7d760-a218-4990-bd63-784666ccf382" SourceId="1" SourceUrl="http://localhost:16498/Winder/PullDetectionRegService.svc?xsd=xsd1" />
+    <MetadataFile FileName="PullDetectionRegService61.xsd" MetadataType="Schema" ID="1458dc40-903a-4db3-8759-a89f0708fb2d" SourceId="1" SourceUrl="http://localhost:16498/Winder/PullDetectionRegService.svc?xsd=xsd4" />
+    <MetadataFile FileName="PullDetectionRegService62.xsd" MetadataType="Schema" ID="b604f14a-2ee1-4e1b-96c4-e7126c91ef66" SourceId="1" SourceUrl="http://localhost:16498/Winder/PullDetectionRegService.svc?xsd=xsd5" />
+    <MetadataFile FileName="PullDetectionRegService1.wsdl" MetadataType="Wsdl" ID="b76559f1-8630-42ba-9cea-f43ddcacc8ce" SourceId="1" SourceUrl="http://localhost:16498/Winder/PullDetectionRegService.svc?wsdl" />
+    <MetadataFile FileName="PullDetectionRegService1.disco" MetadataType="Disco" ID="e370542f-0c26-4544-b4e2-c3cdc20b8467" SourceId="1" SourceUrl="http://localhost:16498/Winder/PullDetectionRegService.svc?disco" />
+    <MetadataFile FileName="PullDetectionRegService63.xsd" MetadataType="Schema" ID="27f33086-0739-4c31-83b4-3abe104f04ce" SourceId="1" SourceUrl="http://localhost:16498/Winder/PullDetectionRegService.svc?xsd=xsd2" />
+    <MetadataFile FileName="PullDetectionRegService64.xsd" MetadataType="Schema" ID="222ed81c-b959-4908-a06a-f8c378656d2e" SourceId="1" SourceUrl="http://localhost:16498/Winder/PullDetectionRegService.svc?xsd=xsd3" />
+    <MetadataFile FileName="PullDetectionRegService65.xsd" MetadataType="Schema" ID="15af8202-3694-4743-952a-27861994f51c" SourceId="1" SourceUrl="http://localhost:16498/Winder/PullDetectionRegService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

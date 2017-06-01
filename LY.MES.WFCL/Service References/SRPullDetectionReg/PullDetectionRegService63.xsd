@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/LY.MES.Model" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/LY.MES.Model" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="QC_PullDetectionReg">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ActualPull" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ActualThick" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ActualWidth" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="AutoID" type="xs:int" />
+      <xs:element minOccurs="0" name="CreateDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreatePerson" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Frequency" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ModifyDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ModifyPerson" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProcessType" type="xs:int" />
+      <xs:element minOccurs="0" name="ProductLevel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProductionLine" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QualityInspector" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RegDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="StandardPull" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Strength" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TestResults" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Thick" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Width" nillable="true" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QC_PullDetectionReg" nillable="true" type="tns:QC_PullDetectionReg" />
+  <xs:complexType name="ArrayOfQC_PullDetectionReg">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="QC_PullDetectionReg" nillable="true" type="tns:QC_PullDetectionReg" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfQC_PullDetectionReg" nillable="true" type="tns:ArrayOfQC_PullDetectionReg" />
+</xs:schema>

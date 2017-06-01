@@ -1,0 +1,581 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="LYMesSystemModelStoreContainer" CdmEntityContainer="LYMesSystemEntities">
+    <EntitySetMapping Name="ArrangedVouch">
+      <EntityTypeMapping TypeName="LYMesSystemModel.ArrangedVouch">
+        <MappingFragment StoreEntitySet="ArrangedVouch">
+          <ScalarProperty Name="ProPlanNum" ColumnName="ProPlanNum" />
+          <ScalarProperty Name="VouchType" ColumnName="VouchType" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ArrangedVouchCode" ColumnName="ArrangedVouchCode" />
+          <ScalarProperty Name="VouchDate" ColumnName="VouchDate" />
+          <ScalarProperty Name="MaterialVouchCode" ColumnName="MaterialVouchCode" />
+          <ScalarProperty Name="FormulaCode" ColumnName="FormulaCode" />
+          <ScalarProperty Name="FormulaName" ColumnName="FormulaName" />
+          <ScalarProperty Name="InputWeight" ColumnName="InputWeight" />
+          <ScalarProperty Name="OutputWeight" ColumnName="OutputWeight" />
+          <ScalarProperty Name="WeighingPounds" ColumnName="WeighingPounds" />
+          <ScalarProperty Name="UserStatus" ColumnName="UserStatus" />
+          <ScalarProperty Name="InterruptionRemark" ColumnName="InterruptionRemark" />
+          <ScalarProperty Name="InterruptionTime" ColumnName="InterruptionTime" />
+          <ScalarProperty Name="Creator" ColumnName="Creator" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="ModifyPerson" ColumnName="ModifyPerson" />
+          <ScalarProperty Name="ModifyTime" ColumnName="ModifyTime" />
+          <ScalarProperty Name="LicenseNum" ColumnName="LicenseNum" />
+          <ScalarProperty Name="VehicleWeight" ColumnName="VehicleWeight" />
+          <ScalarProperty Name="WeightMan" ColumnName="WeightMan" />
+          <ScalarProperty Name="TeachProgress" ColumnName="TeachProgress" />
+          <ScalarProperty Name="RFIDCode" ColumnName="RFIDCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ArrangedVouchLog">
+      <EntityTypeMapping TypeName="LYMesSystemModel.ArrangedVouchLog">
+        <MappingFragment StoreEntitySet="ArrangedVouchLog">
+          <ScalarProperty Name="AutoID" ColumnName="AutoID" />
+          <ScalarProperty Name="ArrangedVouchCode" ColumnName="ArrangedVouchCode" />
+          <ScalarProperty Name="OperatDesc" ColumnName="OperatDesc" />
+          <ScalarProperty Name="Operator" ColumnName="Operator" />
+          <ScalarProperty Name="OperatingTime" ColumnName="OperatingTime" />
+          <ScalarProperty Name="Frequency" ColumnName="Frequency" />
+          <ScalarProperty Name="CraftsName" ColumnName="CraftsName" />
+          <ScalarProperty Name="OperatorNum" ColumnName="OperatorNum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CollectDataInfo">
+      <EntityTypeMapping TypeName="LYMesSystemModel.CollectDataInfo">
+        <MappingFragment StoreEntitySet="CollectDataInfo">
+          <ScalarProperty Name="AutoId" ColumnName="AutoId" />
+          <ScalarProperty Name="DeveCode" ColumnName="DeveCode" />
+          <ScalarProperty Name="OriginalValue" ColumnName="OriginalValue" />
+          <ScalarProperty Name="CollValue" ColumnName="CollValue" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CraftsLineParamSet">
+      <EntityTypeMapping TypeName="LYMesSystemModel.CraftsLineParamSet">
+        <MappingFragment StoreEntitySet="CraftsLineParamSet">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="WorkShop" ColumnName="WorkShop" />
+          <ScalarProperty Name="Order" ColumnName="Order" />
+          <ScalarProperty Name="CraftsCode" ColumnName="CraftsCode" />
+          <ScalarProperty Name="CraftsName" ColumnName="CraftsName" />
+          <ScalarProperty Name="CraftsTaskTime" ColumnName="CraftsTaskTime" />
+          <ScalarProperty Name="Treatment" ColumnName="Treatment" />
+          <ScalarProperty Name="Creator" ColumnName="Creator" />
+          <ScalarProperty Name="CreateDateTime" ColumnName="CreateDateTime" />
+          <ScalarProperty Name="Modify" ColumnName="Modify" />
+          <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+          <ScalarProperty Name="UseStatus" ColumnName="UseStatus" />
+          <ScalarProperty Name="MachineNum" ColumnName="MachineNum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CraftsLineParamSetDetail">
+      <EntityTypeMapping TypeName="LYMesSystemModel.CraftsLineParamSetDetail">
+        <MappingFragment StoreEntitySet="CraftsLineParamSetDetail">
+          <ScalarProperty Name="ParameterID" ColumnName="ParameterID" />
+          <ScalarProperty Name="CraftsID" ColumnName="CraftsID" />
+          <ScalarProperty Name="AutoID" ColumnName="AutoID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Priority" ColumnName="Priority" />
+          <ScalarProperty Name="StandardValue" ColumnName="StandardValue" />
+          <ScalarProperty Name="UpperValue" ColumnName="UpperValue" />
+          <ScalarProperty Name="LowerValue" ColumnName="LowerValue" />
+          <ScalarProperty Name="IsValveCheck" ColumnName="IsValveCheck" />
+          <ScalarProperty Name="IsValveControl" ColumnName="IsValveControl" />
+          <ScalarProperty Name="IsFixedParameters" ColumnName="IsFixedParameters" />
+          <ScalarProperty Name="IntervalDuration" ColumnName="IntervalDuration" />
+          <ScalarProperty Name="TriggerDuration" ColumnName="TriggerDuration" />
+          <ScalarProperty Name="UserStatus" ColumnName="UserStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CraftsParameterContrast">
+      <EntityTypeMapping TypeName="LYMesSystemModel.CraftsParameterContrast">
+        <MappingFragment StoreEntitySet="CraftsParameterContrast">
+          <ScalarProperty Name="ParameterID" ColumnName="ParameterID" />
+          <ScalarProperty Name="ParamType" ColumnName="ParamType" />
+          <ScalarProperty Name="ParamName" ColumnName="ParamName" />
+          <ScalarProperty Name="DevepName" ColumnName="DevepName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CraftsProcessExecute">
+      <EntityTypeMapping TypeName="LYMesSystemModel.CraftsProcessExecute">
+        <MappingFragment StoreEntitySet="CraftsProcessExecute">
+          <ScalarProperty Name="ExecuteID" ColumnName="ExecuteID" />
+          <ScalarProperty Name="ArrangedVouchCode" ColumnName="ArrangedVouchCode" />
+          <ScalarProperty Name="ExecuteOrder" ColumnName="ExecuteOrder" />
+          <ScalarProperty Name="WorkshopCode" ColumnName="WorkshopCode" />
+          <ScalarProperty Name="WorkshopName" ColumnName="WorkshopName" />
+          <ScalarProperty Name="WorkbrachCode" ColumnName="WorkbrachCode" />
+          <ScalarProperty Name="WorkbrachName" ColumnName="WorkbrachName" />
+          <ScalarProperty Name="CraftsCode" ColumnName="CraftsCode" />
+          <ScalarProperty Name="CraftsName" ColumnName="CraftsName" />
+          <ScalarProperty Name="ExecuteMode" ColumnName="ExecuteMode" />
+          <ScalarProperty Name="PlanDuration" ColumnName="PlanDuration" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="ExecuteStatus" ColumnName="ExecuteStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CraftsProcessExecuteDetail">
+      <EntityTypeMapping TypeName="LYMesSystemModel.CraftsProcessExecuteDetail">
+        <MappingFragment StoreEntitySet="CraftsProcessExecuteDetail">
+          <ScalarProperty Name="ParameterID" ColumnName="ParameterID" />
+          <ScalarProperty Name="AutoID" ColumnName="AutoID" />
+          <ScalarProperty Name="ExecuteID" ColumnName="ExecuteID" />
+          <ScalarProperty Name="Priority" ColumnName="Priority" />
+          <ScalarProperty Name="StandardValue" ColumnName="StandardValue" />
+          <ScalarProperty Name="UpperValue" ColumnName="UpperValue" />
+          <ScalarProperty Name="LowerValue" ColumnName="LowerValue" />
+          <ScalarProperty Name="IsValveCheck" ColumnName="IsValveCheck" />
+          <ScalarProperty Name="IsValveControl" ColumnName="IsValveControl" />
+          <ScalarProperty Name="IntervalDuration" ColumnName="IntervalDuration" />
+          <ScalarProperty Name="TriggerDuration" ColumnName="TriggerDuration" />
+          <ScalarProperty Name="StartDateTime" ColumnName="StartDateTime" />
+          <ScalarProperty Name="EndDateTime" ColumnName="EndDateTime" />
+          <ScalarProperty Name="ExecuteStatus" ColumnName="ExecuteStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Device">
+      <EntityTypeMapping TypeName="LYMesSystemModel.Device">
+        <MappingFragment StoreEntitySet="Device">
+          <ScalarProperty Name="DevDefine1" ColumnName="DevDefine1" />
+          <ScalarProperty Name="DevDefine8" ColumnName="DevDefine8" />
+          <ScalarProperty Name="DevDefine16" ColumnName="DevDefine16" />
+          <ScalarProperty Name="DevDefine15" ColumnName="DevDefine15" />
+          <ScalarProperty Name="DevDefine14" ColumnName="DevDefine14" />
+          <ScalarProperty Name="DevDefine13" ColumnName="DevDefine13" />
+          <ScalarProperty Name="DevDefine12" ColumnName="DevDefine12" />
+          <ScalarProperty Name="DevDefine11" ColumnName="DevDefine11" />
+          <ScalarProperty Name="DevDefine10" ColumnName="DevDefine10" />
+          <ScalarProperty Name="DevDefine9" ColumnName="DevDefine9" />
+          <ScalarProperty Name="DevDefine7" ColumnName="DevDefine7" />
+          <ScalarProperty Name="DevDefine6" ColumnName="DevDefine6" />
+          <ScalarProperty Name="DevDefine5" ColumnName="DevDefine5" />
+          <ScalarProperty Name="DevDefine4" ColumnName="DevDefine4" />
+          <ScalarProperty Name="DevDefine3" ColumnName="DevDefine3" />
+          <ScalarProperty Name="DevDefine2" ColumnName="DevDefine2" />
+          <ScalarProperty Name="Volume" ColumnName="Volume" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="DevAbbName" ColumnName="DevAbbName" />
+          <ScalarProperty Name="DevCode" ColumnName="DevCode" />
+          <ScalarProperty Name="DevName" ColumnName="DevName" />
+          <ScalarProperty Name="DevStd" ColumnName="DevStd" />
+          <ScalarProperty Name="DevCCode" ColumnName="DevCCode" />
+          <ScalarProperty Name="DevImageUrl" ColumnName="DevImageUrl" />
+          <ScalarProperty Name="DevQRUrl" ColumnName="DevQRUrl" />
+          <ScalarProperty Name="DevCategory" ColumnName="DevCategory" />
+          <ScalarProperty Name="FactoryName" ColumnName="FactoryName" />
+          <ScalarProperty Name="FactoryContacts" ColumnName="FactoryContacts" />
+          <ScalarProperty Name="FContactsTel" ColumnName="FContactsTel" />
+          <ScalarProperty Name="Origin" ColumnName="Origin" />
+          <ScalarProperty Name="IPUrl" ColumnName="IPUrl" />
+          <ScalarProperty Name="Port" ColumnName="Port" />
+          <ScalarProperty Name="SerialPort" ColumnName="SerialPort" />
+          <ScalarProperty Name="DeviceId" ColumnName="DeviceId" />
+          <ScalarProperty Name="CallID" ColumnName="CallID" />
+          <ScalarProperty Name="LocalAddress" ColumnName="LocalAddress" />
+          <ScalarProperty Name="AdminPerson" ColumnName="AdminPerson" />
+          <ScalarProperty Name="AdminPhone" ColumnName="AdminPhone" />
+          <ScalarProperty Name="UseStatus" ColumnName="UseStatus" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreatePerson" ColumnName="CreatePerson" />
+          <ScalarProperty Name="LastDate" ColumnName="LastDate" />
+          <ScalarProperty Name="LastPerson" ColumnName="LastPerson" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DeviceClass">
+      <EntityTypeMapping TypeName="LYMesSystemModel.DeviceClass">
+        <MappingFragment StoreEntitySet="DeviceClass">
+          <ScalarProperty Name="DevCCode" ColumnName="DevCCode" />
+          <ScalarProperty Name="DevCName" ColumnName="DevCName" />
+          <ScalarProperty Name="SupCCode" ColumnName="SupCCode" />
+          <ScalarProperty Name="Grade" ColumnName="Grade" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DeviceExecute">
+      <EntityTypeMapping TypeName="LYMesSystemModel.DeviceExecute">
+        <MappingFragment StoreEntitySet="DeviceExecute">
+          <ScalarProperty Name="DeveCode" ColumnName="DeveCode" />
+          <ScalarProperty Name="DevCode" ColumnName="DevCode" />
+          <ScalarProperty Name="DeviCode" ColumnName="DeviCode" />
+          <ScalarProperty Name="CollFrequency" ColumnName="CollFrequency" />
+          <ScalarProperty Name="UserStatus" ColumnName="UserStatus" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreatePerson" ColumnName="CreatePerson" />
+          <ScalarProperty Name="LastDate" ColumnName="LastDate" />
+          <ScalarProperty Name="LastPerson" ColumnName="LastPerson" />
+          <ScalarProperty Name="DevpCode" ColumnName="DevpCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DeviceInterface">
+      <EntityTypeMapping TypeName="LYMesSystemModel.DeviceInterface">
+        <MappingFragment StoreEntitySet="DeviceInterface">
+          <ScalarProperty Name="DeviCode" ColumnName="DeviCode" />
+          <ScalarProperty Name="DeviName" ColumnName="DeviName" />
+          <ScalarProperty Name="DevCode" ColumnName="DevCode" />
+          <ScalarProperty Name="DevpCode" ColumnName="DevpCode" />
+          <ScalarProperty Name="DevpAddress" ColumnName="DevpAddress" />
+          <ScalarProperty Name="DataType" ColumnName="DataType" />
+          <ScalarProperty Name="IsTwoWay" ColumnName="IsTwoWay" />
+          <ScalarProperty Name="SendFormat" ColumnName="SendFormat" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="UserStatus" ColumnName="UserStatus" />
+          <ScalarProperty Name="ConAccAddress" ColumnName="ConAccAddress" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DeviceParameter">
+      <EntityTypeMapping TypeName="LYMesSystemModel.DeviceParameter">
+        <MappingFragment StoreEntitySet="DeviceParameter">
+          <ScalarProperty Name="ConvertType" ColumnName="ConvertType" />
+          <ScalarProperty Name="DevpCode" ColumnName="DevpCode" />
+          <ScalarProperty Name="DevpName" ColumnName="DevpName" />
+          <ScalarProperty Name="DevCode" ColumnName="DevCode" />
+          <ScalarProperty Name="StandardValue" ColumnName="StandardValue" />
+          <ScalarProperty Name="MinValue" ColumnName="MinValue" />
+          <ScalarProperty Name="MaxValue" ColumnName="MaxValue" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="SerialPort" ColumnName="SerialPort" />
+          <ScalarProperty Name="BaudRate" ColumnName="BaudRate" />
+          <ScalarProperty Name="CheckBit" ColumnName="CheckBit" />
+          <ScalarProperty Name="DataBit" ColumnName="DataBit" />
+          <ScalarProperty Name="StopBit" ColumnName="StopBit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MainPipelineInfo">
+      <EntityTypeMapping TypeName="LYMesSystemModel.MainPipelineInfo">
+        <MappingFragment StoreEntitySet="MainPipelineInfo">
+          <ScalarProperty Name="AutoID" ColumnName="AutoID" />
+          <ScalarProperty Name="DeveCode" ColumnName="DeveCode" />
+          <ScalarProperty Name="DeveName" ColumnName="DeveName" />
+          <ScalarProperty Name="PipelineStatus" ColumnName="PipelineStatus" />
+          <ScalarProperty Name="PromptDes" ColumnName="PromptDes" />
+          <ScalarProperty Name="Frequency" ColumnName="Frequency" />
+          <ScalarProperty Name="OperatorReamrk" ColumnName="OperatorReamrk" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="Creator" ColumnName="Creator" />
+          <ScalarProperty Name="Operator" ColumnName="Operator" />
+          <ScalarProperty Name="OperatingTime" ColumnName="OperatingTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QC_PullDetectionReg">
+      <EntityTypeMapping TypeName="LYMesSystemModel.QC_PullDetectionReg">
+        <MappingFragment StoreEntitySet="QC_PullDetectionReg">
+          <ScalarProperty Name="AutoID" ColumnName="AutoID" />
+          <ScalarProperty Name="RegDate" ColumnName="RegDate" />
+          <ScalarProperty Name="Frequency" ColumnName="Frequency" />
+          <ScalarProperty Name="ProductionLine" ColumnName="ProductionLine" />
+          <ScalarProperty Name="QualityInspector" ColumnName="QualityInspector" />
+          <ScalarProperty Name="OrderType" ColumnName="OrderType" />
+          <ScalarProperty Name="OrderCode" ColumnName="OrderCode" />
+          <ScalarProperty Name="ProductLevel" ColumnName="ProductLevel" />
+          <ScalarProperty Name="StandardPull" ColumnName="StandardPull" />
+          <ScalarProperty Name="ActualPull" ColumnName="ActualPull" />
+          <ScalarProperty Name="ActualWidth" ColumnName="ActualWidth" />
+          <ScalarProperty Name="ActualThick" ColumnName="ActualThick" />
+          <ScalarProperty Name="Width" ColumnName="Width" />
+          <ScalarProperty Name="Thick" ColumnName="Thick" />
+          <ScalarProperty Name="Strength" ColumnName="Strength" />
+          <ScalarProperty Name="ProcessType" ColumnName="ProcessType" />
+          <ScalarProperty Name="TestResults" ColumnName="TestResults" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreatePerson" ColumnName="CreatePerson" />
+          <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+          <ScalarProperty Name="ModifyPerson" ColumnName="ModifyPerson" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_DurmsUpFeeding">
+      <EntityTypeMapping TypeName="LYMesSystemModel.vw_DurmsUpFeeding">
+        <MappingFragment StoreEntitySet="vw_DurmsUpFeeding">
+          <ScalarProperty Name="ProPlanNum" ColumnName="ProPlanNum" />
+          <ScalarProperty Name="RFIDCode" ColumnName="RFIDCode" />
+          <ScalarProperty Name="TeachProgress" ColumnName="TeachProgress" />
+          <ScalarProperty Name="WeightMan" ColumnName="WeightMan" />
+          <ScalarProperty Name="VehicleWeight" ColumnName="VehicleWeight" />
+          <ScalarProperty Name="LicenseNum" ColumnName="LicenseNum" />
+          <ScalarProperty Name="ModifyTime" ColumnName="ModifyTime" />
+          <ScalarProperty Name="ModifyPerson" ColumnName="ModifyPerson" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="Creator" ColumnName="Creator" />
+          <ScalarProperty Name="InterruptionTime" ColumnName="InterruptionTime" />
+          <ScalarProperty Name="InterruptionRemark" ColumnName="InterruptionRemark" />
+          <ScalarProperty Name="UserStatus" ColumnName="UserStatus" />
+          <ScalarProperty Name="WeighingPounds" ColumnName="WeighingPounds" />
+          <ScalarProperty Name="OutputWeight" ColumnName="OutputWeight" />
+          <ScalarProperty Name="InputWeight" ColumnName="InputWeight" />
+          <ScalarProperty Name="FormulaName" ColumnName="FormulaName" />
+          <ScalarProperty Name="FormulaCode" ColumnName="FormulaCode" />
+          <ScalarProperty Name="MaterialVouchCode" ColumnName="MaterialVouchCode" />
+          <ScalarProperty Name="VouchDate" ColumnName="VouchDate" />
+          <ScalarProperty Name="ArrangedVouchCode" ColumnName="ArrangedVouchCode" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ExecuteStatus" ColumnName="ExecuteStatus" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="PlanDuration" ColumnName="PlanDuration" />
+          <ScalarProperty Name="ExecuteMode" ColumnName="ExecuteMode" />
+          <ScalarProperty Name="CraftsName" ColumnName="CraftsName" />
+          <ScalarProperty Name="CraftsCode" ColumnName="CraftsCode" />
+          <ScalarProperty Name="WorkbrachName" ColumnName="WorkbrachName" />
+          <ScalarProperty Name="WorkbrachCode" ColumnName="WorkbrachCode" />
+          <ScalarProperty Name="WorkshopName" ColumnName="WorkshopName" />
+          <ScalarProperty Name="WorkshopCode" ColumnName="WorkshopCode" />
+          <ScalarProperty Name="ExecuteOrder" ColumnName="ExecuteOrder" />
+          <ScalarProperty Name="ExecuteID" ColumnName="ExecuteID" />
+          <ScalarProperty Name="DeveUseStatus" ColumnName="DeveUseStatus" />
+          <ScalarProperty Name="DevName" ColumnName="DevName" />
+          <ScalarProperty Name="DevCode" ColumnName="DevCode" />
+          <ScalarProperty Name="vwId" ColumnName="vwId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_QC_FindLeakDrumsSet">
+      <EntityTypeMapping TypeName="LYMesSystemModel.vw_QC_FindLeakDrumsSet">
+        <MappingFragment StoreEntitySet="vw_QC_FindLeakDrumsSet">
+          <ScalarProperty Name="ExecuteID" ColumnName="ExecuteID" />
+          <ScalarProperty Name="ArrangedVouchCode" ColumnName="ArrangedVouchCode" />
+          <ScalarProperty Name="IsLeak" ColumnName="IsLeak" />
+          <ScalarProperty Name="DevName" ColumnName="DevName" />
+          <ScalarProperty Name="DevCode" ColumnName="DevCode" />
+          <ScalarProperty Name="CreateDateTime" ColumnName="CreateDateTime" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreatePerson" ColumnName="CreatePerson" />
+          <ScalarProperty Name="Frequency" ColumnName="Frequency" />
+          <ScalarProperty Name="Week" ColumnName="Week" />
+          <ScalarProperty Name="Month" ColumnName="Month" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AutoID" ColumnName="AutoID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QC_FindLeakDrumsSet">
+      <EntityTypeMapping TypeName="LYMesSystemModel.QC_FindLeakDrumsSet">
+        <MappingFragment StoreEntitySet="QC_FindLeakDrumsSet">
+          <ScalarProperty Name="CreateDateTime" ColumnName="CreateDateTime" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreatePerson" ColumnName="CreatePerson" />
+          <ScalarProperty Name="Frequency" ColumnName="Frequency" />
+          <ScalarProperty Name="Week" ColumnName="Week" />
+          <ScalarProperty Name="Month" ColumnName="Month" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QC_FindLeakDrumsSetDetail">
+      <EntityTypeMapping TypeName="LYMesSystemModel.QC_FindLeakDrumsSetDetail">
+        <MappingFragment StoreEntitySet="QC_FindLeakDrumsSetDetail">
+          <ScalarProperty Name="ExecuteID" ColumnName="ExecuteID" />
+          <ScalarProperty Name="ArrangedVouchCode" ColumnName="ArrangedVouchCode" />
+          <ScalarProperty Name="IsLeak" ColumnName="IsLeak" />
+          <ScalarProperty Name="DevName" ColumnName="DevName" />
+          <ScalarProperty Name="DevCode" ColumnName="DevCode" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AutoID" ColumnName="AutoID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QC_DrumsFindLeakReport">
+      <EntityTypeMapping TypeName="LYMesSystemModel.QC_DrumsFindLeakReport">
+        <MappingFragment StoreEntitySet="QC_DrumsFindLeakReport">
+          <ScalarProperty Name="SourceCode" ColumnName="SourceCode" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreatePerson" ColumnName="CreatePerson" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="FLResult" ColumnName="FLResult" />
+          <ScalarProperty Name="FLSituation" ColumnName="FLSituation" />
+          <ScalarProperty Name="Frequency" ColumnName="Frequency" />
+          <ScalarProperty Name="DevName" ColumnName="DevName" />
+          <ScalarProperty Name="DevCode" ColumnName="DevCode" />
+          <ScalarProperty Name="Week" ColumnName="Week" />
+          <ScalarProperty Name="Month" ColumnName="Month" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="FLVCode" ColumnName="FLVCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Department">
+      <EntityTypeMapping TypeName="LYMesSystemModel.Department">
+        <MappingFragment StoreEntitySet="Department">
+          <ScalarProperty Name="Grade" ColumnName="Grade" />
+          <ScalarProperty Name="DepEndDate" ColumnName="DepEndDate" />
+          <ScalarProperty Name="DepBeginDate" ColumnName="DepBeginDate" />
+          <ScalarProperty Name="DepMemo" ColumnName="DepMemo" />
+          <ScalarProperty Name="DepEmail" ColumnName="DepEmail" />
+          <ScalarProperty Name="DepPostCode" ColumnName="DepPostCode" />
+          <ScalarProperty Name="DepFax" ColumnName="DepFax" />
+          <ScalarProperty Name="DepAddress" ColumnName="DepAddress" />
+          <ScalarProperty Name="DepPhone" ColumnName="DepPhone" />
+          <ScalarProperty Name="DepPerson" ColumnName="DepPerson" />
+          <ScalarProperty Name="SupDepCode" ColumnName="SupDepCode" />
+          <ScalarProperty Name="DepName" ColumnName="DepName" />
+          <ScalarProperty Name="DepCode" ColumnName="DepCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DeviceWorkingCondition">
+      <EntityTypeMapping TypeName="LYMesSystemModel.DeviceWorkingCondition">
+        <MappingFragment StoreEntitySet="DeviceWorkingCondition">
+          <ScalarProperty Name="WorkingStatus" ColumnName="WorkingStatus" />
+          <ScalarProperty Name="VouchCode" ColumnName="VouchCode" />
+          <ScalarProperty Name="VouchType" ColumnName="VouchType" />
+          <ScalarProperty Name="DevName" ColumnName="DevName" />
+          <ScalarProperty Name="DevCode" ColumnName="DevCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Person">
+      <EntityTypeMapping TypeName="LYMesSystemModel.Person">
+        <MappingFragment StoreEntitySet="Person">
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="OparatorName" ColumnName="OparatorName" />
+          <ScalarProperty Name="OparatorCode" ColumnName="OparatorCode" />
+          <ScalarProperty Name="IsOperator" ColumnName="IsOperator" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="PersonPhone" ColumnName="PersonPhone" />
+          <ScalarProperty Name="PersonEmai" ColumnName="PersonEmai" />
+          <ScalarProperty Name="DepCode" ColumnName="DepCode" />
+          <ScalarProperty Name="PersonType" ColumnName="PersonType" />
+          <ScalarProperty Name="PersonName" ColumnName="PersonName" />
+          <ScalarProperty Name="PersonCode" ColumnName="PersonCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_ArrangedCraftsProcessExecute">
+      <EntityTypeMapping TypeName="LYMesSystemModel.vw_ArrangedCraftsProcessExecute">
+        <MappingFragment StoreEntitySet="vw_ArrangedCraftsProcessExecute">
+          <ScalarProperty Name="ParameterName" ColumnName="ParameterName" />
+          <ScalarProperty Name="ParameterID" ColumnName="ParameterID" />
+          <ScalarProperty Name="ParamType" ColumnName="ParamType" />
+          <ScalarProperty Name="ArrangedVTime" ColumnName="ArrangedVTime" />
+          <ScalarProperty Name="ParamExecuteStatus" ColumnName="ParamExecuteStatus" />
+          <ScalarProperty Name="EndDateTime" ColumnName="EndDateTime" />
+          <ScalarProperty Name="StartDateTime" ColumnName="StartDateTime" />
+          <ScalarProperty Name="IsValveControl" ColumnName="IsValveControl" />
+          <ScalarProperty Name="IsValveCheck" ColumnName="IsValveCheck" />
+          <ScalarProperty Name="TriggerDuration" ColumnName="TriggerDuration" />
+          <ScalarProperty Name="IntervalDuration" ColumnName="IntervalDuration" />
+          <ScalarProperty Name="LowerValue" ColumnName="LowerValue" />
+          <ScalarProperty Name="UpperValue" ColumnName="UpperValue" />
+          <ScalarProperty Name="StandardValue" ColumnName="StandardValue" />
+          <ScalarProperty Name="DevepName" ColumnName="DevepName" />
+          <ScalarProperty Name="Priority" ColumnName="Priority" />
+          <ScalarProperty Name="AutoID" ColumnName="AutoID" />
+          <ScalarProperty Name="ExecuteStatus" ColumnName="ExecuteStatus" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="PlanDuration" ColumnName="PlanDuration" />
+          <ScalarProperty Name="ExecuteMode" ColumnName="ExecuteMode" />
+          <ScalarProperty Name="ExecuteOrder" ColumnName="ExecuteOrder" />
+          <ScalarProperty Name="CraftsName" ColumnName="CraftsName" />
+          <ScalarProperty Name="CraftsCode" ColumnName="CraftsCode" />
+          <ScalarProperty Name="WorkbrachName" ColumnName="WorkbrachName" />
+          <ScalarProperty Name="WorkbrachCode" ColumnName="WorkbrachCode" />
+          <ScalarProperty Name="WorkshopCode" ColumnName="WorkshopCode" />
+          <ScalarProperty Name="WorkshopName" ColumnName="WorkshopName" />
+          <ScalarProperty Name="ExecuteID" ColumnName="ExecuteID" />
+          <ScalarProperty Name="UserStatus" ColumnName="UserStatus" />
+          <ScalarProperty Name="FormulaName" ColumnName="FormulaName" />
+          <ScalarProperty Name="FormulaCode" ColumnName="FormulaCode" />
+          <ScalarProperty Name="MaterialVouchCode" ColumnName="MaterialVouchCode" />
+          <ScalarProperty Name="VouchDate" ColumnName="VouchDate" />
+          <ScalarProperty Name="ArrangedVouchCode" ColumnName="ArrangedVouchCode" />
+          <ScalarProperty Name="vwID" ColumnName="vwID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IPRegistForm">
+      <EntityTypeMapping TypeName="LYMesSystemModel.IPRegistForm">
+        <MappingFragment StoreEntitySet="IPRegistForm">
+          <ScalarProperty Name="CreatorTime" ColumnName="CreatorTime" />
+          <ScalarProperty Name="CreatorName" ColumnName="CreatorName" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="MACAddress" ColumnName="MACAddress" />
+          <ScalarProperty Name="IP" ColumnName="IP" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_CraftsLineParamSetDetail">
+      <EntityTypeMapping TypeName="LYMesSystemModel.vw_CraftsLineParamSetDetail">
+        <MappingFragment StoreEntitySet="vw_CraftsLineParamSetDetail">
+          <ScalarProperty Name="AutoID" ColumnName="AutoID" />
+          <ScalarProperty Name="CraftsID" ColumnName="CraftsID" />
+          <ScalarProperty Name="UserStatus" ColumnName="UserStatus" />
+          <ScalarProperty Name="TriggerDuration" ColumnName="TriggerDuration" />
+          <ScalarProperty Name="IntervalDuration" ColumnName="IntervalDuration" />
+          <ScalarProperty Name="IsFixedParameters" ColumnName="IsFixedParameters" />
+          <ScalarProperty Name="IsValveControl" ColumnName="IsValveControl" />
+          <ScalarProperty Name="IsValveCheck" ColumnName="IsValveCheck" />
+          <ScalarProperty Name="LowerValue" ColumnName="LowerValue" />
+          <ScalarProperty Name="UpperValue" ColumnName="UpperValue" />
+          <ScalarProperty Name="StandardValue" ColumnName="StandardValue" />
+          <ScalarProperty Name="Priority" ColumnName="Priority" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DevepName" ColumnName="DevepName" />
+          <ScalarProperty Name="ParamName" ColumnName="ParamName" />
+          <ScalarProperty Name="ParamType" ColumnName="ParamType" />
+          <ScalarProperty Name="ParameterID" ColumnName="ParameterID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="V_DV_DevExecute">
+      <EntityTypeMapping TypeName="LYMesSystemModel.V_DV_DevExecute">
+        <MappingFragment StoreEntitySet="V_DV_DevExecute">
+          <ScalarProperty Name="DevCode" ColumnName="DevCode" />
+          <ScalarProperty Name="ConvertType" ColumnName="ConvertType" />
+          <ScalarProperty Name="ConAccAddress" ColumnName="ConAccAddress" />
+          <ScalarProperty Name="WorkStatus" ColumnName="WorkStatus" />
+          <ScalarProperty Name="EquipStatus" ColumnName="EquipStatus" />
+          <ScalarProperty Name="DevStd" ColumnName="DevStd" />
+          <ScalarProperty Name="DataType" ColumnName="DataType" />
+          <ScalarProperty Name="InterFaceStatus" ColumnName="InterFaceStatus" />
+          <ScalarProperty Name="StopBit" ColumnName="StopBit" />
+          <ScalarProperty Name="DataBit" ColumnName="DataBit" />
+          <ScalarProperty Name="CheckBit" ColumnName="CheckBit" />
+          <ScalarProperty Name="BaudRate" ColumnName="BaudRate" />
+          <ScalarProperty Name="SerialPort" ColumnName="SerialPort" />
+          <ScalarProperty Name="SendFormat" ColumnName="SendFormat" />
+          <ScalarProperty Name="DevpAddress" ColumnName="DevpAddress" />
+          <ScalarProperty Name="CallID" ColumnName="CallID" />
+          <ScalarProperty Name="DeviceId" ColumnName="DeviceId" />
+          <ScalarProperty Name="StandardValue" ColumnName="StandardValue" />
+          <ScalarProperty Name="MinValue" ColumnName="MinValue" />
+          <ScalarProperty Name="MaxValue" ColumnName="MaxValue" />
+          <ScalarProperty Name="LocalAddress" ColumnName="LocalAddress" />
+          <ScalarProperty Name="Port" ColumnName="Port" />
+          <ScalarProperty Name="IPUrl" ColumnName="IPUrl" />
+          <ScalarProperty Name="CollFrequency" ColumnName="CollFrequency" />
+          <ScalarProperty Name="DevpName" ColumnName="DevpName" />
+          <ScalarProperty Name="DeviName" ColumnName="DeviName" />
+          <ScalarProperty Name="DevName" ColumnName="DevName" />
+          <ScalarProperty Name="DevpCode" ColumnName="DevpCode" />
+          <ScalarProperty Name="DeviCode" ColumnName="DeviCode" />
+          <ScalarProperty Name="ZGName" ColumnName="ZGName" />
+          <ScalarProperty Name="ZGCode" ColumnName="ZGCode" />
+          <ScalarProperty Name="ExecuteID" ColumnName="ExecuteID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

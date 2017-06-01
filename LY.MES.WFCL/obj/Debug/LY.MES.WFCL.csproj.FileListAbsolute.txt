@@ -1,0 +1,3 @@
+D:\svn\MES\第三方\SingleDrum\LY.MES.WFCL.exe.config
+D:\svn\MES\第三方\SingleDrum\LY.MES.WFCL.exe
+D:\svn\MES\第三方\SingleDrum\LY.MES.WFCL.pdb

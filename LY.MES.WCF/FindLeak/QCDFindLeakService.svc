@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="LY.MES.WCF.FindLeak.QCDFindLeakService" CodeBehind="QCDFindLeakService.svc.cs" %>

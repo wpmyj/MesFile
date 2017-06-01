@@ -1,0 +1,1371 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A20F2F2B-1591-4C40-A430-432C7A4759E3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LY.MES.WFCL</RootNamespace>
+    <AssemblyName>LY.MES.WFCL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>发布\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\第三方\LYMES\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Client.Utility, Version=1.0.6275.17295, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\第三方\ThirdPart.DLL\Client\Client.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v13.1.Core, Version=13.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v13.1, Version=13.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v13.1.Core, Version=13.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v13.1.Core, Version=13.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v13.1.Core, Version=13.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v13.1, Version=13.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v13.1, Version=13.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v13.1, Version=13.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v13.1.UI, Version=13.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v13.1.Wizard, Version=13.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v13.1, Version=13.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v13.1, Version=13.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v13.1, Version=13.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v13.1, Version=13.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v13.1, Version=13.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AutoSizeFormClass.cs" />
+    <Compile Include="Base\Frm\frmDevice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\Frm\frmDevice.Designer.cs">
+      <DependentUpon>frmDevice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\Frm\frmPersonalInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\Frm\frmPersonalInfo.Designer.cs">
+      <DependentUpon>frmPersonalInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\Frm\frmUserList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\Frm\frmUserList.Designer.cs">
+      <DependentUpon>frmUserList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\List\frmCPContrastList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\List\frmCPContrastList.Designer.cs">
+      <DependentUpon>frmCPContrastList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\List\frmCLParamSetList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\List\frmCLParamSetList.Designer.cs">
+      <DependentUpon>frmCLParamSetList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\List\frmDateDictionary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\List\frmDateDictionary.Designer.cs">
+      <DependentUpon>frmDateDictionary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\List\frmDepartmentClassList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\List\frmDepartmentClassList.Designer.cs">
+      <DependentUpon>frmDepartmentClassList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\List\frmPersonalInfoList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\List\frmPersonalInfoList.Designer.cs">
+      <DependentUpon>frmPersonalInfoList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\SingleDrumsControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomControl\SingleDrumsControl.Designer.cs">
+      <DependentUpon>SingleDrumsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\StockPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomControl\StockPanel.Designer.cs">
+      <DependentUpon>StockPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataColl\Frm\frmExecute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataColl\Frm\frmExecute.Designer.cs">
+      <DependentUpon>frmExecute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\List\frmDevParamList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\List\frmDevParamList.Designer.cs">
+      <DependentUpon>frmDevParamList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataColl\List\frmDataCollcetion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataColl\List\frmDataCollcetion.Designer.cs">
+      <DependentUpon>frmDataCollcetion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataColl\List\frmDeviceExecuteList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataColl\List\frmDeviceExecuteList.Designer.cs">
+      <DependentUpon>frmDeviceExecuteList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\List\frmDevInterfaceList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\List\frmDevInterfaceList.designer.cs">
+      <DependentUpon>frmDevInterfaceList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\List\frmDeviceClassList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\List\frmDeviceClassList.Designer.cs">
+      <DependentUpon>frmDeviceClassList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\List\frmDeviceList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\List\frmDeviceList.Designer.cs">
+      <DependentUpon>frmDeviceList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Drums\Frm\frmArrangedVouch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Drums\Frm\frmArrangedVouch.Designer.cs">
+      <DependentUpon>frmArrangedVouch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Drums\List\frmArrangedVouchList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Drums\List\frmArrangedVouchList.Designer.cs">
+      <DependentUpon>frmArrangedVouchList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Drums\Frm\frmCfPExecute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Drums\Frm\frmCfPExecute.Designer.cs">
+      <DependentUpon>frmCfPExecute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Drums\Frm\frmDrumProcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Drums\Frm\frmDrumProcess.Designer.cs">
+      <DependentUpon>frmDrumProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Drums\Frm\frmDrums.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Drums\Frm\frmDrums.Designer.cs">
+      <DependentUpon>frmDrums.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Drums\Frm\frmIPRegitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Drums\Frm\frmIPRegitForm.Designer.cs">
+      <DependentUpon>frmIPRegitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Drums\List\DrumsMangerList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Drums\List\DrumsMangerList.Designer.cs">
+      <DependentUpon>DrumsMangerList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindLeak\Frm\frmQCDFindLeak.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindLeak\Frm\frmQCDFindLeak.Designer.cs">
+      <DependentUpon>frmQCDFindLeak.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pipeline\MainPipelineGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pipeline\MainPipelineGroup.Designer.cs">
+      <DependentUpon>MainPipelineGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pipeline\PipelineOperate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pipeline\PipelineOperate.Designer.cs">
+      <DependentUpon>PipelineOperate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Refer\frmReferQCDFindLeak.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Refer\frmReferQCDFindLeak.Designer.cs">
+      <DependentUpon>frmReferQCDFindLeak.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindLeak\Frm\frmQCDrumsSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindLeak\Frm\frmQCDrumsSet.Designer.cs">
+      <DependentUpon>frmQCDrumsSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindLeak\List\frmQueryDrumsSetList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindLeak\List\frmQueryDrumsSetList.Designer.cs">
+      <DependentUpon>frmQueryDrumsSetList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindLeak\List\frmQueryFindLeakList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindLeak\List\frmQueryFindLeakList.Designer.cs">
+      <DependentUpon>frmQueryFindLeakList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pipeline\PipelineOperatingRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pipeline\PipelineOperatingRecord.Designer.cs">
+      <DependentUpon>PipelineOperatingRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Refer\frmDeviceChoose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Refer\frmDeviceChoose.Designer.cs">
+      <DependentUpon>frmDeviceChoose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Refer\frmExecuteChoose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Refer\frmExecuteChoose.Designer.cs">
+      <DependentUpon>frmExecuteChoose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Refer\frmInterfaceChoose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Refer\frmInterfaceChoose.Designer.cs">
+      <DependentUpon>frmInterfaceChoose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Refer\frmOrderChoose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Refer\frmOrderChoose.Designer.cs">
+      <DependentUpon>frmOrderChoose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Refer\frmReferCrafts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Refer\frmReferCrafts.Designer.cs">
+      <DependentUpon>frmReferCrafts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Refer\frmParChoose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Refer\frmParChoose.Designer.cs">
+      <DependentUpon>frmParChoose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SRArrangedVouch\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SRBase\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SRCfPExecute\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SRCLParamSet\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SRDataColl\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SRDepartment\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SRDevice\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SRExcute\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SRFindLeak\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SRPersonInfo\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SRPiPeline\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SRPullDetectionReg\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SRQZData\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SRQZDDrumesSet\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SRZhuanGu\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="VModel\CPContrast.cs" />
+    <Compile Include="Winder\Frm\frmPullDetectionReg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winder\Frm\frmPullDetectionReg.Designer.cs">
+      <DependentUpon>frmPullDetectionReg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Winder\Frm\frmSJAutoWind.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winder\Frm\frmSJAutoWind.Designer.cs">
+      <DependentUpon>frmSJAutoWind.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZhuanGu\List\ArrangedVouchCodeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZhuanGu\List\ArrangedVouchCodeList.Designer.cs">
+      <DependentUpon>ArrangedVouchCodeList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZhuanGu\ParameterMonitoring.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZhuanGu\ParameterMonitoring.Designer.cs">
+      <DependentUpon>ParameterMonitoring.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZhuanGu\ZGParameter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZhuanGu\ZGParameter.Designer.cs">
+      <DependentUpon>ZGParameter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZhuanGu\ZhuanGuStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZhuanGu\ZhuanGuStatus.Designer.cs">
+      <DependentUpon>ZhuanGuStatus.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Base\Frm\frmDevice.resx">
+      <DependentUpon>frmDevice.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\Frm\frmPersonalInfo.resx">
+      <DependentUpon>frmPersonalInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\Frm\frmUserList.resx">
+      <DependentUpon>frmUserList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\List\frmCPContrastList.resx">
+      <DependentUpon>frmCPContrastList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\List\frmCLParamSetList.resx">
+      <DependentUpon>frmCLParamSetList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\List\frmDateDictionary.resx">
+      <DependentUpon>frmDateDictionary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\List\frmDepartmentClassList.resx">
+      <DependentUpon>frmDepartmentClassList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\List\frmPersonalInfoList.resx">
+      <DependentUpon>frmPersonalInfoList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\SingleDrumsControl.resx">
+      <DependentUpon>SingleDrumsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\StockPanel.resx">
+      <DependentUpon>StockPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataColl\Frm\frmExecute.resx">
+      <DependentUpon>frmExecute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\List\frmDevParamList.resx">
+      <DependentUpon>frmDevParamList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataColl\List\frmDataCollcetion.resx">
+      <DependentUpon>frmDataCollcetion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataColl\List\frmDeviceExecuteList.resx">
+      <DependentUpon>frmDeviceExecuteList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\List\frmDevInterfaceList.resx">
+      <DependentUpon>frmDevInterfaceList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\List\frmDeviceClassList.resx">
+      <DependentUpon>frmDeviceClassList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\List\frmDeviceList.resx">
+      <DependentUpon>frmDeviceList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Drums\Frm\frmArrangedVouch.resx">
+      <DependentUpon>frmArrangedVouch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Drums\List\frmArrangedVouchList.resx">
+      <DependentUpon>frmArrangedVouchList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Drums\Frm\frmCfPExecute.resx">
+      <DependentUpon>frmCfPExecute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Drums\Frm\frmDrumProcess.resx">
+      <DependentUpon>frmDrumProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Drums\Frm\frmDrums.resx">
+      <DependentUpon>frmDrums.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Drums\Frm\frmIPRegitForm.resx">
+      <DependentUpon>frmIPRegitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Drums\List\DrumsMangerList.resx">
+      <DependentUpon>DrumsMangerList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindLeak\Frm\frmQCDFindLeak.resx">
+      <DependentUpon>frmQCDFindLeak.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pipeline\MainPipelineGroup.resx">
+      <DependentUpon>MainPipelineGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pipeline\PipelineOperate.resx">
+      <DependentUpon>PipelineOperate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Refer\frmReferQCDFindLeak.resx">
+      <DependentUpon>frmReferQCDFindLeak.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindLeak\Frm\frmQCDrumsSet.resx">
+      <DependentUpon>frmQCDrumsSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindLeak\List\frmQueryDrumsSetList.resx">
+      <DependentUpon>frmQueryDrumsSetList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindLeak\List\frmQueryFindLeakList.resx">
+      <DependentUpon>frmQueryFindLeakList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pipeline\PipelineOperatingRecord.resx">
+      <DependentUpon>PipelineOperatingRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Refer\frmDeviceChoose.resx">
+      <DependentUpon>frmDeviceChoose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Refer\frmExecuteChoose.resx">
+      <DependentUpon>frmExecuteChoose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Refer\frmInterfaceChoose.resx">
+      <DependentUpon>frmInterfaceChoose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Refer\frmOrderChoose.resx">
+      <DependentUpon>frmOrderChoose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Refer\frmReferCrafts.resx">
+      <DependentUpon>frmReferCrafts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Refer\frmParChoose.resx">
+      <DependentUpon>frmParChoose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winder\Frm\frmPullDetectionReg.resx">
+      <DependentUpon>frmPullDetectionReg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winder\Frm\frmSJAutoWind.resx">
+      <DependentUpon>frmSJAutoWind.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZhuanGu\List\ArrangedVouchCodeList.resx">
+      <DependentUpon>ArrangedVouchCodeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZhuanGu\ParameterMonitoring.resx">
+      <DependentUpon>ParameterMonitoring.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZhuanGu\ZGParameter.resx">
+      <DependentUpon>ZGParameter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZhuanGu\ZhuanGuStatus.resx">
+      <DependentUpon>ZhuanGuStatus.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\DataSources\Client.Utility.SRSysBase.CommonResultOfboolean.datasource" />
+    <None Include="Properties\DataSources\Client.Utility.SRSysBase.UA_Enum.datasource" />
+    <None Include="Properties\DataSources\Client.Utility.SRSysBase.User.datasource" />
+    <None Include="Properties\DataSources\Client.Utility.SRSysOperLog.CommonResultOfboolean.datasource" />
+    <None Include="Properties\DataSources\DurmsUpFeeding.datasource" />
+    <None Include="Properties\DataSources\LY.MES.WFCL.Pipeline.MainPipeline.datasource" />
+    <None Include="Properties\DataSources\LY.MES.WFCL.SRArrangedVouch.ArrangedVouch.datasource" />
+    <None Include="Properties\DataSources\LY.MES.WFCL.SRCfPExecute.ArrangedVouchLog.datasource" />
+    <None Include="Properties\DataSources\LY.MES.WFCL.SRCfPExecute.CraftsProcessExecute.datasource" />
+    <None Include="Properties\DataSources\LY.MES.WFCL.SRCfPExecute.CraftsProcessExecute1.datasource" />
+    <None Include="Properties\DataSources\LY.MES.WFCL.SRCfPExecute.CraftsProcessExecutes.datasource" />
+    <None Include="Properties\DataSources\LY.MES.WFCL.SRCfPExecute.vw_DurmsUpFeeding.datasource" />
+    <None Include="Properties\DataSources\LY.MES.WFCL.SRCLParamSet.CraftsLineParamSet.datasource" />
+    <None Include="Properties\DataSources\LY.MES.WFCL.SRCLParamSet.CraftsLineParamSet1.datasource" />
+    <None Include="Properties\DataSources\LY.MES.WFCL.SRCLParamSet.CraftsLineParamSets.datasource" />
+    <None Include="Properties\DataSources\LY.MES.WFCL.SRCLParamSets.CraftsLineParamSet1.datasource" />
+    <None Include="Properties\DataSources\LY.MES.WFCL.SRCLParamSets.CraftsLineParamSets.datasource" />
+    <None Include="Properties\DataSources\LY.MES.WFCL.SRDataColl.VCollectDataInfo.datasource" />
+    <None Include="Properties\DataSources\LY.MES.WFCL.SRDataColl.VCollectDataInfo1.datasource" />
+    <None Include="Properties\DataSources\LY.MES.WFCL.SRDepartment.Department.datasource" />
+    <None Include="Properties\DataSources\LY.MES.WFCL.SRDevice.Device.datasource" />
+    <None Include="Properties\DataSources\LY.MES.WFCL.SRDevice.Device1.datasource" />
+    <None Include="Properties\DataSources\LY.MES.WFCL.SRDevice.DeviceClass.datasource" />
+    <None Include="Properties\DataSources\LY.MES.WFCL.SRDevice.DeviceParameter.datasource" />
+    <None Include="Properties\DataSources\LY.MES.WFCL.SRDevice.VDeviceInfo.datasource" />
+    <None Include="Properties\DataSources\LY.MES.WFCL.SRExcute.DeviceExecute.datasource" />
+    <None Include="Properties\DataSources\LY.MES.WFCL.SRFindLeak.QC_DrumsFindLeakReport.datasource" />
+    <None Include="Properties\DataSources\LY.MES.WFCL.SRPiPeline.MainPipelineInfo.datasource" />
+    <None Include="Properties\DataSources\LY.MES.WFCL.SRPullDetectionReg.QC_PullDetectionReg.datasource" />
+    <None Include="Properties\DataSources\LY.MES.WFCL.SRQZDDrumesSet.QC_FindLeakDrumsSet.datasource" />
+    <None Include="Properties\DataSources\LY.MES.WFCL.SRQZDDrumesSet.vw_QC_FindLeakDrumsSet.datasource" />
+    <None Include="Properties\DataSources\LY.MES.WFCL.SRTest.Test.datasource" />
+    <None Include="Properties\DataSources\LY.MES.WFCL.VModel.CPContrast.datasource" />
+    <None Include="Properties\DataSources\System.Data.DataTable.datasource" />
+    <None Include="Service References\SRArrangedVouch\ArrangedVService.wsdl" />
+    <None Include="Service References\SRArrangedVouch\ArrangedVService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRArrangedVouch\ArrangedVService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRArrangedVouch\ArrangedVService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRArrangedVouch\ArrangedVService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRArrangedVouch\ArrangedVService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRArrangedVouch\ArrangedVService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRArrangedVouch\LY.MES.WFCL.SRArrangedVouch.CommonResultOfArrangedVouchdYMi5huk.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SRArrangedVouch\LY.MES.WFCL.SRArrangedVouch.CommonResultOfArrayOfArrangedVouchdYMi5huk.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SRBase\BaseService.wsdl" />
+    <None Include="Service References\SRBase\BaseService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRBase\BaseService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRBase\BaseService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRBase\BaseService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRBase\LY.MES.WFCL.SRBase.CommonResultOfArrayOfCraftsParameterContrastdYMi5huk.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SRBase\LY.MES.WFCL.SRBase.CommonResultOfboolean.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SRBase\LY.MES.WFCL.SRBase.CommonResultOfCraftsParameterContrastdYMi5huk.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SRCfPExecute\CfPExecute.wsdl" />
+    <None Include="Service References\SRCfPExecute\CfPExecute.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRCfPExecute\CfPExecute1.wsdl" />
+    <None Include="Service References\SRCfPExecute\CfPExecute2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRCfPExecute\CfPExecute4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRCfPExecute\CfPExecute5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRCfPExecute\CfPExecute6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRCfPExecute\CfPExecute7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRCfPExecute\CfPExecuteService.wsdl" />
+    <None Include="Service References\SRCfPExecute\CfPExecuteService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRCfPExecute\CfPExecuteService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRCfPExecute\CfPExecuteService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRCfPExecute\CfPExecuteService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRCfPExecute\LY.MES.WFCL.SRCfPExecute.CommonResultOfArrangedVouchdYMi5huk.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SRCfPExecute\LY.MES.WFCL.SRCfPExecute.CommonResultOfArrangedVouchLogdYMi5huk.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SRCfPExecute\LY.MES.WFCL.SRCfPExecute.CommonResultOfArrayOfArrangedVouchLogdYMi5huk.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SRCfPExecute\LY.MES.WFCL.SRCfPExecute.CommonResultOfArrayOfCraftsProcessExecutedYMi5huk.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SRCfPExecute\LY.MES.WFCL.SRCfPExecute.CommonResultOfArrayOfvw_DurmsUpFeedingdYMi5huk.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SRCfPExecute\LY.MES.WFCL.SRCfPExecute.CommonResultOfCraftsProcessExecuteCraftsProcessExecuteDetail7Kpb7GJA.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SRCfPExecute\LY.MES.WFCL.SRCfPExecute.CommonResultOfCraftsProcessExecuteCraftsProcessExecutes7Kpb7GJA1.datasource" />
+    <None Include="Service References\SRCfPExecute\LY.MES.WFCL.SRCfPExecute.CommonResultOfCraftsProcessExecutedYMi5huk.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SRCfPExecute\LY.MES.WFCL.SRCfPExecute.CommonResultOfvw_DurmsUpFeedingdYMi5huk.datasource" />
+    <None Include="Service References\SRCfPExecute\LY.MES.WFCL.SRCfPExecute.CommonResultOfvw_DurmsUpFeedingdYMi5huk1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SRCLParamSet\CLParamSetSerivce.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRCLParamSet\CLParamSetSerivce1.wsdl" />
+    <None Include="Service References\SRCLParamSet\CLParamSetSerivce4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRCLParamSet\CLParamSetSerivce41.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRCLParamSet\CLParamSetSerivce42.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRCLParamSet\CLParamSetSerivce43.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRCLParamSet\LY.MES.WFCL.SRCLParamSet.CommonResultOfArrayOfCraftsLineParamSetdYMi5huk.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SRCLParamSet\LY.MES.WFCL.SRCLParamSet.CommonResultOfCraftsLineParamSetVCraftsLineParamSetDetaildAbW2S3Q.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SRDataColl\DeviceCollectService1.wsdl" />
+    <None Include="Service References\SRDataColl\DeviceCollectService10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRDataColl\DeviceCollectService11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRDataColl\DeviceCollectService12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRDataColl\DeviceCollectService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRDataColl\DeviceCollectService7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRDataColl\DeviceCollectService8.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRDataColl\DeviceCollectService9.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRDataColl\LY.MES.WFCL.SRDataColl.CommonResultOfArrayOfVCollectDataInfo1w0wSc2f.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SRDataColl\LY.MES.WFCL.SRDataColl.CommonResultOfCollectDataInfodYMi5huk.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SRDepartment\DepartmentService.wsdl" />
+    <None Include="Service References\SRDepartment\DepartmentService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRDepartment\DepartmentService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRDepartment\DepartmentService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRDepartment\DepartmentService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRDepartment\DepartmentService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRDepartment\DepartmentService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRDepartment\LY.MES.WFCL.SRDepartment.CommonResultOfArrayOfDepartmentdYMi5huk.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SRDepartment\LY.MES.WFCL.SRDepartment.CommonResultOfArrayOfPersondYMi5huk.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SRDepartment\LY.MES.WFCL.SRDepartment.CommonResultOfDepartmentdYMi5huk.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SRDepartment\LY.MES.WFCL.SRDepartment.CommonResultOfPersondYMi5huk.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SRDevice\DeviceService.wsdl" />
+    <None Include="Service References\SRDevice\DeviceService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRDevice\DeviceService1.wsdl" />
+    <None Include="Service References\SRDevice\DeviceService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRDevice\DeviceService10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRDevice\DeviceService11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRDevice\DeviceService12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRDevice\DeviceService13.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRDevice\DeviceService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRDevice\DeviceService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRDevice\DeviceService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRDevice\DeviceService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRDevice\DeviceService6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRDevice\DeviceService7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRDevice\DeviceService8.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRDevice\DeviceService9.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRDevice\LY.MES.WFCL.SRDevice.CommonResultOfArrayOfDeviceClassdYMi5huk.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SRDevice\LY.MES.WFCL.SRDevice.CommonResultOfArrayOfDevicedYMi5huk.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SRDevice\LY.MES.WFCL.SRDevice.CommonResultOfArrayOfDeviceInterfacedYMi5huk.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SRDevice\LY.MES.WFCL.SRDevice.CommonResultOfArrayOfDeviceParameterdYMi5huk.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SRDevice\LY.MES.WFCL.SRDevice.CommonResultOfArrayOfVDeviceInfo1w0wSc2f.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SRDevice\LY.MES.WFCL.SRDevice.CommonResultOfboolean.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SRDevice\LY.MES.WFCL.SRDevice.CommonResultOfDeviceClassdYMi5huk.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SRDevice\LY.MES.WFCL.SRDevice.CommonResultOfDevicedYMi5huk.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SRDevice\LY.MES.WFCL.SRDevice.CommonResultOfDeviceInterfacedYMi5huk.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SRDevice\LY.MES.WFCL.SRDevice.CommonResultOfDeviceParameterdYMi5huk.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SRDevice\LY.MES.WFCL.SRDevice.GetDeviceInterfaceListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SRDevice\LY.MES.WFCL.SRDevice.GetDevParByCodePagingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SRExcute\DevExecuteService.wsdl" />
+    <None Include="Service References\SRExcute\DevExecuteService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRExcute\DevExecuteService1.wsdl" />
+    <None Include="Service References\SRExcute\DevExecuteService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRExcute\DevExecuteService10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRExcute\DevExecuteService11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRExcute\DevExecuteService2.wsdl" />
+    <None Include="Service References\SRExcute\DevExecuteService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRExcute\DevExecuteService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRExcute\DevExecuteService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRExcute\DevExecuteService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRExcute\DevExecuteService51.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRExcute\DevExecuteService52.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRExcute\DevExecuteService53.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRExcute\DevExecuteService54.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRExcute\DevExecuteService55.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRExcute\DevExecuteService6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRExcute\DevExecuteService7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRExcute\DevExecuteService8.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRExcute\DevExecuteService9.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRExcute\LY.MES.WFCL.SRExcute.CommonResultOfArrayOfDeviceExecutedYMi5huk1.datasource" />
+    <None Include="Service References\SRExcute\LY.MES.WFCL.SRExcute.CommonResultOfArrayOfDeviceExecutedYMi5huk11.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SRExcute\LY.MES.WFCL.SRExcute.CommonResultOfArrayOfV_DV_DevExecutedYMi5huk.datasource" />
+    <None Include="Service References\SRExcute\LY.MES.WFCL.SRExcute.CommonResultOfArrayOfV_DV_DevExecutedYMi5huk1.datasource" />
+    <None Include="Service References\SRExcute\LY.MES.WFCL.SRExcute.CommonResultOfboolean.datasource" />
+    <None Include="Service References\SRExcute\LY.MES.WFCL.SRExcute.CommonResultOfDeviceExecutedYMi5huk1.datasource" />
+    <None Include="Service References\SRExcute\LY.MES.WFCL.SRExcute.CommonResultOfV_DV_DevExecutedYMi5huk.datasource" />
+    <None Include="Service References\SRExcute\LY.MES.WFCL.SRExcute.CommonResultOfV_DV_DevExecutedYMi5huk1.datasource" />
+    <None Include="Service References\SRFindLeak\LY.MES.WFCL.SRFindLeak.CommonResultOfArrayOfQC_DrumsFindLeakReportdYMi5huk.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SRFindLeak\LY.MES.WFCL.SRFindLeak.CommonResultOfQC_DrumsFindLeakReportdYMi5huk.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SRFindLeak\QCDFindLeakService.wsdl" />
+    <None Include="Service References\SRFindLeak\QCDFindLeakService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRFindLeak\QCDFindLeakService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRFindLeak\QCDFindLeakService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRFindLeak\QCDFindLeakService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRFindLeak\QCDFindLeakService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRFindLeak\QCDFindLeakService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRPersonInfo\LY.MES.WFCL.SRPersonInfo.CommonResultOfArrayOfPersondYMi5huk.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SRPersonInfo\LY.MES.WFCL.SRPersonInfo.CommonResultOfPersondYMi5huk.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SRPersonInfo\PersonService.wsdl" />
+    <None Include="Service References\SRPersonInfo\PersonService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRPersonInfo\PersonService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRPersonInfo\PersonService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRPersonInfo\PersonService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRPersonInfo\PersonService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRPersonInfo\PersonService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRPiPeline\LY.MES.WFCL.SRPiPeline.CommonResultOfArrayOfMainPipelineInfodYMi5huk.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SRPiPeline\LY.MES.WFCL.SRPiPeline.CommonResultOfDevicedYMi5huk.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SRPiPeline\LY.MES.WFCL.SRPiPeline.CommonResultOfMainPipelineInfodYMi5huk.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SRPiPeline\PipelineService.wsdl" />
+    <None Include="Service References\SRPiPeline\PipelineService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRPiPeline\PipelineService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRPiPeline\PipelineService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRPiPeline\PipelineService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRPiPeline\PipelineService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRPiPeline\PipelineService41.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRPullDetectionReg\LY.MES.WFCL.SRPullDetectionReg.CommonResultOfArrayOfQC_PullDetectionRegdYMi5huk.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SRPullDetectionReg\LY.MES.WFCL.SRPullDetectionReg.CommonResultOfboolean.datasource" />
+    <None Include="Service References\SRPullDetectionReg\LY.MES.WFCL.SRPullDetectionReg.CommonResultOfQC_PullDetectionRegdYMi5huk.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SRPullDetectionReg\PullDetectionRegService1.wsdl" />
+    <None Include="Service References\SRPullDetectionReg\PullDetectionRegService6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRPullDetectionReg\PullDetectionRegService61.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRPullDetectionReg\PullDetectionRegService62.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRPullDetectionReg\PullDetectionRegService63.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRPullDetectionReg\PullDetectionRegService64.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRPullDetectionReg\PullDetectionRegService65.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRQZData\LY.MES.WFCL.SRQZData.GetCraftsTableResponse.datasource" />
+    <None Include="Service References\SRQZData\LY.MES.WFCL.SRQZData.GetOrderSchData1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SRQZData\LY.MES.WFCL.SRQZData.GetOrderSchDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SRQZData\LY.MES.WFCL.SRQZData.GetPullComputeResponse.datasource" />
+    <None Include="Service References\SRQZData\LY.MES.WFCL.SRQZData.GetQualityInspectorResponse.datasource" />
+    <None Include="Service References\SRQZData\LY.MES.WFCL.SRQZData.GetQualityInspectorResponse1.datasource" />
+    <None Include="Service References\SRQZData\QZDataService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRQZData\QZDataService1.wsdl" />
+    <None Include="Service References\SRQZData\QZDataService11.wsdl" />
+    <None Include="Service References\SRQZData\QZDataService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRQZData\QZDataService41.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRQZData\QZDataService42.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRQZData\QZDataService43.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRQZData\QZDataService44.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRQZData\QZDataService45.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRQZData\QZDataService46.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRQZData\QZDataService47.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRQZDDrumesSet\LY.MES.WFCL.SRQZDDrumesSet.CommonResultOfArrayOfQC_FindLeakDrumsSetdYMi5huk.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SRQZDDrumesSet\LY.MES.WFCL.SRQZDDrumesSet.CommonResultOfArrayOfvw_DurmsUpFeedingdYMi5huk.datasource" />
+    <None Include="Service References\SRQZDDrumesSet\LY.MES.WFCL.SRQZDDrumesSet.CommonResultOfArrayOfvw_QC_FindLeakDrumsSetdYMi5huk.datasource" />
+    <None Include="Service References\SRQZDDrumesSet\LY.MES.WFCL.SRQZDDrumesSet.CommonResultOfArrayOfvw_QC_FindLeakDrumsSetdYMi5huk1.datasource" />
+    <None Include="Service References\SRQZDDrumesSet\LY.MES.WFCL.SRQZDDrumesSet.CommonResultOfboolean.datasource" />
+    <None Include="Service References\SRQZDDrumesSet\LY.MES.WFCL.SRQZDDrumesSet.CommonResultOfboolean1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SRQZDDrumesSet\LY.MES.WFCL.SRQZDDrumesSet.CommonResultOfQC_FindLeakDrumsSetdYMi5huk.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SRQZDDrumesSet\LY.MES.WFCL.SRQZDDrumesSet.CommonResultOfQC_FindLeakDrumsSetQC_FindLeakDrumsSetDetail7Kpb7GJA.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SRQZDDrumesSet\QCDrumsSetService.wsdl" />
+    <None Include="Service References\SRQZDDrumesSet\QCDrumsSetService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRQZDDrumesSet\QCDrumsSetService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRQZDDrumesSet\QCDrumsSetService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRQZDDrumesSet\QCDrumsSetService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRQZDDrumesSet\QCDrumsSetService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRQZDDrumesSet\QCDrumsSetService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRZhuanGu\LY.MES.WFCL.SRZhuanGu.CommonResultOfDataSetymujubN2.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SRZhuanGu\LY.MES.WFCL.SRZhuanGu.CommonResultOfstring.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SRZhuanGu\ZhuanGuService.wsdl" />
+    <None Include="Service References\SRZhuanGu\ZhuanGuService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRZhuanGu\ZhuanGuService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRZhuanGu\ZhuanGuService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRZhuanGu\ZhuanGuService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SRZhuanGu\ZhuanGuService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\SRArrangedVouch\" />
+    <WCFMetadataStorage Include="Service References\SRBase\" />
+    <WCFMetadataStorage Include="Service References\SRCfPExecute\" />
+    <WCFMetadataStorage Include="Service References\SRCLParamSet\" />
+    <WCFMetadataStorage Include="Service References\SRDataColl\" />
+    <WCFMetadataStorage Include="Service References\SRDepartment\" />
+    <WCFMetadataStorage Include="Service References\SRDevice\" />
+    <WCFMetadataStorage Include="Service References\SRExcute\" />
+    <WCFMetadataStorage Include="Service References\SRFindLeak\" />
+    <WCFMetadataStorage Include="Service References\SRPersonInfo\" />
+    <WCFMetadataStorage Include="Service References\SRPiPeline\" />
+    <WCFMetadataStorage Include="Service References\SRPullDetectionReg\" />
+    <WCFMetadataStorage Include="Service References\SRQZData\" />
+    <WCFMetadataStorage Include="Service References\SRQZDDrumesSet\" />
+    <WCFMetadataStorage Include="Service References\SRZhuanGu\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SRDataColl\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SRDataColl\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SRDataColl\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SRExcute\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SRExcute\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SRExcute\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Winder\List\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SRPullDetectionReg\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SRPullDetectionReg\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SRPullDetectionReg\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SRQZData\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SRQZData\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SRQZData\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SRPullDetectionReg\PullDetectionRegService1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SRQZDDrumesSet\QCDrumsSetService.disco" />
+    <None Include="Service References\SRZhuanGu\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\SRZhuanGu\configuration.svcinfo" />
+    <None Include="Service References\SRZhuanGu\configuration91.svcinfo" />
+    <None Include="Service References\SRZhuanGu\ZhuanGuService.disco" />
+    <None Include="Service References\SRPersonInfo\PersonService.disco" />
+    <None Include="Service References\SRPersonInfo\configuration91.svcinfo" />
+    <None Include="Service References\SRPersonInfo\configuration.svcinfo" />
+    <None Include="Service References\SRPersonInfo\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\SRQZData\QZDataService11.disco" />
+    <None Include="Service References\SRBase\BaseService.disco" />
+    <None Include="Service References\SRBase\configuration91.svcinfo" />
+    <None Include="Service References\SRBase\configuration.svcinfo" />
+    <None Include="Service References\SRBase\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\SRCfPExecute\configuration91.svcinfo" />
+    <None Include="Service References\SRCfPExecute\configuration.svcinfo" />
+    <None Include="Service References\SRCfPExecute\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\SRCLParamSet\configuration91.svcinfo" />
+    <None Include="Service References\SRCLParamSet\configuration.svcinfo" />
+    <None Include="Service References\SRCLParamSet\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\SRDataColl\DeviceCollectService1.disco" />
+    <None Include="Service References\SRDevice\DeviceService.disco" />
+    <None Include="Service References\SRDevice\configuration91.svcinfo" />
+    <None Include="Service References\SRDevice\configuration.svcinfo" />
+    <None Include="Service References\SRDevice\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\SRArrangedVouch\ArrangedVService.disco" />
+    <None Include="Service References\SRArrangedVouch\configuration91.svcinfo" />
+    <None Include="Service References\SRArrangedVouch\configuration.svcinfo" />
+    <None Include="Service References\SRArrangedVouch\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\SRCfPExecute\CfPExecute1.disco" />
+    <None Include="Service References\SRCfPExecute\CfPExecuteService.disco" />
+    <None Include="Service References\SRDepartment\DepartmentService.disco" />
+    <None Include="Service References\SRDepartment\configuration91.svcinfo" />
+    <None Include="Service References\SRDepartment\configuration.svcinfo" />
+    <None Include="Service References\SRDepartment\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\SRDevice\DeviceService1.disco" />
+    <None Include="Service References\SRCLParamSet\CLParamSetSerivce1.disco" />
+    <None Include="Resources\开阀门.png" />
+    <None Include="Resources\开鼓体.png" />
+    <None Include="Resources\蓝色实心圆.png" />
+    <None Include="Resources\绿色实心圆.png" />
+    <None Include="Resources\绿色状态框.png" />
+    <None Include="Resources\转鼓.png" />
+    <None Include="Resources\转鼓1.jpg" />
+    <None Include="Resources\白色状态框.png" />
+    <None Include="Resources\单豉界面.png" />
+    <None Include="Resources\关阀门.png" />
+    <None Include="Resources\关鼓体.png" />
+    <None Include="Resources\红色实心圆.png" />
+    <None Include="Resources\红色状态框.png" />
+    <None Include="Resources\黄色状态框.png" />
+    <None Include="Resources\灰色实心圆.png" />
+    <Content Include="Service References\SRExcute\DevExecuteService.disco" />
+    <Content Include="Service References\SRExcute\DevExecuteService1.disco" />
+    <None Include="Service References\SRPiPeline\PipelineService.disco" />
+    <None Include="Service References\SRPiPeline\configuration91.svcinfo" />
+    <None Include="Service References\SRPiPeline\configuration.svcinfo" />
+    <None Include="Service References\SRPiPeline\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\SRExcute\DevExecuteService2.disco" />
+    <Content Include="Service References\SRQZData\QZDataService1.disco" />
+    <None Include="Service References\SRQZDDrumesSet\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\SRQZDDrumesSet\configuration.svcinfo" />
+    <None Include="Service References\SRQZDDrumesSet\configuration91.svcinfo" />
+    <None Include="Service References\SRFindLeak\QCDFindLeakService.disco" />
+    <None Include="Service References\SRFindLeak\configuration91.svcinfo" />
+    <None Include="Service References\SRFindLeak\configuration.svcinfo" />
+    <None Include="Service References\SRFindLeak\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

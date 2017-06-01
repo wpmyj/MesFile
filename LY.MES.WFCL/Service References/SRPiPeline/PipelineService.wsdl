@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="PipelineService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="WSHttpBinding_IPipelineService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:16498/Pipeline/PipelineService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:16498/Pipeline/PipelineService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Server.Utility" />
+      <xsd:import schemaLocation="http://localhost:16498/Pipeline/PipelineService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:16498/Pipeline/PipelineService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/System" />
+      <xsd:import schemaLocation="http://localhost:16498/Pipeline/PipelineService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost:16498/Pipeline/PipelineService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/LY.MES.Model" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IPipelineService_GetOperatingRecord_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOperatingRecord" />
+  </wsdl:message>
+  <wsdl:message name="IPipelineService_GetOperatingRecord_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOperatingRecordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPipelineService_GetOperatingRecord_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q1:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IPipelineService_AddOperatingData_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddOperatingData" />
+  </wsdl:message>
+  <wsdl:message name="IPipelineService_AddOperatingData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddOperatingDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPipelineService_AddOperatingData_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q2:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IPipelineService_GetDaviceData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDaviceData" />
+  </wsdl:message>
+  <wsdl:message name="IPipelineService_GetDaviceData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDaviceDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPipelineService_GetDaviceData_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q3:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IPipelineService_GetDaviceInformation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDaviceInformation" />
+  </wsdl:message>
+  <wsdl:message name="IPipelineService_GetDaviceInformation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDaviceInformationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPipelineService_GetDaviceInformation_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q4:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:portType name="IPipelineService">
+    <wsdl:operation name="GetOperatingRecord">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPipelineService/GetOperatingRecord" message="tns:IPipelineService_GetOperatingRecord_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPipelineService/GetOperatingRecordResponse" message="tns:IPipelineService_GetOperatingRecord_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IPipelineService/GetOperatingRecordCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IPipelineService_GetOperatingRecord_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddOperatingData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPipelineService/AddOperatingData" message="tns:IPipelineService_AddOperatingData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPipelineService/AddOperatingDataResponse" message="tns:IPipelineService_AddOperatingData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IPipelineService/AddOperatingDataCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IPipelineService_AddOperatingData_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDaviceData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPipelineService/GetDaviceData" message="tns:IPipelineService_GetDaviceData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPipelineService/GetDaviceDataResponse" message="tns:IPipelineService_GetDaviceData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IPipelineService/GetDaviceDataCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IPipelineService_GetDaviceData_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDaviceInformation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPipelineService/GetDaviceInformation" message="tns:IPipelineService_GetDaviceInformation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPipelineService/GetDaviceInformationResponse" message="tns:IPipelineService_GetDaviceInformation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IPipelineService/GetDaviceInformationCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IPipelineService_GetDaviceInformation_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSHttpBinding_IPipelineService" type="tns:IPipelineService">
+    <wsp:PolicyReference URI="#WSHttpBinding_IPipelineService_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetOperatingRecord">
+      <soap12:operation soapAction="http://tempuri.org/IPipelineService/GetOperatingRecord" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddOperatingData">
+      <soap12:operation soapAction="http://tempuri.org/IPipelineService/AddOperatingData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDaviceData">
+      <soap12:operation soapAction="http://tempuri.org/IPipelineService/GetDaviceData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDaviceInformation">
+      <soap12:operation soapAction="http://tempuri.org/IPipelineService/GetDaviceInformation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PipelineService">
+    <wsdl:port name="WSHttpBinding_IPipelineService" binding="tns:WSHttpBinding_IPipelineService">
+      <soap12:address location="http://localhost:16498/Pipeline/PipelineService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://localhost:16498/Pipeline/PipelineService.svc</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

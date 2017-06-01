@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/LY.MES.Model" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/LY.MES.Model" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="QC_FindLeakDrumsSet">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreateDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreatePerson" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Frequency" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Month" type="xs:int" />
+      <xs:element minOccurs="0" name="QC_FindLeakDrumsSetDetail" nillable="true" type="tns:ArrayOfQC_FindLeakDrumsSetDetail" />
+      <xs:element minOccurs="0" name="Week" type="xs:int" />
+      <xs:element minOccurs="0" name="Year" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QC_FindLeakDrumsSet" nillable="true" type="tns:QC_FindLeakDrumsSet" />
+  <xs:complexType name="ArrayOfQC_FindLeakDrumsSetDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="QC_FindLeakDrumsSetDetail" nillable="true" type="tns:QC_FindLeakDrumsSetDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfQC_FindLeakDrumsSetDetail" nillable="true" type="tns:ArrayOfQC_FindLeakDrumsSetDetail" />
+  <xs:complexType name="QC_FindLeakDrumsSetDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ArrangedVouchCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AutoID" type="xs:int" />
+      <xs:element minOccurs="0" name="DevCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DevName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExecuteID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="IsLeak" type="xs:int" />
+      <xs:element minOccurs="0" name="QC_FindLeakDrumsSet" nillable="true" type="tns:QC_FindLeakDrumsSet" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QC_FindLeakDrumsSetDetail" nillable="true" type="tns:QC_FindLeakDrumsSetDetail" />
+  <xs:complexType name="ArrayOfQC_FindLeakDrumsSet">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="QC_FindLeakDrumsSet" nillable="true" type="tns:QC_FindLeakDrumsSet" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfQC_FindLeakDrumsSet" nillable="true" type="tns:ArrayOfQC_FindLeakDrumsSet" />
+  <xs:complexType name="ArrayOfvw_QC_FindLeakDrumsSet">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="vw_QC_FindLeakDrumsSet" nillable="true" type="tns:vw_QC_FindLeakDrumsSet" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfvw_QC_FindLeakDrumsSet" nillable="true" type="tns:ArrayOfvw_QC_FindLeakDrumsSet" />
+  <xs:complexType name="vw_QC_FindLeakDrumsSet">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ArrangedVouchCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AutoID" type="xs:int" />
+      <xs:element minOccurs="0" name="CreateDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreatePerson" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DevCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DevName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExecuteID" type="xs:int" />
+      <xs:element minOccurs="0" name="Frequency" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="IsLeak" type="xs:int" />
+      <xs:element minOccurs="0" name="Month" type="xs:int" />
+      <xs:element minOccurs="0" name="Week" type="xs:int" />
+      <xs:element minOccurs="0" name="Year" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="vw_QC_FindLeakDrumsSet" nillable="true" type="tns:vw_QC_FindLeakDrumsSet" />
+  <xs:complexType name="ArrayOfvw_DurmsUpFeeding">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="vw_DurmsUpFeeding" nillable="true" type="tns:vw_DurmsUpFeeding" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfvw_DurmsUpFeeding" nillable="true" type="tns:ArrayOfvw_DurmsUpFeeding" />
+  <xs:complexType name="vw_DurmsUpFeeding">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ArrangedVouchCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CraftsCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CraftsName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreateTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Creator" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DevCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DevName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DeveUseStatus" type="xs:int" />
+      <xs:element minOccurs="0" name="EndTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ExecuteID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ExecuteMode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExecuteOrder" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ExecuteStatus" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="FormulaCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FormulaName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="InputWeight" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="InterruptionRemark" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InterruptionTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="LicenseNum" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MaterialVouchCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ModifyPerson" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ModifyTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OutputWeight" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PlanDuration" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="RFIDCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StartTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TeachProgress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserStatus" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="VehicleWeight" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="VouchDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="WeighingPounds" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="WeightMan" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="WorkbrachCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WorkbrachName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WorkshopCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WorkshopName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="vwId" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="vw_DurmsUpFeeding" nillable="true" type="tns:vw_DurmsUpFeeding" />
+</xs:schema>

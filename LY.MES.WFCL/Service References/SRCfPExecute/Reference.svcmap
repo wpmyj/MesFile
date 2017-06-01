@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="1401b88c-6567-4010-84ab-832308e5e566" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:16498/Drums/CfPExecuteService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CfPExecuteService.xsd" MetadataType="Schema" ID="c8fd9935-4f48-4b8c-8374-bf635244cbd0" SourceId="1" SourceUrl="http://localhost:16498/Drums/CfPExecuteService.svc?xsd=xsd1" />
+    <MetadataFile FileName="CfPExecuteService1.xsd" MetadataType="Schema" ID="5ca0392f-4f95-4df9-8055-bfdb2d6e5b3e" SourceId="1" SourceUrl="http://localhost:16498/Drums/CfPExecuteService.svc?xsd=xsd2" />
+    <MetadataFile FileName="CfPExecuteService2.xsd" MetadataType="Schema" ID="9dbafd52-7316-4ab8-b87b-f27b2b783c8f" SourceId="1" SourceUrl="http://localhost:16498/Drums/CfPExecuteService.svc?xsd=xsd3" />
+    <MetadataFile FileName="CfPExecuteService3.xsd" MetadataType="Schema" ID="3f02c3ed-ee6a-4ba2-ba77-07ba88d96cbb" SourceId="1" SourceUrl="http://localhost:16498/Drums/CfPExecuteService.svc?xsd=xsd0" />
+    <MetadataFile FileName="CfPExecuteService.disco" MetadataType="Disco" ID="9ddf3b7f-6ead-4b92-80db-32ae4c13a776" SourceId="1" SourceUrl="http://localhost:16498/Drums/CfPExecuteService.svc?disco" />
+    <MetadataFile FileName="CfPExecuteService.wsdl" MetadataType="Wsdl" ID="12f677c2-8725-451c-a69c-5b688163194e" SourceId="1" SourceUrl="http://localhost:16498/Drums/CfPExecuteService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/LY.MES.Model.VModel" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/LY.MES.Model.VModel" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:16498/DataColl/DeviceCollectService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/LY.MES.Model" />
+  <xs:complexType name="ArrayOfVCollectDataInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VCollectDataInfo" nillable="true" type="tns:VCollectDataInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVCollectDataInfo" nillable="true" type="tns:ArrayOfVCollectDataInfo" />
+  <xs:complexType name="VCollectDataInfo">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/LY.MES.Model" base="q1:CollectDataInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DeviCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeviName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DevpCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DevpName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IFDevCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IFDevName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PDevCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PDevName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="VCollectDataInfo" nillable="true" type="tns:VCollectDataInfo" />
+</xs:schema>

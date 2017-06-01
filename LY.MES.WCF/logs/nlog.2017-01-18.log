@@ -1,0 +1,16 @@
+2017-01-18 08:41:42.3037   8 ERROR LY.MES.Service.Drums.ForCfPExecuteServices.InsterRegistForm
+ForCfPExecuteServices.InsterRegistForm => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - 未将对象引用设置到对象的实例。 
+
+2017-01-18 09:20:45.6428   8 ERROR LY.MES.Service.Drums.ForCfPExecuteServices.DeleteRegistForm
+ForCfPExecuteServices.DeleteRegistForm => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - 无法删除此对象，因为未在 ObjectStateManager 中找到它。 
+
+2017-01-18 09:21:35.3686   8 ERROR LY.MES.Service.Drums.ForCfPExecuteServices.DeleteRegistForm
+ForCfPExecuteServices.DeleteRegistForm => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - 无法删除此对象，因为未在 ObjectStateManager 中找到它。 
+
+2017-01-18 09:24:14.4907   8 ERROR LY.MES.Service.Drums.ForCfPExecuteServices.DeleteRegistForm
+ForCfPExecuteServices.DeleteRegistForm => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - 无法删除此对象，因为未在 ObjectStateManager 中找到它。 
+

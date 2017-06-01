@@ -1,0 +1,44 @@
+2017-02-26 16:32:10.1101  16 ERROR LY.MES.Service.Drums.ForCfPExecuteServices.UpdateCraftsProcessData
+ForCfPExecuteServices.UpdateCraftsProcessData => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - 无法绑定由多个部分组成的标识符 "工艺参数设置_明细.参数属性"。 
+
+2017-02-26 16:37:39.5540  14 ERROR LY.MES.Service.Drums.ForCfPExecuteServices.UpdateCraftsProcessData
+ForCfPExecuteServices.UpdateCraftsProcessData => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - 未找到列 [属性]。 
+
+2017-02-26 16:41:18.5735  12 ERROR LY.MES.Service.Drums.ForCfPExecuteServices.UpdateCraftsProcessData
+ForCfPExecuteServices.UpdateCraftsProcessData => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - 基础提供程序在 Open 上失败。 
+
+2017-02-26 16:45:30.3099  18 ERROR LY.MES.Service.Drums.ForCfPExecuteServices.UpdateCraftsProcessData
+ForCfPExecuteServices.UpdateCraftsProcessData => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - 基础提供程序在 Open 上失败。 
+
+2017-02-26 16:52:54.5333  19 ERROR LY.MES.Service.Drums.ForCfPExecuteServices.UpdateCraftsProcessData
+ForCfPExecuteServices.UpdateCraftsProcessData => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - 列“[标准值]”不属于表 ds。 
+
+2017-02-26 16:55:55.1746  10 ERROR LY.MES.Service.Drums.ForCfPExecuteServices.UpdateCraftsProcessData
+ForCfPExecuteServices.UpdateCraftsProcessData => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - 输入字符串的格式不正确。 
+
+2017-02-26 16:58:04.6600  11 ERROR LY.MES.Service.Drums.ForCfPExecuteServices.UpdateCraftsProcessData
+ForCfPExecuteServices.UpdateCraftsProcessData => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - 输入字符串的格式不正确。 
+
+2017-02-26 17:02:48.9093  13 ERROR LY.MES.Service.Drums.ForCfPExecuteServices.UpdateCraftsProcessData
+ForCfPExecuteServices.UpdateCraftsProcessData => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - 基础提供程序在 Open 上失败。 
+
+2017-02-26 17:04:00.8624   8 ERROR LY.MES.Service.Drums.ForCfPExecuteServices.UpdateCraftsProcessData
+ForCfPExecuteServices.UpdateCraftsProcessData => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - 基础提供程序在 Open 上失败。 
+
+2017-02-26 17:08:44.7696  13 ERROR LY.MES.Service.Drums.ForCfPExecuteServices.UpdateCraftsProcessData
+ForCfPExecuteServices.UpdateCraftsProcessData => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - 输入字符串的格式不正确。 
+
+2017-02-26 17:10:48.4707  13 ERROR LY.MES.Service.Drums.ForCfPExecuteServices.UpdateCraftsProcessData
+ForCfPExecuteServices.UpdateCraftsProcessData => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - 输入字符串的格式不正确。 
+

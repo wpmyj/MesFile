@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e1db6cb6-634f-4f6c-a1fc-cc6022668328" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:16498/ThirdSystem/QZDataService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="QZDataService11.wsdl" MetadataType="Wsdl" ID="7f603624-4ea1-4365-b12b-f063af1dbab3" SourceId="1" SourceUrl="http://localhost:16498/ThirdSystem/QZDataService.svc?wsdl" />
+    <MetadataFile FileName="QZDataService44.xsd" MetadataType="Schema" ID="b9feccb3-3169-471e-a8af-1fbe4f55f064" SourceId="1" SourceUrl="http://localhost:16498/ThirdSystem/QZDataService.svc?xsd=xsd2" />
+    <MetadataFile FileName="QZDataService.xsd" MetadataType="Schema" ID="dcc00f7c-19cb-40ee-b718-d7584df5e892" SourceId="1" SourceUrl="http://localhost:16498/ThirdSystem/QZDataService.svc?xsd=xsd4" />
+    <MetadataFile FileName="QZDataService45.xsd" MetadataType="Schema" ID="cf81f9e9-6d81-42c0-90ec-40b449e9e857" SourceId="1" SourceUrl="http://localhost:16498/ThirdSystem/QZDataService.svc?xsd=xsd1" />
+    <MetadataFile FileName="QZDataService46.xsd" MetadataType="Schema" ID="5a3f604c-2a3f-4e39-8772-05b157b389ee" SourceId="1" SourceUrl="http://localhost:16498/ThirdSystem/QZDataService.svc?xsd=xsd0" />
+    <MetadataFile FileName="QZDataService47.xsd" MetadataType="Schema" ID="373d1197-b5db-4696-a796-448c968ebc77" SourceId="1" SourceUrl="http://localhost:16498/ThirdSystem/QZDataService.svc?xsd=xsd3" />
+    <MetadataFile FileName="QZDataService11.disco" MetadataType="Disco" ID="91f70600-6dbd-46ef-974b-5a343aa3a4df" SourceId="1" SourceUrl="http://localhost:16498/ThirdSystem/QZDataService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="fcce86bb-03ab-4516-a56b-aa99ccdb9d3f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:16498/Base/BaseService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="BaseService.xsd" MetadataType="Schema" ID="016afe1b-2114-49fd-bc66-d8d5881edb5b" SourceId="1" SourceUrl="http://localhost:16498/Base/BaseService.svc?xsd=xsd3" />
+    <MetadataFile FileName="BaseService.wsdl" MetadataType="Wsdl" ID="a11661ab-6390-4394-8bf1-df01042388e0" SourceId="1" SourceUrl="http://localhost:16498/Base/BaseService.svc?wsdl" />
+    <MetadataFile FileName="BaseService1.xsd" MetadataType="Schema" ID="2596f223-4748-4b2c-b130-42b618b9d45e" SourceId="1" SourceUrl="http://localhost:16498/Base/BaseService.svc?xsd=xsd2" />
+    <MetadataFile FileName="BaseService.disco" MetadataType="Disco" ID="d8553d32-f5e3-404c-82d3-c4ac06f4a670" SourceId="1" SourceUrl="http://localhost:16498/Base/BaseService.svc?disco" />
+    <MetadataFile FileName="BaseService2.xsd" MetadataType="Schema" ID="738a3a83-00c3-459b-b14d-6b3f5b599a2c" SourceId="1" SourceUrl="http://localhost:16498/Base/BaseService.svc?xsd=xsd0" />
+    <MetadataFile FileName="BaseService3.xsd" MetadataType="Schema" ID="895cc464-08e8-4e7d-91db-657918ff2fea" SourceId="1" SourceUrl="http://localhost:16498/Base/BaseService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

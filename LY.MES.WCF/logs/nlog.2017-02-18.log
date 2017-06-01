@@ -1,0 +1,16 @@
+2017-02-18 11:08:41.3156  10 ERROR LY.MES.Service.Base.ForDeviceServices.GetDevParameterByCode
+ForDeviceServices.GetDevParameterByCode => LoggerExtensions.Error => LoggerExtensions.FilteredLog
+ - 实体类型 DeviceParameter 不是当前上下文的模型的一部分。 
+
+2017-02-18 14:14:09.5261  10 DEBUG LY.MES.WCF.Base.DeviceService.GetDeviceClassList
+DeviceService.GetDeviceClassList => LoggerExtensions.Debug => LoggerExtensions.FilteredLog
+ - 时长:1099 
+
+2017-02-18 14:20:40.3594   7 DEBUG LY.MES.WCF.Base.DeviceService.GetDeviceClassList
+DeviceService.GetDeviceClassList => LoggerExtensions.Debug => LoggerExtensions.FilteredLog
+ - 时长:951 
+
+2017-02-18 15:16:13.6861   7 DEBUG LY.MES.WCF.Base.DeviceService.GetDeviceClassList
+DeviceService.GetDeviceClassList => LoggerExtensions.Debug => LoggerExtensions.FilteredLog
+ - 时长:965 
+
